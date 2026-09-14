@@ -1,0 +1,68 @@
+TAP version 13
+# Subtest: control reproduces every baseline production step and the 88-to-102 period-14 cycle
+not ok 1 - control reproduces every baseline production step and the 88-to-102 period-14 cycle
+  ---
+  duration_ms: 36.306875
+  type: 'test'
+  location: '/Users/tr/Projects/zombie-lab-position/scripts/test-preview.cjs:41:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+    +   name: 'fixed-start-capture-cycle',
+    -   changedField: 'human.x',
+    -   name: 'human-one-cell-west',
+    -   playback: 'treatment',
+        safetyTickLimit: 10000
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    name: 'human-one-cell-west'
+    safetyTickLimit: 10000
+    changedField: 'human.x'
+    playback: 'treatment'
+  actual:
+    name: 'fixed-start-capture-cycle'
+    safetyTickLimit: 10000
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-position/scripts/test-preview.cjs:47:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: treatment changes only human.x from 7 to 6 and exports every actual production step
+not ok 2 - treatment changes only human.x from 7 to 6 and exports every actual production step
+  ---
+  duration_ms: 29.993125
+  type: 'test'
+  location: '/Users/tr/Projects/zombie-lab-position/scripts/test-preview.cjs:60:1'
+  failureType: 'testCodeFailure'
+  error: 'treatment must be explicitly labeled'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-position/scripts/test-preview.cjs:64:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 0
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 98.151083

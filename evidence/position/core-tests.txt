@@ -1,0 +1,10 @@
+PASS initial world is one human and one zombie on a bounded grid
+PASS one pure tick uses the same old state for both decisions
+PASS shared destination is caught and further ticks stop
+PASS exchanged positions are caught even without a shared destination
+PASS explicit tick limit stops exactly, with capture taking precedence
+PASS existing contact stops without moving, including a one-cell board
+PASS resolver rejects out-of-bounds, diagonal, fractional and long moves
+PASS all starts on 1×1 through 4×4 boards stay bounded, pure and repeatable
+PASS following into a vacated cell is not capture unless positions swap
+9/9 passed

@@ -2,7 +2,7 @@
 
 ## Question and intervention
 
-**Question:** does moving the human one cell west change capture versus recurrence or cycle timing? **Hypothesis evaluated:** the shift changes the outcome or timing. This is exploratory, not preregistered.
+**Question:** does moving the human one cell west change capture versus recurrence or cycle timing? **Hypothesis stated before the run:** the shifted start also reaches a non-capturing cycle; the same period or orbit was not required. Timing and trajectory differences are exploratory measurements.
 
 Baseline: `6a690bd8801db120957dd77fc5d84da680f7bd06`; branch: `experiment/human-one-cell-west`, uncommitted pending parent review/PR.
 
@@ -19,7 +19,7 @@ Production `simulation.js` is byte-identical to baseline: SHA-256 `d40bf395b47a0
 
 Position trajectories differ initially, then coincide from **tick 11** through the endpoint, joining at H `(9, 6)`, Z `(9, 0)`. Incoming decision metadata at tick 11 still differs. Both endpoint snapshots remain production `running` with empty reason: cycle is a separate runner outcome.
 
-**Interpretation:** the transient changes, but outcome, cycle timing, period and repeated pair do not. The hypothesis of an outcome/timing change is not supported for these starts.
+**Interpretation:** the transient changes, but outcome, cycle timing, period and repeated pair do not. The stated non-capture-cycle hypothesis is supported for this one neighboring start; equal timing was an observed result, not a required outcome.
 
 **Limits:** one deterministic run per condition, not an ensemble. Test/build repetitions check repeatability, not independent samples; there is no statistical confidence claim. Recurrence proves motion cycling only for this fixed deterministic, memoryless policy if allowed to continue without the cutoff. No general survival, intelligence, other-start or group-behavior claim follows. Synthetic capture/cycle/unresolved fixtures are regression checks, not scientific treatment runs. No capture-rule intervention is included.
 

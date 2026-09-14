@@ -1,0 +1,19 @@
+{
+  "started": "2026-09-14T06:10:41.821Z",
+  "browser": "153.0.8010.12",
+  "checks": [
+    "side-by-side control/treatment labels, starts and exact outcomes",
+    "complete treatment table: 103 rows",
+    "all 103 scrubbed ticks: real Canvas calls, coordinates and selected row",
+    "keyboard endpoints, Back, playback endpoint stop and restart/pause",
+    "390px viewport without page overflow"
+  ],
+  "requests": [
+    "file:///Users/tr/Projects/zombie-lab-position/evidence/position/replay/index.html"
+  ],
+  "errors": [
+    "Failed to execute 'write' on 'Document': Identifier 'replay' has already been declared"
+  ],
+  "passed": false,
+  "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok((await page.locator(\"#metadata\").innerText()).includes(hostile))\n\n    at /Users/tr/Projects/zombie-lab-position/evidence/position/browser-check.cjs:84:12"
+}
