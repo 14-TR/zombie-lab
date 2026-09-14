@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One human. One zombie. One deterministic tick at a time. An offline Canvas experiment.">
+  <title>Zombie Lab — ZL-001</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #1e2a22; background: #f2f4ee; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 28px 20px; }
+    main { max-width: 720px; margin: 0 auto; }
+    .eyebrow { margin: 0; color: #55614f; font: 12px/1.5 ui-monospace, monospace; letter-spacing: .1em; }
+    h1 { font-size: 34px; line-height: 1.15; margin: 8px 0; }
+    .intro { margin: 0 0 20px; color: #55614f; }
+    .controls { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    button { font: inherit; font-weight: 650; padding: 10px 22px; border: 1px solid #52604d; border-radius: 5px; cursor: pointer; background: #fff; color: #1e2a22; }
+    button[data-step] { color: #fff; background: #304f35; border-color: #304f35; }
+    button:disabled { opacity: .5; cursor: default; }
+    button:focus-visible, a:focus-visible { outline: 3px solid #225ca8; outline-offset: 3px; }
+    .tick-note { font-size: 13px; color: #55614f; }
+    canvas { width: 100%; height: auto; display: block; border: 1px solid #aab6a5; border-radius: 3px; }
+    .readout { margin-top: 14px; padding: 14px 16px; background: #fff; border: 1px solid #d2d9d0; border-radius: 5px; line-height: 1.5; }
+    .readout p { margin: 0; }
+    [data-status] { font-weight: 700; }
+    [data-positions] { font-family: ui-monospace, monospace; font-size: 14px; margin: 5px 0 !important; white-space: pre-wrap; }
+    [data-decisions] { color: #4c5948; font-size: 14px; }
+    .rules { font-size: 14px; line-height: 1.6; color: #4c5948; }
+    .rules p { margin: 12px 0; }
+    .human { color: #225ca8; font-weight: 700; }
+    .zombie { color: #a6362b; font-weight: 700; }
+    footer { border-top: 1px solid #d2d9d0; padding-top: 12px; font-size: 13px; color: #55614f; }
+    a { color: #225ca8; }
+    @media (max-width: 480px) { body { padding: 20px 12px; } .tick-note { max-width: 90px; } h1 { font-size: 30px; } }
+  </style>
+</head>
+<body>
+  <main id="lab">
+    <p class="eyebrow">ZL-001 / ATOMIC SIMULATION</p>
+    <h1>Zombie Lab</h1>
+    <p class="intro">One human. One zombie. No hidden clock.</p>
+    <div class="controls">
+      <button type="button" data-step>Step</button>
+      <button type="button" data-reset>Reset</button>
+      <span class="tick-note">One click = one tick</span>
+    </div>
+    <canvas data-grid width="640" height="448" role="img" aria-label="Human and zombie on a ten by seven grid">Grid positions and decisions are also listed below.</canvas>
+    <section class="readout" aria-live="polite" aria-atomic="true" aria-label="Simulation state">
+      <p data-status></p>
+      <p data-positions></p>
+      <p data-decisions></p>
+    </section>
+    <section class="rules" aria-label="Rules">
+      <p><span class="human">H · Human / circle</span> flees. <span class="zombie">Z · Zombie / square</span> pursues.<br>
+        Both choose from the <strong>same old positions</strong>, then move together.</p>
+      <p>10 × 7 bounded grid. Move one cell north, east, south, west, or stay.
+        The human maximizes Manhattan distance; the zombie minimizes it.
+        Ties: <strong>north → east → south → west → stay</strong>.
+        Coordinates start at (0, 0) in the top-left; x increases right, y down.</p>
+      <p>A shared destination or exchanged positions means <strong>caught</strong>.
+        Stop on capture or at tick 40. Reset always restores the same start.</p>
+    </section>
+    <footer>Local-only · No dependencies · <a href="tests.html">Run browser tests</a> · <a href="README.md">Rules &amp; notes</a></footer>
+    <noscript><p>Enable JavaScript to run this offline experiment.</p></noscript>
+  </main>
+  <script src="simulation.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
