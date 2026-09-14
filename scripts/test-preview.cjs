@@ -27,28 +27,31 @@ function succeeded(result) {
 function productionFrames() {
   const context = vm.createContext({});
   vm.runInContext(fs.readFileSync(path.join(root, "simulation.js"), "utf8"), context, { timeout: 1000 });
-  vm.runInContext("state = ZombieLab.initialState()", context, { timeout: 1000 });
+  vm.runInContext("state = { ...ZombieLab.initialState(), tickLimit: 10000 }", context, { timeout: 1000 });
   const frames = [];
-  for (let count = 0; count <= 10000; count++) {
-    const frame = JSON.parse(JSON.stringify(context.state));
-    frames.push(frame);
-    if (frame.status !== "running") return frames;
-    vm.runInContext("state = ZombieLab.step(state)", context, { timeout: 1000 });
+  // Independently execute every production step through the observed repeat.
+  for (let tick = 0; tick <= 102; tick++) {
+    frames.push(JSON.parse(JSON.stringify(context.state)));
+    if (tick < 102) vm.runInContext("state = ZombieLab.step(state)", context, { timeout: 1000 });
   }
-  assert.fail("Production simulation did not terminate within 10000 ticks");
+  return frames;
 }
 
-test("JSON captures every production frame from initial through terminal", (t) => {
+test("fixed-start experiment records every production step through the first repeated pair", (t) => {
   const out = temporary(t);
   succeeded(generate(out));
   const replay = JSON.parse(fs.readFileSync(path.join(out, "positions.json"), "utf8"));
   const expected = productionFrames();
-  assert.equal(replay.schemaVersion, 1);
+  assert.equal(replay.schemaVersion, 2);
+  assert.deepEqual(replay.experiment, { name: "fixed-start-capture-cycle", safetyTickLimit: 10000 });
   assert.deepEqual(replay.frames, expected);
-  assert.deepEqual(replay.frames.map(frame => frame.tick), Array.from({ length: expected.length }, (_, tick) => tick));
-  assert.equal(replay.frames[0].tick, 0);
-  assert.notEqual(replay.frames.at(-1).status, "running");
-  assert.equal(new Set(replay.frames.map(frame => frame.tick)).size, expected.length);
+  assert.deepEqual(replay.frames.map(frame => frame.tick), Array.from({ length: 103 }, (_, tick) => tick));
+  const keys = expected.map(frame => [frame.human.x, frame.human.y, frame.zombie.x, frame.zombie.y].join(","));
+  assert.equal(new Set(keys.slice(0, -1)).size, 102, "no earlier repeated pair");
+  assert.equal(keys[102], keys[88]);
+  assert.deepEqual(replay.outcome, { type: "cycle", startTick: 88, repeatTick: 102, period: 14, positionKey: keys[88] });
+  assert.equal(replay.frames.at(-1).status, "running", "cycle is a runner outcome, not a production status");
+  assert.equal(replay.frames.at(-1).reason, "");
 });
 
 test("CSV contains the ordered positions and terminal reason for every production tick", (t) => {
@@ -98,6 +101,9 @@ test("CSV correctly quotes commas, quotes, and newlines in state text", (t) => {
   const reason = 'said "caught",\nthen stopped';
   const { script, out } = fixture(t, `ZombieLab = { ...ZombieLab, step: state => ({ ...state, tick: state.tick + 1, status: "caught", reason: ${JSON.stringify(reason)} }) };`);
   succeeded(generate(out, {}, [], script));
+  const replay = JSON.parse(fs.readFileSync(path.join(out, "positions.json"), "utf8"));
+  assert.deepEqual(replay.outcome, { type: "capture", tick: 1, reason }, "capture takes precedence over a repeated pair");
+  assert.equal(replay.frames.length, 2);
   const csv = fs.readFileSync(path.join(out, "positions.csv"), "utf8");
   assert.equal(csv, 'tick,human_x,human_y,zombie_x,zombie_y,status,reason\r\n0,7,2,2,4,running,\r\n1,7,2,2,4,caught,"said ""caught"",\nthen stopped"\r\n');
 });
@@ -119,12 +125,68 @@ test("unknown terminal status is not silently accepted", (t) => {
   assert.match(result.stderr, /status/i);
 });
 
-test("a nonterminating simulation is bounded to 10000 steps", (t) => {
-  const { script, out } = fixture(t, 'ZombieLab = { ...ZombieLab, step: state => ({ ...state, tick: state.tick + 1 }) };');
+// Synthetic sequences only exist in copied temporary sources. Their enlarged
+// board allows unique pairs through the safety boundary without changing policy.
+function safetyFixture(t, endpointStatus = "limit", repeat = false) {
+  return fixture(t, `
+    const originalInitial = ZombieLab.initialState;
+    ZombieLab = { ...ZombieLab,
+      initialState: () => ({ ...originalInitial(), width: 20010 }),
+      step: state => {
+        const tick = state.tick + 1, last = tick === state.tickLimit;
+        return { ...state, tick,
+          human: { x: last && ${repeat} ? 7 : 7 + tick, y: 2 },
+          status: last ? ${JSON.stringify(endpointStatus)} : "running",
+          reason: last && ${JSON.stringify(endpointStatus)} !== "running" ? "fixture endpoint" : ""
+        };
+      }
+    };`);
+}
+
+test("a unique synthetic trajectory reports unresolved at the inclusive 10000-tick safety endpoint", (t) => {
+  for (const status of ["limit", "running"]) {
+    const { script, out } = safetyFixture(t, status);
+    succeeded(generate(out, {}, [], script));
+    const replay = JSON.parse(fs.readFileSync(path.join(out, "positions.json"), "utf8"));
+    assert.deepEqual(replay.outcome, { type: "unresolved", tick: 10000, reason: "safety tick limit" });
+    assert.equal(replay.frames.length, 10001);
+    assert.deepEqual(replay.frames.map(frame => frame.tick), Array.from({ length: 10001 }, (_, tick) => tick));
+    assert.equal(replay.frames.at(-1).status, status, "runner must preserve the source status");
+  }
+});
+
+test("capture then cycle take precedence over safety on tick 10000", (t) => {
+  for (const status of ["caught", "limit", "running"]) {
+    const { script, out } = safetyFixture(t, status, true);
+    succeeded(generate(out, {}, [], script));
+    const replay = JSON.parse(fs.readFileSync(path.join(out, "positions.json"), "utf8"));
+    assert.deepEqual(replay.outcome, status === "caught" ?
+      { type: "capture", tick: 10000, reason: "fixture endpoint" } :
+      { type: "cycle", startTick: 0, repeatTick: 10000, period: 10000, positionKey: "7,2,2,4" });
+    assert.equal(replay.frames.length, 10001, "include the repeated/capture endpoint");
+    assert.equal(replay.frames.at(-1).status, status);
+  }
+});
+
+test("cycle key distinguishes all four coordinates and remembers tick zero", (t) => {
+  const pairs = [[7, 2, 2, 4], [8, 2, 2, 4], [7, 3, 2, 4], [7, 2, 3, 4], [7, 2, 2, 5], [7, 2, 2, 4]];
+  const { script, out } = fixture(t, `
+    const pairs = ${JSON.stringify(pairs)};
+    ZombieLab = { ...ZombieLab, step: state => {
+      const tick = state.tick + 1, [hx, hy, zx, zy] = pairs[tick];
+      return { ...state, tick, human: { x: hx, y: hy }, zombie: { x: zx, y: zy } };
+    } };`);
+  succeeded(generate(out, {}, [], script));
+  const replay = JSON.parse(fs.readFileSync(path.join(out, "positions.json"), "utf8"));
+  assert.deepEqual(replay.outcome, { type: "cycle", startTick: 0, repeatTick: 5, period: 5, positionKey: "7,2,2,4" });
+  assert.equal(replay.frames.length, pairs.length);
+});
+
+test("a premature source limit fails instead of claiming the safety bound was reached", (t) => {
+  const { script, out } = fixture(t, 'ZombieLab = { ...ZombieLab, step: state => ({ ...state, tick: state.tick + 1, human: { x: 8, y: 2 }, status: "limit" }) };');
   const result = generate(out, {}, [], script);
-  assert.equal(result.error, undefined);
   assert.equal(result.status, 1);
-  assert.match(result.stderr, /10000.*bound/i);
+  assert.match(result.stderr, /before.*safety/i);
   assert.equal(fs.existsSync(out), false);
 });
 
@@ -135,6 +197,40 @@ test("an infinite individual step is interrupted by the VM timeout", (t) => {
   assert.equal(result.status, 1);
   assert.match(result.stderr, /timed out/i);
   assert.equal(fs.existsSync(out), false);
+});
+
+// Execute the generated page script with a minimal DOM for summary assertions.
+// Real Canvas, interaction and network checks run separately in cached Chromium.
+function summaryText(out) {
+  const html = fs.readFileSync(path.join(out, "index.html"), "utf8");
+  assert.match(html, /Fixed-start capture\/cycle experiment/);
+  assert.match(html, /id="outcome"/);
+  const payload = html.match(/<script id="replay-data" type="application\/json">([\s\S]*?)<\/script>/)[1];
+  const elements = new Map();
+  function element() {
+    return { textContent: "", dataset: {}, width: 800, height: 560,
+      appendChild() {}, setAttribute() {}, addEventListener() {},
+      getContext: () => new Proxy({}, { get: () => () => {} }) };
+  }
+  const document = { createElement: element, getElementById(id) {
+    if (!elements.has(id)) elements.set(id, element());
+    return elements.get(id);
+  } };
+  document.getElementById("replay-data").textContent = payload;
+  vm.runInNewContext(html.match(/<script>([\s\S]*?)<\/script>/)[1], { document }, { timeout: 1000 });
+  return document.getElementById("outcome").textContent;
+}
+
+test("visible experiment summary reports exact cycle, capture, or unresolved outcome", (t) => {
+  const out = temporary(t);
+  succeeded(generate(out));
+  assert.equal(summaryText(out), "Cycle detected · start tick 88 · repeat tick 102 · length 14 ticks · safety limit 10000 ticks.");
+  const capture = fixture(t, 'ZombieLab = { ...ZombieLab, step: state => ({ ...state, tick: state.tick + 1, status: "caught", reason: "exchanged positions" }) };');
+  succeeded(generate(capture.out, {}, [], capture.script));
+  assert.equal(summaryText(capture.out), "Capture at tick 1 · exchanged positions · safety limit 10000 ticks.");
+  const unresolved = safetyFixture(t);
+  succeeded(generate(unresolved.out, {}, [], unresolved.script));
+  assert.equal(summaryText(unresolved.out), "Unresolved at tick 10000 · safety tick limit · safety limit 10000 ticks.");
 });
 
 test("positional output overrides the environment and default is cwd/preview", (t) => {
