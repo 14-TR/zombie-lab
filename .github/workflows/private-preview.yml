@@ -32,13 +32,18 @@ jobs:
           node scripts/test-preview.cjs
           node scripts/test-sweep.cjs
           node scripts/test-sweep-view.cjs
+          node scripts/test-compare.cjs
+          node scripts/test-proof.cjs
       - name: Generate full position replay
         env:
           PREVIEW_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
           node scripts/build-preview.cjs preview
           node scripts/build-sweep.cjs preview
-          cp sweep.html sweep-view.js simulation.js preview/
+          node scripts/build-proof.cjs preview
+          cp sweep.html sweep-view.js simulation.js compare.html compare-view.js preview/
+          mkdir -p preview/experiments
+          cp experiments/ZL-007-start-position-effects.md preview/experiments/
       - name: Upload offline preview
         id: artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

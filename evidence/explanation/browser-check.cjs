@@ -1,0 +1,103 @@
+"use strict";
+const fs = require('node:fs'), path = require('node:path'), http = require('node:http'), assert = require('node:assert/strict');
+const { chromium } = require('/Users/tr/.npm/_npx/e41f203b7505f1fb/node_modules/playwright');
+const root = '/Users/tr/Projects/zombie-lab-explain';
+const frozen = fs.readFileSync(path.join(root, 'evidence/all-starts/sweep.json'), 'utf8');
+const receipt = { harness: __filename, node: process.version, checks: [], requests: [], errors: [] };
+(async () => {
+  const server = http.createServer((req, res) => {
+    const pathname = new URL(req.url, 'http://localhost').pathname;
+    receipt.requests.push(pathname);
+    if (pathname === '/sweep-data.js') { res.setHeader('content-type','text/javascript'); res.end('globalThis.ZombieSweepData = ' + frozen + ';'); return; }
+    const file = path.join(root, pathname);
+    if (!file.startsWith(root + '/') || !fs.existsSync(file) || !fs.statSync(file).isFile()) { res.writeHead(404); res.end('Not found'); return; }
+    res.setHeader('content-type', pathname.endsWith('.js') ? 'text/javascript' : pathname.endsWith('.html') ? 'text/html' : 'text/plain');
+    res.end(fs.readFileSync(file));
+  });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  const browser = await chromium.launch({ headless: true });
+  try {
+    const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+    page.on('pageerror', error => receipt.errors.push(error.message));
+    await page.goto('http://127.0.0.1:' + server.address().port + '/compare.html');
+    assert.equal(await page.locator('#human-a').count(), 1, 'comparison must render');
+    assert.equal(await page.locator('#zombie-start').inputValue(), '42');
+    assert.equal(await page.locator('#human-a').inputValue(), '1');
+    assert.equal(await page.locator('#human-b').inputValue(), '2');
+    assert.equal(await page.locator('#scrubber').getAttribute('max'), '73');
+    assert.equal(await page.locator('#history-a tr').count(), 12);
+    assert.equal(await page.locator('#history-b tr').count(), 74);
+    assert.equal(await page.locator('#world-a polyline').count(), 2);
+    assert.equal(await page.locator('#world-b polyline').count(), 2);
+    assert.equal(await page.evaluate(() => typeof ZombieSweepView), 'undefined');
+    assert.match(await page.locator('#match').innerText(), /Verified/);
+    receipt.checks.push('defaults 42/1/2; capture11/73; full histories/trails; no old explorer mount');
+    await page.locator('#scrubber').fill('50');
+    assert.match(await page.locator('#timeline').innerText(), /50/);
+    assert.match(await page.locator('#readout-a').innerText(), /local tick 11.*frozen/i);
+    assert.match(await page.locator('#readout-b').innerText(), /local tick 50/i);
+    await page.locator('#next').click();
+    assert.equal(await page.locator('#scrubber').inputValue(), '51');
+    await page.locator('#reset').click();
+    assert.equal(await page.locator('#scrubber').inputValue(), '0');
+    await page.locator('#play').click();
+    await page.waitForFunction(() => Number(document.getElementById('scrubber').value) >= 1);
+    await page.locator('#pause').click();
+    const paused = await page.locator('#scrubber').inputValue();
+    await page.waitForTimeout(350);
+    assert.equal(await page.locator('#scrubber').inputValue(), paused);
+    await page.locator('#scrubber').fill('73');
+    assert.equal(await page.locator('#next').isDisabled(), true);
+    receipt.checks.push('shared scrub/next/reset/play/pause and honest early freeze');
+    assert.equal(await page.locator('#capture-map button').count(), 70);
+    assert.equal(await page.locator('#sensitivity-map button').count(), 70);
+    assert.equal(await page.locator('#capture-map [data-human="42"]').isDisabled(), true);
+    await page.locator('#map-target').selectOption('b');
+    await page.locator('#capture-map [data-human="3"]').click();
+    assert.equal(await page.locator('#human-b').inputValue(), '3');
+    await page.locator('#sensitivity-map [data-human="1"]').click();
+    assert.match(await page.locator('#witness').innerText(), /62/);
+    await page.locator('#use-witness').click();
+    assert.equal(await page.locator('#human-a').inputValue(), '1');
+    assert.equal(await page.locator('#human-b').inputValue(), '2');
+    receipt.checks.push('numeric maps, excluded zombie, map target B and cardinal witness62 applied to A/B');
+    await page.locator('#zombie-start').selectOption('1');
+    assert.equal(await page.locator('#human-a option[value="1"]').count(), 0);
+    assert.equal(await page.locator('#capture-map [data-human="1"]').isDisabled(), true);
+    await page.locator('#zombie-start').selectOption('42');
+    await page.locator('#human-a').selectOption('1');
+    await page.locator('#human-b').selectOption('2');
+    await page.locator('#scrubber').fill('50');
+    await page.screenshot({ path:'/tmp/zl007-desktop.png', fullPage:true });
+    await page.setViewportSize({ width: 320, height: 900 });
+    const mobile = await page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth, mapFont: parseFloat(getComputedStyle(document.querySelector('#capture-map button')).fontSize), boardWidth: document.getElementById('world-a').getBoundingClientRect().width }));
+    assert.ok(mobile.scrollWidth <= mobile.width, JSON.stringify(mobile));
+    assert.ok(mobile.mapFont >= 12);
+    assert.ok(mobile.boardWidth >= 270);
+    receipt.mobile = mobile;
+    await page.screenshot({ path:'/tmp/zl007-mobile.png', fullPage:true });
+    receipt.checks.push('zombie reselection excludes same-cell; 320px no page overflow and readable map numerals');
+    await page.evaluate(() => { ZombieSweepData.results.find(r => r.id === 'z42-h1').stopTick++; document.getElementById('human-a').dispatchEvent(new Event('change')); });
+    assert.match(await page.locator('#error').innerText(), /Replay mismatch/);
+    for (const id of ['play','pause','next','reset','scrubber']) assert.equal(await page.locator('#' + id).isDisabled(), true, id);
+    assert.equal(await page.locator('#world-a').innerHTML(), '');
+    assert.equal(await page.locator('#history-a tr').count(), 0);
+    assert.equal(await page.locator('#match').isHidden(), true);
+    receipt.checks.push('mismatch visible; stale boards/history cleared and playback disabled');
+    for (const [name, body] of [['missing', ''], ['invalid', 'globalThis.ZombieSweepData = {results: []};']]) {
+      await page.route('**/sweep-data.js', route => route.fulfill({ contentType:'text/javascript', body }));
+      await page.reload();
+      assert.equal(await page.locator('#error').isVisible(), true, name);
+      assert.equal(await page.locator('#play').isDisabled(), true, name);
+      await page.unroute('**/sweep-data.js');
+    }
+    receipt.checks.push('missing and invalid data visibly fail closed');
+    assert.deepEqual(receipt.errors, []);
+    assert.equal(receipt.requests.some(p => p.includes('proof.json')), false);
+    receipt.ok = true;
+  } finally {
+    await browser.close(); await new Promise(resolve => server.close(resolve));
+    fs.writeFileSync('/tmp/zl007-browser.json', JSON.stringify(receipt, null, 2) + '\n');
+  }
+  console.log(JSON.stringify(receipt, null, 2));
+})().catch(error => { console.error(error); process.exitCode = 1; });

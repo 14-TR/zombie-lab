@@ -1,0 +1,32 @@
+{
+  "harness": "/private/tmp/zl007-browser.cjs",
+  "node": "v26.8.1",
+  "checks": [
+    "defaults 42/1/2; capture11/73; full histories/trails; no old explorer mount",
+    "shared scrub/next/reset/play/pause and honest early freeze",
+    "numeric maps, excluded zombie, map target B and cardinal witness62 applied to A/B",
+    "zombie reselection excludes same-cell; 320px no page overflow and readable map numerals",
+    "mismatch visible; stale boards/history cleared and playback disabled",
+    "missing and invalid data visibly fail closed"
+  ],
+  "requests": [
+    "/compare.html",
+    "/simulation.js",
+    "/sweep-data.js",
+    "/compare-view.js",
+    "/compare.html",
+    "/simulation.js",
+    "/compare-view.js",
+    "/compare.html",
+    "/simulation.js",
+    "/compare-view.js"
+  ],
+  "errors": [],
+  "mobile": {
+    "width": 320,
+    "scrollWidth": 320,
+    "mapFont": 13,
+    "boardWidth": 278
+  },
+  "ok": true
+}

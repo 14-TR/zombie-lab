@@ -1,0 +1,264 @@
+TAP version 13
+# Subtest: indexes every frozen scalar row without running trajectories or mutating data
+ok 1 - indexes every frozen scalar row without running trajectories or mutating data
+  ---
+  duration_ms: 7.312625
+  type: 'test'
+  ...
+# Subtest: rejects missing, malformed, duplicate, noncapture or inconsistent frozen rows safely
+ok 2 - rejects missing, malformed, duplicate, noncapture or inconsistent frozen rows safely
+  ---
+  duration_ms: 24.508083
+  type: 'test'
+  ...
+# Subtest: one-cell sensitivity and witnesses match an independent exhaustive cardinal-neighbor scan
+ok 3 - one-cell sensitivity and witnesses match an independent exhaustive cardinal-neighbor scan
+  ---
+  duration_ms: 13.586333
+  type: 'test'
+  ...
+# Subtest: synchronized production A/B replay holds tick 11 while the shared timeline reaches 73
+ok 4 - synchronized production A/B replay holds tick 11 while the shared timeline reaches 73
+  ---
+  duration_ms: 9.437042
+  type: 'test'
+  ...
+# Subtest: standalone classic page exposes accessible comparison controls and source links without auto-mounting sweep
+ok 5 - standalone classic page exposes accessible comparison controls and source links without auto-mounting sweep
+  ---
+  duration_ms: 0.549959
+  type: 'test'
+  ...
+# Subtest: combined comparison preserves schema and both complete production trajectories under adjacency capture
+ok 6 - combined comparison preserves schema and both complete production trajectories under adjacency capture
+  ---
+  duration_ms: 54.549334
+  type: 'test'
+  ...
+# Subtest: treatment changes only human.x from 7 to 6 under the identical production adjacency rule
+ok 7 - treatment changes only human.x from 7 to 6 under the identical production adjacency rule
+  ---
+  duration_ms: 31.7835
+  type: 'test'
+  ...
+# Subtest: fixed source and metadata generate byte-identical replay exports
+ok 8 - fixed source and metadata generate byte-identical replay exports
+  ---
+  duration_ms: 60.791792
+  type: 'test'
+  ...
+# Subtest: CSV contains the ordered positions and terminal reason for every production tick
+ok 9 - CSV contains the ordered positions and terminal reason for every production tick
+  ---
+  duration_ms: 36.003417
+  type: 'test'
+  ...
+# Subtest: offline HTML embeds exact replay data and safely preserves hostile commit metadata
+ok 10 - offline HTML embeds exact replay data and safely preserves hostile commit metadata
+  ---
+  duration_ms: 31.397458
+  type: 'test'
+  ...
+# Subtest: CSV correctly quotes commas, quotes, and newlines in state text
+ok 11 - CSV correctly quotes commas, quotes, and newlines in state text
+  ---
+  duration_ms: 25.104583
+  type: 'test'
+  ...
+# Subtest: a missing or skipped tick fails instead of publishing an incomplete trajectory
+ok 12 - a missing or skipped tick fails instead of publishing an incomplete trajectory
+  ---
+  duration_ms: 61.557541
+  type: 'test'
+  ...
+# Subtest: unknown terminal status is not silently accepted
+ok 13 - unknown terminal status is not silently accepted
+  ---
+  duration_ms: 22.953208
+  type: 'test'
+  ...
+# Subtest: a unique synthetic trajectory reports unresolved at the inclusive 10000-tick safety endpoint
+ok 14 - a unique synthetic trajectory reports unresolved at the inclusive 10000-tick safety endpoint
+  ---
+  duration_ms: 1803.346417
+  type: 'test'
+  ...
+# Subtest: capture then cycle take precedence over safety on tick 10000
+ok 15 - capture then cycle take precedence over safety on tick 10000
+  ---
+  duration_ms: 2587.151833
+  type: 'test'
+  ...
+# Subtest: cycle key distinguishes all four coordinates and remembers tick zero
+ok 16 - cycle key distinguishes all four coordinates and remembers tick zero
+  ---
+  duration_ms: 23.610292
+  type: 'test'
+  ...
+# Subtest: a premature source limit fails instead of claiming the safety bound was reached
+ok 17 - a premature source limit fails instead of claiming the safety bound was reached
+  ---
+  duration_ms: 22.305083
+  type: 'test'
+  ...
+# Subtest: an infinite individual step is interrupted by the VM timeout
+ok 18 - an infinite individual step is interrupted by the VM timeout
+  ---
+  duration_ms: 1024.224416
+  type: 'test'
+  ...
+# Subtest: replay visibly compares labeled control and treatment starts and outcomes side by side
+ok 19 - replay visibly compares labeled control and treatment starts and outcomes side by side
+  ---
+  duration_ms: 34.2085
+  type: 'test'
+  ...
+# Subtest: visible experiment summary reports exact cycle, capture, or unresolved outcome
+ok 20 - visible experiment summary reports exact cycle, capture, or unresolved outcome
+  ---
+  duration_ms: 986.35175
+  type: 'test'
+  ...
+# Subtest: positional output overrides the environment and default is cwd/preview
+ok 21 - positional output overrides the environment and default is cwd/preview
+  ---
+  duration_ms: 60.512208
+  type: 'test'
+  ...
+# Subtest: selected orthogonally adjacent starts preserve one production-normalized tick-zero frame
+ok 22 - selected orthogonally adjacent starts preserve one production-normalized tick-zero frame
+  ---
+  duration_ms: 1.34475
+  type: 'test'
+  ...
+# Subtest: selected baseline follows every actual production step through its stopping endpoint
+ok 23 - selected baseline follows every actual production step through its stopping endpoint
+  ---
+  duration_ms: 3.208292
+  type: 'test'
+  ...
+# Subtest: replay rejects a row whose outcome, endpoint tick or cycle fields disagree
+ok 24 - replay rejects a row whose outcome, endpoint tick or cycle fields disagree
+  ---
+  duration_ms: 0.745625
+  type: 'test'
+  ...
+# Subtest: diagonal starts are not tick-zero capture and cutoff keeps the moving endpoint
+ok 25 - diagonal starts are not tick-zero capture and cutoff keeps the moving endpoint
+  ---
+  duration_ms: 0.379334
+  type: 'test'
+  ...
+# Subtest: index exposes every human start for each zombie without executing trajectories
+ok 26 - index exposes every human start for each zombie without executing trajectories
+  ---
+  duration_ms: 0.774084
+  type: 'test'
+  ...
+# Subtest: runner preserves first-repeat endpoint and capture/cycle priority at the safety boundary
+ok 27 - runner preserves first-repeat endpoint and capture/cycle priority at the safety boundary
+  ---
+  duration_ms: 0.33875
+  type: 'test'
+  ...
+# Subtest: selected replay rejects unknown production statuses and premature terminal limits
+ok 28 - selected replay rejects unknown production statuses and premature terminal limits
+  ---
+  duration_ms: 0.389584
+  type: 'test'
+  ...
+# Subtest: offline explorer keeps classic script order and provides selection, playback and complete history
+ok 29 - offline explorer keeps classic script order and provides selection, playback and complete history
+  ---
+  duration_ms: 0.223417
+  type: 'test'
+  ...
+# Subtest: exhaustive sweep covers every distinct ordered start exactly once in row-major order
+ok 30 - exhaustive sweep covers every distinct ordered start exactly once in row-major order
+  ---
+  duration_ms: 943.0355
+  type: 'test'
+  ...
+# Subtest: CLI writes only the two safe data artifacts and preserves existing replay files
+ok 31 - CLI writes only the two safe data artifacts and preserves existing replay files
+  ---
+  duration_ms: 1084.204292
+  type: 'test'
+  ...
+# Subtest: single-start adjudicator preserves the baseline, initial capture, cutoff and frozen input
+ok 32 - single-start adjudicator preserves the baseline, initial capture, cutoff and frozen input
+  ---
+  duration_ms: 1.885458
+  type: 'test'
+  ...
+# Subtest: all and only adjacent starts capture at tick zero; both baseline rows capture at 73
+ok 33 - all and only adjacent starts capture at tick zero; both baseline rows capture at 73
+  ---
+  duration_ms: 977.927
+  type: 'test'
+  ...
+# Subtest: fixed source and metadata repeat byte-for-byte without mutation or bulk trajectories
+ok 34 - fixed source and metadata repeat byte-for-byte without mutation or bulk trajectories
+  ---
+  duration_ms: 3782.301125
+  type: 'test'
+  ...
+# Subtest: first occurrence uses both ordered positions and records a nonzero cycle start
+ok 35 - first occurrence uses both ordered positions and records a nonzero cycle start
+  ---
+  duration_ms: 0.853334
+  type: 'test'
+  ...
+# Subtest: capture precedes cycle, which precedes unresolved at the inclusive tick 10000 bound
+ok 36 - capture precedes cycle, which precedes unresolved at the inclusive tick 10000 bound
+  ---
+  duration_ms: 7.502708
+  type: 'test'
+  ...
+# Subtest: malformed progress, positions and terminal states are rejected rather than published
+ok 37 - malformed progress, positions and terminal states are rejected rather than published
+  ---
+  duration_ms: 0.812833
+  type: 'test'
+  ...
+# Subtest: unsafe or noninteger safety caps and nonstring metadata are rejected
+ok 38 - unsafe or noninteger safety caps and nonstring metadata are rejected
+  ---
+  duration_ms: 2.337916
+  type: 'test'
+  ...
+# Subtest: CLI output argument wins over environment and default is cwd/preview
+ok 39 - CLI output argument wins over environment and default is cwd/preview
+  ---
+  duration_ms: 2558.699458
+  type: 'test'
+  ...
+# PASS initial world is one human and one zombie on a bounded grid
+# PASS initial cardinal adjacency is caught before movement, even at the limit
+# PASS one pure tick uses the same old state for both decisions
+# PASS shared destination is caught and further ticks stop
+# PASS crossing remains caught, but initial adjacency now stops before a swap
+# PASS all four cardinal post-move adjacencies capture before the tick limit
+# PASS diagonal neighbors are not captured before or after simultaneous moves
+# PASS explicit tick limit stops exactly, with capture taking precedence
+# PASS existing contact stops without moving, including a one-cell board
+# PASS original default start reaches the manual cap and extended capture deterministically
+# PASS resolver rejects out-of-bounds, diagonal, fractional and long moves
+# PASS all starts on 1×1 through 4×4 boards stay bounded, pure and repeatable
+# PASS following and staying cannot evade existing cardinal adjacency
+# 13/13 passed
+# Subtest: test-node.cjs
+ok 5 - test-node.cjs
+  ---
+  duration_ms: 92.248875
+  type: 'test'
+  ...
+1..40
+# tests 40
+# suites 0
+# pass 40
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9397.7935

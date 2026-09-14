@@ -1,0 +1,43 @@
+{
+  "certificateVerified": true,
+  "fullPositionDomain": 4900,
+  "distinctRows": 4830,
+  "overlapTerminalExtension": 70,
+  "terminal": 316,
+  "nonterminal": 4584,
+  "terminalSuccessors": 4,
+  "overlapSuccessors": 0,
+  "terminalPrecedence": 316,
+  "successorPositionTickIndependent": 4584,
+  "verifiedProductionReplays": 4830,
+  "replaySteps": 252572,
+  "maximumRank": 77,
+  "sweepCap": 10000,
+  "manualAppDefaultCap": 40,
+  "rowsOverDefaultCap": 3549,
+  "defaultRuns": [
+    {
+      "zombieId": 42,
+      "humanId": 1,
+      "tickLimit": 40,
+      "status": "caught",
+      "stopTick": 11
+    },
+    {
+      "zombieId": 42,
+      "humanId": 2,
+      "tickLimit": 40,
+      "status": "limit",
+      "stopTick": 40
+    }
+  ],
+  "proofScope": "Fixed 10x7 ordered positions, unchanged deterministic memoryless policy, initial running status, cap absent or sufficient remaining ticks. Complete table plus explicit shared-cell rank-zero extension.",
+  "proof": "Initial contact iff rank=0. Every nonterminal production successor remains in domain with rank exactly one lower. Induction gives first contact after exactly rank steps; ranks <=77 preclude nonterminal cycles. Production contact priority covers capture at the cap.",
+  "limitations": [
+    "The 4830-row table omits 70 same-cell terminal states; explicitly extend them or verify closure for the restricted start domain.",
+    "Position key is ordered and collision-free (zombieId*70+humanId); fixed dimensions, policy, tie order and no hidden history are essential.",
+    "Production state includes tick, tickLimit and status. A position-only certificate describes uncapped positional dynamics, not arbitrary halted/capped states.",
+    "10000 is a safety cap, not the mathematical proof; default40 truncates some capture times. For fresh starts cap>=77 suffices, and at later starts remaining cap must cover the rank.",
+    "Rank must be a finite nonnegative integer, zero iff terminal, complete with unique IDs; missing successors/outcomes cannot be silently treated as rank0."
+  ]
+}
