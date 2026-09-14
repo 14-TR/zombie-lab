@@ -23,39 +23,60 @@
     assert(second !== state && second.human !== state.human, "Reset must create fresh state");
   });
 
+  test("initial cardinal adjacency is caught before movement, even at the limit", function () {
+    for (const zombie of [{ x: 1, y: 0 }, { x: 2, y: 1 }, { x: 1, y: 2 }, { x: 0, y: 1 }]) {
+      for (const tick of [0, 3]) for (const tickLimit of [tick, 40]) {
+        const state = Object.assign(root.ZombieLab.initialState(), {
+          width: 3, height: 3, tick, tickLimit,
+          human: { x: 1, y: 1 }, zombie
+        });
+        const before = JSON.stringify(state);
+        for (const next of [root.ZombieLab.step(state), root.ZombieLab.resolveTick(state, {})]) {
+          equal(next.status, "caught");
+          equal(next.reason, "already orthogonally adjacent");
+          equal(next.tick, tick, "Pre-step capture must not consume a tick");
+          equal(next.human, state.human); equal(next.zombie, zombie);
+          equal(next.decisions, null);
+          equal(root.ZombieLab.step(next), next);
+        }
+        equal(JSON.stringify(state), before);
+      }
+    }
+  });
+
   test("one pure tick uses the same old state for both decisions", function () {
     assert(typeof root.ZombieLab.step === "function", "Missing step");
     const state = root.ZombieLab.initialState();
     state.width = 3; state.height = 3;
-    state.human = Object.freeze({ x: 1, y: 1 });
-    state.zombie = Object.freeze({ x: 0, y: 1 });
+    state.human = Object.freeze({ x: 0, y: 0 });
+    state.zombie = Object.freeze({ x: 2, y: 0 });
     Object.freeze(state);
     const before = JSON.stringify(state);
     const next = root.ZombieLab.step(state);
-    equal(next.human, { x: 1, y: 0 }, "Human flees north on a tie");
-    equal(next.zombie, { x: 1, y: 1 }, "Zombie targets OLD human, not its new destination");
+    equal(next.human, { x: 0, y: 1 }, "Human flees south");
+    equal(next.zombie, { x: 1, y: 0 }, "Zombie targets OLD human; new human would select south on a tie");
     equal(next.tick, 1);
     equal(JSON.stringify(state), before, "Input state changed");
-    equal(next.decisions.human, { direction: "north", distance: 2 });
-    equal(next.decisions.zombie, { direction: "east", distance: 0 });
+    equal(next.decisions.human, { direction: "south", distance: 3 });
+    equal(next.decisions.zombie, { direction: "west", distance: 1 });
   });
 
   test("shared destination is caught and further ticks stop", function () {
     assert(typeof root.ZombieLab.resolveTick === "function", "Missing resolveTick");
     const state = Object.assign(root.ZombieLab.initialState(), {
-      width: 2, height: 1, human: { x: 1, y: 0 }, zombie: { x: 0, y: 0 }
+      width: 3, height: 1, human: { x: 2, y: 0 }, zombie: { x: 0, y: 0 }
     });
-    const next = root.ZombieLab.step(state);
+    const next = root.ZombieLab.resolveTick(state, { human: { x: 1, y: 0 }, zombie: { x: 1, y: 0 } });
     equal(next.status, "caught");
     equal(next.reason, "shared destination");
     equal(next.tick, 1);
     equal(next.human, next.zombie);
-    equal(next.decisions.human.direction, "stay");
+    equal(next.decisions.human.direction, "west");
     equal(root.ZombieLab.step(next), next, "Terminal step must not advance");
     equal(root.ZombieLab.resolveTick(next, { human: next.human, zombie: next.zombie }), next);
   });
 
-  test("exchanged positions are caught even without a shared destination", function () {
+  test("crossing remains caught, but initial adjacency now stops before a swap", function () {
     const state = Object.assign(root.ZombieLab.initialState(), {
       width: 2, height: 1, human: { x: 1, y: 0 }, zombie: { x: 0, y: 0 }
     });
@@ -63,12 +84,43 @@
     const moves = Object.freeze({ human: Object.freeze({ x: 0, y: 0 }), zombie: Object.freeze({ x: 1, y: 0 }) });
     const next = root.ZombieLab.resolveTick(state, moves);
     equal(next.status, "caught");
-    equal(next.reason, "exchanged positions");
-    equal(next.tick, 1);
-    equal(next.human, moves.human);
-    equal(next.zombie, moves.zombie);
+    equal(next.reason, "already orthogonally adjacent");
+    equal(next.tick, 0);
+    equal(next.human, state.human);
+    equal(next.zombie, state.zombie);
     equal(JSON.stringify(state), before);
     equal(root.ZombieLab.step(next), next);
+  });
+
+  test("all four cardinal post-move adjacencies capture before the tick limit", function () {
+    for (const [dx, dy] of [[0, -1], [1, 0], [0, 1], [-1, 0]]) {
+      for (const tickLimit of [1, 40]) {
+        const state = Object.assign(root.ZombieLab.initialState(), {
+          width: 5, height: 5, tickLimit, human: { x: 2, y: 2 },
+          zombie: { x: 2 + 2 * dx, y: 2 + 2 * dy }
+        });
+        const next = root.ZombieLab.resolveTick(state, {
+          human: state.human, zombie: { x: 2 + dx, y: 2 + dy }
+        });
+        equal(next.status, "caught"); equal(next.tick, 1);
+        equal(next.reason, "orthogonally adjacent");
+        equal(root.ZombieLab.step(next), next);
+      }
+    }
+  });
+
+  test("diagonal neighbors are not captured before or after simultaneous moves", function () {
+    for (const [dx, dy] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) {
+      const state = Object.assign(root.ZombieLab.initialState(), {
+        width: 5, height: 5, human: { x: 2, y: 2 }, zombie: { x: 2 + dx, y: 2 + dy }
+      });
+      const stay = root.ZombieLab.resolveTick(state, { human: state.human, zombie: state.zombie });
+      equal(stay.tick, 1); equal(stay.status, "running"); equal(stay.reason, "");
+      const approach = Object.assign({}, state, { zombie: { x: 2 + 2 * dx, y: 2 + dy } });
+      const next = root.ZombieLab.resolveTick(approach, { human: state.human, zombie: state.zombie });
+      equal(next.tick, 1); equal(next.status, "running");
+      equal(root.ZombieLab.step(Object.assign({}, state, { tickLimit: 0 })).status, "limit");
+    }
   });
 
   test("explicit tick limit stops exactly, with capture taking precedence", function () {
@@ -95,13 +147,32 @@
     const next = root.ZombieLab.step(state);
     equal(next.tick, 0);
     equal(next.status, "caught");
-    equal(next.reason, "already in contact");
+    equal(next.reason, "already in shared cell");
     equal(next.human, state.human);
     equal(next.zombie, state.zombie);
     equal(state.status, "running");
     const zeroLimit = Object.assign(root.ZombieLab.initialState(), { tickLimit: 0 });
     equal(root.ZombieLab.step(zeroLimit).tick, 0);
     equal(root.ZombieLab.step(zeroLimit).status, "limit");
+  });
+
+  test("original default start reaches the manual cap and extended capture deterministically", function () {
+    let manual = root.ZombieLab.initialState();
+    for (let i = 0; i < 40; i += 1) manual = root.ZombieLab.step(manual);
+    equal(manual.tick, 40); equal(manual.status, "limit");
+    equal(manual.human, { x: 0, y: 2 }); equal(manual.zombie, { x: 5, y: 1 });
+    for (const tickLimit of [73, 10000]) {
+      let state = Object.assign(root.ZombieLab.initialState(), { tickLimit });
+      let repeat = JSON.parse(JSON.stringify(state));
+      for (let tick = 1; tick <= 73; tick += 1) {
+        state = root.ZombieLab.step(state); repeat = root.ZombieLab.step(repeat);
+        equal(state, repeat); equal(state.tick, tick);
+        equal(state.status, tick === 73 ? "caught" : "running");
+      }
+      equal(state.reason, "orthogonally adjacent");
+      equal(state.human, { x: 0, y: 6 }); equal(state.zombie, { x: 1, y: 6 });
+      equal(root.ZombieLab.step(state), state);
+    }
   });
 
   test("resolver rejects out-of-bounds, diagonal, fractional and long moves", function () {
@@ -143,6 +214,9 @@
             assert(Math.abs(p.x - state[name].x) + Math.abs(p.y - state[name].y) <= 1, "Non-neighbor movement");
           }
           assert(next.tick <= next.tickLimit, "Tick limit exceeded");
+          const separation = Math.abs(next.human.x - next.zombie.x) + Math.abs(next.human.y - next.zombie.y);
+          if (next.status === "running") assert(separation > 1, "Running frame violates capture radius");
+          if (next.status === "caught") assert(separation <= 1, "Capture exceeds orthogonal radius");
           if (state.status !== "running") equal(next, state, "Terminal state changed");
           state = next;
         }
@@ -151,12 +225,15 @@
     }
   });
 
-  test("following into a vacated cell is not capture unless positions swap", function () {
+  test("following and staying cannot evade existing cardinal adjacency", function () {
     const state = Object.assign(root.ZombieLab.initialState(), {
       width: 3, height: 1, human: { x: 0, y: 0 }, zombie: { x: 1, y: 0 }
     });
-    equal(root.ZombieLab.resolveTick(state, { human: { x: 1, y: 0 }, zombie: { x: 2, y: 0 } }).status, "running");
-    equal(root.ZombieLab.resolveTick(state, { human: state.human, zombie: state.zombie }).status, "running");
+    for (const moves of [{ human: { x: 1, y: 0 }, zombie: { x: 2, y: 0 } }, { human: state.human, zombie: state.zombie }]) {
+      const next = root.ZombieLab.resolveTick(state, moves);
+      equal(next.status, "caught"); equal(next.tick, 0);
+      equal(next.reason, "already orthogonally adjacent");
+    }
   });
 
   if (typeof document !== "undefined") {

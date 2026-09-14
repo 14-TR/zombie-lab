@@ -1,0 +1,5 @@
+{
+  "output": "PASS initial world is one human and one zombie on a bounded grid\nFAIL initial cardinal adjacency is caught before movement, even at the limit: Values differ: \"limit\" !== \"caught\"\nPASS one pure tick uses the same old state for both decisions\nPASS shared destination is caught and further ticks stop\nFAIL crossing remains caught, but initial adjacency now stops before a swap: Values differ: \"exchanged positions\" !== \"already orthogonally adjacent\"\nPASS explicit tick limit stops exactly, with capture taking precedence\nFAIL existing contact stops without moving, including a one-cell board: Values differ: \"already in contact\" !== \"already in shared cell\"\nPASS resolver rejects out-of-bounds, diagonal, fractional and long moves\nPASS all starts on 1\u00d71 through 4\u00d74 boards stay bounded, pure and repeatable\nFAIL following and staying cannot evade existing cardinal adjacency: Values differ: \"running\" !== \"caught\"\n6/10 passed",
+  "exit_code": 1,
+  "error": null
+}

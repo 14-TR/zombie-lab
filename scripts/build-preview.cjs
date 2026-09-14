@@ -67,8 +67,8 @@ tr[aria-current="true"] { background: #dcedf7; font-weight: 700; }
 </head>
 <body>
 <h1>Zombie Lab · Offline replay</h1>
-<h2>Position-only experiment · human one cell west</h2>
-<p>Only human.x changes: 7 → 6. Zombie stays (2, 4); board, movement and capture rules are unchanged. Both runs use the same experiment-only safety limit of 10000 ticks (manual app: 40). Stop at capture, first repeated position pair, or safety limit, in that order.</p>
+<h2>ZL-005 · Position and adjacency integration</h2>
+<p>Combined comparison: control H (7, 2), treatment H (6, 2); Z stays (2, 4). Between these runs only human.x changes: 7 → 6. Both runs use the production shared-cell or orthogonally adjacent capture rule (Manhattan distance 1, not diagonal), checked before movement (including tick 0) and after simultaneous moves; exchanged positions still count. Board, movement and tie-breaking are unchanged. The common experiment-only safety limit is 10000 ticks (manual app: 40). Stop at capture, first repeated position pair, or safety limit, in that order. This integration is not the original ZL-003 position-only or ZL-004 capture-only result; those reports and evidence remain historical snapshots.</p>
 <table id="comparison"><thead><tr><th scope="col">Control</th><th scope="col">Treatment (playback)</th></tr></thead><tbody>
 <tr><td id="control-start"></td><td id="treatment-start"></td></tr>
 <tr><td id="control-outcome"></td><td id="outcome" role="status"></td></tr>
@@ -167,7 +167,7 @@ function main() {
   const replay = {
     schemaVersion: 2,
     metadata: { commit: process.env.PREVIEW_COMMIT ?? "unknown", ref: process.env.PREVIEW_REF ?? "", repository: process.env.PREVIEW_REPOSITORY ?? "" },
-    experiment: { name: "human-one-cell-west", safetyTickLimit: SAFETY_TICK_LIMIT, changedField: "human.x", playback: "treatment" },
+    experiment: { name: "human-one-cell-west-adjacent-capture", safetyTickLimit: SAFETY_TICK_LIMIT, changedField: "human.x", playback: "treatment", captureRule: "shared-cell-or-orthogonally-adjacent-or-crossing" },
     control: { initialState: control.frames[0], ...control },
     treatment: { initialState: treatment.frames[0], outcome: treatment.outcome },
     ...treatment

@@ -36,11 +36,13 @@
   }
   function stopped(state) {
     if (state.status !== "running") return state;
-    if (same(state.human, state.zombie)) return Object.assign({}, state, { status: "caught", reason: "already in contact" });
+    if (distance(state.human, state.zombie) <= 1) return Object.assign({}, state, {
+      status: "caught", reason: same(state.human, state.zombie) ? "already in shared cell" : "already orthogonally adjacent"
+    });
     if (state.tick >= state.tickLimit) return Object.assign({}, state, { status: "limit", reason: "tick limit" });
     return null;
   }
-  // Separate resolution lets tests exercise contact independently of policy.
+  // Separate resolution tests shared-cell/adjacent/crossing capture independently of policy.
   function resolveTick(state, moves) {
     const terminal = stopped(state);
     if (terminal) return terminal;
@@ -53,7 +55,8 @@
     const human = { x: moves.human.x, y: moves.human.y };
     const zombie = { x: moves.zombie.x, y: moves.zombie.y };
     const reason = same(human, zombie) ? "shared destination" :
-      (same(human, state.zombie) && same(zombie, state.human) ? "exchanged positions" : "");
+      (same(human, state.zombie) && same(zombie, state.human) ? "exchanged positions" :
+        (distance(human, zombie) === 1 ? "orthogonally adjacent" : ""));
     return Object.assign({}, state, {
       tick: state.tick + 1, human, zombie,
       status: reason ? "caught" : (state.tick + 1 >= state.tickLimit ? "limit" : "running"),

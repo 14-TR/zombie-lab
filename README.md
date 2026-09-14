@@ -1,112 +1,74 @@
-# Zombie Lab · ZL-001
+# Zombie Lab · ZL-005 position and adjacency integration
 
-An atomic, deterministic human-versus-zombie experiment. One human, one zombie, one tick per click. No training or learned behavior.
+One human, one zombie, deterministic simultaneous movement. The current replay combines the position comparison from main with PR4's production adjacent-capture rule. **Both runs use adjacency capture:** control H `(7, 2)`, treatment H `(6, 2)`, Z `(2, 4)` in both. Only `human.x` differs between the two current initial states. This is a **new combined integration**, not a relabeling of either original one-factor experiment. See [ZL-005 results and reproduction](experiments/ZL-005-position-adjacency.md).
 
-## Launch
+## Launch and manual controls
 
-Double-click **`index.html`**, or open it directly in a modern browser:
+Open `index.html` directly in a modern browser, keeping `simulation.js` and `app.js` beside it. No install, server, account or network is needed. **Step** advances one tick; **Reset** restores the initial world. Tab and Enter/Space work on native buttons. The blue H circle and red Z square have text coordinates and decision explanations; shared-cell agents are drawn side-by-side.
 
-```text
-file:///Users/tr/Projects/zombie-lab/index.html
-```
+The manual app keeps H `(7, 2)`, Z `(2, 4)` and its **40-tick cap**. It reaches that limit, not capture. The two-condition comparison is the generated offline replay, not a new manual-app mode.
 
-On this Mac, `open /Users/tr/Projects/zombie-lab/index.html` uses the default browser. No install, build command, web server, account, or network connection is needed. Keep `index.html`, `simulation.js`, and `app.js` together.
+## World and production rules
 
-- **Step** advances exactly one tick. There is no automatic clock.
-- **Reset** restores the identical initial world and clears the decision explanation.
-- Native buttons also work with Tab and Enter/Space.
-- The Canvas shows a blue **H** circle and a red **Z** square. The text below it reports coordinates, tick, terminal reason, and each decision. Co-located agents are drawn side-by-side inside their shared cell so neither label hides the other.
+- Bounded 10×7 grid; no obstacles or wrapping. Integer coordinates; `(0, 0)` at top-left, x right, y down.
+- Legal actions: north, east, south, west or stay, at most one cell per tick.
+- Both choose from the **same old state**. Human maximizes Manhattan distance to the old zombie; zombie minimizes distance to the old human. Ties keep the first legal action in **north → east → south → west → stay** order; moves resolve simultaneously.
+- Capture means a **shared cell or orthogonally adjacent cells**, Manhattan distance ≤1, **not diagonal**. Check before movement (including tick 0) and after simultaneous movement. Initial contact consumes no tick, with `already in shared cell` or `already orthogonally adjacent`. Post-move reasons remain `shared destination`, `exchanged positions`, or `orthogonally adjacent`. Legal one-cell swaps already start adjacent and are caught by the pre-check.
+- Capture precedes the tick limit; terminal states cannot advance. `simulation.js` is unchanged from PR4 during integration; no policies, randomness, memory, speeds or population were added.
 
-## World and rules
+## Actual combined results
 
-| Setting | Value |
-| --- | --- |
-| Grid | 10 columns × 7 rows, bounded, no wrapping or obstacles |
-| Initial human | `(7, 2)` |
-| Initial zombie | `(2, 4)` |
-| Tick limit | 40 |
-| Coordinates | Integers; `(0, 0)` is top-left, x increases right, y increases down |
-| Legal action | North, east, south, west, or stay; at most one cell per tick |
+Both extended runs copy production `initialState()` into separate Node VM contexts, set the common experiment-only `tickLimit: 10000`, and change only treatment `human.x` to 6.
 
-Both agents choose using the **same old state**. The human chooses the legal destination with greatest Manhattan distance to the old zombie position; the zombie chooses the destination with smallest distance to the old human position. Manhattan distance is `abs(x1 - x2) + abs(y1 - y2)`.
+| Condition | Initial H / Z | Executed outcome | Endpoint H / Z | Frames |
+| --- | --- | --- | --- | --- |
+| Control | `(7, 2)` / `(2, 4)` | Capture at tick **73**, `orthogonally adjacent` | `(0, 6)` / `(1, 6)` | **74**, ticks 0–73 |
+| Treatment | `(6, 2)` / `(2, 4)` | Capture at tick **73**, `orthogonally adjacent` | `(0, 6)` / `(1, 6)` | **74**, ticks 0–73 |
 
-Ties keep the first legal action in **north → east → south → west → stay** order. Choices are resolved simultaneously. A **shared destination** or **exchanged positions** counts as caught. Merely moving into a cell the other agent vacated does not count unless the agents swap. Capture takes precedence over reaching the tick limit on that tick. Existing contact is already terminal and does not consume a tick. Capture and tick-limit states cannot advance.
+No earlier capture or repeated ordered position pair occurs. Positions differ initially, then coincide from tick 11 through capture; incoming decisions at tick 11 still differ. Each trajectory was independently recomputed from production stepping, not assumed equal. These are two deterministic conditions, not independent statistical samples. This neighboring start changes the transient but not the observed capture outcome/timing under the current rule. No general survival, intelligence, probability or significance claim follows.
 
-The default trial was observed to reach the 40-tick limit, not capture. This is a transparent local-distance heuristic, not evidence of intelligence or general survival ability. The shared-destination and crossing cases are deliberately covered by small test fixtures; the default flee policy need not naturally produce a crossing.
+## Build, replay and data contract
 
-## Small stack
-
-**Runtime:** one HTML file (inline CSS), two classic JavaScript files, native Canvas 2D. No ES modules, fetch, package manager, framework, assets, models, API, database, persistence, telemetry, workers, timers, recurring work, or deployment. State is held only in the page's JavaScript memory; reload resets it. Browser/system fonts are used.
-
-- `simulation.js`: pure `ZombieLab.initialState()`, `ZombieLab.step(state)`, and `ZombieLab.resolveTick(state, moves)`.
-- `step` chooses both moves from the old state, then calls the same resolver tested for crossing/collision.
-- `resolveTick` accepts `{human: {x, y}, zombie: {x, y}}` for testing legal explicit moves independently of policy. It rejects out-of-bounds, diagonal, fractional, and long moves. This is not a second UI mode.
-- The core expects valid states: positive integer dimensions, in-bounds integer positions, nonnegative integer tick/limit, and the documented status values. No arbitrary state editor/importer is provided.
-- `app.js`: read-only drawing and event-driven controls. Drawing never steps the world; snapshots do not expose mutable UI state.
-- Terminal `step` may return the input object unchanged; purity means no input writes, not mandatory cloning of unchanged data.
-
-## Run tests
-
-Open **`tests.html`** directly from disk, or follow **Run browser tests** in the app. Reload to rerun. The page reports each result and a total. It tests core transitions plus actual browser Canvas and DOM controls.
-
-Optional, using an already-installed Node (not an app dependency):
+With an already-installed Node 22+:
 
 ```sh
 node test-node.cjs
-```
-
-The Node run covers core rules only. It deliberately does **not** pretend to test Canvas or DOM. Browser checks cover drawing/state independence, controls, reset and terminal stop. Exhaustive small-board checks cover all paired starting cells on every rectangular board from 1×1 through 4×4, including narrow and one-cell cases; they are regression coverage, not a proof for every possible world.
-
-`evidence/` contains actual JSON execution receipts, screenshots, and verification-only scripts. The scripts reuse an existing local Playwright Core and Chromium supplied as arguments; they do not install anything and are not required to use the app. Commands, tool versions, timings, exact source bytes and coverage are recorded in `RECEIPT.md` and the evidence files.
-
-## Resource and verification boundaries
-
-Runtime package dependencies: **0**. Observed app page loads: **3 local files, 0 external network requests**. This count is page-scoped; it is not a measurement of all browser or operating-system traffic.
-
-The recorded benchmark measures warmed pure ticks plus trial resets, excluding Canvas, DOM updates, painting and automation. It is a local microbenchmark, not a frame-rate or cross-machine performance claim. A CDP JavaScript-heap sample is recorded separately; isolated app/process memory, RSS, GPU memory and energy are **unavailable**, not assumed zero. Source size is not the browser's total runtime footprint.
-
-No dependencies were installed for verification. Automated evidence uses an existing headless Chromium opened at `file://`; screenshots were generated by the real browser. Native Safari automation was unavailable in this worker session. Cross-browser testing and assistive-technology testing remain unverified. Independent source review and any local Git checkpoint belong to the lead; this worker leaves files uncommitted and performs no remote publication.
-
-Expansion is intentionally out of scope: no additional agents, infection, resources, training, or deeper brains. See `GOAL.md` for the next decision gates.
-
-## ZL-003 · position-only control/treatment experiment · offline replay
-
-The optional runner executes the **byte-unchanged production `simulation.js`** using Node's built-in VM, in a separate context for each condition. Both conditions copy `initialState()` and use the same experiment-only `tickLimit: 10000`. **Control:** H `(7, 2)`, Z `(2, 4)`. **Treatment:** change only the copied `human.x` from **7 to 6**, leaving H y=2 and Z `(2, 4)` unchanged. The board, simultaneous movement, tie-breaking, shared-destination and exchanged-position capture rules are identical. The manual app keeps its original H `(7, 2)` and 40-tick defaults. No additional policy, population, randomness, memory, dependency or capture-rule change is included.
-
-Question: does moving this human one cell west change capture versus recurrence, or the cycle timing, in this exact setup? See the concise [ZL-003 result write-up](experiments/ZL-003-position.md) for hypothesis, evidence and limitations.
-
-The runner records tick 0 and each actual production `step` result, then stops in this exact order at every frame:
-
-1. **Capture:** production `status === "caught"` wins, including shared destinations and exchanged positions; report the exact capture tick and production reason.
-2. **Cycle:** key the ordered pair as the comma-separated integers `Hx,Hy,Zx,Zy`. Remember the first tick for each key, including tick 0. On the first repeated key, report `startTick`, `repeatTick`, `period = repeatTick - startTick`, and `positionKey`. Include the repeated endpoint in every export.
-3. **Unresolved:** if neither happened by tick 10000, include that safety endpoint and report unresolved, not survival. Capture beats cycle, and both beat safety even on tick 10000.
-
-**Actual executed results — one deterministic run per condition:**
-
-| Condition | Initial H / Z | Outcome | First repeat | Frames |
-| --- | --- | --- | --- | --- |
-| Control | `(7, 2)` / `(2, 4)` | Cycle, no capture before endpoint | 88 → 102, period 14 | 103 (ticks 0–102) |
-| Treatment | `(6, 2)` / `(2, 4)` | Cycle, no capture before endpoint | 88 → 102, period 14 | 103 (ticks 0–102) |
-
-Both repeated endpoints have key `9,0,8,0`. Position trajectories differ initially but coincide from tick 11 through the recorded endpoint. This perturbation changes the transient, **not the observed outcome or cycle timing**. Verification reruns are repeatability checks, not independent experimental samples; there is no statistical confidence claim or evidence about other starts, policies, group behavior or general survival ability.
-
-All exported frames of both conditions are compared to independent calls of the real production source with their exact starts and common cap. Movement depends only on positions and fixed board/rules, not tick, history, decision metadata or randomness. Therefore the repeated ordered pair proves a motion cycle for each fixed setup under unchanged rules if allowed to continue without the cutoff. A future time-dependent, randomized or memory-bearing policy would require a different key/proof.
-
-```sh
 node scripts/test-preview.cjs
-PREVIEW_COMMIT="$(git rev-parse HEAD)" node scripts/build-preview.cjs preview
+PREVIEW_COMMIT="$(git rev-parse HEAD)" \
+PREVIEW_REF="$(git branch --show-current)" \
+PREVIEW_REPOSITORY="14-TR/zombie-lab" \
+node scripts/build-preview.cjs preview
 ```
 
-Use an already-installed Node 22 or newer; no npm install, framework, server, or external assets are needed. The optional first argument selects the output directory, overriding `PREVIEW_OUTPUT_DIR`; otherwise output is `preview/` relative to the working directory. Only these files are generated:
+Use a clean, reviewed commit for commit-only metadata. For an uncommitted merge, label `PREVIEW_COMMIT` with both parents and `uncommitted integration`; the builder preserves supplied text and does not certify checkout cleanliness.
 
-- **`index.html`**: self-contained replay with side-by-side labeled control/treatment initial positions and exact outcomes. Canvas, Play/Pause, Back/Next, scrubber and complete table show **treatment** only, without a new UI framework. Open directly from disk. Playback selects recorded frames at four frames per second, not simulation steps; playing at the endpoint restarts, while stepping/scrubbing pauses.
-- **`positions.json`** retains `schemaVersion: 2`, `metadata: { commit, ref, repository }`, top-level `outcome` and complete top-level `frames` for CI/replay compatibility. `experiment` is `{ name: "human-one-cell-west", safetyTickLimit: 10000, changedField: "human.x", playback: "treatment" }`. Explicit `control: { initialState, outcome, frames }` and `treatment: { initialState, outcome }` identify each condition; top-level frames/outcome belong to treatment. Each outcome remains `{ type: "capture", tick, reason }`, `{ type: "cycle", startTick, repeatTick, period, positionKey }`, or `{ type: "unresolved", tick, reason: "safety tick limit" }`.
-- **`positions.csv`**: one row per recorded **treatment** tick, preserving `tick,human_x,human_y,zombie_x,zombie_y,status,reason` columns.
+The optional first argument overrides `PREVIEW_OUTPUT_DIR`; otherwise output is `preview/` in the working directory. Exactly three files are generated:
 
-Frames remain unmodified production snapshots under the configured cap, including decisions and production status/reason. **Cycle is a runner outcome, not a fabricated production status:** the actual tick-102 frame still says `running` with an empty reason. Read the HTML summary or JSON `outcome` for why recording stopped; CSV intentionally retains the production fields. JSON includes the initial and stopping endpoint, even when that endpoint is not production-terminal.
+- **`index.html`**: self-contained replay, side-by-side control/treatment starts and outcomes. Canvas, Play/Pause, Back/Next, scrubber and complete table show **treatment**. Playback selects recorded frames at four per second, not simulation steps. Playing at the endpoint restarts; stepping/scrubbing pauses.
+- **`positions.json`**: preserves `schemaVersion: 2`, `metadata: { commit, ref, repository }`, top-level treatment `frames` and `outcome`, `control: { initialState, outcome, frames }`, and `treatment: { initialState, outcome }`. Every frame of **both** runs is retained. `experiment` is `{ name: "human-one-cell-west-adjacent-capture", safetyTickLimit: 10000, changedField: "human.x", playback: "treatment", captureRule: "shared-cell-or-orthogonally-adjacent-or-crossing" }`.
+- **`positions.csv`**: every treatment tick, unchanged columns `tick,human_x,human_y,zombie_x,zombie_y,status,reason`.
 
-`PREVIEW_COMMIT` sets the displayed source commit (default `unknown`); optional `PREVIEW_REF` and `PREVIEW_REPOSITORY` add context. Metadata is preserved as text and safely escaped in the embedded HTML data. The generator does not infer or certify that supplied metadata describes a clean checkout; CI must supply the exact checked-out PR head or main commit. The same source and metadata produce the same output bytes.
+At each frame, including tick 0 and the stopping endpoint, recording stops in priority order:
 
-Builds reject missing/skipped ticks, unknown production statuses (only `running`, `caught`, `limit` are accepted), and a premature production `limit` before tick 10000. They apply a one-second VM timeout to loading, initialization, and each step. Hitting the safety bound is a valid unresolved outcome, not a build error; malformed/nonprogressing sources or timeouts fail before writing output. Tests use temporary directories and compare every recorded frame to an independent run of the real production simulation. Synthetic copied-source fixtures cover capture, all four cycle-key coordinates, tick-zero repeats, unresolved safety endpoints (with either `limit` or `running` production status), and capture/cycle precedence at the safety boundary. No fixture alters runtime source. Metadata escaping, CSV quoting, output-path behavior and standalone playback are retained.
+1. **Capture:** production `caught`, with exact tick and reason.
+2. **Cycle:** first repeated ordered key `Hx,Hy,Zx,Zy`, reporting `startTick`, `repeatTick`, `period`, `positionKey`.
+3. **Unresolved:** neither outcome by the inclusive tick-10000 safety boundary; not proof of survival.
 
-**Delivery:** this position-only branch is for a separate reviewed PR; it is not combined with a capture-rule experiment. Existing CI metadata inputs and workflows are unchanged. PR workflows provide public-repository downloadable artifacts; a PR replay is not automatically the public main replay at [https://14-tr.github.io/zombie-lab/](https://14-tr.github.io/zombie-lab/). This work does not change, deploy, or merge into main. Downloaded HTML works offline without uploads, telemetry or persistence. Local verification does not certify CI or Pages deployment.
+Outcomes retain `{ type: "capture", tick, reason }`, `{ type: "cycle", startTick, repeatTick, period, positionKey }`, or `{ type: "unresolved", tick, reason: "safety tick limit" }`. Production snapshots, decisions, status and reason are not rewritten; cycle is a runner outcome, not a fabricated production status. Capture beats cycle, and both beat safety even on tick 10000. A repeated-position proof assumes fixed deterministic memoryless movement, not future time-dependent or learned rules.
+
+Metadata defaults are commit `unknown`, ref/repository empty. Hostile metadata is escaped in embedded JSON and rendered as text. Same source and metadata produce byte-identical exports. Builds reject missing/skipped ticks, unknown statuses and premature limits, with a one-second VM timeout for loading, initialization and each step. Malformed or nonprogressing runs fail before output is written.
+
+## Verification and boundaries
+
+`node test-node.cjs` tests core rules only, not Canvas/DOM. Open `tests.html` for the browser suite. Core retains exhaustive paired starts on all 1×1 through 4×4 rectangular boards, purity, determinism, illegal moves, adjacency/diagonal rules and terminal precedence. Preview tests retain full production trajectory equality, CSV quoting, hostile metadata, determinism, output paths, bounded execution and synthetic capture/cycle/unresolved boundary coverage. Fixtures only alter temporary copies, never production source.
+
+Runtime: classic JavaScript and native Canvas, **zero package dependencies**, no persistence, telemetry or uploads. The manual app has no clock; replay has a playback timer only. Existing optional cached browser automation is verification tooling, not a runtime dependency. No new infrastructure or installs are required. Historical performance measurements in `RECEIPT.md` are not new integration benchmarks.
+
+Existing CI metadata inputs and workflow files are unchanged. PR workflows produce downloadable artifacts; a PR artifact is not automatically the [public main Pages replay](https://14-tr.github.io/zombie-lab/). Local verification does not certify CI, deployment, cross-browser or assistive-technology behavior.
+
+## Historical experiments — immutable source-bound snapshots
+
+- [ZL-003: human one cell west](experiments/ZL-003-position.md), with [`evidence/position/`](evidence/position/), records the old shared-cell/crossing rule: both runs cycle 88→102, period 14. It is **not** the current runtime result.
+- [ZL-004: adjacent capture](experiments/ZL-004-adjacent-capture.md), with [`evidence/adjacent/`](evidence/adjacent/), records the original H `(7, 2)` capture-only intervention against its pinned baseline: capture at 73.
+
+These reports, source hashes, receipts and replay bytes are retained unchanged. Their branch/deployment statements and reproduction commands describe their original source snapshots; do not rerun those commands into the historical evidence directories from the integrated checkout. Use a fresh output directory and the ZL-005 report for current reproduction. `RECEIPT.md` remains the older ZL-001 baseline receipt. See `GOAL.md` for expansion gates.

@@ -1,0 +1,107 @@
+{
+  "startedAt": "2026-09-14T06:15:01.789Z",
+  "browser": "153.0.8010.12",
+  "checks": [
+    {
+      "name": "browser core, Canvas and DOM suite",
+      "passed": true
+    },
+    {
+      "name": "manual rule labels, exact start, Step, terminal cap and Reset",
+      "passed": true
+    },
+    {
+      "name": "replay full trajectory, capture outcome, next/back/scrub and final selection",
+      "passed": true
+    },
+    {
+      "name": "play restarts from endpoint and pause freezes recorded frame",
+      "passed": true
+    },
+    {
+      "name": "390px replay has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "no page errors, failed loads or external page requests",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "externalRequests": [],
+  "suite": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0,
+    "results": [
+      {
+        "name": "initial world is one human and one zombie on a bounded grid",
+        "passed": true
+      },
+      {
+        "name": "initial cardinal adjacency is caught before movement, even at the limit",
+        "passed": true
+      },
+      {
+        "name": "one pure tick uses the same old state for both decisions",
+        "passed": true
+      },
+      {
+        "name": "shared destination is caught and further ticks stop",
+        "passed": true
+      },
+      {
+        "name": "crossing remains caught, but initial adjacency now stops before a swap",
+        "passed": true
+      },
+      {
+        "name": "all four cardinal post-move adjacencies capture before the tick limit",
+        "passed": true
+      },
+      {
+        "name": "diagonal neighbors are not captured before or after simultaneous moves",
+        "passed": true
+      },
+      {
+        "name": "explicit tick limit stops exactly, with capture taking precedence",
+        "passed": true
+      },
+      {
+        "name": "existing contact stops without moving, including a one-cell board",
+        "passed": true
+      },
+      {
+        "name": "original default start reaches the manual cap and extended capture deterministically",
+        "passed": true
+      },
+      {
+        "name": "resolver rejects out-of-bounds, diagonal, fractional and long moves",
+        "passed": true
+      },
+      {
+        "name": "all starts on 1×1 through 4×4 boards stay bounded, pure and repeatable",
+        "passed": true
+      },
+      {
+        "name": "following and staying cannot evade existing cardinal adjacency",
+        "passed": true
+      },
+      {
+        "name": "Canvas drawing shows pixels without changing state or trajectories",
+        "passed": true
+      },
+      {
+        "name": "Step and Reset controls advance once, stop, and restore the exact start",
+        "passed": true
+      }
+    ]
+  },
+  "coverage": {
+    "boards": 16,
+    "starts": 900,
+    "transitions": 12600
+  },
+  "passed": true,
+  "finishedAt": "2026-09-14T06:15:04.036Z"
+}
