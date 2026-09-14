@@ -1,5 +1,7 @@
 # ZL-001 — Atomic simulation
 
+> Historical baseline document. For this branch’s changed capture rule and current execution evidence, see [ZL-004 adjacent capture](experiments/ZL-004-adjacent-capture.md).
+
 Build and verify a browser-only human-versus-zombie experiment in /Users/tr/Projects/zombie-lab. Deliver working files, not merely project setup.
 
 ## Scope

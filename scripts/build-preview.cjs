@@ -64,8 +64,8 @@ tr[aria-current="true"] { background: #dcedf7; font-weight: 700; }
 </head>
 <body>
 <h1>Zombie Lab · Offline replay</h1>
-<h2>Fixed-start capture/cycle experiment</h2>
-<p>Same initial positions and movement rules; experiment-only safety limit of 10000 ticks (manual app: 40). Stop at capture, first repeated position pair, or safety limit, in that order. Playback selects recorded frames, not simulation steps.</p>
+<h2>Fixed-start capture/cycle experiment · Adjacent-capture experiment</h2>
+<p>Fixed start H (7, 2), Z (2, 4); unchanged movement rules and experiment-only safety limit of 10000 ticks (manual app: 40). Capture: shared cell or orthogonally adjacent cells (Manhattan distance 1, not diagonal), checked before movement (including tick 0) and after simultaneous moves; exchanged positions still count. Stop at capture, first repeated position pair, or safety limit, in that order. Playback selects recorded frames, not simulation steps.</p>
 <p id="outcome" role="status"></p>
 <p id="metadata"></p>
 <canvas id="world" width="800" height="560" role="img" aria-label="Recorded human and zombie positions; exact coordinates in the table below."></canvas>
@@ -155,7 +155,7 @@ function main() {
   const replay = {
     schemaVersion: 2,
     metadata: { commit: process.env.PREVIEW_COMMIT ?? "unknown", ref: process.env.PREVIEW_REF ?? "", repository: process.env.PREVIEW_REPOSITORY ?? "" },
-    experiment: { name: "fixed-start-capture-cycle", safetyTickLimit: SAFETY_TICK_LIMIT },
+    experiment: { name: "fixed-start-capture-cycle", safetyTickLimit: SAFETY_TICK_LIMIT, captureRule: "shared-cell-or-orthogonally-adjacent-or-crossing" },
     ...captureFrames()
   };
   fs.mkdirSync(out, { recursive: true });

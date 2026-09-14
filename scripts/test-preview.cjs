@@ -29,29 +29,57 @@ function productionFrames() {
   vm.runInContext(fs.readFileSync(path.join(root, "simulation.js"), "utf8"), context, { timeout: 1000 });
   vm.runInContext("state = { ...ZombieLab.initialState(), tickLimit: 10000 }", context, { timeout: 1000 });
   const frames = [];
-  // Independently execute every production step through the observed repeat.
-  for (let tick = 0; tick <= 102; tick++) {
+  // Independently execute every production step through the observed capture.
+  for (let tick = 0; tick <= 73; tick++) {
     frames.push(JSON.parse(JSON.stringify(context.state)));
-    if (tick < 102) vm.runInContext("state = ZombieLab.step(state)", context, { timeout: 1000 });
+    if (tick < 73) vm.runInContext("state = ZombieLab.step(state)", context, { timeout: 1000 });
   }
   return frames;
 }
 
-test("fixed-start experiment records every production step through the first repeated pair", (t) => {
+test("fixed-start adjacent-capture experiment records every production step through capture", (t) => {
   const out = temporary(t);
   succeeded(generate(out));
   const replay = JSON.parse(fs.readFileSync(path.join(out, "positions.json"), "utf8"));
   const expected = productionFrames();
   assert.equal(replay.schemaVersion, 2);
-  assert.deepEqual(replay.experiment, { name: "fixed-start-capture-cycle", safetyTickLimit: 10000 });
+  assert.deepEqual(replay.experiment, { name: "fixed-start-capture-cycle", safetyTickLimit: 10000, captureRule: "shared-cell-or-orthogonally-adjacent-or-crossing" });
   assert.deepEqual(replay.frames, expected);
-  assert.deepEqual(replay.frames.map(frame => frame.tick), Array.from({ length: 103 }, (_, tick) => tick));
+  assert.deepEqual(replay.frames.map(frame => frame.tick), Array.from({ length: 74 }, (_, tick) => tick));
+  assert.deepEqual(replay.frames[0].human, { x: 7, y: 2 });
+  assert.deepEqual(replay.frames[0].zombie, { x: 2, y: 4 });
   const keys = expected.map(frame => [frame.human.x, frame.human.y, frame.zombie.x, frame.zombie.y].join(","));
-  assert.equal(new Set(keys.slice(0, -1)).size, 102, "no earlier repeated pair");
-  assert.equal(keys[102], keys[88]);
-  assert.deepEqual(replay.outcome, { type: "cycle", startTick: 88, repeatTick: 102, period: 14, positionKey: keys[88] });
-  assert.equal(replay.frames.at(-1).status, "running", "cycle is a runner outcome, not a production status");
-  assert.equal(replay.frames.at(-1).reason, "");
+  assert.equal(new Set(keys).size, 74, "no repeated pair before capture");
+  for (const frame of expected.slice(0, -1)) {
+    assert.equal(frame.status, "running");
+    assert.ok(Math.abs(frame.human.x - frame.zombie.x) + Math.abs(frame.human.y - frame.zombie.y) > 1);
+  }
+  assert.deepEqual(replay.outcome, { type: "capture", tick: 73, reason: "orthogonally adjacent" });
+  assert.deepEqual(replay.frames.at(-1).human, { x: 0, y: 6 });
+  assert.deepEqual(replay.frames.at(-1).zombie, { x: 1, y: 6 });
+  assert.equal(replay.frames.at(-1).status, "caught");
+  assert.equal(replay.frames.at(-1).reason, "orthogonally adjacent");
+});
+
+test("manual app and replay visibly state orthogonal-only capture and unchanged start", (t) => {
+  const out = temporary(t);
+  succeeded(generate(out));
+  for (const html of [fs.readFileSync(path.join(root, "index.html"), "utf8"), fs.readFileSync(path.join(out, "index.html"), "utf8")]) {
+    assert.match(html, /Adjacent-capture experiment/);
+    assert.match(html, /orthogonally adjacent/);
+    assert.match(html, /not diagonal/);
+    assert.match(html, /before.*after.*simultaneous/);
+    assert.match(html, /H \(7, 2\).*Z \(2, 4\)/);
+  }
+});
+
+test("fixed source and metadata generate byte-identical replay exports", (t) => {
+  const first = temporary(t), second = temporary(t);
+  const env = { PREVIEW_COMMIT: "determinism-check", PREVIEW_REF: "experiment/adjacent-capture" };
+  succeeded(generate(first, env)); succeeded(generate(second, env));
+  for (const file of ["index.html", "positions.json", "positions.csv"]) {
+    assert.deepEqual(fs.readFileSync(path.join(first, file)), fs.readFileSync(path.join(second, file)));
+  }
 });
 
 test("CSV contains the ordered positions and terminal reason for every production tick", (t) => {
@@ -224,7 +252,10 @@ function summaryText(out) {
 test("visible experiment summary reports exact cycle, capture, or unresolved outcome", (t) => {
   const out = temporary(t);
   succeeded(generate(out));
-  assert.equal(summaryText(out), "Cycle detected · start tick 88 · repeat tick 102 · length 14 ticks · safety limit 10000 ticks.");
+  assert.equal(summaryText(out), "Capture at tick 73 · orthogonally adjacent · safety limit 10000 ticks.");
+  const cycle = fixture(t, 'ZombieLab = { ...ZombieLab, step: state => ({ ...state, tick: state.tick + 1 }) };');
+  succeeded(generate(cycle.out, {}, [], cycle.script));
+  assert.equal(summaryText(cycle.out), "Cycle detected · start tick 0 · repeat tick 1 · length 1 ticks · safety limit 10000 ticks.");
   const capture = fixture(t, 'ZombieLab = { ...ZombieLab, step: state => ({ ...state, tick: state.tick + 1, status: "caught", reason: "exchanged positions" }) };');
   succeeded(generate(capture.out, {}, [], capture.script));
   assert.equal(summaryText(capture.out), "Capture at tick 1 · exchanged positions · safety limit 10000 ticks.");

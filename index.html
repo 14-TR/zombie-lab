@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="One human. One zombie. One deterministic tick at a time. An offline Canvas experiment.">
-  <title>Zombie Lab — ZL-001</title>
+  <title>Zombie Lab — Adjacent-capture experiment</title>
   <style>
     :root { color-scheme: light; font-family: system-ui, sans-serif; color: #1e2a22; background: #f2f4ee; }
     * { box-sizing: border-box; }
@@ -36,9 +36,9 @@
 </head>
 <body>
   <main id="lab">
-    <p class="eyebrow">ZL-001 / ATOMIC SIMULATION</p>
+    <p class="eyebrow">ZL-004 / ADJACENT CAPTURE</p>
     <h1>Zombie Lab</h1>
-    <p class="intro">One human. One zombie. No hidden clock.</p>
+    <p class="intro">Adjacent-capture experiment. One human. One zombie. No hidden clock.</p>
     <div class="controls">
       <button type="button" data-step>Step</button>
       <button type="button" data-reset>Reset</button>
@@ -57,8 +57,10 @@
         The human maximizes Manhattan distance; the zombie minimizes it.
         Ties: <strong>north → east → south → west → stay</strong>.
         Coordinates start at (0, 0) in the top-left; x increases right, y down.</p>
-      <p>A shared destination or exchanged positions means <strong>caught</strong>.
-        Stop on capture or at tick 40. Reset always restores the same start.</p>
+      <p>A shared cell or orthogonally adjacent cells (Manhattan distance 1, not diagonal) means <strong>caught</strong>.
+        Check before movement (including tick 0) and after simultaneous moves; exchanged positions still count.
+        Capture takes priority over the tick limit. Stop on capture or at tick 40.
+        Reset restores H (7, 2), Z (2, 4).</p>
     </section>
     <footer>Local-only · No dependencies · <a href="tests.html">Run browser tests</a> · <a href="README.md">Rules &amp; notes</a></footer>
     <noscript><p>Enable JavaScript to run this offline experiment.</p></noscript>

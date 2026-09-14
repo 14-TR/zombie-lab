@@ -1,5 +1,7 @@
 # ZL-001 execution receipt
 
+> Historical baseline document. For this branch’s changed capture rule and current execution evidence, see [ZL-004 adjacent capture](experiments/ZL-004-adjacent-capture.md).
+
 ## Clock and ownership
 
 - Live start observed with `date -u`: **2026-09-14T04:39:48Z** (recorded before implementation).
