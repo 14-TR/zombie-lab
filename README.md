@@ -1,5 +1,26 @@
 # Zombie Lab
 
+## ZL-008 — Does this planning policy help?
+
+[Same-start policy comparison](https://14-tr.github.io/zombie-lab/planning.html) · [Preregistered protocol](experiments/ZL-008-protocol.md) · [Result report](experiments/ZL-008-lookahead.md)
+
+Compare the frozen greedy human with a model-based two-tick planner from the **same** starting pair. Only the experimental human policy changes; the original simulation, zombie policy, board and capture rules remain fixed. The planner has an accurate model of zombie behavior. This tests that specific policy package, not intelligence generally or planning depth in isolation.
+
+The viewer distinguishes later capture, earlier capture, equal capture time, proven non-capturing cycles, and unresolved cutoffs. A cycle is not a large capture time; its first repeated endpoint is displayed and frozen honestly. Outcome totals come from every allowed starting pair, not the selected demonstration.
+
+With an existing Node 22+ and no package install:
+
+```sh
+node scripts/test-planning.cjs
+node scripts/test-planning-view.cjs
+PREVIEW_COMMIT="$(git rev-parse HEAD)" node scripts/build-planning.cjs preview
+cp simulation.js planner.js planning.html planning-view.js preview/
+mkdir -p preview/experiments
+cp experiments/ZL-008-lookahead.md experiments/ZL-008-protocol.md preview/experiments/
+```
+
+Open `preview/planning.html`; `planning.json` contains the full paired scalar results. Build the previous preview pages using their commands below to enable the historical navigation links. Public URLs update after successful main deployment, not local generation.
+
 ## ZL-007 — Understand starting-position effects
 
 [Compare two starts](https://14-tr.github.io/zombie-lab/compare.html) · [Explanation and certificate method](experiments/ZL-007-start-position-effects.md)
