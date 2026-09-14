@@ -1,0 +1,40 @@
+{
+  "at": "2026-09-14T06:15:42.599Z",
+  "node": "v26.8.1",
+  "syntax": [
+    {
+      "file": "app.js",
+      "passed": true
+    },
+    {
+      "file": "evidence/adjacent/browser-check.cjs",
+      "passed": true
+    },
+    {
+      "file": "evidence/adjacent/verify-control.cjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/build-preview.cjs",
+      "passed": true
+    },
+    {
+      "file": "scripts/test-preview.cjs",
+      "passed": true
+    },
+    {
+      "file": "simulation.js",
+      "passed": true
+    },
+    {
+      "file": "test-node.cjs",
+      "passed": true
+    },
+    {
+      "file": "tests.js",
+      "passed": true
+    }
+  ],
+  "limitedAddedLineSecurityScan": [],
+  "diffCheck": ""
+}
