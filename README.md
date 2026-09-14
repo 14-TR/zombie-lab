@@ -2,6 +2,24 @@
 
 One human, one zombie, deterministic simultaneous movement. The current replay combines the position comparison from main with PR4's production adjacent-capture rule. **Both runs use adjacency capture:** control H `(7, 2)`, treatment H `(6, 2)`, Z `(2, 4)` in both. Only `human.x` differs between the two current initial states. This is a **new combined integration**, not a relabeling of either original one-factor experiment. See [ZL-005 results and reproduction](experiments/ZL-005-position-adjacency.md).
 
+## ZL-006 — All starting positions
+
+[All-starts explorer](https://14-tr.github.io/zombie-lab/sweep.html) · [Experiment report](experiments/ZL-006-all-starts.md)
+
+The sweep holds the current production rules fixed and enumerates all 4,830 ordered human/zombie starts on the 10×7 board, excluding only same-cell starts. Initially adjacent pairs count as capture at tick 0. Select a zombie start, inspect the human-start heatmap, and select a condition for its full position replay. This is exhaustive coverage of this finite configuration, not a statistical sample of general human behavior.
+
+Build with an existing Node 22+ (no install):
+
+```sh
+node scripts/test-sweep.cjs
+node scripts/test-sweep-view.cjs
+PREVIEW_COMMIT="$(git rev-parse HEAD)" node scripts/build-preview.cjs preview
+PREVIEW_COMMIT="$(git rev-parse HEAD)" node scripts/build-sweep.cjs preview
+cp sweep.html sweep-view.js simulation.js preview/
+```
+
+Open `preview/sweep.html`. Full sweep outcomes are in `preview/sweep.json`; trajectories are reconstructed on selection rather than bulk stored. PR artifacts include both the explorer and previous comparison. Public URLs update only after a successful main deployment.
+
 ## Launch and manual controls
 
 Open `index.html` directly in a modern browser, keeping `simulation.js` and `app.js` beside it. No install, server, account or network is needed. **Step** advances one tick; **Reset** restores the initial world. Tab and Enter/Space work on native buttons. The blue H circle and red Z square have text coordinates and decision explanations; shared-cell agents are drawn side-by-side.

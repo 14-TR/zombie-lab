@@ -1,0 +1,13 @@
+{
+  "compared_rows": 4830,
+  "all_fields_match": true,
+  "summary": {
+    "total": 4830,
+    "capture": 4830,
+    "cycle": 0,
+    "unresolved": 0,
+    "initialCapture": 246
+  },
+  "max_stop_tick": 77,
+  "method": "Parent exact Python equality of ordered results arrays and summary between regenerated production sweep and independent oracle"
+}

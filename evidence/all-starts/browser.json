@@ -1,0 +1,10 @@
+{
+  "out": "/var/folders/g6/2_n0nkqd36g7x3mkwxg3d9n40000gn/T/zl006-ui-real-Uu1Hka",
+  "errors": [],
+  "external": [],
+  "checks": [
+    "real 4830-row artifact, 70 zombie choices, 69 humans, exact baseline 74 frames and endpoint",
+    "320px no overflow and readable tick labels"
+  ],
+  "passed": true
+}

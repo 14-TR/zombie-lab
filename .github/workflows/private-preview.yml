@@ -30,10 +30,15 @@ jobs:
         run: |
           node test-node.cjs
           node scripts/test-preview.cjs
+          node scripts/test-sweep.cjs
+          node scripts/test-sweep-view.cjs
       - name: Generate full position replay
         env:
           PREVIEW_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
-        run: node scripts/build-preview.cjs preview
+        run: |
+          node scripts/build-preview.cjs preview
+          node scripts/build-sweep.cjs preview
+          cp sweep.html sweep-view.js simulation.js preview/
       - name: Upload offline preview
         id: artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -48,4 +53,4 @@ jobs:
           ARTIFACT_URL: ${{ steps.artifact.outputs.artifact-url }}
           SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
-          printf '## Zombie Lab PR replay\n\n[Download replay ZIP](%s) (GitHub sign-in required to download the artifact).\n\nUnzip, then open `index.html` locally. Includes playback, every position, JSON and CSV. The main-branch replay is also published on GitHub Pages.\n\nSource commit: `%s`. Artifact expires after seven days.\n' "$ARTIFACT_URL" "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
+          printf '## Zombie Lab PR replay\n\n[Download replay ZIP](%s) (GitHub sign-in required to download the artifact).\n\nUnzip, then open `sweep.html` for all-starts exploration or `index.html` for the earlier comparison. Includes playback, every position, JSON and CSV. The main-branch replay is also published on GitHub Pages.\n\nSource commit: `%s`. Artifact expires after seven days.\n' "$ARTIFACT_URL" "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
