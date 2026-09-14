@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Zombie Lab · All-starts explorer</title>
+<style>
+:root { color-scheme: light; font: 16px/1.5 system-ui, sans-serif; color: #192733; background: #f5f6f2; }
+* { box-sizing: border-box; } body { max-width: 960px; margin: auto; padding: 20px 14px 40px; }
+h1 { margin: 0; font-size: 1.8rem; } h2 { font-size: 1.2rem; margin-top: 26px; } p { margin: 8px 0 16px; }
+a { color: #12618a; } .note { color: #455761; font-size: .9rem; } #metadata { font: .8rem/1.5 monospace; overflow-wrap: anywhere; }
+canvas { display: block; width: 100%; height: auto; background: white; border: 1px solid #63747c; }
+#heatmap { cursor: pointer; touch-action: manipulation; } .selectors { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+label { display: block; font-weight: 600; } select { width: 100%; min-width: 0; } button, select { font: inherit; color: inherit; background: white; border: 1px solid #63747c; border-radius: 4px; padding: 9px; min-height: 44px; }
+button { cursor: pointer; } button:disabled { opacity: .5; cursor: default; } :focus-visible { outline: 3px solid #126ea6; outline-offset: 2px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; } input[type=range] { width: 100%; min-height: 44px; }
+output { display: block; margin: 10px 0; font-weight: 600; } #error { background: #ffeded; border: 2px solid #a12323; padding: 12px; overflow-wrap: anywhere; }
+#match { padding: 8px 10px; border-left: 4px solid #287049; background: #e9f2eb; } #summary { font-weight: 600; }
+#legend { display: flex; flex-wrap: wrap; gap: 8px 18px; padding: 10px 0; font-size: .9rem; } .swatch { display: inline-block; width: 1em; height: 1em; border: 1px solid #52616a; vertical-align: -.1em; }
+.table-wrap { overflow-x: auto; } table { width: 100%; border-collapse: collapse; font-size: .85rem; } th,td { padding: 7px 8px; border-bottom: 1px solid #bec7cc; text-align: left; white-space: nowrap; } tr[aria-current=true] { background: #d9edf7; font-weight: 700; }
+@media (max-width: 480px) { .selectors { grid-template-columns: 1fr; } h1 { font-size: 1.5rem; } }
+</style>
+</head>
+<body>
+<header><a href="./index.html">← Previous ZL-005 replay</a><h1>ZL-006 · All-starts explorer</h1></header>
+<p>Every distinct ordered human/zombie starting pair. One deterministic execution per condition, not a statistical sample. The heatmap reads precomputed results; only the selected trajectory is recomputed with the production simulation.</p>
+<p id="summary" role="status">Loading sweep results…</p>
+<p id="metadata"></p>
+<p class="note">Capture means shared cell or orthogonally adjacent (Manhattan distance 1, <strong>not diagonal</strong>), including tick 0; production also checks exchanged positions. Moves are simultaneous. Stop priority: capture, first repeated ordered position pair, then unresolved safety cutoff. A cycle is not a production capture; a cutoff is not proof of survival.</p>
+<p id="error" role="alert" hidden></p>
+<section aria-labelledby="starts-title">
+<h2 id="starts-title">Starting positions</h2>
+<div class="selectors"><label for="zombie-start">Zombie start<select id="zombie-start" disabled></select></label><label for="human-start">Human start · keyboard alternative to heatmap<select id="human-start" disabled></select></label></div>
+<p id="slice-summary"></p>
+<canvas id="heatmap" width="800" height="560" role="img" aria-label="Human-start outcome heatmap. Choose exact coordinates in the Human start menu."></canvas>
+<div id="legend"><span><i class="swatch" style="background:#efaaaa"></i> C = capture</span><span><i class="swatch" style="background:#aacaef"></i> ↻ = cycle</span><span><i class="swatch" style="background:#efd9aa"></i> ? = unresolved</span><span><i class="swatch" style="background:#d9dee1"></i> Z = same-cell start excluded</span></div>
+<p class="note">Each cell shows outcome and stopping tick. Darker shade = later stop within this zombie’s slice; <span id="tick-scale"></span>. Black outline = selected human. Origin (0, 0) is top-left; x increases right, y down. Cell ID = y × width + x.</p>
+</section>
+<section aria-labelledby="replay-title">
+<h2 id="replay-title">Selected production replay</h2>
+<p id="selection"></p><p id="match" role="status" hidden></p>
+<canvas id="world" width="800" height="560" role="img" aria-label="Selected production positions; exact coordinates in the full table below."></canvas>
+<p class="note">Blue circle H = human; red square Z = zombie. Full path includes initial and stopping frames. Initial adjacent contact is normalized by the production step without advancing tick 0.</p>
+<div class="controls"><button id="back" type="button" disabled>Back</button><button id="play" type="button" disabled>Play</button><button id="pause" type="button" disabled>Pause</button><button id="next" type="button" disabled>Next</button></div>
+<label for="scrubber">Selected tick</label><input id="scrubber" type="range" min="0" max="0" step="1" value="0" disabled>
+<output id="readout" aria-live="polite"></output>
+<h2>Complete selected position history</h2>
+<p class="note">Production status/reason are preserved, except the tick-0 contact normalization described above. A first-repeat cycle endpoint can still have status “running”. The highlighted row is the current playback frame.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Tick</th><th scope="col">H x</th><th scope="col">H y</th><th scope="col">Z x</th><th scope="col">Z y</th><th scope="col">Status</th><th scope="col">Reason</th></tr></thead><tbody id="positions"></tbody></table></div>
+</section>
+<p><a href="./sweep.json" download>Download all result rows (JSON, no bulk trajectories)</a></p>
+<noscript>Enable JavaScript for the explorer. The JSON download contains all result rows.</noscript>
+<script src="./simulation.js"></script>
+<script src="./sweep-data.js"></script>
+<script src="./sweep-view.js"></script>
+</body>
+</html>
