@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Zombie Lab · Why starts change capture time</title>
+<style>
+:root { color-scheme: light; font: 16px/1.5 system-ui,sans-serif; color:#172b37; background:#f3f5f3; }
+* { box-sizing:border-box; } body { max-width:1100px; margin:auto; padding:20px 8px; }
+h1 { font-size:clamp(1.65rem,4vw,2.5rem); line-height:1.15; margin:8px 0 16px; } h2 { font-size:1.3rem; margin:0 0 10px; } h3 { margin:0 0 8px; }
+p { margin:8px 0 14px; } a { color:#07567f; } nav { display:flex; flex-wrap:wrap; gap:8px 20px; margin:12px 0; }
+.panel { background:white; border:1px solid #c2cfce; border-radius:8px; padding:12px; margin:12px 0; min-width:0; }
+.columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; } .columns .panel { margin:0; }
+.selectors { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+label { display:block; font-weight:600; } select { width:100%; min-width:0; } select,button { font:inherit; color:inherit; background:white; border:1px solid #617780; border-radius:4px; padding:8px; min-height:44px; }
+button { cursor:pointer; } button:disabled,select:disabled { cursor:default; opacity:.55; } :focus-visible { outline:3px solid #b34d00; outline-offset:2px; }
+.controls { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; } input[type=range] { width:100%; min-height:40px; margin:0; }
+output { display:block; font-weight:650; } .note { color:#415965; font-size:.92rem; } #metadata { overflow-wrap:anywhere; font: .82rem/1.6 ui-monospace,monospace; }
+#error { background:#fff1e8; border:2px solid #ab3900; padding:12px; } #match { color:#215432; }
+svg { display:block; width:100%; height:auto; background:#fbfcfa; border:1px solid #a5b8bd; }
+.readout { min-height:5.5em; padding-top:8px; } .frozen { color:#82380e; }
+.map { display:grid; gap:1px; background:#8599a2; border:1px solid #8599a2; }
+.map button { border-radius:0; border:0; min-width:0; min-height:32px; padding:0; font-size:13px; font-weight:650; color:#172b37; }
+.map button:disabled { opacity:1; color:#465964; background:#d8e0df!important; }
+.map .selected-a { outline:2px solid #006ba1; outline-offset:-3px; } .map .selected-b { border:2px dashed #732faa; }
+.map .inspected { box-shadow:inset 0 0 0 3px #ad4c00; } .legend { display:flex; align-items:center; gap:8px; margin:8px 0; font-size:.9rem; }
+.ramp { display:inline-block; width:80px; height:14px; background:linear-gradient(90deg,hsl(190 60% 96%),hsl(190 60% 58%)); border:1px solid #81949a; }
+.ramp.sensitivity { background:linear-gradient(90deg,hsl(35 70% 96%),hsl(35 70% 58%)); }
+.table-wrap { overflow:auto; max-height:360px; } table { width:100%; border-collapse:collapse; font-size:.85rem; } th,td { padding:5px; text-align:left; border-bottom:1px solid #ccd5d6; white-space:nowrap; }
+summary { cursor:pointer; padding:10px 0; font-weight:600; } tr[aria-current=true] { background:#e0edf6; }
+@media(max-width:650px) { .columns,.selectors { grid-template-columns:1fr; } .readout { min-height:0; } }
+</style>
+</head>
+<body id="compare-app">
+<header><p class="note">ZL-007 · Starting-position effects</p><h1>Same outcome. Different time to capture.</h1>
+<p id="summary">Loading frozen start-space results…</p>
+<p>Move the human start by one cell while holding the zombie start and all rules fixed. The default comparison is H (1, 0) versus H (2, 0), with Z (2, 4). This deterministic toy model is not evidence about real people or statistical confidence.</p>
+<nav aria-label="Evidence and other views"><a href="./sweep.html">All-starts explorer</a><a href="./proof.json">Finite-state certificate (JSON)</a><a href="./experiments/ZL-007-start-position-effects.md">Experiment report</a></nav>
+</header>
+<p id="error" role="alert" hidden></p>
+<section class="panel" aria-labelledby="choose-heading"><h2 id="choose-heading">1 · Choose two starts</h2>
+<div class="selectors"><label for="zombie-start">Shared zombie start<select id="zombie-start" disabled></select></label><label for="human-a">A · Human start<select id="human-a" disabled></select></label><label for="human-b">B · Human start<select id="human-b" disabled></select></label></div>
+<p id="comparison" aria-live="polite"></p><p id="match" class="note" hidden></p>
+<div class="controls"><button id="play" type="button" disabled>Play</button><button id="pause" type="button" disabled>Pause</button><button id="next" type="button" disabled>Next tick</button><button id="reset" type="button" disabled>Reset time</button></div>
+<label for="scrubber">Shared timeline</label><input id="scrubber" type="range" min="0" max="0" step="1" value="0" disabled><output id="timeline" aria-live="polite"></output>
+<p class="note">Both replays use the same timeline. After capture, a run stays at its actual endpoint: its local tick freezes while the shared tick can continue. Reset changes time, not the chosen starts.</p></section>
+<div class="columns"><section class="panel"><h2>A · Replay</h2><svg id="world-a" role="img" aria-label="A replay unavailable"></svg><output id="readout-a" class="readout"></output><details><summary>Every A position, including both endpoints</summary><div class="table-wrap"><table><thead><tr><th>Tick</th><th>Human</th><th>Zombie</th><th>Distance</th><th>Status</th></tr></thead><tbody id="history-a"></tbody></table></div></details></section>
+<section class="panel"><h2>B · Replay</h2><svg id="world-b" role="img" aria-label="B replay unavailable"></svg><output id="readout-b" class="readout"></output><details><summary>Every B position, including both endpoints</summary><div class="table-wrap"><table><thead><tr><th>Tick</th><th>Human</th><th>Zombie</th><th>Distance</th><th>Status</th></tr></thead><tbody id="history-b"></tbody></table></div></details></section></div>
+<p class="note">Blue circle H = human; red square Z = zombie. Faint blue solid / red dashed lines show each complete trajectory, including future positions, not just elapsed history. Origin (0, 0) is top-left; x increases right, y down. Manhattan separation = |Hx − Zx| + |Hy − Zy|.</p>
+<section class="panel"><h2>2 · Read the start-space maps</h2><p id="slice-summary"></p><p>Each cell is a possible human start with the selected zombie held fixed. Numbers are exact ticks, not probabilities. Z marks the excluded same-cell start. Solid blue outline = A; dashed purple border = B.</p>
+<label for="map-target">Capture-map click sets<select id="map-target"><option value="a">Human A</option><option value="b">Human B</option></select></label></section>
+<div class="columns"><section class="panel"><h3>Capture time</h3><p class="note">Click a cell to select its human start.</p><div id="capture-map" class="map" role="group" aria-label="Capture times by human start"></div><div class="legend"><span class="ramp" aria-hidden="true"></span><span id="capture-legend"></span></div></section>
+<section class="panel"><h3>One-cell sensitivity</h3><p class="note">Click a cell to inspect its strongest neighboring edge.</p><div id="sensitivity-map" class="map" role="group" aria-label="One-cell capture-time sensitivity"></div><div class="legend"><span class="ramp sensitivity" aria-hidden="true"></span><span id="sensitivity-legend"></span></div></section></div>
+<section class="panel"><h3>What does sensitivity mean?</h3><p>At each permitted human cell, sensitivity is the <strong>maximum absolute difference in stopTick</strong> from its permitted north, east, south and west human-start neighbors, excluding the zombie cell and out-of-board cells. Diagonals do not count. Ties choose the lowest neighbor ID; an empty neighbor set is shown as “—”, not zero.</p><output id="witness" aria-live="polite"></output><div class="controls"><button id="use-witness" type="button" disabled>Compare this edge: A = cell, B = neighbor</button></div><p class="note">This is a local timing difference, not a change in capture outcome. The orange inset marks the inspected sensitivity cell.</p></section>
+<footer class="panel"><h2>Scope and provenance</h2><p>Only starting positions change. Both agents choose simultaneous cardinal/stay moves using Manhattan distance and the unchanged production tie-break order north, east, south, west, stay. Capture is shared-cell or orthogonal adjacency (including tick 0), with crossing compatibility. The runner checks capture, first repeated ordered position pair, then the safety limit.</p><p id="metadata"></p><p class="note">Maps use frozen scalar results; only the selected A/B trajectories are recomputed. The replay checks outcome, stopping tick, cycle start and period against those rows. Endpoint coordinates are recomputed, not stored in the frozen rows. The linked certificate is optional supporting evidence: this page does not load or verify it and does not depend on its availability.</p></footer>
+<noscript>Enable JavaScript for maps and synchronized replay; the experiment report and certificate remain links above.</noscript>
+<!-- sweep-view.js auto-mounts unconditionally; compare-view owns a minimal bounded replay helper instead. -->
+<script src="./simulation.js"></script>
+<script src="./sweep-data.js"></script>
+<script src="./compare-view.js"></script>
+</body>
+</html>

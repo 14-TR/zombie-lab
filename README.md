@@ -1,4 +1,14 @@
-# Zombie Lab · ZL-005 position and adjacency integration
+# Zombie Lab
+
+## ZL-007 — Understand starting-position effects
+
+[Compare two starts](https://14-tr.github.io/zombie-lab/compare.html) · [Explanation and certificate method](experiments/ZL-007-start-position-effects.md)
+
+Start with the preset human positions `(1,0)` versus `(2,0)`, zombie `(2,4)`. Both capture, but at ticks 11 and 73. The synchronized timeline holds a captured run at its actual endpoint while the other continues. Capture-time colors reveal duration; the sensitivity map shows the largest absolute time difference to a legal cardinal neighboring human start while holding the zombie fixed. It is a local difference, not a probability or derivative.
+
+Build the sweep as below, then run `node scripts/test-compare.cjs`, `node scripts/test-proof.cjs`, and `PREVIEW_COMMIT="$(git rev-parse HEAD)" node scripts/build-proof.cjs preview`; copy `compare.html compare-view.js` into `preview/` alongside the existing assets, copy the report into `preview/experiments/`, and open `preview/compare.html`. `proof.json` records a finite-state rank certificate for this exact simulation. New public assets are available only after successful deployment.
+
+## ZL-005 — Previous two-start integration
 
 One human, one zombie, deterministic simultaneous movement. The current replay combines the position comparison from main with PR4's production adjacent-capture rule. **Both runs use adjacency capture:** control H `(7, 2)`, treatment H `(6, 2)`, Z `(2, 4)` in both. Only `human.x` differs between the two current initial states. This is a **new combined integration**, not a relabeling of either original one-factor experiment. See [ZL-005 results and reproduction](experiments/ZL-005-position-adjacency.md).
 
