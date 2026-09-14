@@ -5,13 +5,15 @@ const path = require("node:path");
 const vm = require("node:vm");
 const SAFETY_TICK_LIMIT = 10000;
 
-function captureFrames() {
+function captureFrames(humanX) {
   const context = vm.createContext({});
   vm.runInContext(fs.readFileSync(path.join(__dirname, "..", "simulation.js"), "utf8"), context, {
     filename: "simulation.js", timeout: 1000
   });
   // Experiment-only override. Do not change the manual application's defaults.
   vm.runInContext("state = { ...ZombieLab.initialState(), tickLimit: " + SAFETY_TICK_LIMIT + " }", context, { timeout: 1000 });
+  // Treatment changes just one coordinate on a copy; the control uses defaults.
+  if (humanX !== undefined) vm.runInContext("state = { ...state, human: { ...state.human, x: " + humanX + " } }", context, { timeout: 1000 });
   const frames = [];
   const firstSeen = new Map();
   for (let count = 0; count <= SAFETY_TICK_LIMIT; count++) {
@@ -58,15 +60,20 @@ button:disabled { opacity: .45; cursor: default; } :focus-visible { outline: 3px
 label { display: block; } input { width: 100%; } output { display: block; font-weight: 600; margin: 12px 0; }
 .table-wrap { overflow-x: auto; } table { border-collapse: collapse; width: 100%; font-size: .9rem; }
 th, td { border-bottom: 1px solid #c0c9cc; padding: 6px 8px; text-align: left; white-space: nowrap; }
+#comparison { margin-bottom: 16px; } #comparison td { white-space: normal; width: 50%; vertical-align: top; }
 tr[aria-current="true"] { background: #dcedf7; font-weight: 700; }
 .note { color: #465964; font-size: .9rem; }
 </style>
 </head>
 <body>
 <h1>Zombie Lab · Offline replay</h1>
-<h2>Fixed-start capture/cycle experiment</h2>
-<p>Same initial positions and movement rules; experiment-only safety limit of 10000 ticks (manual app: 40). Stop at capture, first repeated position pair, or safety limit, in that order. Playback selects recorded frames, not simulation steps.</p>
-<p id="outcome" role="status"></p>
+<h2>Position-only experiment · human one cell west</h2>
+<p>Only human.x changes: 7 → 6. Zombie stays (2, 4); board, movement and capture rules are unchanged. Both runs use the same experiment-only safety limit of 10000 ticks (manual app: 40). Stop at capture, first repeated position pair, or safety limit, in that order.</p>
+<table id="comparison"><thead><tr><th scope="col">Control</th><th scope="col">Treatment (playback)</th></tr></thead><tbody>
+<tr><td id="control-start"></td><td id="treatment-start"></td></tr>
+<tr><td id="control-outcome"></td><td id="outcome" role="status"></td></tr>
+</tbody></table>
+<p class="note">One deterministic run per condition, not a statistical sample. Playback and the table below show the complete treatment trajectory; JSON also contains every control frame. Playback selects recorded frames, not simulation steps.</p>
 <p id="metadata"></p>
 <canvas id="world" width="800" height="560" role="img" aria-label="Recorded human and zombie positions; exact coordinates in the table below."></canvas>
 <p class="note">Blue circle: H (human). Red square: Z (zombie). Origin (0, 0) is top-left; x goes right, y goes down.</p>
@@ -75,7 +82,7 @@ tr[aria-current="true"] { background: #dcedf7; font-weight: 700; }
 </div>
 <label for="scrubber">Recorded tick</label><input id="scrubber" type="range" min="0" max="0" step="1" value="0">
 <output id="readout" aria-live="polite"></output>
-<h2>Complete position history</h2>
+<h2>Complete treatment position history</h2>
 <p class="note">Every recorded tick, including tick 0 and the stopping endpoint. Status and reason below are unchanged production fields; a cycle is a runner outcome, so its endpoint can still say running. The selected row is highlighted. Full states and outcome are in positions.json; coordinates are in positions.csv.</p>
 <div class="table-wrap"><table><thead><tr><th scope="col">Tick</th><th scope="col">H x</th><th scope="col">H y</th><th scope="col">Z x</th><th scope="col">Z y</th><th scope="col">Status</th><th scope="col">Reason</th></tr></thead><tbody id="positions"></tbody></table></div>
 <noscript>Enable JavaScript for offline playback, or read positions.csv / positions.json.</noscript>
@@ -91,12 +98,15 @@ let selected = 0, timer = null;
 byId("metadata").textContent = "Source commit: " + replay.metadata.commit +
   (replay.metadata.repository ? " · Repository: " + replay.metadata.repository : "") +
   (replay.metadata.ref ? " · Ref: " + replay.metadata.ref : "");
-const outcome = replay.outcome;
-byId("outcome").textContent = (outcome.type === "cycle" ?
-  "Cycle detected · start tick " + outcome.startTick + " · repeat tick " + outcome.repeatTick + " · length " + outcome.period + " ticks" :
-  outcome.type === "capture" ? "Capture at tick " + outcome.tick + " · " + outcome.reason :
-  "Unresolved at tick " + outcome.tick + " · " + outcome.reason) +
-  " · safety limit " + replay.experiment.safetyTickLimit + " ticks.";
+for (const [name, run] of [["control", replay.control], ["treatment", replay.treatment]]) {
+  const initial = run.initialState, outcome = run.outcome;
+  byId(name + "-start").textContent = "Initial H (" + initial.human.x + ", " + initial.human.y + ") · Z (" + initial.zombie.x + ", " + initial.zombie.y + ")";
+  byId(name === "control" ? "control-outcome" : "outcome").textContent = (outcome.type === "cycle" ?
+    "Cycle detected · start tick " + outcome.startTick + " · repeat tick " + outcome.repeatTick + " · length " + outcome.period + " ticks" :
+    outcome.type === "capture" ? "Capture at tick " + outcome.tick + " · " + outcome.reason :
+    "Unresolved at tick " + outcome.tick + " · " + outcome.reason) +
+    " · safety limit " + replay.experiment.safetyTickLimit + " ticks.";
+}
 const rows = frames.map(frame => {
   const row = document.createElement("tr");
   row.dataset.tick = frame.tick;
@@ -152,11 +162,15 @@ render();
 
 function main() {
   const out = path.resolve(process.argv[2] || process.env.PREVIEW_OUTPUT_DIR || "preview");
+  const control = captureFrames();
+  const treatment = captureFrames(6);
   const replay = {
     schemaVersion: 2,
     metadata: { commit: process.env.PREVIEW_COMMIT ?? "unknown", ref: process.env.PREVIEW_REF ?? "", repository: process.env.PREVIEW_REPOSITORY ?? "" },
-    experiment: { name: "fixed-start-capture-cycle", safetyTickLimit: SAFETY_TICK_LIMIT },
-    ...captureFrames()
+    experiment: { name: "human-one-cell-west", safetyTickLimit: SAFETY_TICK_LIMIT, changedField: "human.x", playback: "treatment" },
+    control: { initialState: control.frames[0], ...control },
+    treatment: { initialState: treatment.frames[0], outcome: treatment.outcome },
+    ...treatment
   };
   fs.mkdirSync(out, { recursive: true });
   fs.writeFileSync(path.join(out, "positions.json"), JSON.stringify(replay, null, 2) + "\n");
