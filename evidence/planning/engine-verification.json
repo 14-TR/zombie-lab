@@ -1,0 +1,97 @@
+{
+  "matchedUncachedTreatmentRows": 4830,
+  "nonterminalChoices": 4584,
+  "clockIndependentChoices": 4584,
+  "actualUncachedTreatmentTransitions": 66131,
+  "elapsedMs": 3728.078208,
+  "maxRSSKiB": 78704,
+  "initialCapture": 246,
+  "periodDistribution": {
+    "2": 4584
+  },
+  "cycleStartRange": [
+    0,
+    26
+  ],
+  "stopTickRange": [
+    2,
+    28
+  ],
+  "witnesses": [
+    {
+      "id": "z0-h2",
+      "zombieId": 0,
+      "humanId": 2,
+      "baseline": {
+        "outcome": "capture",
+        "stopTick": 71,
+        "cycleStart": null,
+        "period": null
+      },
+      "treatment": {
+        "outcome": "cycle",
+        "stopTick": 22,
+        "cycleStart": 20,
+        "period": 2
+      },
+      "comparison": "escape"
+    },
+    {
+      "id": "z42-h27",
+      "zombieId": 42,
+      "humanId": 27,
+      "baseline": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "treatment": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      },
+      "comparison": "escape"
+    },
+    {
+      "id": "z0-h1",
+      "zombieId": 0,
+      "humanId": 1,
+      "baseline": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      },
+      "treatment": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      },
+      "comparison": "same"
+    }
+  ],
+  "files": {
+    "build-metrics.json": 318,
+    "decisions.json": 177468,
+    "green.tap": 1515,
+    "planning-data.js": 1047826,
+    "planning.json": 1047793,
+    "red-cli.tap": 2564,
+    "verification.json": 2575,
+    "verify.cjs": 4200
+  },
+  "hashes": {
+    "simulation.js": "4ee5817ba528b163fca1347c49ad4c48de2dcae226dd800065e5048b5b9bb568",
+    "planner.js": "ea535e5a564ca133cdcf1cfa339c359d967d7d89a64640f3e9e8bc977000cb6a",
+    "scripts/build-planning.cjs": "7acf822f52ec8f0565b45d83c17ed5c76b86ac836908458550b0ed764947f549",
+    "scripts/test-planning.cjs": "dee492e6e48b884a973502164ac3b15f74efe0bcaebe5d9a17c49edb00ae405f",
+    "experiments/ZL-008-protocol.md": "47b60e3d7e21c85e958d21170fafad1ada32cdbfca6aa377b8835f22977e650f",
+    "evidence/all-starts/sweep.json": "da7d74eba9e97403a45a5cd76954d4d3537482b7592e9752b3d530bf3fce0327",
+    "planning.json": "8b6a5b72e2a2f68ab3a11d39b4036f99d7488d929339abd70f197399d75035ff",
+    "planning-data.js": "c269bffe4696fce6517de48286534c33ad99eef1108d35bffdff9b6e48579b2a",
+    "decisions.json": "d868cb521771d890294c457c71ef123cfa8841bb3cb02b95809a7519f656f639"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "node": "v26.8.1",
+  "chromium": "151.0.7922.34",
+  "dataSource": "actual buildPlanning() / current worktree",
+  "metadata": {
+    "commit": "VIEWER_TEST_WORKTREE"
+  },
+  "dataSHA256": "53009d89ab1dadf49d2e54f56e12fbaad8d567ccf31eb845e0fb71603f216116",
+  "summary": {
+    "total": 4830,
+    "baseline": {
+      "capture": 4830,
+      "cycle": 0,
+      "unresolved": 0
+    },
+    "treatment": {
+      "capture": 246,
+      "cycle": 4584,
+      "unresolved": 0
+    },
+    "later": 0,
+    "earlier": 0,
+    "same": 246,
+    "escape": 4584,
+    "unresolved": 0
+  },
+  "selected": "z0-h2 · Baseline: capture at tick 71. Planner: proven cycle: start tick 20, first repeat tick 22, period 2 — indefinite avoidance under fixed policy. No finite capture-time difference is defined.",
+  "endpoints": {
+    "baseline": "Local tick 71 · shared tick 71 · capture endpoint. H (0, 6) · Z (1, 6) · separation 1. Run outcome: capture at tick 71.",
+    "treatment": "Local tick 22 · shared tick 71 · frozen at first-repeat cycle endpoint. H (8, 0) · Z (9, 1) · separation 2. Run outcome: proven cycle: start tick 20, first repeat tick 22, period 2 — indefinite avoidance under fixed policy.",
+    "histories": [
+      72,
+      23
+    ]
+  },
+  "coverage": 4830,
+  "mobile": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "font": 13
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "font": 13
+    }
+  ],
+  "consoleErrors": [],
+  "hashes": {
+    "planning.html": "99be79bae5a56d10268c874e1d4da3952de33fd80c6af5d53ff4d79632f61f88",
+    "planning-view.js": "2c26766a0ffcb135356cf43f908b15c2a6b308d31f1dbd27038ca97183ff01c9",
+    "scripts/test-planning-view.cjs": "34611ddcea52cbdb743a8f2beee43fa91956f86d65928b3c594ecb3fa7e9e62a",
+    "simulation.js": "4ee5817ba528b163fca1347c49ad4c48de2dcae226dd800065e5048b5b9bb568",
+    "planner.js": "ea535e5a564ca133cdcf1cfa339c359d967d7d89a64640f3e9e8bc977000cb6a"
+  }
+}
