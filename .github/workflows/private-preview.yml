@@ -1,0 +1,51 @@
+name: PR replay preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: private-preview-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out exact candidate
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Set up verification runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Test simulation and replay export
+        run: |
+          node test-node.cjs
+          node scripts/test-preview.cjs
+      - name: Generate full position replay
+        env:
+          PREVIEW_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: node scripts/build-preview.cjs preview
+      - name: Upload offline preview
+        id: artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: zombie-replay-pr-${{ github.event.pull_request.number || 'manual' }}-${{ github.run_id }}
+          path: preview/
+          if-no-files-found: error
+          retention-days: 7
+          include-hidden-files: false
+      - name: Link preview in run summary
+        env:
+          ARTIFACT_URL: ${{ steps.artifact.outputs.artifact-url }}
+          SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          printf '## Zombie Lab PR replay\n\n[Download replay ZIP](%s) (GitHub sign-in required to download the artifact).\n\nUnzip, then open `index.html` locally. Includes playback, every position, JSON and CSV. The main-branch replay is also published on GitHub Pages.\n\nSource commit: `%s`. Artifact expires after seven days.\n' "$ARTIFACT_URL" "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
