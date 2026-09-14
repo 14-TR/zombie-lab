@@ -3,21 +3,33 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
+const SAFETY_TICK_LIMIT = 10000;
 
 function captureFrames() {
   const context = vm.createContext({});
   vm.runInContext(fs.readFileSync(path.join(__dirname, "..", "simulation.js"), "utf8"), context, {
     filename: "simulation.js", timeout: 1000
   });
-  vm.runInContext("state = ZombieLab.initialState()", context, { timeout: 1000 });
+  // Experiment-only override. Do not change the manual application's defaults.
+  vm.runInContext("state = { ...ZombieLab.initialState(), tickLimit: " + SAFETY_TICK_LIMIT + " }", context, { timeout: 1000 });
   const frames = [];
-  for (let count = 0; count <= 10000; count++) {
+  const firstSeen = new Map();
+  for (let count = 0; count <= SAFETY_TICK_LIMIT; count++) {
     const frame = JSON.parse(JSON.stringify(context.state));
     if (!frame || frame.tick !== count) throw new Error("Simulation made no consecutive tick progress at frame " + count);
     if (!["running", "caught", "limit"].includes(frame.status)) throw new Error("Unknown simulation status at tick " + count);
+    if (frame.status === "limit" && count < SAFETY_TICK_LIMIT) throw new Error("Simulation stopped before the safety tick limit");
     frames.push(frame);
-    if (frame.status !== "running") return frames;
-    if (count === 10000) throw new Error("Simulation exceeded 10000-step safety bound");
+    // Runner outcomes never rewrite production status/reason. Include the
+    // endpoint, then adjudicate capture before cycle before safety unresolved.
+    if (frame.status === "caught") return { frames, outcome: { type: "capture", tick: frame.tick, reason: frame.reason } };
+    const positionKey = [frame.human.x, frame.human.y, frame.zombie.x, frame.zombie.y].join(",");
+    if (firstSeen.has(positionKey)) {
+      const startTick = firstSeen.get(positionKey);
+      return { frames, outcome: { type: "cycle", startTick, repeatTick: frame.tick, period: frame.tick - startTick, positionKey } };
+    }
+    firstSeen.set(positionKey, frame.tick);
+    if (count === SAFETY_TICK_LIMIT) return { frames, outcome: { type: "unresolved", tick: frame.tick, reason: "safety tick limit" } };
     vm.runInContext("state = ZombieLab.step(state)", context, { timeout: 1000 });
   }
 }
@@ -52,7 +64,9 @@ tr[aria-current="true"] { background: #dcedf7; font-weight: 700; }
 </head>
 <body>
 <h1>Zombie Lab · Offline replay</h1>
-<p>Recorded production trajectory. Playback changes the selected frame, not the simulation.</p>
+<h2>Fixed-start capture/cycle experiment</h2>
+<p>Same initial positions and movement rules; experiment-only safety limit of 10000 ticks (manual app: 40). Stop at capture, first repeated position pair, or safety limit, in that order. Playback selects recorded frames, not simulation steps.</p>
+<p id="outcome" role="status"></p>
 <p id="metadata"></p>
 <canvas id="world" width="800" height="560" role="img" aria-label="Recorded human and zombie positions; exact coordinates in the table below."></canvas>
 <p class="note">Blue circle: H (human). Red square: Z (zombie). Origin (0, 0) is top-left; x goes right, y goes down.</p>
@@ -62,7 +76,7 @@ tr[aria-current="true"] { background: #dcedf7; font-weight: 700; }
 <label for="scrubber">Recorded tick</label><input id="scrubber" type="range" min="0" max="0" step="1" value="0">
 <output id="readout" aria-live="polite"></output>
 <h2>Complete position history</h2>
-<p class="note">Every captured tick, including the initial and terminal states. The selected row is highlighted. Full states are also in positions.json; coordinates are in positions.csv.</p>
+<p class="note">Every recorded tick, including tick 0 and the stopping endpoint. Status and reason below are unchanged production fields; a cycle is a runner outcome, so its endpoint can still say running. The selected row is highlighted. Full states and outcome are in positions.json; coordinates are in positions.csv.</p>
 <div class="table-wrap"><table><thead><tr><th scope="col">Tick</th><th scope="col">H x</th><th scope="col">H y</th><th scope="col">Z x</th><th scope="col">Z y</th><th scope="col">Status</th><th scope="col">Reason</th></tr></thead><tbody id="positions"></tbody></table></div>
 <noscript>Enable JavaScript for offline playback, or read positions.csv / positions.json.</noscript>
 <script id="replay-data" type="application/json">${payload}</script>
@@ -77,6 +91,12 @@ let selected = 0, timer = null;
 byId("metadata").textContent = "Source commit: " + replay.metadata.commit +
   (replay.metadata.repository ? " · Repository: " + replay.metadata.repository : "") +
   (replay.metadata.ref ? " · Ref: " + replay.metadata.ref : "");
+const outcome = replay.outcome;
+byId("outcome").textContent = (outcome.type === "cycle" ?
+  "Cycle detected · start tick " + outcome.startTick + " · repeat tick " + outcome.repeatTick + " · length " + outcome.period + " ticks" :
+  outcome.type === "capture" ? "Capture at tick " + outcome.tick + " · " + outcome.reason :
+  "Unresolved at tick " + outcome.tick + " · " + outcome.reason) +
+  " · safety limit " + replay.experiment.safetyTickLimit + " ticks.";
 const rows = frames.map(frame => {
   const row = document.createElement("tr");
   row.dataset.tick = frame.tick;
@@ -133,9 +153,10 @@ render();
 function main() {
   const out = path.resolve(process.argv[2] || process.env.PREVIEW_OUTPUT_DIR || "preview");
   const replay = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     metadata: { commit: process.env.PREVIEW_COMMIT ?? "unknown", ref: process.env.PREVIEW_REF ?? "", repository: process.env.PREVIEW_REPOSITORY ?? "" },
-    frames: captureFrames()
+    experiment: { name: "fixed-start-capture-cycle", safetyTickLimit: SAFETY_TICK_LIMIT },
+    ...captureFrames()
   };
   fs.mkdirSync(out, { recursive: true });
   fs.writeFileSync(path.join(out, "positions.json"), JSON.stringify(replay, null, 2) + "\n");

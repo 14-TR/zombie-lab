@@ -69,9 +69,17 @@ No dependencies were installed for verification. Automated evidence uses an exis
 
 Expansion is intentionally out of scope: no additional agents, infection, resources, training, or deeper brains. See `GOAL.md` for the next decision gates.
 
-## Offline replay artifacts
+## Fixed-start capture/cycle experiment · offline replay
 
-The optional build tooling records the **unchanged production `simulation.js`** using Node's built-in VM. It captures every state from tick 0 through the terminal tick; it does not add a clock or dependency to the atomic application above.
+The optional runner executes the **unchanged production `simulation.js`** using Node's built-in VM. It copies `initialState()` and overrides **only `tickLimit: 10000`**, for this experiment only. The start remains H `(7, 2)`, Z `(2, 4)` on the same 10×7 board, with identical simultaneous movement, tie-breaking and capture rules. The base manual app above remains unchanged at 40 ticks; no new controls, population, policy, randomness, memory or dependency are added.
+
+The runner records tick 0 and each actual production `step` result, then stops in this exact order at every frame:
+
+1. **Capture:** production `status === "caught"` wins, including shared destinations and exchanged positions; report the exact capture tick and production reason.
+2. **Cycle:** key the ordered pair as the comma-separated integers `Hx,Hy,Zx,Zy`. Remember the first tick for each key, including tick 0. On the first repeated key, report `startTick`, `repeatTick`, `period = repeatTick - startTick`, and `positionKey`. Include the repeated endpoint in every export.
+3. **Unresolved:** if neither happened by tick 10000, include that safety endpoint and report unresolved, not survival. Capture beats cycle, and both beat safety even on tick 10000.
+
+**Observed result:** ticks **0–102**, **103 frames**; the first repeated pair starts at tick **88**, repeats at **102**, and has period **14**. All exported frames are compared to independent calls of the real production source configured with the same cap. Movement depends only on the current positions and fixed board/rules, not tick, history, decisions metadata or randomness. Thus the repeated ordered pair proves a motion cycle for this fixed setup under unchanged rules (if allowed to continue without the safety cutoff), not general survival ability. A future time-dependent, randomized or memory-bearing policy would require a different key/proof.
 
 ```sh
 node scripts/test-preview.cjs
@@ -80,12 +88,14 @@ PREVIEW_COMMIT="$(git rev-parse HEAD)" node scripts/build-preview.cjs preview
 
 Use an already-installed Node 22 or newer; no npm install, framework, server, or external assets are needed. The optional first argument selects the output directory, overriding `PREVIEW_OUTPUT_DIR`; otherwise output is `preview/` relative to the working directory. Only these files are generated:
 
-- **`index.html`**: self-contained offline replay with embedded recorded states, Canvas H/Z positions, Play/Pause, Back/Next, a tick scrubber, and the complete position table. Open it directly from disk after downloading and extracting the artifact. Playback selects recorded frames at four frames per second; it does not rerun the simulation. Playing from the final frame restarts playback; stepping or scrubbing pauses it.
-- **`positions.json`**: `{ schemaVersion: 1, metadata: { commit, ref, repository }, frames: [...] }`, with complete production states, including the initial and terminal frames.
+- **`index.html`**: self-contained offline replay with a visibly labeled experiment and exact outcome summary, embedded recorded states, Canvas H/Z positions, Play/Pause, Back/Next, a tick scrubber, and the complete position table. Open it directly from disk after downloading and extracting the artifact. Playback selects recorded frames at four frames per second; it does not rerun the simulation. Playing from the final frame restarts playback; stepping or scrubbing pauses it.
+- **`positions.json`**: `{ schemaVersion: 2, metadata: { commit, ref, repository }, experiment: { name: "fixed-start-capture-cycle", safetyTickLimit: 10000 }, outcome, frames: [...] }`. `outcome` is one of `{ type: "capture", tick, reason }`, `{ type: "cycle", startTick, repeatTick, period, positionKey }`, or `{ type: "unresolved", tick, reason: "safety tick limit" }`.
 - **`positions.csv`**: one row per captured tick, with `tick,human_x,human_y,zombie_x,zombie_y,status,reason` columns.
+
+Frames remain unmodified production snapshots under the configured cap, including decisions and production status/reason. **Cycle is a runner outcome, not a fabricated production status:** the actual tick-102 frame still says `running` with an empty reason. Read the HTML summary or JSON `outcome` for why recording stopped; CSV intentionally retains the production fields. JSON includes the initial and stopping endpoint, even when that endpoint is not production-terminal.
 
 `PREVIEW_COMMIT` sets the displayed source commit (default `unknown`); optional `PREVIEW_REF` and `PREVIEW_REPOSITORY` add context. Metadata is preserved as text and safely escaped in the embedded HTML data. The generator does not infer or certify that supplied metadata describes a clean checkout; CI must supply the exact checked-out PR head or main commit. The same source and metadata produce the same output bytes.
 
-Builds reject missing/skipped ticks and unknown statuses, stop at a hard 10,000-step safety bound, and apply a one-second VM timeout to loading, initialization, and each step. They capture the entire run before writing output. Tests use temporary directories and compare every recorded frame to an independent run of the real production simulation; failure fixtures do not alter runtime source.
+Builds reject missing/skipped ticks, unknown production statuses (only `running`, `caught`, `limit` are accepted), and a premature production `limit` before tick 10000. They apply a one-second VM timeout to loading, initialization, and each step. Hitting the safety bound is a valid unresolved outcome, not a build error; malformed/nonprogressing sources or timeouts fail before writing output. Tests use temporary directories and compare every recorded frame to an independent run of the real production simulation. Synthetic copied-source fixtures cover capture, all four cycle-key coordinates, tick-zero repeats, unresolved safety endpoints (with either `limit` or `running` production status), and capture/cycle precedence at the safety boundary. No fixture alters runtime source. Metadata escaping, CSV quoting, output-path behavior and standalone playback are retained.
 
 **Delivery:** PR workflows provide downloadable replay artifacts. The repository is now public, so these are not private previews. The public main-branch replay is intended for [https://14-tr.github.io/zombie-lab/](https://14-tr.github.io/zombie-lab/); Pages has been configured, but deployment is not yet verified here. PR artifacts and the main Pages deployment are separate: a PR replay is not automatically the published main replay. Downloaded HTML works without network access and makes no external requests; there is no upload, telemetry, or persistence in the replay page.
