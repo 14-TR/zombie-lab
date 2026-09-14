@@ -1,0 +1,20 @@
+{
+  "started": "2026-09-14T06:12:08.104Z",
+  "browser": "153.0.8010.12",
+  "checks": [
+    "side-by-side control/treatment labels, starts and exact outcomes",
+    "complete treatment table: 103 rows",
+    "all 103 scrubbed ticks: real Canvas calls, coordinates and selected row",
+    "keyboard endpoints, Back, playback endpoint stop and restart/pause",
+    "390px viewport without page overflow",
+    "hostile metadata remains literal text, no injected script",
+    "zero page errors, failed loads or external requests"
+  ],
+  "requests": [
+    "file:///Users/tr/Projects/zombie-lab-position/evidence/position/replay/index.html"
+  ],
+  "errors": [],
+  "framesChecked": 103,
+  "finished": "2026-09-14T06:12:09.632Z",
+  "passed": true
+}

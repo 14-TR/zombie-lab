@@ -1,0 +1,77 @@
+{
+  "sourceBaseline": "6a690bd8801db120957dd77fc5d84da680f7bd06",
+  "branch": "experiment/human-one-cell-west",
+  "metadata": {
+    "commit": "6a690bd8801db120957dd77fc5d84da680f7bd06+uncommitted-position-experiment",
+    "ref": "experiment/human-one-cell-west",
+    "repository": "14-TR/zombie-lab"
+  },
+  "control": {
+    "initialState": {
+      "width": 10,
+      "height": 7,
+      "tick": 0,
+      "tickLimit": 10000,
+      "human": {
+        "x": 7,
+        "y": 2
+      },
+      "zombie": {
+        "x": 2,
+        "y": 4
+      },
+      "status": "running",
+      "reason": "",
+      "decisions": null
+    },
+    "outcome": {
+      "type": "cycle",
+      "startTick": 88,
+      "repeatTick": 102,
+      "period": 14,
+      "positionKey": "9,0,8,0"
+    },
+    "frameCount": 103
+  },
+  "treatment": {
+    "initialState": {
+      "width": 10,
+      "height": 7,
+      "tick": 0,
+      "tickLimit": 10000,
+      "human": {
+        "x": 6,
+        "y": 2
+      },
+      "zombie": {
+        "x": 2,
+        "y": 4
+      },
+      "status": "running",
+      "reason": "",
+      "decisions": null
+    },
+    "outcome": {
+      "type": "cycle",
+      "startTick": 88,
+      "repeatTick": 102,
+      "period": 14,
+      "positionKey": "9,0,8,0"
+    },
+    "frameCount": 103
+  },
+  "firstIdenticalPositionSuffixTick": 11,
+  "positionAtJoin": {
+    "human": {
+      "x": 9,
+      "y": 6
+    },
+    "zombie": {
+      "x": 9,
+      "y": 0
+    }
+  },
+  "replayTestsPassed": 15,
+  "browserPassed": true,
+  "verifiedAt": "2026-09-14T06:14:52.271019+00:00"
+}

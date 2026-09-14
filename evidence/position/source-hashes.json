@@ -1,0 +1,100 @@
+{
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 13117,
+      "sha256": "0ef02e037e3405398f7c39eb828cd87518deb3890322d41714cc8d1d62fe8d13"
+    },
+    {
+      "path": "scripts/build-preview.cjs",
+      "bytes": 12658,
+      "sha256": "76e937e871f0f22d98216fe87db2729deb92d08b94ed20b2a7797d96de4bab1e"
+    },
+    {
+      "path": "scripts/test-preview.cjs",
+      "bytes": 16447,
+      "sha256": "276423a11bffd54e05a03f38a977a0a535ce418c504e1c5afd3a6b93ae31434f"
+    },
+    {
+      "path": "experiments/ZL-003-position.md",
+      "bytes": 4717,
+      "sha256": "d870477bda7e17fc0012803a04c445d1dcb2473f906f4b7a7a6b5193f3fc2431"
+    },
+    {
+      "path": "simulation.js",
+      "bytes": 3426,
+      "sha256": "d40bf395b47a04d487a455d3841d28243f924f620beedec848696f68856cfa65"
+    },
+    {
+      "path": "evidence/position/browser-check.cjs",
+      "bytes": 6915,
+      "sha256": "e92c06234e26a3266cb4e15d28d39c8512282d21f51596e0fe0520765a7a1ab5"
+    },
+    {
+      "path": "evidence/position/browser-harness-red.json",
+      "bytes": 907,
+      "sha256": "24ff517b35237edfc479315faf68afd4452166ff1876e4eb35382fcb83a82ce1"
+    },
+    {
+      "path": "evidence/position/browser.json",
+      "bytes": 736,
+      "sha256": "ce9d2bd9cb108bc3457f7470a22948700650bf1365723fe6cf83b22e39f04cf6"
+    },
+    {
+      "path": "evidence/position/core-tests.txt",
+      "bytes": 630,
+      "sha256": "0dfb14d00ce3852442cdc11bb8473a12d215136a353b13893035c5f49ac9e289"
+    },
+    {
+      "path": "evidence/position/findings.json",
+      "bytes": 1547,
+      "sha256": "a222635c140decfdb5094bb45bf7efbc9e77f8cbd5cd074895f533f0d5cedb40"
+    },
+    {
+      "path": "evidence/position/green-data.tap",
+      "bytes": 3179,
+      "sha256": "170808a23ab58c4d3d7ac7182752c09446d85cc24944c8427b8fb3835a9f2fe5"
+    },
+    {
+      "path": "evidence/position/green-summary.tap",
+      "bytes": 3434,
+      "sha256": "2940e8e766cd9bd49b7f11437d6abbbcf6e8b540201e84174d2a1ad64b9ad631"
+    },
+    {
+      "path": "evidence/position/red-data.tap",
+      "bytes": 2355,
+      "sha256": "41d72c35f6003cd9e135fbb1311792a1a506fd5fcc38e6baede43c7641570ed2"
+    },
+    {
+      "path": "evidence/position/red-summary.tap",
+      "bytes": 67248,
+      "sha256": "2438532304e4139a61282807580ba4e49d3e57e1a2216954b974a71a4adc07b9"
+    },
+    {
+      "path": "evidence/position/replay/index.html",
+      "bytes": 56342,
+      "sha256": "9271484b2647ad8201b92f94750bf5a48ed3dc2470523a0ec8adf74cb8a63ac7"
+    },
+    {
+      "path": "evidence/position/replay/positions.csv",
+      "bytes": 2210,
+      "sha256": "e9893d71cf43fb2d962c16e5a1d399483d3bbd70947c8b705c7721167c03791e"
+    },
+    {
+      "path": "evidence/position/replay/positions.json",
+      "bytes": 100671,
+      "sha256": "83f6a790eb13521080957708423555cfef6314c78bfce2797e104fe506471f47"
+    },
+    {
+      "path": "evidence/position/replay-desktop.png",
+      "bytes": 91003,
+      "sha256": "8e4879f1f7c2761bca124b2208a267d5efa89958a5f930719065a7614d018d70"
+    },
+    {
+      "path": "evidence/position/replay-mobile.png",
+      "bytes": 80968,
+      "sha256": "d5ec43aa316ad87a665963ac23fb23406982c40cc824786388da8c0ed032675d"
+    }
+  ]
+}
