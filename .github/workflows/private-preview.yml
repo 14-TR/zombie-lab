@@ -36,6 +36,8 @@ jobs:
           node scripts/test-proof.cjs
           node scripts/test-planning.cjs
           node scripts/test-planning-view.cjs
+          node scripts/test-two-zombies.cjs
+          node scripts/test-two-zombies-view.cjs
       - name: Generate full position replay
         env:
           PREVIEW_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -44,9 +46,12 @@ jobs:
           node scripts/build-sweep.cjs preview
           node scripts/build-proof.cjs preview
           node scripts/build-planning.cjs preview
+          node scripts/build-two-zombies.cjs preview
+          cp two-zombies.js two-zombies.html two-zombies-view.js preview/
           cp planner.js planning.html planning-view.js preview/
           cp sweep.html sweep-view.js simulation.js compare.html compare-view.js preview/
           mkdir -p preview/experiments
+          cp experiments/ZL-009-two-zombies.md experiments/ZL-009-protocol.md preview/experiments/
           cp experiments/ZL-007-start-position-effects.md experiments/ZL-008-lookahead.md experiments/ZL-008-protocol.md preview/experiments/
       - name: Upload offline preview
         id: artifact

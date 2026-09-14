@@ -1,0 +1,1175 @@
+[
+  {
+    "id": "z2-42-h0",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 11,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 5,
+        "cycleStart": 3,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h1",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 11,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 5,
+        "cycleStart": 3,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h2",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h3",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h4",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h5",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h6",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h7",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h8",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h9",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h10",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 11,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 5,
+        "cycleStart": 3,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h11",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 11,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 5,
+        "cycleStart": 3,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h12",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h13",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h14",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h15",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h16",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h17",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h18",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h19",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h20",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 11,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 5,
+        "cycleStart": 3,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h21",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 11,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 5,
+        "cycleStart": 3,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h22",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h23",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h24",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h25",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h26",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h27",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h28",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h29",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h30",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 11,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 5,
+        "cycleStart": 3,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h31",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 11,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 5,
+        "cycleStart": 3,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h32",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      }
+    }
+  },
+  {
+    "id": "z2-42-h33",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h34",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h35",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h36",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h37",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h38",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h39",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h40",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 6,
+        "cycleStart": 4,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h41",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      }
+    }
+  },
+  {
+    "id": "z2-42-h43",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      }
+    }
+  },
+  {
+    "id": "z2-42-h44",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h45",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h46",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h47",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h48",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h49",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 73,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 24,
+        "cycleStart": 22,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h50",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 9,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 7,
+        "cycleStart": 5,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h51",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 9,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 7,
+        "cycleStart": 5,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h52",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 0,
+        "cycleStart": null,
+        "period": null
+      }
+    }
+  },
+  {
+    "id": "z2-42-h53",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h54",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h55",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h56",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h57",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h58",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h59",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h60",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 9,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 9,
+        "cycleStart": 7,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h61",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 9,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 9,
+        "cycleStart": 7,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h62",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h63",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h64",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h65",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h66",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h67",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h68",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  },
+  {
+    "id": "z2-42-h69",
+    "oldOutcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 65,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      }
+    }
+  }
+]
