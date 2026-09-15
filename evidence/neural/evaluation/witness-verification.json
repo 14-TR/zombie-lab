@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "fixture": false,
+  "witnesses": [
+    {
+      "id": "z2-0-h2",
+      "reason": "first-neural-cycle",
+      "frames": 39,
+      "stopTick": 38
+    },
+    {
+      "id": "z2-0-h11",
+      "reason": "regression-depth1; regression-depth2; first-avoidable-neural-capture",
+      "frames": 2,
+      "stopTick": 1
+    },
+    {
+      "id": "z2-0-h30",
+      "reason": "first-noninitial-unavoidable",
+      "frames": 5,
+      "stopTick": 4
+    },
+    {
+      "id": "z2-5-h3",
+      "reason": "recovery-depth1; recovery-depth2",
+      "frames": 17,
+      "stopTick": 16
+    }
+  ],
+  "witnessCount": 4,
+  "witnessFrames": 63,
+  "classicJSONEqual": true,
+  "neuralJSONSHA256": "f34effd57d8745321bf0458115535ed587a180e1158a7fc514b5dec0f04c1dc0",
+  "maxRSSKiB": 155904
+}

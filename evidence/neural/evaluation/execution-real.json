@@ -1,0 +1,38 @@
+[
+  {
+    "name": "real-model-tests",
+    "command": [
+      "node",
+      "--max-old-space-size=384",
+      "--test",
+      "scripts/test-neural.cjs",
+      "scripts/test-two-zombies.cjs"
+    ],
+    "cwd": "/Users/tr/Projects/zombie-lab-neural",
+    "status": 0,
+    "wallSeconds": 16.82163370901253,
+    "stdout": "/tmp/zl011-eval/real-model-tests.stdout.txt",
+    "stderr": "/tmp/zl011-eval/real-model-tests.stderr.txt",
+    "watchdogSeconds": 900
+  },
+  {
+    "name": "real-evaluation",
+    "command": [
+      "node",
+      "--max-old-space-size=384",
+      "scripts/build-neural.cjs",
+      "--model-dir",
+      "models",
+      "--out-dir",
+      "/tmp/zl011-eval",
+      "--python",
+      "/Users/tr/.hermes/hermes-agent/venv/bin/python"
+    ],
+    "cwd": "/Users/tr/Projects/zombie-lab-neural",
+    "status": 0,
+    "wallSeconds": 11.585708791972138,
+    "stdout": "/tmp/zl011-eval/real-evaluation.stdout.txt",
+    "stderr": "/tmp/zl011-eval/real-evaluation.stderr.txt",
+    "watchdogSeconds": 900
+  }
+]

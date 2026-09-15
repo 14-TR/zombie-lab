@@ -1,0 +1,97 @@
+{
+  "frozenAt": "2026-09-15T02:21:00.960911+00:00",
+  "identity": {
+    "protocolCommit": "875c75ec5bc8c0b39179202ff570b6a5d4e10fbd",
+    "sourceHashes": {
+      "scripts/train-neural.py": "3a2966fca79fb19df5eacd6cb768146a92c7d9ec9f6b43b136eaf5a3d78a65bb",
+      "scripts/test-neural-training.py": "75a31b58d3ef1ba57ae1417e0db1f45e39c2814005ce7fec25225ac3bd3e71b2",
+      "scripts/build-neural-dataset.cjs": "40f8db99e23c50001f28439238264b9b2e8e34c88458fb408dd738f61e2ae39a",
+      "experiments/ZL-011-protocol.md": "c962cd8c2d93ae715a1d3f728732e4292cfd089daf0cd6cffcf4b7372e8c59db",
+      "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243"
+    },
+    "sourceCommit": "875c75ec5bc8c0b39179202ff570b6a5d4e10fbd",
+    "worktreeStatus": "M .github/workflows/pages.yml\n M .github/workflows/private-preview.yml\n?? neural-policy.js\n?? neural-view.js\n?? neural.html\n?? scripts/__pycache__/\n?? scripts/build-neural-dataset.cjs\n?? scripts/build-neural.cjs\n?? scripts/test-neural-training.py\n?? scripts/test-neural-view.cjs\n?? scripts/test-neural.cjs\n?? scripts/train-neural.py"
+  },
+  "dataset": {
+    "schemaVersion": 1,
+    "metadata": {
+      "protocolCommit": "875c75ec5bc8c0b39179202ff570b6a5d4e10fbd",
+      "sourceHashes": {
+        "experiments/ZL-011-protocol.md": "c962cd8c2d93ae715a1d3f728732e4292cfd089daf0cd6cffcf4b7372e8c59db",
+        "scripts/build-neural-dataset.cjs": "40f8db99e23c50001f28439238264b9b2e8e34c88458fb408dd738f61e2ae39a",
+        "scripts/build-avoidability.cjs": "3695964bf1f7a71094f3cd795b264cde5a0d3faa76418c7eaad348e4ca36ace1",
+        "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243"
+      },
+      "sourceCommit": "875c75ec5bc8c0b39179202ff570b6a5d4e10fbd",
+      "worktreeStatus": "M .github/workflows/pages.yml\n M .github/workflows/private-preview.yml\n?? neural-policy.js\n?? neural-view.js\n?? neural.html\n?? scripts/__pycache__/\n?? scripts/build-neural-dataset.cjs\n?? scripts/build-neural.cjs\n?? scripts/test-neural-training.py\n?? scripts/test-neural-view.cjs\n?? scripts/test-neural.cjs\n?? scripts/train-neural.py",
+      "nodeVersion": "v26.8.1",
+      "createdAt": "2026-09-15T02:12:40.222Z",
+      "certificateSha256": "a1f47e74bb5d4f086aedd8d6c01f51edd37e390c74adeb8eae4bc4d0bbc7dfc8"
+    },
+    "stateCount": 343000,
+    "enumeration": "stateIndex=(z1Cell*70+z2Cell)*70+humanCell; cell=y*10+x; ascending stateIndex",
+    "inputs": [
+      "hx/9",
+      "hy/6",
+      "z1x/9",
+      "z1y/6",
+      "z2x/9",
+      "z2y/6"
+    ],
+    "actions": [
+      "N",
+      "E",
+      "S",
+      "W",
+      "stay"
+    ],
+    "splitRule": "SHA256 UTF8 ZL011:min(z1,z2):max(z1,z2); first8 hex uint32 modulo10; 0..7 train,8 validation,9 test",
+    "targetRule": "Uniform over legal rank -1 successors if winning; otherwise uniform over all maximum-rank legal successors",
+    "membershipEncoding": "UTF8 ascending decimal stateIndex followed by LF; nonterminal only, per split",
+    "groupMembershipEncoding": "UTF8 a:b:split followed by LF; a=0..69,b=a..69",
+    "stateMembershipEncoding": "UTF8 stateIndex:split:terminal followed by LF; all states ascending; terminal=0 or1",
+    "groupMembershipSha256": "059d83d6ad14c90a2ee5c88ee85fb12f1c72041be3cbeeddb65eb86a9fcb630c",
+    "stateMembershipSha256": "9be723d3011a17e55edcecffba8d47a7762dc1f1ffa13daeef284ab81e09793d",
+    "rankEncoding": "Int32 little-endian rank per ascending stateIndex",
+    "ranksSha256": "2680dbfb1f30e6c5264a11f1d263a4fd0e6f39040f57e1c5da1d46a516eeaae1",
+    "splits": {
+      "train": {
+        "groups": 1967,
+        "orderedStates": 271040,
+        "terminalStates": 33898,
+        "examples": 237142,
+        "membershipSha256": "9aae6e6941b854cc5f21d212d3be390971c0202b0dc8bf4f64b825df3b0fd214"
+      },
+      "validation": {
+        "groups": 245,
+        "orderedStates": 34230,
+        "terminalStates": 4251,
+        "examples": 29979,
+        "membershipSha256": "9f2cfe6e853b4ee0d11e3da01b00d0bc8d26464c8f6743652cbdb481d2ed9167"
+      },
+      "test": {
+        "groups": 273,
+        "orderedStates": 37730,
+        "terminalStates": 4639,
+        "examples": 33091,
+        "membershipSha256": "1b0a3802e267eb6ace5b60189310cda0340683ac25d9e2a70910b5c6ae9897cc"
+      }
+    },
+    "files": {
+      "train.json": {
+        "bytes": 45987023,
+        "sha256": "e15ace812e1e8c6bdeb7d83bdff9fa9d8bec9fc9456d05a7dfac3a14ec2126f9"
+      },
+      "validation.json": {
+        "bytes": 5764140,
+        "sha256": "a39902619b2c8c881dc9e8dd91b4756fc069071035aeaa3f53eee863d3d8b798"
+      },
+      "test.json": {
+        "bytes": 6377577,
+        "sha256": "770bea33d78f198e6eeb5ee8a30fea2b6e8f6ebf33e183c82b43e4e797998a26"
+      }
+    }
+  },
+  "manifestSha256": "48a786f72b40ac58a45ab6b25016c88c75ab3a579856f1e1fe43e60af8ad8c01",
+  "testFilesOpened": []
+}

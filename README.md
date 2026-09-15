@@ -1,5 +1,26 @@
 # Zombie Lab
 
+## ZL-011 — A tiny learned policy did not beat the planners
+
+[Frozen-model replay](https://14-tr.github.io/zombie-lab/neural.html) · [Protocol](experiments/ZL-011-protocol.md) · [Negative result report](experiments/ZL-011-feed-forward.md) · [Original evidence](evidence/neural/README.md)
+
+One fixed seed-17, 6–32–5 float64 imitation run: **336 avoidable captures versus 24 for each planner** on the original 4,761 starts. It recovered some planner failures but introduced 317/328 new captures and was slower in the original warmed benchmark. All 37,730 held-out starting configurations were evaluated against exact avoidability, **not expanded planner trajectories**; trajectories can enter training groups. The original models and negative results are frozen, not retrained by CI.
+
+Using existing Node 22+ (no installation or training):
+
+```sh
+node --test scripts/test-neural.cjs scripts/test-neural-release.cjs
+PREVIEW_COMMIT="$(git rev-parse HEAD)" node --max-old-space-size=384 scripts/build-neural.cjs --out-dir preview
+ZL011_DATA=preview/neural.json node --test scripts/test-neural-view.cjs
+cp neural.html neural-view.js neural-policy.js two-zombies.js preview/
+mkdir -p preview/models preview/experiments preview/evidence
+cp models/feed-forward.json models/feed-forward.js models/feed-forward-initial.json preview/models/
+cp experiments/ZL-011-protocol.md experiments/ZL-011-feed-forward.md preview/experiments/
+cp -R evidence/neural preview/evidence/
+```
+
+Open `preview/neural.html`; build older pages below for historical navigation. Actual PR and Pages builds package all pages. Original training/NumPy-parity receipts are preserved separately from source-bound release re-evaluation. Optional browser checks use an existing cached Playwright installation; Node artifact checks do not silently skip when a real data path is supplied. Combined original retained training and evaluation evidence exceeded the 30 MB target; the full dataset remains outside Git.
+
 ## ZL-010 — Which captures are avoidable?
 
 [Exact-solver replay](https://14-tr.github.io/zombie-lab/avoidability.html) · [Protocol](experiments/ZL-010-protocol.md) · [Report](experiments/ZL-010-avoidability.md)

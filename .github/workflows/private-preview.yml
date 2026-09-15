@@ -15,7 +15,7 @@ concurrency:
 jobs:
   replay:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - name: Check out exact candidate
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -39,6 +39,7 @@ jobs:
           node scripts/test-two-zombies.cjs
           node scripts/test-two-zombies-view.cjs
           node scripts/test-avoidability.cjs
+          node --max-old-space-size=384 --test scripts/test-neural.cjs scripts/test-neural-release.cjs
           python3 -B scripts/test-avoidability-checker.py
       - name: Generate full position replay
         env:
@@ -52,11 +53,19 @@ jobs:
           node scripts/build-avoidability.cjs --out-dir preview
           python3 -B scripts/check-avoidability.py preview/avoidability-certificate.json --out-dir /tmp/avoidability-check
           ZL010_DATA=preview/avoidability.json node --test scripts/test-avoidability-view.cjs
+          node --max-old-space-size=384 scripts/build-neural.cjs --out-dir preview
+          ZL011_DATA=preview/neural.json node --test scripts/test-neural-view.cjs
+          cp neural.html neural-view.js neural-policy.js preview/
+          mkdir -p preview/models
+          cp models/feed-forward.json models/feed-forward.js models/feed-forward-initial.json preview/models/
           cp avoidability.html avoidability-view.js preview/
           cp two-zombies.js two-zombies.html two-zombies-view.js preview/
           cp planner.js planning.html planning-view.js preview/
           cp sweep.html sweep-view.js simulation.js compare.html compare-view.js preview/
           mkdir -p preview/experiments
+          cp experiments/ZL-011-protocol.md experiments/ZL-011-feed-forward.md preview/experiments/
+          mkdir -p preview/evidence
+          cp -R evidence/neural preview/evidence/
           cp experiments/ZL-010-avoidability.md experiments/ZL-010-protocol.md preview/experiments/
           cp experiments/ZL-009-two-zombies.md experiments/ZL-009-protocol.md preview/experiments/
           cp experiments/ZL-007-start-position-effects.md experiments/ZL-008-lookahead.md experiments/ZL-008-protocol.md preview/experiments/
@@ -74,4 +83,4 @@ jobs:
           ARTIFACT_URL: ${{ steps.artifact.outputs.artifact-url }}
           SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
-          printf '## Zombie Lab PR replay\n\n[Download replay ZIP](%s) (GitHub sign-in required to download the artifact).\n\nUnzip, then open `sweep.html` for all-starts exploration or `index.html` for the earlier comparison. Includes playback, every position, JSON and CSV. The main-branch replay is also published on GitHub Pages.\n\nSource commit: `%s`. Artifact expires after seven days.\n' "$ARTIFACT_URL" "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
+          printf '## Zombie Lab PR replay\n\n[Download replay ZIP](%s) (GitHub sign-in required to download the artifact).\n\nUnzip, then open `neural.html` for ZL-011 frozen-model replay and negative results, or `index.html` for the earlier comparison. Includes full replay history, JSON, frozen models, reports and compact original evidence. No training is run in CI. Main publishes on GitHub Pages.\n\nSource commit: `%s`. Artifact expires after seven days.\n' "$ARTIFACT_URL" "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"

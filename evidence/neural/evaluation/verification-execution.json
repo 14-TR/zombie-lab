@@ -1,0 +1,33 @@
+[
+  {
+    "name": "frozen-export-parity",
+    "command": [
+      "node",
+      "--max-old-space-size=384",
+      "/tmp/zl011-eval/verify-frozen-export.cjs"
+    ],
+    "status": 0,
+    "wallSeconds": 3.4808210830087774,
+    "watchdogSeconds": 900
+  },
+  {
+    "name": "independent-reconciliation",
+    "command": [
+      "/Users/tr/.hermes/hermes-agent/venv/bin/python",
+      "/tmp/zl011-eval/verify-real-artifacts.py"
+    ],
+    "status": 0,
+    "wallSeconds": 0.6511108750128187,
+    "watchdogSeconds": 900
+  },
+  {
+    "name": "independent-reconciliation-with-splits",
+    "command": [
+      "/Users/tr/.hermes/hermes-agent/venv/bin/python",
+      "/tmp/zl011-eval/verify-real-artifacts.py"
+    ],
+    "status": 0,
+    "wallSeconds": 0.6035845830338076,
+    "watchdogSeconds": 900
+  }
+]

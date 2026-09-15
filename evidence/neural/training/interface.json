@@ -1,0 +1,11 @@
+{
+  "status": "completed: one fixed40epoch real run; model hashes frozen; label-free all-state parity export verified",
+  "protocolCommit": "875c75ec5bc8c0b39179202ff570b6a5d4e10fbd",
+  "datasetDir": "/tmp/zl011-dataset",
+  "trainingDir": "/tmp/zl011-training",
+  "dataSchema": "train.json/validation.json/test.json are objects {schemaVersion:1,split,examples:[{stateIndex,inputs,legal,targets}]}",
+  "splitManifest": "manifest.json splits[train|validation|test] gives groups,orderedStates,terminalStates,examples,membershipSha256; files gives raw SHA256/bytes",
+  "models": "Final models copied unchanged to repo models/feed-forward.json, models/feed-forward.js, models/feed-forward-initial.json after model-freeze.json is durable",
+  "parity": "Exported /tmp/zl011-training/python-parity.bin and python-parity.json AFTER freeze. Binary records: little-endian <I5dB5dB (86 bytes); stateIndex uint32, final logits float64x5, final action uint8, initial logits float64x5, initial action uint8. All 300212 nonterminal states ascending, N/E/S/W/stay indices. Metadata has SHA256/count and near-tie margins. No labels or performance accessed to export.",
+  "holdout": "Trainer does not read test.json; permanent Python audit guard blocks it. Synthetic 40epoch isolation tests change validation targets and poison test file, check bit-identical weights. Do not open test performance before model-freeze.json. Parent evaluator owns all performance evaluation."
+}

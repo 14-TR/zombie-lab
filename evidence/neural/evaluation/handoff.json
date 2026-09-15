@@ -1,0 +1,185 @@
+{
+  "status": "completed-real-evaluation-negative-result",
+  "realModelResultsProduced": true,
+  "updatedAt": "2026-09-15T02:49:44.504956+00:00",
+  "blockers": [],
+  "publication": "not attempted or authorized by this evaluation",
+  "trainingInvoked": false,
+  "modelsTrainerDatasetPhysicsProtocolChanged": false,
+  "repoFilesChangedByThisResume": [
+    "experiments/ZL-011-feed-forward.md"
+  ],
+  "previousHandoff": "/tmp/zl011-eval/handoff-readiness.json",
+  "modelHashes": {
+    "neural": "c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275",
+    "untrained": "2b977ed115c41ed2db8256ec25829e2bd4bb11b8484d899a80f4edf7a31b83ef"
+  },
+  "keyResults": {
+    "originalRows": 4761,
+    "heldoutRows": 37730,
+    "completeTrajectories": 99265,
+    "fullFrameComparisons": 1438294,
+    "testCount": 22,
+    "testFailures": 0,
+    "allStateParity": {
+      "neural": {
+        "states": 300212,
+        "logitsCompared": 1501060,
+        "tolerance": 1e-10,
+        "maxAbsoluteLogitError": 3.3861802251067274e-15,
+        "actionDisagreements": 0,
+        "nearTies": 0,
+        "pythonNearTies": 0,
+        "minMargin": 1.0800765853358207e-06,
+        "minPythonMargin": 1.0800765860019546e-06,
+        "firstActionDisagreements": [],
+        "modelSHA256": "c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275",
+        "passed": true
+      },
+      "untrained": {
+        "states": 300212,
+        "logitsCompared": 1501060,
+        "tolerance": 1e-10,
+        "maxAbsoluteLogitError": 1.1102230246251565e-15,
+        "actionDisagreements": 0,
+        "nearTies": 0,
+        "pythonNearTies": 0,
+        "minMargin": 5.646946081239168e-06,
+        "minPythonMargin": 5.646946081239168e-06,
+        "firstActionDisagreements": [],
+        "modelSHA256": "2b977ed115c41ed2db8256ec25829e2bd4bb11b8484d899a80f4edf7a31b83ef",
+        "passed": true
+      }
+    },
+    "originalNeural": {
+      "capture": 880,
+      "cycle": 3881,
+      "avoidableCaptures": 336,
+      "unresolved": 0
+    },
+    "plannerComparisons": {
+      "depth1": {
+        "recoveredAvoidableCaptures": 5,
+        "newCapturesOnCycles": 317,
+        "unchangedCycles": 3876,
+        "unresolvedOnCycles": 0,
+        "success": false
+      },
+      "depth2": {
+        "recoveredAvoidableCaptures": 16,
+        "newCapturesOnCycles": 328,
+        "unchangedCycles": 3865,
+        "unresolvedOnCycles": 0,
+        "success": false
+      }
+    },
+    "heldoutNeural": {
+      "capture": 7687,
+      "cycle": 30043,
+      "avoidableCaptures": 2868,
+      "unresolved": 0
+    },
+    "latencyMedianMicroseconds": {
+      "neural": 2.7420234375,
+      "depth1": 0.4353828125,
+      "depth2": 1.9760742187499998,
+      "overhead": 0.011558593749999999
+    }
+  },
+  "resources": {
+    "elapsedMs": 11405.95525,
+    "maxRSSKiB": 291184,
+    "currentRSSBytes": 298172416,
+    "userCPUTimeUs": 11406686,
+    "systemCPUTimeUs": 57094,
+    "watchdogMs": 840000
+  },
+  "limitations": [
+    "Heldout expanded cohort retains explicit exact-avoidability-only scope; no expanded planner trajectories or observed runtime blocker is claimed.",
+    "Only starting configurations held out; final-model trajectories enter training groups on 32930 of 37730 starts.",
+    "Three real output artifacts total 15045364 bytes, but combined evaluation plus existing external training/parity evidence exceeds literal 30 MB retained-artifact target; evidence retained, not deleted.",
+    "No browser, CI, independent review, merge or publication verification in this scoped evaluator task."
+  ],
+  "artifacts": {
+    "evaluation.json": {
+      "path": "/tmp/zl011-eval/evaluation.json",
+      "sha256": "1fe5aab11bf87fa29f28542da6d4d31111373c28488f8d976c26c0b1fac1f151",
+      "bytes": 18300
+    },
+    "neural.json": {
+      "path": "/tmp/zl011-eval/neural.json",
+      "sha256": "f34effd57d8745321bf0458115535ed587a180e1158a7fc514b5dec0f04c1dc0",
+      "bytes": 2623196
+    },
+    "neural-data.js": {
+      "path": "/tmp/zl011-eval/neural-data.js",
+      "sha256": "730b10f9776b3f2de241b69307c6f21371b5b7ab174c9acb3fb0d5921b653b65",
+      "bytes": 2623271
+    },
+    "neural-heldout.json": {
+      "path": "/tmp/zl011-eval/neural-heldout.json",
+      "sha256": "85bf8d24e671669432ac8c8fe56dff3273fdc9ff5d03ae91e5c4a4c5dbabf482",
+      "bytes": 9798897
+    },
+    "verified-real.json": {
+      "path": "/tmp/zl011-eval/verified-real.json",
+      "sha256": "b20c70bbdf38e9d91a7b659f30afbbff9299d61836e3fb1a5afe4c019a7cb7cd",
+      "bytes": 1673
+    },
+    "original-split-summary.json": {
+      "path": "/tmp/zl011-eval/original-split-summary.json",
+      "sha256": "ac860a82b7d25f99b44f3535de7f661207285675f23acf0e0b0cb2167612859a",
+      "bytes": 13835
+    },
+    "frozen-export-parity.json": {
+      "path": "/tmp/zl011-eval/frozen-export-parity.json",
+      "sha256": "27e92ab0141073a5878d02a6cb40005ab86788a21fc9f6124911aa3c334da2f5",
+      "bytes": 1722
+    },
+    "witness-verification.json": {
+      "path": "/tmp/zl011-eval/witness-verification.json",
+      "sha256": "e5d41d4029d153605c72583e5bf140b1a191a723bb9693f2eac9c3433e89cfb3",
+      "bytes": 783
+    },
+    "execution-real.json": {
+      "path": "/tmp/zl011-eval/execution-real.json",
+      "sha256": "37a56499e639d8c3fab7580f8578b8ce6cce571aeedbaa567accb785468132ee",
+      "bytes": 1011
+    },
+    "verification-execution.json": {
+      "path": "/tmp/zl011-eval/verification-execution.json",
+      "sha256": "761547b03ab5b91adf32f7628cc37c2b7167de4f44cb1ffcdd03362eb6692104",
+      "bytes": 790
+    },
+    "preflight-real.json": {
+      "path": "/tmp/zl011-eval/preflight-real.json",
+      "sha256": "598879f3727a5d84861c3b00f7b20399aad86da89ce5e4fad724b0c17eed4cdb",
+      "bytes": 25293
+    },
+    "frozen-models.json": {
+      "path": "/tmp/zl011-eval/frozen-models.json",
+      "sha256": "4a4365b273d7836d88a43d42e1ca39c2b79333ae35677e09aa97110fbb5d2ec0",
+      "bytes": 379
+    },
+    "real-model-tests.stdout.txt": {
+      "path": "/tmp/zl011-eval/real-model-tests.stdout.txt",
+      "sha256": "8f88371f8c426942063e2649812bb4266a9dd5300bed741af60428be1a9fc748",
+      "bytes": 2289
+    },
+    "verify-frozen-export.cjs": {
+      "path": "/tmp/zl011-eval/verify-frozen-export.cjs",
+      "sha256": "e11976f284fa9430a7d567a6e44ae342022dcdc64481fb3f367f6b4ec29ef5df",
+      "bytes": 6320
+    },
+    "verify-real-artifacts.py": {
+      "path": "/tmp/zl011-eval/verify-real-artifacts.py",
+      "sha256": "78f30a10e2ee6a9144d6b9046bb531ffbb52fc2d99f9e452e87f9adfcb427789",
+      "bytes": 14043
+    },
+    "report": {
+      "path": "/Users/tr/Projects/zombie-lab-neural/experiments/ZL-011-feed-forward.md",
+      "sha256": "5a81ab6e8fec3e12cd27af296dcc9a7ab951a524fbac212197d3bdefd18f336c",
+      "bytes": 16893
+    }
+  }
+}
