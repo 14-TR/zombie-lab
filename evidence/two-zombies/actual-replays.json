@@ -1,0 +1,64 @@
+{
+  "node": "v26.8.1",
+  "dataSource": "actual buildTwoZombies() and uncached production step / current worktree",
+  "rows": 4761,
+  "runs": 14283,
+  "frames": 335454,
+  "elapsedMs": 10309.241666,
+  "summary": {
+    "total": 4761,
+    "initialCapture": 502,
+    "policies": {
+      "greedy": {
+        "capture": 4761,
+        "cycle": 0,
+        "unresolved": 0
+      },
+      "depth1": {
+        "capture": 568,
+        "cycle": 4193,
+        "unresolved": 0
+      },
+      "depth2": {
+        "capture": 568,
+        "cycle": 4193,
+        "unresolved": 0
+      }
+    }
+  },
+  "selected": {
+    "row": {
+      "id": "z2-0-h2",
+      "humanId": 2,
+      "zombie2Id": 0,
+      "outcomes": {
+        "greedy": {
+          "outcome": "capture",
+          "stopTick": 71,
+          "cycleStart": null,
+          "period": null
+        },
+        "depth1": {
+          "outcome": "cycle",
+          "stopTick": 22,
+          "cycleStart": 20,
+          "period": 2
+        },
+        "depth2": {
+          "outcome": "cycle",
+          "stopTick": 22,
+          "cycleStart": 20,
+          "period": 2
+        }
+      }
+    },
+    "reason": "Selected example, not representative: first outcome difference in Z2 / human ID order."
+  },
+  "hashes": {
+    "two-zombies.html": "b4bedfae8b3cd898fdbc2d6cbce783910366dad24895c09956bd67e86b56cd09",
+    "two-zombies-view.js": "95e10b975c915a5b04778ad6d510d7cd5ed87ec7869032cc2fe15cbe980dc18f",
+    "scripts/test-two-zombies-view.cjs": "86335e542af604ed8fe0bc5e10e941a4b37062ff9fd4d296c8a946d4bf9747d4",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2"
+  }
+}

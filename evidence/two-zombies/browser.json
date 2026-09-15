@@ -1,0 +1,78 @@
+{
+  "node": "v26.8.1",
+  "chromium": "151.0.7922.34",
+  "dataSource": "actual buildTwoZombies() / current worktree; not packaged artifact or live publication",
+  "dataSHA256": "85702d45057de3396944faf37f150a46cb5d993aa3cac98fc772a2ebd116274f",
+  "summary": {
+    "total": 4761,
+    "initialCapture": 502,
+    "policies": {
+      "greedy": {
+        "capture": 4761,
+        "cycle": 0,
+        "unresolved": 0
+      },
+      "depth1": {
+        "capture": 568,
+        "cycle": 4193,
+        "unresolved": 0
+      },
+      "depth2": {
+        "capture": 568,
+        "cycle": 4193,
+        "unresolved": 0
+      }
+    }
+  },
+  "selected": "z2-0-h2: greedy: capture at tick 71. depth1: proven cycle: start tick 20, first repeat tick 22, period 2 — indefinite avoidance under this fixed deterministic policy. depth2: proven cycle: start tick 20, first repeat tick 22, period 2 — indefinite avoidance under this fixed deterministic policy. No finite capture-time difference for depth1 − greedy. No finite capture-time difference for depth2 − greedy. No finite capture-time difference for depth2 − depth1.",
+  "endpoints": {
+    "greedy": {
+      "readout": "Local tick 71 · shared tick 71 · capture endpoint. H (0, 6) · Z1 (1, 6) · Z2 (1, 6) (co-located) · nearest distance 1. Outcome: capture at tick 71.",
+      "frames": 72
+    },
+    "depth1": {
+      "readout": "Local tick 22 · shared tick 71 · frozen at first-repeat cycle endpoint. H (8, 0) · Z1 (9, 1) · Z2 (9, 1) (co-located) · nearest distance 2. Outcome: proven cycle: start tick 20, first repeat tick 22, period 2 — indefinite avoidance under this fixed deterministic policy.",
+      "frames": 23
+    },
+    "depth2": {
+      "readout": "Local tick 22 · shared tick 71 · frozen at first-repeat cycle endpoint. H (8, 0) · Z1 (9, 1) · Z2 (9, 1) (co-located) · nearest distance 2. Outcome: proven cycle: start tick 20, first repeat tick 22, period 2 — indefinite avoidance under this fixed deterministic policy.",
+      "frames": 23
+    }
+  },
+  "mapChecks": [
+    {
+      "policy": "greedy",
+      "cells": 69
+    },
+    {
+      "policy": "depth1",
+      "cells": 69
+    },
+    {
+      "policy": "depth2",
+      "cells": 69
+    }
+  ],
+  "mobile": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "mapFont": 12,
+      "glyphPx": 13.44
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "mapFont": 12,
+      "glyphPx": 16.8
+    }
+  ],
+  "consoleErrors": [],
+  "hashes": {
+    "two-zombies.html": "b4bedfae8b3cd898fdbc2d6cbce783910366dad24895c09956bd67e86b56cd09",
+    "two-zombies-view.js": "95e10b975c915a5b04778ad6d510d7cd5ed87ec7869032cc2fe15cbe980dc18f",
+    "scripts/test-two-zombies-view.cjs": "86335e542af604ed8fe0bc5e10e941a4b37062ff9fd4d296c8a946d4bf9747d4",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2"
+  }
+}

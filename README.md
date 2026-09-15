@@ -1,5 +1,24 @@
 # Zombie Lab
 
+## ZL-009 — Two independent zombies
+
+[Three-policy comparison](https://14-tr.github.io/zombie-lab/two-zombies.html) · [Frozen protocol](experiments/ZL-009-protocol.md) · [Results](experiments/ZL-009-two-zombies.md)
+
+Zombie 1 starts at `(2,4)`; vary the human and zombie 2 across 4,761 legal arrangements. Compare greedy, one-tick and two-tick policies at identical starts. Both zombies chase independently and may overlap; either can capture. This is a **fixed-Z1 slice**, not an exhaustive study of all three-agent configurations. Initial contact is reported separately. A policy getting caught is not proof that capture was unavoidable.
+
+Using an existing Node 22+ (no installation):
+
+```sh
+node scripts/test-two-zombies.cjs
+node scripts/test-two-zombies-view.cjs
+PREVIEW_COMMIT="$(git rev-parse HEAD)" node scripts/build-two-zombies.cjs preview
+cp two-zombies.js two-zombies.html two-zombies-view.js preview/
+mkdir -p preview/experiments
+cp experiments/ZL-009-two-zombies.md experiments/ZL-009-protocol.md preview/experiments/
+```
+
+Open `preview/two-zombies.html`. Generate the older pages below to enable historical navigation. Shared playback distinguishes capture from first-repeat cycle endpoints; JSON contains all policy outcomes. Public links update only after successful deployment.
+
 ## ZL-008 — Does this planning policy help?
 
 [Same-start policy comparison](https://14-tr.github.io/zombie-lab/planning.html) · [Preregistered protocol](experiments/ZL-008-protocol.md) · [Result report](experiments/ZL-008-lookahead.md)

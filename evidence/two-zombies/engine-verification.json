@@ -1,0 +1,42 @@
+{
+  "frozenCommit": "39bfd229fa20154512a154b7e499edbc954fda21",
+  "metadata": "39bfd229fa20154512a154b7e499edbc954fda21+uncommitted-engine-ae62cc4ed7d4",
+  "sourceHashes": {
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2",
+    "scripts/test-two-zombies.cjs": "9563a9abc6c68b0d605e997cd3803ef9e587c757b04bc58c438b8da620ebc04d",
+    "simulation.js": "4ee5817ba528b163fca1347c49ad4c48de2dcae226dd800065e5048b5b9bb568",
+    "planner.js": "ea535e5a564ca133cdcf1cfa339c359d967d7d89a64640f3e9e8bc977000cb6a",
+    "scripts/build-sweep.cjs": "8e5ede1d6045c7f2c27d0a4098c79a36b1d4179a26e9606b8b8dfe365636ceb0",
+    "experiments/ZL-009-protocol.md": "8401922409e83724dfdbba073f57087838cbe88c74bb52367bc917b767c5866d"
+  },
+  "noMemoization": true,
+  "runs": 14283,
+  "rows": 4761,
+  "decisions": 12777,
+  "initialContactStarts": 502,
+  "frames": 335454,
+  "classificationMismatches": 0,
+  "controls": {
+    "starts": 69,
+    "policyRuns": 138,
+    "frames": 5092,
+    "outcomeMismatches": 0,
+    "frameMismatches": 0
+  },
+  "uncachedTrajectorySha256": {
+    "greedy": "d25fe135dab98361133486d81cb5fdd2cd817b0f55c4a1f41aa3bc4727522942",
+    "depth1": "1ffb00ecfa9817b5340957f22a659a39006b1f6e924e7062a0cc384ca08a9d39",
+    "depth2": "1a8e801b20eac7ca99860029d052da1551215326ed5b615a8251a46236132f33"
+  },
+  "perPolicyReplayMs": {
+    "greedy": 958.358,
+    "depth1": 1017.835792,
+    "depth2": 3508.174334
+  },
+  "elapsedMs": 10899.980125,
+  "maxRSSKiB": 87264,
+  "currentRSSBytes": 89374720,
+  "userCPUTimeUs": 5836912,
+  "systemCPUTimeUs": 26540
+}

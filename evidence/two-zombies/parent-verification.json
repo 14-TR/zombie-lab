@@ -1,0 +1,9 @@
+{
+  "pairedRows": 4761,
+  "policyRuns": 14283,
+  "decisionsMatched": 12777,
+  "allMatched": true,
+  "engineTests": "9/9",
+  "viewerBrowserTests": "7/7 no skips",
+  "publication": "pending"
+}
