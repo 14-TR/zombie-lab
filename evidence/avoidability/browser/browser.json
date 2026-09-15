@@ -1,0 +1,153 @@
+{
+  "node": "v26.8.1",
+  "chromium": "151.0.7922.34",
+  "scope": "current-worktree file:// verification; not downloaded artifact or live deployment",
+  "results": [
+    {
+      "name": "fixture",
+      "source": "synthetic scalar interface fixture with real production frames, NOT scientific data",
+      "dataScriptSource": "test-generated classic-script wrapper",
+      "dataScriptSha256": "67fe464a4c8bec862f1614818bda2d7ef0f3862babcbc13a09b70d064a872284",
+      "fileURL": true,
+      "witnesses": 2,
+      "frames": 26,
+      "mobile": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "glyphPx": [
+            13.631785714285714,
+            13.631785714285714,
+            13.631785714285714
+          ],
+          "markers": [
+            {
+              "x": 221.0590362548828,
+              "right": 240.938720703125,
+              "y": 2119.34033203125,
+              "bottom": 2139.219970703125
+            },
+            {
+              "x": 75.6533203125,
+              "right": 88.71711730957031,
+              "y": 2179.54736328125,
+              "bottom": 2192.611083984375
+            },
+            {
+              "x": 89.28511047363281,
+              "right": 102.34890747070312,
+              "y": 2179.54736328125,
+              "bottom": 2192.611083984375
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "glyphPx": [
+            16.99178571428571,
+            16.99178571428571,
+            16.99178571428571
+          ],
+          "markers": [
+            {
+              "x": 271.1090393066406,
+              "right": 295.88873291015625,
+              "y": 1813.9996337890625,
+              "bottom": 1838.779296875
+            },
+            {
+              "x": 89.86332702636719,
+              "right": 106.1471176147461,
+              "y": 1889.0467529296875,
+              "bottom": 1905.33056640625
+            },
+            {
+              "x": 106.85511016845703,
+              "right": 123.13890838623047,
+              "y": 1889.0467529296875,
+              "bottom": 1905.33056640625
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "actual",
+      "source": "/tmp/zl010-engine/outputs/avoidability.json",
+      "dataScriptSource": "/tmp/zl010-engine/outputs/avoidability-data.js",
+      "dataScriptSha256": "397aeec5e7668441f57393de92f69c15bfdd71df8e0480aaa1976108cf30791d",
+      "fileURL": true,
+      "witnesses": 32,
+      "frames": 734,
+      "mobile": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "glyphPx": [
+            13.631785714285714,
+            13.631785714285714,
+            13.631785714285714
+          ],
+          "markers": [
+            {
+              "x": 79.061279296875,
+              "right": 98.94096374511719,
+              "y": 2062.541259765625,
+              "bottom": 2082.4208984375
+            },
+            {
+              "x": 79.061279296875,
+              "right": 98.94096374511719,
+              "y": 2176.139404296875,
+              "bottom": 2196.01904296875
+            },
+            {
+              "x": 22.262165069580078,
+              "right": 42.14185333251953,
+              "y": 2062.541259765625,
+              "bottom": 2082.4208984375
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "glyphPx": [
+            16.99178571428571,
+            16.99178571428571,
+            16.99178571428571
+          ],
+          "markers": [
+            {
+              "x": 94.11127471923828,
+              "right": 118.8909683227539,
+              "y": 1671.2005615234375,
+              "bottom": 1695.980224609375
+            },
+            {
+              "x": 94.11127471923828,
+              "right": 118.8909683227539,
+              "y": 1812.798828125,
+              "bottom": 1837.5784912109375
+            },
+            {
+              "x": 23.312164306640625,
+              "right": 48.091854095458984,
+              "y": 1671.2005615234375,
+              "bottom": 1695.980224609375
+            }
+          ]
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "hashes": {
+    "avoidability.html": "813438105691ec7bf0eac58afe78baeda22113035b49498ea40c0fe29c701864",
+    "avoidability-view.js": "d9836d278015e3e285a2e9aa4147c00b12f471e60f028462edee764f1d33cab2",
+    "scripts/test-avoidability-view.cjs": "b4d39f6a6067b5913cd5c4a7b600b9fee4b16fb8ce8dc8ce78943d63b29e06a2",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243"
+  }
+}

@@ -194,14 +194,6 @@ Measured source identities:
 
 Artifact hashes are in `verification.json`; source snapshots identify the exact measured worktree. Internal graph checks and selected production replays are **not a substitute for the separately implemented complete checker**. Independent checker, review, browser/package/CI, merge and live Pages verification remain parent-owned delivery gates and are not claimed complete by this engine-stage report.
 
-## Integrated verification
-
-The independent Python checker accepted a rebuilt certificate bound to committed engine source `a64fae29f6498750a4cd0d6ad14ed781e8d72247`. All 343,000 ranks and 1,351,892 legal transitions passed. A separate production enumeration matched all 10,169,373 oracle transition bytes and all 70 zombie1 partitions (SHA-256 `6385ad2fca93170d1367b84315b88188dc71b47970f28ab836e64cfc63abedef`). The signed-int32 rank digest is `2680dbfb1f30e6c5264a11f1d263a4fd0e6f39040f57e1c5da1d46a516eeaae1`.
-
-Parent reruns passed 10 engine tests, 5 independent-checker tests, and 7 viewer tests with no skips, including real file:// Chromium and all 32 actual witnesses. Independent scientific review passed. Mobile 320/390px checks covered labels, overlap, controls, and fail-closed handling. This is local verification; remote publication is separately gated by CI and live verification.
-
-[Preserved source-bound evidence](https://github.com/14-TR/zombie-lab/tree/experiment/exact-avoidability/evidence/avoidability) includes committed-source data/certificate, independent acceptance, review/parity scripts and receipts, engine-stage measurements and source snapshots, and browser receipts. Engine-stage measurements above describe the original dirty-tag artifacts; the rebuilt certificate has the same ranks and outcomes, with updated commit metadata. Do not treat the original dirty tag as clean-commit acceptance.
-
 ## Interpretation limits
 
 The graph is exhaustive only for this fixed board, full observations, deterministic frozen zombies, legal action set, ordering and contact rules. The 4,761-row policy comparison is a named initial slice of that graph, not the whole graph's distribution. A winning classification proves existence of a legal safe strategy, not that arbitrary choices are safe; a losing rank proves eventual capture and its attainable maximum delay, not that every policy captures at the same tick. No comparison to learned policies was conducted, and nothing here establishes a requirement for recurrence, training, increased horizon, or a neural model.

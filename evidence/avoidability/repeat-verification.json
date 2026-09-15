@@ -1,0 +1,30 @@
+{
+  "sourceCommitMetadata": "7cb59fec334f6992c39c131477964874208eb48f+uncommitted-zl010-engine",
+  "artifacts": {
+    "avoidability.json": {
+      "bytes": 1887461,
+      "sha256": "fffa53c6a496375fc017afa073b302dd5d167112f0d20a93513d5e8e25d4c4a5",
+      "byteIdentical": true
+    },
+    "avoidability-data.js": {
+      "bytes": 1887492,
+      "sha256": "397aeec5e7668441f57393de92f69c15bfdd71df8e0480aaa1976108cf30791d",
+      "byteIdentical": true
+    },
+    "avoidability-certificate.json": {
+      "bytes": 985208,
+      "sha256": "a29c15476c00531caee956969abd8c8a411d540e97b31b1ab623876f6fe98b5f",
+      "byteIdentical": true
+    }
+  },
+  "repeatElapsedMs": 9717.710333,
+  "repeatMaxRSSKiB": 138224,
+  "unchangedFromPreregistration": [
+    "two-zombies.js",
+    "scripts/build-two-zombies.cjs",
+    "experiments/ZL-010-protocol.md",
+    "simulation.js",
+    "planner.js",
+    "evidence"
+  ]
+}

@@ -1,5 +1,26 @@
 # Zombie Lab
 
+## ZL-010 — Which captures are avoidable?
+
+[Exact-solver replay](https://14-tr.github.io/zombie-lab/avoidability.html) · [Protocol](experiments/ZL-010-protocol.md) · [Report](experiments/ZL-010-avoidability.md)
+
+The complete ordered-position graph separates safe strategies from unavoidable capture under the **same deterministic zombie rules**. For the 4,761 earlier starts: 502 begin in contact, 42 others cannot avoid capture, and 4,217 admit indefinite avoidance. Each short-horizon planner fails on 24 avoidable starts; all 30 planner disagreements are avoidable. This is an exact control benchmark, not a trained model or a claim about general intelligence.
+
+Using existing Node 22+ and Python 3 (no install):
+
+```sh
+node scripts/test-avoidability.cjs
+python3 -B scripts/test-avoidability-checker.py
+PREVIEW_COMMIT="$(git rev-parse HEAD)" node scripts/build-avoidability.cjs --out-dir preview
+python3 -B scripts/check-avoidability.py preview/avoidability-certificate.json --out-dir /tmp/zl010-check
+ZL010_DATA=preview/avoidability.json node --test scripts/test-avoidability-view.cjs
+cp two-zombies.js avoidability.html avoidability-view.js preview/
+mkdir -p preview/experiments
+cp experiments/ZL-010-protocol.md experiments/ZL-010-avoidability.md preview/experiments/
+```
+
+Open `preview/avoidability.html`; generate prior pages below for historical navigation. Public links become available after deployment. The JSON certificate contains every state rank; the independent Python checker validates every legal action, not just selected replays.
+
 ## ZL-009 — Two independent zombies
 
 [Three-policy comparison](https://14-tr.github.io/zombie-lab/two-zombies.html) · [Frozen protocol](experiments/ZL-009-protocol.md) · [Results](experiments/ZL-009-two-zombies.md)

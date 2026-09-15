@@ -1,0 +1,127 @@
+{
+  "allLegacyRowsMatchHistoricalEvidence": 4761,
+  "certificateIdentityError": "commit must be a full lowercase 40-hex identifier",
+  "disagreements": {
+    "bothWinning": 15,
+    "commonAvoidableCaptures": 9,
+    "reportRowsExactlyMatched": 30,
+    "total": 30,
+    "winningVersusLosing": 15
+  },
+  "elapsedSeconds": 1.263632333,
+  "inputCertificateSha256": "a29c15476c00531caee956969abd8c8a411d540e97b31b1ab623876f6fe98b5f",
+  "inputDataSha256": "fffa53c6a496375fc017afa073b302dd5d167112f0d20a93513d5e8e25d4c4a5",
+  "partition": {
+    "avoidable": 4217,
+    "initialContact": 502,
+    "noninitialUnavoidable": 42
+  },
+  "policies": {
+    "depth1": {
+      "actionableFiniteCapturedStarts": 42,
+      "avoidableCaptures": 24,
+      "finiteCapturedStarts": 544,
+      "maxShortfall": 1,
+      "outcomes": {
+        "capture": 568,
+        "cycle": 4193
+      },
+      "positiveShortfalls": [
+        [
+          "z2-10-h60",
+          1
+        ]
+      ],
+      "sumShortfall": 1
+    },
+    "depth2": {
+      "actionableFiniteCapturedStarts": 42,
+      "avoidableCaptures": 24,
+      "finiteCapturedStarts": 544,
+      "maxShortfall": 2,
+      "outcomes": {
+        "capture": 568,
+        "cycle": 4193
+      },
+      "positiveShortfalls": [
+        [
+          "z2-10-h60",
+          2
+        ]
+      ],
+      "sumShortfall": 2
+    },
+    "greedy": {
+      "actionableFiniteCapturedStarts": 42,
+      "avoidableCaptures": 4217,
+      "finiteCapturedStarts": 544,
+      "maxShortfall": 4,
+      "outcomes": {
+        "capture": 4761
+      },
+      "positiveShortfalls": [
+        [
+          "z2-0-h40",
+          3
+        ],
+        [
+          "z2-0-h50",
+          1
+        ],
+        [
+          "z2-1-h40",
+          3
+        ],
+        [
+          "z2-1-h51",
+          1
+        ],
+        [
+          "z2-10-h30",
+          3
+        ],
+        [
+          "z2-10-h31",
+          4
+        ],
+        [
+          "z2-10-h50",
+          1
+        ],
+        [
+          "z2-10-h51",
+          1
+        ],
+        [
+          "z2-10-h60",
+          2
+        ],
+        [
+          "z2-14-h23",
+          2
+        ]
+      ],
+      "sumShortfall": 21
+    }
+  },
+  "rankProofReceipt": "/tmp/zl010-review/rank-proof.json",
+  "rankProofVerified": true,
+  "rankSha256": "2680dbfb1f30e6c5264a11f1d263a4fd0e6f39040f57e1c5da1d46a516eeaae1",
+  "scriptSha256": "f3466fe78029f9d5fa70b0ebcf69a28cdbb95b316db2b8511e14ab5e556c9e01",
+  "sourceHashes": {
+    "experiments/ZL-010-avoidability.md": "01ac567e065f9e00cc32df2d814e795b31a03377d9425d42cfe7f93e511dfcbf",
+    "experiments/ZL-010-protocol.md": "c809145e263e8f360b587b16a25183bcf3e55f21cdffad0a713212baa9757f33",
+    "scripts/build-avoidability.cjs": "3695964bf1f7a71094f3cd795b264cde5a0d3faa76418c7eaad348e4ca36ace1",
+    "scripts/check-avoidability.py": "edb8059aedbc74bade4a97429820d279da650f0836811dc4bbe04871ba7de0ed",
+    "scripts/test-avoidability-checker.py": "98ec6a59c4cce6e0e2733c97505271097acf9bec306e86475a53f63ce2c1ac70",
+    "scripts/test-avoidability.cjs": "e1762879442911adaa566577fe5ca7a4f61ebcfd8bcd61d3ac1563bdd5dba858",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243"
+  },
+  "status": "PASS",
+  "witnesses": {
+    "frames": 734,
+    "independentCandidates": 3003,
+    "total": 32,
+    "transitions": 702
+  }
+}

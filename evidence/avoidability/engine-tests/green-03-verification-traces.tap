@@ -1,0 +1,13 @@
+✔ solveGraph covers every ordered position and legal production action with typed storage (4554.145042ms)
+✔ controlled ranks use ALL successors, maximum delay, cycle closure and first tied action (0.335125ms)
+✔ complete graph ranks certify contact iff zero and the exact maximum-delay Bellman law (8.956791ms)
+✔ internal certificate checks reject incomplete, corrupted and noncanonical strategies (12.015166ms)
+✔ certified traces replay actual production to first recurrence or rank-exact capture (5.494834ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4612.214625

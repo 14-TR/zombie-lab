@@ -1,0 +1,55 @@
+✔ classifyRun records first ordered recurrence and capture-cycle-cutoff precedence (17.268292ms)
+✔ paired sweep covers all 4830 starts and reproduces every frozen baseline row (1802.277667ms)
+✔ CLI preserves neighbors, escapes metadata, repeats bytes and reports measured costs (3738.72375ms)
+✔ two-transition choice scores survival before distance and keeps first sequence on ties (30.51275ms)
+✔ step executes only the selected first action with an old-state zombie and real clock (82.115917ms)
+✔ terminal normalization exactly matches baseline without consuming a tick (0.630417ms)
+✔ independent checker accepts serialized proof and rejects corrupted certificates (3349.147459ms)
+✔ CLI writes proof.json only, preserves preview files and propagates PREVIEW_COMMIT (5340.151125ms)
+✔ graph and rank helpers close over a reachable overlapping terminal (22.140167ms)
+✔ rank helper rejects cycles and missing successor states (0.247125ms)
+✔ builder rejects nonstring commit metadata (0.129375ms)
+✔ position is sufficient before cutoff, but the manual cap still stops a long witness (38.498458ms)
+✔ complete finite certificate gives the exact production capture time for every distinct start (1884.996958ms)
+✔ exhaustive sweep covers every distinct ordered start exactly once in row-major order (1069.60175ms)
+✔ CLI writes only the two safe data artifacts and preserves existing replay files (1097.709125ms)
+✔ single-start adjudicator preserves the baseline, initial capture, cutoff and frozen input (3.007334ms)
+✔ all and only adjacent starts capture at tick zero; both baseline rows capture at 73 (1063.502042ms)
+✔ fixed source and metadata repeat byte-for-byte without mutation or bulk trajectories (4240.721625ms)
+✔ first occurrence uses both ordered positions and records a nonzero cycle start (1.0745ms)
+✔ capture precedes cycle, which precedes unresolved at the inclusive tick 10000 bound (8.109583ms)
+✔ malformed progress, positions and terminal states are rejected rather than published (1.244125ms)
+✔ unsafe or noninteger safety caps and nonstring metadata are rejected (5.198292ms)
+✔ CLI output argument wins over environment and default is cwd/preview (3043.912417ms)
+✔ initialState exposes the frozen classic global and independent coordinates (1.266417ms)
+✔ resolveTick preserves simultaneous contact, legal overlap and terminal precedence (1.912167ms)
+✔ greedy maximizes nearest OLD zombie distance with cardinal ties and old-state chasing (1.705ms)
+✔ depth1 uses survival then predicted nearest endpoint distance, ignoring real remaining cap (346.082375ms)
+✔ depth2 changes only horizon, stops captured branches and replans after each real tick (1430.299667ms)
+✔ classifyRun keys BOTH ordered zombies and prioritizes capture then first repeat then cap (3.190042ms)
+✔ buildTwoZombies covers all frozen ordered starts and all uncached trajectories (12490.636292ms)
+✔ all 69 colocated-zombie starts reduce frame-for-frame to unchanged single-zombie controls (240.048458ms)
+✔ CLI writes only the two artifacts, preserves neighbors and safely escapes metadata (5413.2045ms)
+PASS initial world is one human and one zombie on a bounded grid
+PASS initial cardinal adjacency is caught before movement, even at the limit
+PASS one pure tick uses the same old state for both decisions
+PASS shared destination is caught and further ticks stop
+PASS crossing remains caught, but initial adjacency now stops before a swap
+PASS all four cardinal post-move adjacencies capture before the tick limit
+PASS diagonal neighbors are not captured before or after simultaneous moves
+PASS explicit tick limit stops exactly, with capture taking precedence
+PASS existing contact stops without moving, including a one-cell board
+PASS original default start reaches the manual cap and extended capture deterministically
+PASS resolver rejects out-of-bounds, diagonal, fractional and long moves
+PASS all starts on 1×1 through 4×4 boards stay bounded, pure and repeatable
+PASS following and staying cannot evade existing cardinal adjacency
+13/13 passed
+✔ test-node.cjs (105.888292ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19976.674

@@ -1,0 +1,44 @@
+{
+  "evidence": {
+    "audit-artifacts.py": {
+      "bytes": 9630,
+      "sha256": "f3466fe78029f9d5fa70b0ebcf69a28cdbb95b316db2b8511e14ab5e556c9e01"
+    },
+    "checker-tests.txt": {
+      "bytes": 565,
+      "sha256": "06a50b8547abffa197e14105ed0187c4c550f40b8ca7bc71f24021b069564c54"
+    },
+    "engine-tests.txt": {
+      "bytes": 1221,
+      "sha256": "41a22951d9fa4ae71b83c7d07efb149364af7e8452e7125806a614287119eaaf"
+    },
+    "production-parity.json": {
+      "bytes": 9435,
+      "sha256": "965db428147e645ff9f286281dd2278c0ff080e1049b0acafa4a61bafa7a7e8d"
+    },
+    "production-transitions.bin": {
+      "bytes": 10169373,
+      "sha256": "6385ad2fca93170d1367b84315b88188dc71b47970f28ab836e64cfc63abedef"
+    },
+    "rank-proof.json": {
+      "bytes": 10748,
+      "sha256": "1893afc87c67a0e272b8ce94948bad0e7e7fb99eb2f4269755a98f9ae803c9ca"
+    },
+    "regression-tests.txt": {
+      "bytes": 4246,
+      "sha256": "a4593ed99c0b9674f1963e6c5e18c32fa00dadeef008bec340d3d4b0d33c1965"
+    },
+    "science-audit.json": {
+      "bytes": 3328,
+      "sha256": "fc25ba84437c20f2517104342cc6c4e8b1855f6b91bb2785b8f43fec99b0266f"
+    }
+  },
+  "headAtFinalRead": "a64fae29f6498750a4cd0d6ad14ed781e8d72247",
+  "parityScript": {
+    "path": "/tmp/zl010-production-parity.cjs",
+    "sha256": "60ec1ac909574115e780c15b43bf0b260a7e2616f0204f8cac36f6bd5d6d0d37"
+  },
+  "scope": "scientific/code review only; no release, metadata-acceptance, packaging or deployment claim",
+  "sourceBytesStillMatchReviewedInputs": true,
+  "status": "PASS"
+}
