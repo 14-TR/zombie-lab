@@ -1,0 +1,104 @@
+✔ solveGraph covers every ordered position and legal production action with typed storage (4659.739916ms)
+✔ controlled ranks use ALL successors, maximum delay, cycle closure and first tied action (0.346834ms)
+✔ complete graph ranks certify contact iff zero and the exact maximum-delay Bellman law (8.992459ms)
+✔ internal certificate checks reject incomplete, corrupted and noncanonical strategies (12.309125ms)
+✔ certified traces replay actual production to first recurrence or rank-exact capture (5.612125ms)
+✔ buildAvoidability preserves all 4761 legacy rows and separates impossibility from policy failures (15670.628667ms)
+✖ all 30 depth disagreements identify the first actual action divergence and successor ranks (0.510083ms)
+✖ witnesses are exactly the frozen ordered selection and every frame is a production transition (1.0785ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 6
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20391.0095
+
+✖ failing tests:
+
+test at scripts/test-avoidability.cjs:228:1
+✖ all 30 depth disagreements identify the first actual action divergence and successor ranks (0.510083ms)
+  AssertionError [ERR_ASSERTION]: Disagreement analysis is present
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-solver/scripts/test-avoidability.cjs:231:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at scripts/test-avoidability.cjs:265:1
+✖ witnesses are exactly the frozen ordered selection and every frame is a production transition (1.0785ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + []
+  - [
+  -   'z2-0-h2',
+  -   'z2-0-h30',
+  -   'z2-21-h60',
+  -   'z2-50-h0',
+  -   'z2-50-h1',
+  -   'z2-50-h11',
+  -   'z2-50-h55',
+  -   'z2-50-h57',
+  -   'z2-50-h59',
+  -   'z2-50-h64',
+  -   'z2-50-h66',
+  -   'z2-50-h68',
+  -   'z2-54-h22',
+  -   'z2-60-h0',
+  -   'z2-60-h11',
+  -   'z2-60-h20',
+  -   'z2-60-h64',
+  -   'z2-60-h65',
+  -   'z2-60-h66',
+  -   'z2-60-h67',
+  -   'z2-60-h68',
+  -   'z2-60-h69',
+  -   'z2-61-h0',
+  -   'z2-61-h11',
+  -   'z2-61-h20',
+  -   'z2-61-h55',
+  -   'z2-61-h57',
+  -   'z2-61-h59',
+  -   'z2-61-h66',
+  -   'z2-61-h68',
+  -   'z2-65-h22',
+  -   'z2-65-h33'
+  - ]
+  
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-solver/scripts/test-avoidability.cjs:271:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [
+      'z2-0-h2',   'z2-0-h30',  'z2-21-h60',
+      'z2-50-h0',  'z2-50-h1',  'z2-50-h11',
+      'z2-50-h55', 'z2-50-h57', 'z2-50-h59',
+      'z2-50-h64', 'z2-50-h66', 'z2-50-h68',
+      'z2-54-h22', 'z2-60-h0',  'z2-60-h11',
+      'z2-60-h20', 'z2-60-h64', 'z2-60-h65',
+      'z2-60-h66', 'z2-60-h67', 'z2-60-h68',
+      'z2-60-h69', 'z2-61-h0',  'z2-61-h11',
+      'z2-61-h20', 'z2-61-h55', 'z2-61-h57',
+      'z2-61-h59', 'z2-61-h66', 'z2-61-h68',
+      'z2-65-h22', 'z2-65-h33'
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

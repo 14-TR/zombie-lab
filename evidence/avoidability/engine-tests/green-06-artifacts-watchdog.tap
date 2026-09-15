@@ -1,0 +1,18 @@
+✔ solveGraph covers every ordered position and legal production action with typed storage (4403.773375ms)
+✔ controlled ranks use ALL successors, maximum delay, cycle closure and first tied action (0.339ms)
+✔ complete graph ranks certify contact iff zero and the exact maximum-delay Bellman law (9.056042ms)
+✔ internal certificate checks reject incomplete, corrupted and noncanonical strategies (11.975042ms)
+✔ certified traces replay actual production to first recurrence or rank-exact capture (5.493333ms)
+✔ buildAvoidability preserves all 4761 legacy rows and separates impossibility from policy failures (14754.907667ms)
+✔ all 30 depth disagreements identify the first actual action divergence and successor ranks (12.343584ms)
+✔ witnesses are exactly the frozen ordered selection and every frame is a production transition (7.526666ms)
+✔ wall-clock watchdog interrupts synchronous work and cannot exceed the preregistered bound (22.951792ms)
+✔ CLI exports a complete rank certificate, safe browser data and exact resource receipts without cleaning neighbors (9765.372541ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 29027.138292

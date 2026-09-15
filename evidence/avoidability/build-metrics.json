@@ -1,0 +1,1801 @@
+{
+  "output": "/tmp/zl010-engine/outputs",
+  "summary": {
+    "total": 4761,
+    "initialContact": 502,
+    "noninitialUnavoidable": 42,
+    "avoidable": 4217,
+    "graph": {
+      "stateCount": 343000,
+      "terminalStates": 42788,
+      "nonterminalStates": 300212,
+      "legalActionCount": 1351892,
+      "winningStates": 298396,
+      "losingStates": 44604,
+      "nonterminalLosingStates": 1816,
+      "maxRank": 9,
+      "rankHistogram": {
+        "0": 42788,
+        "1": 206,
+        "2": 264,
+        "3": 336,
+        "4": 408,
+        "5": 418,
+        "6": 86,
+        "7": 52,
+        "8": 36,
+        "9": 10
+      }
+    },
+    "policies": {
+      "greedy": {
+        "capture": 4761,
+        "cycle": 0,
+        "unresolved": 0,
+        "avoidableCaptures": 4217,
+        "unavoidableCaptures": 544,
+        "initialContactCaptures": 502,
+        "noninitialUnavoidableCaptures": 42,
+        "captureDelayShortfall": {
+          "capturedStarts": 544,
+          "noninitialCapturedStarts": 42,
+          "positiveStarts": 10,
+          "totalTicks": 21,
+          "maxTicks": 4,
+          "meanTicks": 0.03860294117647059,
+          "noninitialMeanTicks": 0.5,
+          "histogram": {
+            "0": 534,
+            "1": 4,
+            "2": 2,
+            "3": 3,
+            "4": 1
+          },
+          "maxShortfallIds": [
+            "z2-10-h31"
+          ]
+        }
+      },
+      "depth1": {
+        "capture": 568,
+        "cycle": 4193,
+        "unresolved": 0,
+        "avoidableCaptures": 24,
+        "unavoidableCaptures": 544,
+        "initialContactCaptures": 502,
+        "noninitialUnavoidableCaptures": 42,
+        "captureDelayShortfall": {
+          "capturedStarts": 544,
+          "noninitialCapturedStarts": 42,
+          "positiveStarts": 1,
+          "totalTicks": 1,
+          "maxTicks": 1,
+          "meanTicks": 0.001838235294117647,
+          "noninitialMeanTicks": 0.023809523809523808,
+          "histogram": {
+            "0": 543,
+            "1": 1
+          },
+          "maxShortfallIds": [
+            "z2-10-h60"
+          ]
+        }
+      },
+      "depth2": {
+        "capture": 568,
+        "cycle": 4193,
+        "unresolved": 0,
+        "avoidableCaptures": 24,
+        "unavoidableCaptures": 544,
+        "initialContactCaptures": 502,
+        "noninitialUnavoidableCaptures": 42,
+        "captureDelayShortfall": {
+          "capturedStarts": 544,
+          "noninitialCapturedStarts": 42,
+          "positiveStarts": 1,
+          "totalTicks": 2,
+          "maxTicks": 2,
+          "meanTicks": 0.003676470588235294,
+          "noninitialMeanTicks": 0.047619047619047616,
+          "histogram": {
+            "0": 543,
+            "2": 1
+          },
+          "maxShortfallIds": [
+            "z2-10-h60"
+          ]
+        }
+      }
+    },
+    "depthDisagreements": {
+      "total": 30,
+      "avoidable": 30,
+      "unavoidable": 0,
+      "depth1CaptureDepth2Cycle": 15,
+      "depth1CycleDepth2Capture": 15,
+      "cases": [
+        {
+          "id": "z2-21-h60",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 9,
+            "cycleStart": 7,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 3,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 0,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 1,
+              "y": 2
+            },
+            "tick": 0,
+            "stateIndex": 207330,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 0,
+                "y": 6
+              },
+              "successorIndex": 257030,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 0,
+                "y": 5
+              },
+              "successorIndex": 257020,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-50-h0",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 4,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 27,
+            "cycleStart": 25,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 1,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 3
+            },
+            "zombie2": {
+              "x": 0,
+              "y": 4
+            },
+            "tick": 1,
+            "stateIndex": 159601,
+            "depth1": {
+              "action": "W",
+              "actionIndex": 3,
+              "human": {
+                "x": 0,
+                "y": 0
+              },
+              "successorIndex": 109900,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            },
+            "depth2": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 2,
+                "y": 0
+              },
+              "successorIndex": 109902,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-50-h1",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 4,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 27,
+            "cycleStart": 25,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 1,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 0,
+              "y": 5
+            },
+            "tick": 0,
+            "stateIndex": 209301,
+            "depth1": {
+              "action": "W",
+              "actionIndex": 3,
+              "human": {
+                "x": 0,
+                "y": 0
+              },
+              "successorIndex": 159600,
+              "avoidable": false,
+              "maxCaptureTicks": 3
+            },
+            "depth2": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 2,
+                "y": 0
+              },
+              "successorIndex": 159602,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-50-h11",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 4,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 27,
+            "cycleStart": 25,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 1,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 3
+            },
+            "zombie2": {
+              "x": 0,
+              "y": 4
+            },
+            "tick": 1,
+            "stateIndex": 159601,
+            "depth1": {
+              "action": "W",
+              "actionIndex": 3,
+              "human": {
+                "x": 0,
+                "y": 0
+              },
+              "successorIndex": 109900,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            },
+            "depth2": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 2,
+                "y": 0
+              },
+              "successorIndex": 109902,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-50-h55",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 7,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 5,
+              "y": 5
+            },
+            "tick": 5,
+            "stateIndex": 234219,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 239189,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 239179,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-50-h57",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 5,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 3,
+              "y": 5
+            },
+            "tick": 3,
+            "stateIndex": 224279,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 229249,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 229239,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-50-h59",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 3,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 1,
+              "y": 5
+            },
+            "tick": 1,
+            "stateIndex": 214339,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 219309,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 219299,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-50-h64",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 7,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 5,
+              "y": 5
+            },
+            "tick": 5,
+            "stateIndex": 234219,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 239189,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 239179,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-50-h66",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 5,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 3,
+              "y": 5
+            },
+            "tick": 3,
+            "stateIndex": 224279,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 229249,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 229239,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-50-h68",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 3,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 1,
+              "y": 5
+            },
+            "tick": 1,
+            "stateIndex": 214339,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 219309,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 219299,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-54-h22",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 4,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 7,
+            "cycleStart": 5,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 2,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 2
+            },
+            "zombie2": {
+              "x": 4,
+              "y": 3
+            },
+            "tick": 2,
+            "stateIndex": 110182,
+            "depth1": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 3,
+                "y": 0
+              },
+              "successorIndex": 60483,
+              "avoidable": false,
+              "maxCaptureTicks": 1
+            },
+            "depth2": {
+              "action": "W",
+              "actionIndex": 3,
+              "human": {
+                "x": 1,
+                "y": 0
+              },
+              "successorIndex": 60481,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-60-h0",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 5,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 20,
+            "cycleStart": 18,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 0,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 0,
+              "y": 6
+            },
+            "tick": 0,
+            "stateIndex": 210000,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 0,
+                "y": 0
+              },
+              "successorIndex": 160300,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 1,
+                "y": 0
+              },
+              "successorIndex": 160301,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-60-h11",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 5,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 20,
+            "cycleStart": 18,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 0,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 2
+            },
+            "zombie2": {
+              "x": 0,
+              "y": 4
+            },
+            "tick": 2,
+            "stateIndex": 110600,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 0,
+                "y": 0
+              },
+              "successorIndex": 60900,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            },
+            "depth2": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 1,
+                "y": 0
+              },
+              "successorIndex": 60901,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-60-h20",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 5,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 20,
+            "cycleStart": 18,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 0,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 2
+            },
+            "zombie2": {
+              "x": 0,
+              "y": 4
+            },
+            "tick": 2,
+            "stateIndex": 110600,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 0,
+                "y": 0
+              },
+              "successorIndex": 60900,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            },
+            "depth2": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 1,
+                "y": 0
+              },
+              "successorIndex": 60901,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-60-h64",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 17,
+            "cycleStart": 15,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 7,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 5,
+              "y": 6
+            },
+            "tick": 5,
+            "stateIndex": 234919,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 239889,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 239879,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-60-h65",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 17,
+            "cycleStart": 15,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 6,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 4,
+              "y": 6
+            },
+            "tick": 4,
+            "stateIndex": 229949,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 234919,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 234909,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-60-h66",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 17,
+            "cycleStart": 15,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 5,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 3,
+              "y": 6
+            },
+            "tick": 3,
+            "stateIndex": 224979,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 229949,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 229939,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-60-h67",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 17,
+            "cycleStart": 15,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 4,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 2,
+              "y": 6
+            },
+            "tick": 2,
+            "stateIndex": 220009,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 224979,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 224969,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-60-h68",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 17,
+            "cycleStart": 15,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 3,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 1,
+              "y": 6
+            },
+            "tick": 1,
+            "stateIndex": 215039,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 220009,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 219999,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-60-h69",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 17,
+            "cycleStart": 15,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 0,
+              "y": 6
+            },
+            "tick": 0,
+            "stateIndex": 210069,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 215039,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 215029,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-61-h0",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 7,
+            "cycleStart": 5,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 5,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 0,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 1,
+              "y": 6
+            },
+            "tick": 0,
+            "stateIndex": 210070,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 0,
+                "y": 0
+              },
+              "successorIndex": 160370,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 1,
+                "y": 0
+              },
+              "successorIndex": 160371,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-61-h11",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 7,
+            "cycleStart": 5,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 5,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 0,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 2
+            },
+            "zombie2": {
+              "x": 1,
+              "y": 4
+            },
+            "tick": 2,
+            "stateIndex": 110670,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 0,
+                "y": 0
+              },
+              "successorIndex": 60970,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 1,
+                "y": 0
+              },
+              "successorIndex": 60971,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-61-h20",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 7,
+            "cycleStart": 5,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 5,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 0,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 2
+            },
+            "zombie2": {
+              "x": 1,
+              "y": 4
+            },
+            "tick": 2,
+            "stateIndex": 110670,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 0,
+                "y": 0
+              },
+              "successorIndex": 60970,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 1,
+                "y": 0
+              },
+              "successorIndex": 60971,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-61-h55",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 7,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 5,
+              "y": 5
+            },
+            "tick": 5,
+            "stateIndex": 234219,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 239189,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 239179,
+              "avoidable": false,
+              "maxCaptureTicks": 2
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-61-h57",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 5,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 3,
+              "y": 5
+            },
+            "tick": 3,
+            "stateIndex": 224279,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 229249,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 229239,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-61-h59",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 9,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 3,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 1,
+              "y": 5
+            },
+            "tick": 1,
+            "stateIndex": 214339,
+            "depth1": {
+              "action": "stay",
+              "actionIndex": 4,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 219309,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 9,
+                "y": 5
+              },
+              "successorIndex": 219299,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-61-h66",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 8,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 4,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 3,
+              "y": 6
+            },
+            "tick": 2,
+            "stateIndex": 220078,
+            "depth1": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 225049,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 8,
+                "y": 5
+              },
+              "successorIndex": 225038,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-61-h68",
+          "depth1": {
+            "outcome": "cycle",
+            "stopTick": 16,
+            "cycleStart": 14,
+            "period": 2
+          },
+          "depth2": {
+            "outcome": "capture",
+            "stopTick": 8,
+            "cycleStart": null,
+            "period": null
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 8,
+              "y": 6
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 4
+            },
+            "zombie2": {
+              "x": 1,
+              "y": 6
+            },
+            "tick": 0,
+            "stateIndex": 210138,
+            "depth1": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 9,
+                "y": 6
+              },
+              "successorIndex": 215109,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            },
+            "depth2": {
+              "action": "N",
+              "actionIndex": 0,
+              "human": {
+                "x": 8,
+                "y": 5
+              },
+              "successorIndex": 215098,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-65-h22",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 5,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 18,
+            "cycleStart": 16,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 3,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 1
+            },
+            "zombie2": {
+              "x": 5,
+              "y": 3
+            },
+            "tick": 3,
+            "stateIndex": 61253,
+            "depth1": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 4,
+                "y": 0
+              },
+              "successorIndex": 11554,
+              "avoidable": false,
+              "maxCaptureTicks": 1
+            },
+            "depth2": {
+              "action": "S",
+              "actionIndex": 2,
+              "human": {
+                "x": 3,
+                "y": 1
+              },
+              "successorIndex": 11563,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        },
+        {
+          "id": "z2-65-h33",
+          "depth1": {
+            "outcome": "capture",
+            "stopTick": 5,
+            "cycleStart": null,
+            "period": null
+          },
+          "depth2": {
+            "outcome": "cycle",
+            "stopTick": 18,
+            "cycleStart": 16,
+            "period": 2
+          },
+          "firstDivergence": {
+            "human": {
+              "x": 3,
+              "y": 0
+            },
+            "zombie1": {
+              "x": 2,
+              "y": 1
+            },
+            "zombie2": {
+              "x": 5,
+              "y": 3
+            },
+            "tick": 3,
+            "stateIndex": 61253,
+            "depth1": {
+              "action": "E",
+              "actionIndex": 1,
+              "human": {
+                "x": 4,
+                "y": 0
+              },
+              "successorIndex": 11554,
+              "avoidable": false,
+              "maxCaptureTicks": 1
+            },
+            "depth2": {
+              "action": "S",
+              "actionIndex": 2,
+              "human": {
+                "x": 3,
+                "y": 1
+              },
+              "successorIndex": 11563,
+              "avoidable": true,
+              "maxCaptureTicks": null
+            }
+          },
+          "avoidable": true,
+          "maxCaptureTicks": null
+        }
+      ]
+    },
+    "witnessCount": 32,
+    "witnessFrames": 734,
+    "witnessTransitions": 702
+  },
+  "verification": {
+    "valid": true,
+    "states": 343000,
+    "actions": 1351892
+  },
+  "metadata": {
+    "commit": "7cb59fec334f6992c39c131477964874208eb48f+uncommitted-zl010-engine",
+    "sourceHashes": {
+      "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+      "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2",
+      "scripts/build-avoidability.cjs": "3695964bf1f7a71094f3cd795b264cde5a0d3faa76418c7eaad348e4ca36ace1",
+      "experiments/ZL-010-protocol.md": "c809145e263e8f360b587b16a25183bcf3e55f21cdffad0a713212baa9757f33"
+    }
+  },
+  "maxRSSKiB": 137616,
+  "currentRSSBytes": 140918784,
+  "typedArrayBytes": 20156572,
+  "graphElapsedMs": 4554.72925,
+  "elapsedMs": 9935.419,
+  "watchdogMs": 840000,
+  "userCPUTimeUs": 10124094,
+  "systemCPUTimeUs": 37442,
+  "artifactBytes": {
+    "avoidability.json": 1887461,
+    "avoidability-data.js": 1887492,
+    "avoidability-certificate.json": 985208
+  },
+  "outputBytes": 4760161
+}

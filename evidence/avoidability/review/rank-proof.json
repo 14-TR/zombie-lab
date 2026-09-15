@@ -1,0 +1,339 @@
+{
+  "capturingTransitions": 198419,
+  "certificateIdentityAccepted": false,
+  "certificateIdentityError": "commit must be a full lowercase 40-hex identifier",
+  "certificateVerified": true,
+  "domain": {
+    "cell": "y*10+x",
+    "height": 7,
+    "includesColocatedZombies": true,
+    "includesContacts": true,
+    "orderedAgents": [
+      "human",
+      "zombie1",
+      "zombie2"
+    ],
+    "stateIndex": "((zombie1*70+zombie2)*70+human)",
+    "width": 10
+  },
+  "inputCertificateSha256": "a29c15476c00531caee956969abd8c8a411d540e97b31b1ab623876f6fe98b5f",
+  "inputMetadata": {
+    "commit": "7cb59fec334f6992c39c131477964874208eb48f+uncommitted-zl010-engine",
+    "sourceHashes": {
+      "experiments/ZL-010-protocol.md": "c809145e263e8f360b587b16a25183bcf3e55f21cdffad0a713212baa9757f33",
+      "scripts/build-avoidability.cjs": "3695964bf1f7a71094f3cd795b264cde5a0d3faa76418c7eaad348e4ca36ace1",
+      "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2",
+      "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243"
+    }
+  },
+  "losingStates": 44604,
+  "maximumFiniteRank": 9,
+  "noncapturingTransitions": 1153473,
+  "nonterminalStates": 300212,
+  "rankEncoding": "343000 signed int32 little-endian ranks in ascending stateIndex, no header",
+  "rankHistogram": {
+    "-1": 298396,
+    "0": 42788,
+    "1": 206,
+    "2": 264,
+    "3": 336,
+    "4": 408,
+    "5": 418,
+    "6": 86,
+    "7": 52,
+    "8": 36,
+    "9": 10
+  },
+  "rankSha256": "2680dbfb1f30e6c5264a11f1d263a4fd0e6f39040f57e1c5da1d46a516eeaae1",
+  "scanWallSeconds": 1.176850334,
+  "scope": "rank-only mathematical proof on original unchanged engine artifact; not commit acceptance",
+  "states": 343000,
+  "terminalStates": 42788,
+  "transitionBytes": 10169373,
+  "transitionEncoding": "ASCII ZL010-TRANSITIONS-v1 followed by LF; then states index=0..342999. Each state header is little-endian <IBB: uint32 stateIndex, uint8 terminal (0/1), uint8 degree. Each following edge is <BIB: uint8 action (N=0,E=1,S=2,W=3,stay=4), uint32 successorIndex, uint8 captured (0/1). Terminal states have degree zero. Nonterminal edges include ALL in-bounds human actions in action order, with both zombies pursuing the OLD human. No padding, separators, or footer. Per-zombie1 hashes exclude magic and cover that zombie1's 4900 consecutive state records.",
+  "transitionHashesByZombie1": [
+    {
+      "sha256": "6bdd663722a285745e61adff42d8b75b7f758ba110722a7d02b796f711540f8f",
+      "zombie1": 0
+    },
+    {
+      "sha256": "e6711c71903c7ee6461c9dc4653b836ac5b606219848623abc7e99f08d7474ec",
+      "zombie1": 1
+    },
+    {
+      "sha256": "f5f20b2994f27cb948f22651068b5a241530db375d34742d549cd7e94a0180fd",
+      "zombie1": 2
+    },
+    {
+      "sha256": "8a678de3f574bca48a3f88aadf09dd837da908bd4cf82f5f0cace8eb5fcd55e5",
+      "zombie1": 3
+    },
+    {
+      "sha256": "2308a62e539f76a703c779611537ce7cd429e099b0716fea69f58d312c197efe",
+      "zombie1": 4
+    },
+    {
+      "sha256": "45a423517cc27283d092e79e468db6817b9edb6405d617166a51f1fa879377ec",
+      "zombie1": 5
+    },
+    {
+      "sha256": "205fcef5d315f0f0a610de7ce50328233ee82ca046983e20ac5421abd7a7aa80",
+      "zombie1": 6
+    },
+    {
+      "sha256": "e271cec1e367dbaa76d774b7980fb84c18b7d1832613c6b181e7bfced23f3670",
+      "zombie1": 7
+    },
+    {
+      "sha256": "8bc5b28dbf17140b98ab246207e1e32b9e8f1bad5f015db04991537a7ce3e9eb",
+      "zombie1": 8
+    },
+    {
+      "sha256": "f72297c7593ede7e46e537ed23e4d51b236f21a892eed797732c408235c4a6ca",
+      "zombie1": 9
+    },
+    {
+      "sha256": "09ff9243309429c7d13a2bb7e7c31c26b675c6a2ea78fe94aec7ff1f55e6a559",
+      "zombie1": 10
+    },
+    {
+      "sha256": "7f8cc732d640d47b5a27602b771eede30fe5bd5a7a70f48f8dd249f749cf0353",
+      "zombie1": 11
+    },
+    {
+      "sha256": "220bbd49a452e19bc5db1e722ae2bc2d75a1ad1964e4f325468d6654f2c3466b",
+      "zombie1": 12
+    },
+    {
+      "sha256": "8f1a1d63689e41d882d8877f02fafd4d6c771f7d67a6c379cdde9356509e7de9",
+      "zombie1": 13
+    },
+    {
+      "sha256": "3fd03aa254621a5ead86f4e0af0bce55f8bddfd7d6f1d5c5cab5f105b5c1fd85",
+      "zombie1": 14
+    },
+    {
+      "sha256": "ed891acdfb312b3bce2901711fc862e006401cb5aa836ec073a09c8e1bb53582",
+      "zombie1": 15
+    },
+    {
+      "sha256": "078a37c73b603c70269b2530186ca10ab7ae790f85c136e9a729b86c1695bec9",
+      "zombie1": 16
+    },
+    {
+      "sha256": "8bb5ac6dae3de137aa7fe61a118da42ecec44480258cb20a3ffcfd7face59873",
+      "zombie1": 17
+    },
+    {
+      "sha256": "5f2a0a64d83b07f43dc3ad5648153f9c28fb18115bd5729c0697e6c63095a9e4",
+      "zombie1": 18
+    },
+    {
+      "sha256": "6cf1de38805ae2331be709839bce95e83aa024dc1c7831b7efee366792be4ee0",
+      "zombie1": 19
+    },
+    {
+      "sha256": "0481465a3dee6b5676c693f9cd7078ad9d1e10b4c6d5f1d2a932c124ea6b1a37",
+      "zombie1": 20
+    },
+    {
+      "sha256": "1a7ea3ea1c28335c819fdcc645996cdde0a82aa1c8f1dce3fa2ee5d2961ec0f6",
+      "zombie1": 21
+    },
+    {
+      "sha256": "f8bd8fc9b7981689f5bda433a9a61f70a7731fc40a658098a754ba5258ab75aa",
+      "zombie1": 22
+    },
+    {
+      "sha256": "a9c86cd9635d975a555e9819898415c8fe107107eda5f6a364ff650b45ce04a0",
+      "zombie1": 23
+    },
+    {
+      "sha256": "c034975b6c300337ed609e0620d3b57a50e999bdea6a65c318a05752ab4fe0e9",
+      "zombie1": 24
+    },
+    {
+      "sha256": "9026f15b87c90c9b409ef18ec4b9ed3e6f3faa2a17667126fc874164c2ab54ed",
+      "zombie1": 25
+    },
+    {
+      "sha256": "4b6d7a3d4915b1da8b8b845d0b302bf27203beef3663374099b4ae97ea807e74",
+      "zombie1": 26
+    },
+    {
+      "sha256": "648c9208f8b97a9b97b06d8cdf16b25622852ab1b1a399694da17aebb1ad9ee9",
+      "zombie1": 27
+    },
+    {
+      "sha256": "7230c25f9f920d40fb35d40611c88c69ac0d0f9086f832f9c55984a68a9150ff",
+      "zombie1": 28
+    },
+    {
+      "sha256": "b92a80451fb36a2a63be1e76ff3b3a3bdb7fd0a438a0ec2339f4f7b802a8e197",
+      "zombie1": 29
+    },
+    {
+      "sha256": "73c68883ba53781c87ed52eb47adb535902bc0809558d5b0e767cefc7a0ab4db",
+      "zombie1": 30
+    },
+    {
+      "sha256": "64d741c110a6d6e7ce338cb386cebf4dd44fc2600470b5ff50a49a04805af9b0",
+      "zombie1": 31
+    },
+    {
+      "sha256": "5877c65259748f5bbe7b1dcccc34a61f6780068c69199dffc7c930ab87cc8047",
+      "zombie1": 32
+    },
+    {
+      "sha256": "4f8b4be8fefb5232b5818a482fe4c288bb06a71f15ce551971dd13af008e2414",
+      "zombie1": 33
+    },
+    {
+      "sha256": "15df1621f1e205481fac4657265eced2929467f88a2889519f5653a7c2411c98",
+      "zombie1": 34
+    },
+    {
+      "sha256": "53fd9a2b3bc457f2329f420b0e4bf4b74d29d1eefb01e9bab3228d69bbee8630",
+      "zombie1": 35
+    },
+    {
+      "sha256": "f55dfb0efb2ea00414b44719721283a3fa1a10b3ac9921f51d1a3fa6a3fb6265",
+      "zombie1": 36
+    },
+    {
+      "sha256": "a5ecfb1060624e74aa978e04181537f704aecb95053bc2e87e2ea9e7027fa98e",
+      "zombie1": 37
+    },
+    {
+      "sha256": "d62abdf3c53546f72775a4bfd80262b600f969e3329948ff0aa77e187cac9832",
+      "zombie1": 38
+    },
+    {
+      "sha256": "95e0843aa8dc70f0b8752508ec30d7cce2bd13ff8e67b72df58800b445697d08",
+      "zombie1": 39
+    },
+    {
+      "sha256": "f0e9bcc3dbd18a5b3c4899a350d13c75ac714a2962fc5e33c6a8a173fd688816",
+      "zombie1": 40
+    },
+    {
+      "sha256": "6320055a9428bcf9614d0d3720224a0c42e2a840d83da82cd52ea2d28df57342",
+      "zombie1": 41
+    },
+    {
+      "sha256": "d7070c5c8e42227445525e0d219dce456927fdb134794e340d23a23a161dd5dc",
+      "zombie1": 42
+    },
+    {
+      "sha256": "a3a722c3e5522cc45df112bf5c268f07d0a47345a9fa474d3dc3ac51044b8b9b",
+      "zombie1": 43
+    },
+    {
+      "sha256": "75757033803a04441452406cb3439beb839948f1588488162237d7f909ab204d",
+      "zombie1": 44
+    },
+    {
+      "sha256": "b180038d3d0818b3927694fe3a82ba667b66dbf5625b2727d6ad912509ff3cdb",
+      "zombie1": 45
+    },
+    {
+      "sha256": "2d5fc49885524cd3e93c5ab3edfb756a2aec4fd1305af5b77e33e81bdfcbaa1d",
+      "zombie1": 46
+    },
+    {
+      "sha256": "35111b725b62b446773311b0d7e5bea3c98539c9a15ffaf8611baf6324f9fbf8",
+      "zombie1": 47
+    },
+    {
+      "sha256": "10a19330cb4c49372993abc95da0b2db6cef62d5ae8cb25508272d0325eb8e53",
+      "zombie1": 48
+    },
+    {
+      "sha256": "b623c603f7e206570b56e750a94cc9086231940c6264ea5a75517be108992d3e",
+      "zombie1": 49
+    },
+    {
+      "sha256": "9b696c5d26fcc2eb21c5687a954fd2ea9b8214da2fa4230d86060900b0738356",
+      "zombie1": 50
+    },
+    {
+      "sha256": "84cc5c09f12818110a28447948497002ba3a0341f948de2ee841e057244cf28b",
+      "zombie1": 51
+    },
+    {
+      "sha256": "3ed55a8beeeafc57b2e82a269e660f2fd9225a8ad0550ae4e9dbb960cf88274b",
+      "zombie1": 52
+    },
+    {
+      "sha256": "71bee870e82ca37c26d7c3f5d7fda3f7d6aa7a3df867053e6540abf55811b2ee",
+      "zombie1": 53
+    },
+    {
+      "sha256": "12fb4711b2296709c8a6f050a1575946c00605d23e3209137b10203a27ad6763",
+      "zombie1": 54
+    },
+    {
+      "sha256": "00511ec1c23a3a2db8a34ac2905cc2485ea42f26c3770cef48ef56e29a2906e6",
+      "zombie1": 55
+    },
+    {
+      "sha256": "55b326d56b4332efb1a70e767ff70364e7b00535ce87e226ee1e207424b9dfe4",
+      "zombie1": 56
+    },
+    {
+      "sha256": "f77d314878c23702df7abe1d29b5f97e7753811bb5cf6719fa1ac406c24417ec",
+      "zombie1": 57
+    },
+    {
+      "sha256": "22bdb12c7f90c2fa8c499e1d54dc98ad24d7963716caa5368e251d0e404c3ede",
+      "zombie1": 58
+    },
+    {
+      "sha256": "f5a37c6360bd17eecb518976e02f18156dd4fc1f78002aa4f30bcfdf93dd9c9b",
+      "zombie1": 59
+    },
+    {
+      "sha256": "d76211028d7987bee480cb84cf59686401384410615ffc112dca868685c5192b",
+      "zombie1": 60
+    },
+    {
+      "sha256": "71ef17b9dd3f8a0acfb797d3739279e21abe928524b496cc24d2e21e74588e73",
+      "zombie1": 61
+    },
+    {
+      "sha256": "f74faa7eda165a8e92d7adc68aa0de651569b6faa2391ad1aa34a3c5d4d03498",
+      "zombie1": 62
+    },
+    {
+      "sha256": "88b60791d80fb0d2a1168015a67279c17cdbf4343e2e7f4e948d7ecf3dfa6012",
+      "zombie1": 63
+    },
+    {
+      "sha256": "f3c7bc869e60db5e1887eed031dd28d1eebc75c81005e9610f495f1f9340ee69",
+      "zombie1": 64
+    },
+    {
+      "sha256": "95ef7bc4e99fae77600c054a63cf9f16d3b426900f31765ef5bcb7b1d22fae4c",
+      "zombie1": 65
+    },
+    {
+      "sha256": "4ab82b7eb3a1f09993427c710be179361d031b2583626f67bf71d00cae39bf31",
+      "zombie1": 66
+    },
+    {
+      "sha256": "ea8b4bd89305a92176ffff1b38b03442a99a59b573659df637162ff46bcaf4d2",
+      "zombie1": 67
+    },
+    {
+      "sha256": "13f30890a79f7b4b4407b44145d4ad94d10be9ac4294143f0e15c6384515e2b6",
+      "zombie1": 68
+    },
+    {
+      "sha256": "3e570995ce4c298472402e8a9314b62ade0149fb50b29aca9535e03cf7e07b54",
+      "zombie1": 69
+    }
+  ],
+  "transitionSha256": "6385ad2fca93170d1367b84315b88188dc71b47970f28ab836e64cfc63abedef",
+  "transitions": 1351892,
+  "winningStates": 298396
+}

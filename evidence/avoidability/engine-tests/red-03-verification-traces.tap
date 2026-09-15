@@ -1,0 +1,61 @@
+✔ solveGraph covers every ordered position and legal production action with typed storage (4323.485958ms)
+✔ controlled ranks use ALL successors, maximum delay, cycle closure and first tied action (0.354292ms)
+✔ complete graph ranks certify contact iff zero and the exact maximum-delay Bellman law (8.837834ms)
+✖ internal certificate checks reject incomplete, corrupted and noncanonical strategies (0.499792ms)
+✖ certified traces replay actual production to first recurrence or rank-exact capture (0.158083ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 3
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4365.617208
+
+✖ failing tests:
+
+test at scripts/test-avoidability.cjs:124:1
+✖ internal certificate checks reject incomplete, corrupted and noncanonical strategies (0.499792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-solver/scripts/test-avoidability.cjs:125:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/test-avoidability.cjs:144:1
+✖ certified traces replay actual production to first recurrence or rank-exact capture (0.158083ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-solver/scripts/test-avoidability.cjs:145:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,48 @@
+{
+  "commit": "7cb59fec334f6992c39c131477964874208eb48f+uncommitted-zl010-engine",
+  "cleanCommitClaim": false,
+  "preregistration": "7cb59fe",
+  "sourceHashes": {
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2",
+    "scripts/build-avoidability.cjs": "3695964bf1f7a71094f3cd795b264cde5a0d3faa76418c7eaad348e4ca36ace1",
+    "scripts/test-avoidability.cjs": "e1762879442911adaa566577fe5ca7a4f61ebcfd8bcd61d3ac1563bdd5dba858",
+    "experiments/ZL-010-protocol.md": "c809145e263e8f360b587b16a25183bcf3e55f21cdffad0a713212baa9757f33"
+  },
+  "artifactManifest": {
+    "avoidability.json": {
+      "bytes": 1887461,
+      "sha256": "fffa53c6a496375fc017afa073b302dd5d167112f0d20a93513d5e8e25d4c4a5"
+    },
+    "avoidability-data.js": {
+      "bytes": 1887492,
+      "sha256": "397aeec5e7668441f57393de92f69c15bfdd71df8e0480aaa1976108cf30791d"
+    },
+    "avoidability-certificate.json": {
+      "bytes": 985208,
+      "sha256": "a29c15476c00531caee956969abd8c8a411d540e97b31b1ab623876f6fe98b5f"
+    }
+  },
+  "verification": {
+    "states": 343000,
+    "ranksSerializedMatchSummary": true,
+    "rows": 4761,
+    "legacyRowsMatch": true,
+    "firstActionDivergences": 30,
+    "witnesses": 32,
+    "checkedFrames": 734,
+    "checkedTransitions": 702,
+    "checkedCandidateTransitions": 3003,
+    "witnessChecker": "fresh production candidate enumeration using serialized ranks, no generated edge table",
+    "internalGraph": {
+      "valid": true,
+      "states": 343000,
+      "actions": 1351892
+    },
+    "independentCompleteChecker": "parent-owned, not claimed here"
+  },
+  "collectorElapsedMs": 10032.762292,
+  "nodeVersion": "v26.8.1",
+  "platform": "darwin",
+  "arch": "arm64"
+}

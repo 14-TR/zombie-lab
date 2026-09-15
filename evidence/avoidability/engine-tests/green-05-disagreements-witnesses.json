@@ -1,0 +1,15 @@
+{
+  "label": "green-05-disagreements-witnesses",
+  "status": 0,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 19565.281916,
+  "args": [],
+  "sources": {
+    "scripts/build-avoidability.cjs": "b0da25ccd71e981480145512454140709e21700e1ea0e11b5a1334ae09799587",
+    "scripts/test-avoidability.cjs": "d89b985372d5b6db8216b668d2649655b100d3efef30479ec007abf9f6d00acb",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2",
+    "experiments/ZL-010-protocol.md": "c809145e263e8f360b587b16a25183bcf3e55f21cdffad0a713212baa9757f33"
+  }
+}

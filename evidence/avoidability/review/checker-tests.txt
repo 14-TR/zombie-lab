@@ -1,0 +1,10 @@
+test_complete_domain_and_source_identity_reject_corruption (__main__.CertificateInputTests) ... ok
+test_cli_saves_audit_and_negative_receipts (__main__.CommandLineTests) ... ok
+test_export_complete_graph_then_accept_and_corrupt_full_certificate (__main__.GraphIntegrationTests) ... ok
+test_corner_actions_use_simultaneous_old_human_north_ties (__main__.PhysicsTests) ... ok
+test_exact_rank_and_winning_closure_with_adversarial_labels (__main__.RankRuleTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 10.162s
+
+OK

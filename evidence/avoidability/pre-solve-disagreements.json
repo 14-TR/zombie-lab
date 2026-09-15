@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "z2-21-h60",
+    "humanId": 60,
+    "zombie2Id": 21,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 3,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 9,
+        "cycleStart": 7,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 3,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 0,
+      "human": {
+        "x": 0,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 2
+      },
+      "depth1": {
+        "x": 0,
+        "y": 6
+      },
+      "depth2": {
+        "x": 0,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-50-h0",
+    "humanId": 0,
+    "zombie2Id": 50,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 4,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 4,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 27,
+        "cycleStart": 25,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 1,
+      "human": {
+        "x": 1,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 3
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 4
+      },
+      "depth1": {
+        "x": 0,
+        "y": 0
+      },
+      "depth2": {
+        "x": 2,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-50-h1",
+    "humanId": 1,
+    "zombie2Id": 50,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 4,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 4,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 27,
+        "cycleStart": 25,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 0,
+      "human": {
+        "x": 1,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 5
+      },
+      "depth1": {
+        "x": 0,
+        "y": 0
+      },
+      "depth2": {
+        "x": 2,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-50-h11",
+    "humanId": 11,
+    "zombie2Id": 50,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 4,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 4,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 27,
+        "cycleStart": 25,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 1,
+      "human": {
+        "x": 1,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 3
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 4
+      },
+      "depth1": {
+        "x": 0,
+        "y": 0
+      },
+      "depth2": {
+        "x": 2,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-50-h55",
+    "humanId": 55,
+    "zombie2Id": 50,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 5,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 7,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 5,
+        "y": 5
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-50-h57",
+    "humanId": 57,
+    "zombie2Id": 50,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 3,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 5,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 3,
+        "y": 5
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-50-h59",
+    "humanId": 59,
+    "zombie2Id": 50,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 1,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 3,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 5
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-50-h64",
+    "humanId": 64,
+    "zombie2Id": 50,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 5,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 7,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 5,
+        "y": 5
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-50-h66",
+    "humanId": 66,
+    "zombie2Id": 50,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 3,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 5,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 3,
+        "y": 5
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-50-h68",
+    "humanId": 68,
+    "zombie2Id": 50,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 1,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 3,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 5
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-54-h22",
+    "humanId": 22,
+    "zombie2Id": 54,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 4,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 4,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 7,
+        "cycleStart": 5,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 2,
+      "human": {
+        "x": 2,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 2
+      },
+      "zombie2": {
+        "x": 4,
+        "y": 3
+      },
+      "depth1": {
+        "x": 3,
+        "y": 0
+      },
+      "depth2": {
+        "x": 1,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-60-h0",
+    "humanId": 0,
+    "zombie2Id": 60,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 20,
+        "cycleStart": 18,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 0,
+      "human": {
+        "x": 0,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 6
+      },
+      "depth1": {
+        "x": 0,
+        "y": 0
+      },
+      "depth2": {
+        "x": 1,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-60-h11",
+    "humanId": 11,
+    "zombie2Id": 60,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 20,
+        "cycleStart": 18,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 2,
+      "human": {
+        "x": 0,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 2
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 4
+      },
+      "depth1": {
+        "x": 0,
+        "y": 0
+      },
+      "depth2": {
+        "x": 1,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-60-h20",
+    "humanId": 20,
+    "zombie2Id": 60,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 20,
+        "cycleStart": 18,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 2,
+      "human": {
+        "x": 0,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 2
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 4
+      },
+      "depth1": {
+        "x": 0,
+        "y": 0
+      },
+      "depth2": {
+        "x": 1,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-60-h64",
+    "humanId": 64,
+    "zombie2Id": 60,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 17,
+        "cycleStart": 15,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 5,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 7,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 5,
+        "y": 6
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-60-h65",
+    "humanId": 65,
+    "zombie2Id": 60,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 17,
+        "cycleStart": 15,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 4,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 6,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 4,
+        "y": 6
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-60-h66",
+    "humanId": 66,
+    "zombie2Id": 60,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 17,
+        "cycleStart": 15,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 3,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 5,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 3,
+        "y": 6
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-60-h67",
+    "humanId": 67,
+    "zombie2Id": 60,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 17,
+        "cycleStart": 15,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 2,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 4,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 2,
+        "y": 6
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-60-h68",
+    "humanId": 68,
+    "zombie2Id": 60,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 17,
+        "cycleStart": 15,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 1,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 3,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 6
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-60-h69",
+    "humanId": 69,
+    "zombie2Id": 60,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 17,
+        "cycleStart": 15,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 0,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 6
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-61-h0",
+    "humanId": 0,
+    "zombie2Id": 61,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 7,
+        "cycleStart": 5,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 0,
+      "human": {
+        "x": 0,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 6
+      },
+      "depth1": {
+        "x": 0,
+        "y": 0
+      },
+      "depth2": {
+        "x": 1,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-61-h11",
+    "humanId": 11,
+    "zombie2Id": 61,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 7,
+        "cycleStart": 5,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 2,
+      "human": {
+        "x": 0,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 2
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 4
+      },
+      "depth1": {
+        "x": 0,
+        "y": 0
+      },
+      "depth2": {
+        "x": 1,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-61-h20",
+    "humanId": 20,
+    "zombie2Id": 61,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 7,
+        "cycleStart": 5,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 2,
+      "human": {
+        "x": 0,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 2
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 4
+      },
+      "depth1": {
+        "x": 0,
+        "y": 0
+      },
+      "depth2": {
+        "x": 1,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "z2-61-h55",
+    "humanId": 55,
+    "zombie2Id": 61,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 5,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 7,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 5,
+        "y": 5
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-61-h57",
+    "humanId": 57,
+    "zombie2Id": 61,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 3,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 5,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 3,
+        "y": 5
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-61-h59",
+    "humanId": 59,
+    "zombie2Id": 61,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 1,
+      "human": {
+        "x": 9,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 3,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 5
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 9,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-61-h66",
+    "humanId": 66,
+    "zombie2Id": 61,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 2,
+      "human": {
+        "x": 8,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 4,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 3,
+        "y": 6
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 8,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-61-h68",
+    "humanId": 68,
+    "zombie2Id": 61,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "cycle",
+        "stopTick": 16,
+        "cycleStart": 14,
+        "period": 2
+      },
+      "depth2": {
+        "outcome": "capture",
+        "stopTick": 8,
+        "cycleStart": null,
+        "period": null
+      }
+    },
+    "firstDivergence": {
+      "tick": 0,
+      "human": {
+        "x": 8,
+        "y": 6
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 6
+      },
+      "depth1": {
+        "x": 9,
+        "y": 6
+      },
+      "depth2": {
+        "x": 8,
+        "y": 5
+      }
+    }
+  },
+  {
+    "id": "z2-65-h22",
+    "humanId": 22,
+    "zombie2Id": 65,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 18,
+        "cycleStart": 16,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 3,
+      "human": {
+        "x": 3,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 1
+      },
+      "zombie2": {
+        "x": 5,
+        "y": 3
+      },
+      "depth1": {
+        "x": 4,
+        "y": 0
+      },
+      "depth2": {
+        "x": 3,
+        "y": 1
+      }
+    }
+  },
+  {
+    "id": "z2-65-h33",
+    "humanId": 33,
+    "zombie2Id": 65,
+    "outcomes": {
+      "greedy": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth1": {
+        "outcome": "capture",
+        "stopTick": 5,
+        "cycleStart": null,
+        "period": null
+      },
+      "depth2": {
+        "outcome": "cycle",
+        "stopTick": 18,
+        "cycleStart": 16,
+        "period": 2
+      }
+    },
+    "firstDivergence": {
+      "tick": 3,
+      "human": {
+        "x": 3,
+        "y": 0
+      },
+      "zombie1": {
+        "x": 2,
+        "y": 1
+      },
+      "zombie2": {
+        "x": 5,
+        "y": 3
+      },
+      "depth1": {
+        "x": 4,
+        "y": 0
+      },
+      "depth2": {
+        "x": 3,
+        "y": 1
+      }
+    }
+  }
+]

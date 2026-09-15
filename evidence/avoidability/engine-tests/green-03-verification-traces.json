@@ -1,0 +1,15 @@
+{
+  "label": "green-03-verification-traces",
+  "status": 0,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 4636.230333,
+  "args": [],
+  "sources": {
+    "scripts/build-avoidability.cjs": "46851f7b19e54244da1cd43a70c6d56397821468325a1a7bf064f871ef418d06",
+    "scripts/test-avoidability.cjs": "8faf62db49b3e1be54c348f2fe48eea904fe56806c09ad0519f00d0a1580695a",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2",
+    "experiments/ZL-010-protocol.md": "c809145e263e8f360b587b16a25183bcf3e55f21cdffad0a713212baa9757f33"
+  }
+}

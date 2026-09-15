@@ -1,0 +1,15 @@
+{
+  "label": "red-01-domain",
+  "status": 1,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 52.898,
+  "args": [],
+  "sources": {
+    "scripts/build-avoidability.cjs": null,
+    "scripts/test-avoidability.cjs": "0bd5508b67ced854227e5f30155e73c2cd973a72b9b45b4f93cebfc7f36cfcbd",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2",
+    "experiments/ZL-010-protocol.md": "c809145e263e8f360b587b16a25183bcf3e55f21cdffad0a713212baa9757f33"
+  }
+}
