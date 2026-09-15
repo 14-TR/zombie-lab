@@ -1,0 +1,30 @@
+✔ malformed model schemas and invalid board positions fail closed (1.641208ms)
+✔ position-only trace detects capture before recurrence before cutoff and keeps endpoints (2.0205ms)
+✔ paired statistics separate recovered failures, regressions, finite delay, and contacts (0.321917ms)
+✔ frozen group labels ignore zombie order and witnesses deduplicate in result order (0.742334ms)
+✔ cached production transitions and decisions preserve full fixed-state trajectories (7.607042ms)
+✔ one-step exact labels distinguish all optimal choices from the first canonical action (0.165375ms)
+✔ bounded end-to-end fixture emits paired rows, exact heldout scope and measured benchmark (104.004625ms)
+✔ CLI missing frozen models fails without fabricating outputs (24.589125ms)
+✔ optional independent NumPy logits and legal actions match fixture JS inference (49.059209ms)
+✔ sparse architecture and overflowing hidden sums are invalid model inputs (0.269292ms)
+✔ evaluation rejects model file changes after identities freeze (76.853958ms)
+✔ 6-32 tanh-5 inference uses specified coordinate normalization and matrix orientation (0.178625ms)
+✔ legal masking preserves N/E/S/W/stay first ties, including contacts before decision (0.772625ms)
+✔ initialState exposes the frozen classic global and independent coordinates (1.138583ms)
+✔ resolveTick preserves simultaneous contact, legal overlap and terminal precedence (2.116667ms)
+✔ greedy maximizes nearest OLD zombie distance with cardinal ties and old-state chasing (0.701417ms)
+✔ depth1 uses survival then predicted nearest endpoint distance, ignoring real remaining cap (214.08475ms)
+✔ depth2 changes only horizon, stops captured branches and replans after each real tick (1036.593584ms)
+✔ classifyRun keys BOTH ordered zombies and prioritizes capture then first repeat then cap (1.245042ms)
+✔ buildTwoZombies covers all frozen ordered starts and all uncached trajectories (10127.814417ms)
+✔ all 69 colocated-zombie starts reduce frame-for-frame to unchanged single-zombie controls (221.257792ms)
+✔ CLI writes only the two artifacts, preserves neighbors and safely escapes metadata (5152.595458ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16791.746

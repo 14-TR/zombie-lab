@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/tr/.hermes/hermes-agent/venv/bin/python",
+    "scripts/train-neural.py",
+    "--data-dir",
+    "/tmp/zl011-dataset",
+    "--out-dir",
+    "/tmp/zl011-training"
+  ],
+  "watchdogSeconds": 600,
+  "startedAt": "2026-09-15T02:20:59.612596+00:00",
+  "exitCode": 0,
+  "timedOut": false,
+  "wallSeconds": 6.8430544169968925,
+  "finishedAt": "2026-09-15T02:21:06.455683+00:00"
+}

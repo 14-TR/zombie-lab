@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "all343000MembershipsIndependentlyChecked": true,
+  "splits": {
+    "train": {
+      "groups": 1967,
+      "orderedStates": 271040,
+      "terminalStates": 33898,
+      "examples": 237142,
+      "membershipSha256": "9aae6e6941b854cc5f21d212d3be390971c0202b0dc8bf4f64b825df3b0fd214"
+    },
+    "validation": {
+      "groups": 245,
+      "orderedStates": 34230,
+      "terminalStates": 4251,
+      "examples": 29979,
+      "membershipSha256": "9f2cfe6e853b4ee0d11e3da01b00d0bc8d26464c8f6743652cbdb481d2ed9167"
+    },
+    "test": {
+      "groups": 273,
+      "orderedStates": 37730,
+      "terminalStates": 4639,
+      "examples": 33091,
+      "membershipSha256": "1b0a3802e267eb6ace5b60189310cda0340683ac25d9e2a70910b5c6ae9897cc"
+    }
+  },
+  "targetsCheckedAgainstIndependentPhysicsAndFrozenRanks": {
+    "train": 237142,
+    "validation": 29979
+  },
+  "testLabelsOpened": false,
+  "manifestSha256": "48a786f72b40ac58a45ab6b25016c88c75ab3a579856f1e1fe43e60af8ad8c01",
+  "checkerSha256": "edb8059aedbc74bade4a97429820d279da650f0836811dc4bbe04871ba7de0ed",
+  "trainerSha256": "3a2966fca79fb19df5eacd6cb768146a92c7d9ec9f6b43b136eaf5a3d78a65bb",
+  "testSourceSha256": "75a31b58d3ef1ba57ae1417e0db1f45e39c2814005ce7fec25225ac3bd3e71b2"
+}

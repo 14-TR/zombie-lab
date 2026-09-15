@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "fixture": false,
+  "verifiedAt": "2026-09-15T02:48:24.022310+00:00",
+  "sourceSHA256": "78f30a10e2ee6a9144d6b9046bb531ffbb52fc2d99f9e452e87f9adfcb427789",
+  "artifactHashes": {
+    "neural.json": "f34effd57d8745321bf0458115535ed587a180e1158a7fc514b5dec0f04c1dc0",
+    "neural-data.js": "730b10f9776b3f2de241b69307c6f21371b5b7ab174c9acb3fb0d5921b653b65",
+    "neural-heldout.json": "85bf8d24e671669432ac8c8fe56dff3273fdc9ff5d03ae91e5c4a4c5dbabf482"
+  },
+  "originalSplitSummarySHA256": "ac860a82b7d25f99b44f3535de7f661207285675f23acf0e0b0cb2167612859a",
+  "splitCounts": {
+    "train": {
+      "groups": 1967,
+      "orderedStates": 271040,
+      "terminalStates": 33898,
+      "examples": 237142
+    },
+    "validation": {
+      "groups": 245,
+      "orderedStates": 34230,
+      "terminalStates": 4251,
+      "examples": 29979
+    },
+    "test": {
+      "groups": 273,
+      "orderedStates": 37730,
+      "terminalStates": 4639,
+      "examples": 33091
+    }
+  },
+  "allStateMembershipSHA256": "9be723d3011a17e55edcecffba8d47a7762dc1f1ffa13daeef284ab81e09793d",
+  "originalRows": 4761,
+  "heldoutRows": 37730,
+  "trajectories": 99265,
+  "frameComparisonsReconciled": 1438294,
+  "legacyScalarComparisons": 14283,
+  "protectedRepoFilesUnchanged": 188,
+  "protectedChanges": {},
+  "datasetFilesUnchanged": 4,
+  "frozenModelsUnchanged": true,
+  "wallSeconds": 0.5350679999683052,
+  "peakRSSBytes": 162234368,
+  "scope": "Independent raw-row counts, exact rank classifications, finite delays, cross-tabs, timings, all split/contact membership hashes, overlap visit-total consistency; production full-frame replays are recorded by evaluation.json."
+}

@@ -1,0 +1,1 @@
+{"schemaVersion":1,"modelHashes":{"neural":"c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275","untrained":"2b977ed115c41ed2db8256ec25829e2bd4bb11b8484d899a80f4edf7a31b83ef"},"modelPaths":{"neural":"/Users/tr/Projects/zombie-lab-neural/models/feed-forward.json","untrained":"/Users/tr/Projects/zombie-lab-neural/models/feed-forward-initial.json"},"fixture":false}

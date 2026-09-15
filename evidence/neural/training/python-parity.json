@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-15T02:21:37.288295+00:00",
+  "scope": "all nonterminal ordered states",
+  "rows": 300212,
+  "excludedInitialContact": 42788,
+  "recordBytes": 86,
+  "encoding": "little-endian <I5dB5dB; stateIndex, final logits[5], final action, initial logits[5], initial action",
+  "actions": [
+    "N",
+    "E",
+    "S",
+    "W",
+    "stay"
+  ],
+  "order": "strictly ascending stateIndex",
+  "sha256": "1311ad7cd3d65e6749747dd3ce03d8c60a85acbcabb9b515d0c472ecb837a259",
+  "bytes": 25818232,
+  "nearTies": {
+    "neural": {
+      "threshold": 1e-10,
+      "countWithin1e10": 0,
+      "exactTies": 0,
+      "minimumMargin": 1.0800765860019546e-06,
+      "firstWithin1e10": []
+    },
+    "untrained": {
+      "threshold": 1e-10,
+      "countWithin1e10": 0,
+      "exactTies": 0,
+      "minimumMargin": 5.646946081239168e-06,
+      "firstWithin1e10": []
+    }
+  },
+  "modelFreezeSha256": "3041af5d6ff76ed6658d56d2532de1c5d273921df960a8d2fa4b21cd793ef2c5",
+  "models": {
+    "schemaVersion": 1,
+    "frozenAt": "2026-09-15T02:21:06.353623+00:00",
+    "epoch": 40,
+    "files": {
+      "feed-forward.json": "c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275",
+      "feed-forward.js": "d995296cb49c23ed69fb9f330c15bcbc2d05209e302e0a3e3774013cfabdec13",
+      "feed-forward-initial.json": "2b977ed115c41ed2db8256ec25829e2bd4bb11b8484d899a80f4edf7a31b83ef"
+    },
+    "weightsSha256": "0ed7394e89bf0c129cc1e1f2bb753e4d23e2f186b3b13f9d73656e04180beaa2",
+    "initialWeightsSha256": "f03b175fc2d05f9494ef20f025a23c6a10ced054ef5fb342185869c36b94bc38",
+    "testResultsOpened": false,
+    "testFilesOpened": [],
+    "pretrainingFreezeSha256": "2a3c376a87cc4d8549fd511a8ccfe456cae184dece80e4492d6aeb2326a074d0"
+  },
+  "labelsRead": false,
+  "performanceEvaluated": false,
+  "sourceSha256": "3a2966fca79fb19df5eacd6cb768146a92c7d9ec9f6b43b136eaf5a3d78a65bb",
+  "wallSeconds": 0.4894711659871973,
+  "peakRSSBytes": 37224448
+}

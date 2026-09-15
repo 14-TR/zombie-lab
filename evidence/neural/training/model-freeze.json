@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "frozenAt": "2026-09-15T02:21:06.353623+00:00",
+  "epoch": 40,
+  "files": {
+    "feed-forward.json": "c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275",
+    "feed-forward.js": "d995296cb49c23ed69fb9f330c15bcbc2d05209e302e0a3e3774013cfabdec13",
+    "feed-forward-initial.json": "2b977ed115c41ed2db8256ec25829e2bd4bb11b8484d899a80f4edf7a31b83ef"
+  },
+  "weightsSha256": "0ed7394e89bf0c129cc1e1f2bb753e4d23e2f186b3b13f9d73656e04180beaa2",
+  "initialWeightsSha256": "f03b175fc2d05f9494ef20f025a23c6a10ced054ef5fb342185869c36b94bc38",
+  "testResultsOpened": false,
+  "testFilesOpened": [],
+  "pretrainingFreezeSha256": "2a3c376a87cc4d8549fd511a8ccfe456cae184dece80e4492d6aeb2326a074d0"
+}

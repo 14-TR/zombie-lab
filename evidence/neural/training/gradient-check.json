@@ -1,0 +1,10 @@
+{
+  "method": "central finite differences",
+  "step": 1e-05,
+  "parametersChecked": 389,
+  "maxAbsoluteError": 3.51069381898661e-11,
+  "relativeTolerance": 1e-06,
+  "absoluteTolerance": 2e-09,
+  "passed": true,
+  "trainerSha256": "3a2966fca79fb19df5eacd6cb768146a92c7d9ec9f6b43b136eaf5a3d78a65bb"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "fixture": false,
+  "allOrderedStates": 343000,
+  "excludedInitialContacts": 42788,
+  "binarySHA256": "1311ad7cd3d65e6749747dd3ce03d8c60a85acbcabb9b515d0c472ecb837a259",
+  "metadataSHA256": "bd50433bb55e9c89e705ee5dfdf388866a77a168e0007550ebcc64523f091702",
+  "freezeSHA256": "3041af5d6ff76ed6658d56d2532de1c5d273921df960a8d2fa4b21cd793ef2c5",
+  "sourceSHA256": "e11976f284fa9430a7d567a6e44ae342022dcdc64481fb3f367f6b4ec29ef5df",
+  "modelWrapperPayloadMatchesFinalJSON": true,
+  "models": {
+    "neural": {
+      "states": 300212,
+      "logitsCompared": 1501060,
+      "tolerance": 1e-10,
+      "maxAbsoluteLogitError": 3.3861802251067274e-15,
+      "actionDisagreements": 0,
+      "nearTies": 0,
+      "pythonNearTies": 0,
+      "minMargin": 0.0000010800765853358207,
+      "minPythonMargin": 0.0000010800765860019546,
+      "firstActionDisagreements": [],
+      "modelSHA256": "c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275",
+      "passed": true
+    },
+    "untrained": {
+      "states": 300212,
+      "logitsCompared": 1501060,
+      "tolerance": 1e-10,
+      "maxAbsoluteLogitError": 1.1102230246251565e-15,
+      "actionDisagreements": 0,
+      "nearTies": 0,
+      "pythonNearTies": 0,
+      "minMargin": 0.000005646946081239168,
+      "minPythonMargin": 0.000005646946081239168,
+      "firstActionDisagreements": [],
+      "modelSHA256": "2b977ed115c41ed2db8256ec25829e2bd4bb11b8484d899a80f4edf7a31b83ef",
+      "passed": true
+    }
+  },
+  "method": "Actual NeuralPolicy vs the hash-bound frozen trainer export; 86-byte little-endian <I5dB5dB records; no labels, models or trainer modified.",
+  "elapsedMs": 3448.841834,
+  "maxRSSKiB": 98368,
+  "watchdogMs": 840000
+}

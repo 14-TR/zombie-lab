@@ -1,0 +1,490 @@
+{
+  "fixture": false,
+  "sourceSHA256": "f34effd57d8745321bf0458115535ed587a180e1158a7fc514b5dec0f04c1dc0",
+  "splits": {
+    "train": {
+      "total": 3809,
+      "initialContact": 402,
+      "noninitialUnavoidable": 32,
+      "avoidable": 3375,
+      "policies": {
+        "greedy": {
+          "capture": 3809,
+          "cycle": 0,
+          "unresolved": 0,
+          "avoidableCaptures": 3375,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 434,
+          "initialContactCaptures": 402,
+          "noninitialUnavoidableCaptures": 32,
+          "captureDelayShortfall": {
+            "capturedStarts": 434,
+            "noninitialCapturedStarts": 32,
+            "positiveStarts": 10,
+            "totalTicks": 21,
+            "maxTicks": 4,
+            "meanTicks": 0.04838709677419355,
+            "noninitialMeanTicks": 0.65625,
+            "histogram": {
+              "0": 424,
+              "1": 4,
+              "2": 2,
+              "3": 3,
+              "4": 1
+            }
+          }
+        },
+        "depth1": {
+          "capture": 443,
+          "cycle": 3366,
+          "unresolved": 0,
+          "avoidableCaptures": 9,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 434,
+          "initialContactCaptures": 402,
+          "noninitialUnavoidableCaptures": 32,
+          "captureDelayShortfall": {
+            "capturedStarts": 434,
+            "noninitialCapturedStarts": 32,
+            "positiveStarts": 1,
+            "totalTicks": 1,
+            "maxTicks": 1,
+            "meanTicks": 0.002304147465437788,
+            "noninitialMeanTicks": 0.03125,
+            "histogram": {
+              "0": 433,
+              "1": 1
+            }
+          }
+        },
+        "depth2": {
+          "capture": 445,
+          "cycle": 3364,
+          "unresolved": 0,
+          "avoidableCaptures": 11,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 434,
+          "initialContactCaptures": 402,
+          "noninitialUnavoidableCaptures": 32,
+          "captureDelayShortfall": {
+            "capturedStarts": 434,
+            "noninitialCapturedStarts": 32,
+            "positiveStarts": 1,
+            "totalTicks": 2,
+            "maxTicks": 2,
+            "meanTicks": 0.004608294930875576,
+            "noninitialMeanTicks": 0.0625,
+            "histogram": {
+              "0": 433,
+              "2": 1
+            }
+          }
+        },
+        "untrained": {
+          "capture": 3809,
+          "cycle": 0,
+          "unresolved": 0,
+          "avoidableCaptures": 3375,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 434,
+          "initialContactCaptures": 402,
+          "noninitialUnavoidableCaptures": 32,
+          "captureDelayShortfall": {
+            "capturedStarts": 434,
+            "noninitialCapturedStarts": 32,
+            "positiveStarts": 29,
+            "totalTicks": 71,
+            "maxTicks": 7,
+            "meanTicks": 0.16359447004608296,
+            "noninitialMeanTicks": 2.21875,
+            "histogram": {
+              "0": 405,
+              "1": 6,
+              "2": 14,
+              "3": 5,
+              "4": 2,
+              "7": 2
+            }
+          }
+        },
+        "neural": {
+          "capture": 703,
+          "cycle": 3106,
+          "unresolved": 0,
+          "avoidableCaptures": 269,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 434,
+          "initialContactCaptures": 402,
+          "noninitialUnavoidableCaptures": 32,
+          "captureDelayShortfall": {
+            "capturedStarts": 434,
+            "noninitialCapturedStarts": 32,
+            "positiveStarts": 9,
+            "totalTicks": 16,
+            "maxTicks": 5,
+            "meanTicks": 0.03686635944700461,
+            "noninitialMeanTicks": 0.5,
+            "histogram": {
+              "0": 425,
+              "1": 5,
+              "2": 3,
+              "5": 1
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "total": 612,
+      "initialContact": 62,
+      "noninitialUnavoidable": 5,
+      "avoidable": 545,
+      "policies": {
+        "greedy": {
+          "capture": 612,
+          "cycle": 0,
+          "unresolved": 0,
+          "avoidableCaptures": 545,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 67,
+          "initialContactCaptures": 62,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 67,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 0,
+            "totalTicks": 0,
+            "maxTicks": 0,
+            "meanTicks": 0.0,
+            "noninitialMeanTicks": 0.0,
+            "histogram": {
+              "0": 67
+            }
+          }
+        },
+        "depth1": {
+          "capture": 80,
+          "cycle": 532,
+          "unresolved": 0,
+          "avoidableCaptures": 13,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 67,
+          "initialContactCaptures": 62,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 67,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 0,
+            "totalTicks": 0,
+            "maxTicks": 0,
+            "meanTicks": 0.0,
+            "noninitialMeanTicks": 0.0,
+            "histogram": {
+              "0": 67
+            }
+          }
+        },
+        "depth2": {
+          "capture": 70,
+          "cycle": 542,
+          "unresolved": 0,
+          "avoidableCaptures": 3,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 67,
+          "initialContactCaptures": 62,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 67,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 0,
+            "totalTicks": 0,
+            "maxTicks": 0,
+            "meanTicks": 0.0,
+            "noninitialMeanTicks": 0.0,
+            "histogram": {
+              "0": 67
+            }
+          }
+        },
+        "untrained": {
+          "capture": 612,
+          "cycle": 0,
+          "unresolved": 0,
+          "avoidableCaptures": 545,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 67,
+          "initialContactCaptures": 62,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 67,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 5,
+            "totalTicks": 23,
+            "maxTicks": 7,
+            "meanTicks": 0.34328358208955223,
+            "noninitialMeanTicks": 4.6,
+            "histogram": {
+              "0": 62,
+              "3": 2,
+              "4": 1,
+              "6": 1,
+              "7": 1
+            }
+          }
+        },
+        "neural": {
+          "capture": 124,
+          "cycle": 488,
+          "unresolved": 0,
+          "avoidableCaptures": 57,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 67,
+          "initialContactCaptures": 62,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 67,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 2,
+            "totalTicks": 2,
+            "maxTicks": 1,
+            "meanTicks": 0.029850746268656716,
+            "noninitialMeanTicks": 0.4,
+            "histogram": {
+              "0": 65,
+              "1": 2
+            }
+          }
+        }
+      }
+    },
+    "test": {
+      "total": 340,
+      "initialContact": 38,
+      "noninitialUnavoidable": 5,
+      "avoidable": 297,
+      "policies": {
+        "greedy": {
+          "capture": 340,
+          "cycle": 0,
+          "unresolved": 0,
+          "avoidableCaptures": 297,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 43,
+          "initialContactCaptures": 38,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 43,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 0,
+            "totalTicks": 0,
+            "maxTicks": 0,
+            "meanTicks": 0.0,
+            "noninitialMeanTicks": 0.0,
+            "histogram": {
+              "0": 43
+            }
+          }
+        },
+        "depth1": {
+          "capture": 45,
+          "cycle": 295,
+          "unresolved": 0,
+          "avoidableCaptures": 2,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 43,
+          "initialContactCaptures": 38,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 43,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 0,
+            "totalTicks": 0,
+            "maxTicks": 0,
+            "meanTicks": 0.0,
+            "noninitialMeanTicks": 0.0,
+            "histogram": {
+              "0": 43
+            }
+          }
+        },
+        "depth2": {
+          "capture": 53,
+          "cycle": 287,
+          "unresolved": 0,
+          "avoidableCaptures": 10,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 43,
+          "initialContactCaptures": 38,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 43,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 0,
+            "totalTicks": 0,
+            "maxTicks": 0,
+            "meanTicks": 0.0,
+            "noninitialMeanTicks": 0.0,
+            "histogram": {
+              "0": 43
+            }
+          }
+        },
+        "untrained": {
+          "capture": 340,
+          "cycle": 0,
+          "unresolved": 0,
+          "avoidableCaptures": 297,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 43,
+          "initialContactCaptures": 38,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 43,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 5,
+            "totalTicks": 27,
+            "maxTicks": 7,
+            "meanTicks": 0.627906976744186,
+            "noninitialMeanTicks": 5.4,
+            "histogram": {
+              "0": 38,
+              "4": 2,
+              "6": 2,
+              "7": 1
+            }
+          }
+        },
+        "neural": {
+          "capture": 53,
+          "cycle": 287,
+          "unresolved": 0,
+          "avoidableCaptures": 10,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 43,
+          "initialContactCaptures": 38,
+          "noninitialUnavoidableCaptures": 5,
+          "captureDelayShortfall": {
+            "capturedStarts": 43,
+            "noninitialCapturedStarts": 5,
+            "positiveStarts": 0,
+            "totalTicks": 0,
+            "maxTicks": 0,
+            "meanTicks": 0.0,
+            "noninitialMeanTicks": 0.0,
+            "histogram": {
+              "0": 43
+            }
+          }
+        }
+      }
+    }
+  },
+  "pairedNeuralComparisons": {
+    "train": {
+      "depth1": {
+        "crossTab": {
+          "capture->capture": 439,
+          "cycle->cycle": 3102,
+          "cycle->capture": 264,
+          "capture->cycle": 4
+        },
+        "recoveredAvoidableCaptures": 4,
+        "newCapturesOnCycles": 264,
+        "unchangedCycles": 3102,
+        "unresolvedOnCycles": 0
+      },
+      "depth2": {
+        "crossTab": {
+          "capture->capture": 438,
+          "cycle->cycle": 3099,
+          "cycle->capture": 265,
+          "capture->cycle": 7
+        },
+        "recoveredAvoidableCaptures": 7,
+        "newCapturesOnCycles": 265,
+        "unchangedCycles": 3099,
+        "unresolvedOnCycles": 0
+      },
+      "untrained": {
+        "crossTab": {
+          "capture->capture": 703,
+          "capture->cycle": 3106
+        },
+        "recoveredAvoidableCaptures": 3106,
+        "newCapturesOnCycles": 0,
+        "unchangedCycles": 0,
+        "unresolvedOnCycles": 0
+      }
+    },
+    "validation": {
+      "depth1": {
+        "crossTab": {
+          "cycle->cycle": 488,
+          "capture->capture": 80,
+          "cycle->capture": 44
+        },
+        "recoveredAvoidableCaptures": 0,
+        "newCapturesOnCycles": 44,
+        "unchangedCycles": 488,
+        "unresolvedOnCycles": 0
+      },
+      "depth2": {
+        "crossTab": {
+          "cycle->cycle": 488,
+          "capture->capture": 70,
+          "cycle->capture": 54
+        },
+        "recoveredAvoidableCaptures": 0,
+        "newCapturesOnCycles": 54,
+        "unchangedCycles": 488,
+        "unresolvedOnCycles": 0
+      },
+      "untrained": {
+        "crossTab": {
+          "capture->cycle": 488,
+          "capture->capture": 124
+        },
+        "recoveredAvoidableCaptures": 488,
+        "newCapturesOnCycles": 0,
+        "unchangedCycles": 0,
+        "unresolvedOnCycles": 0
+      }
+    },
+    "test": {
+      "depth1": {
+        "crossTab": {
+          "cycle->cycle": 286,
+          "capture->cycle": 1,
+          "capture->capture": 44,
+          "cycle->capture": 9
+        },
+        "recoveredAvoidableCaptures": 1,
+        "newCapturesOnCycles": 9,
+        "unchangedCycles": 286,
+        "unresolvedOnCycles": 0
+      },
+      "depth2": {
+        "crossTab": {
+          "cycle->cycle": 278,
+          "capture->cycle": 9,
+          "capture->capture": 44,
+          "cycle->capture": 9
+        },
+        "recoveredAvoidableCaptures": 9,
+        "newCapturesOnCycles": 9,
+        "unchangedCycles": 278,
+        "unresolvedOnCycles": 0
+      },
+      "untrained": {
+        "crossTab": {
+          "capture->cycle": 287,
+          "capture->capture": 53
+        },
+        "recoveredAvoidableCaptures": 287,
+        "newCapturesOnCycles": 0,
+        "unchangedCycles": 0,
+        "unresolvedOnCycles": 0
+      }
+    }
+  }
+}
