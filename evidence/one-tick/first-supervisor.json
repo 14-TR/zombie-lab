@@ -1,0 +1,6 @@
+{
+  "exitCode": 0,
+  "wallSeconds": 12.796092374999999,
+  "command": "node --max-old-space-size=384 scripts/build-one-tick.cjs --out-dir ZL-012-first",
+  "timeoutSeconds": 890
+}

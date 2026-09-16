@@ -1,0 +1,12 @@
+✔ one tick rejects high-scoring immediate contact but preserves original logits (1.510792ms)
+✔ all-unsafe fallback, first ties, terminal and clock semantics (0.391875ms)
+✔ failure analysis separates first capture, delayed loss and no safe final action (2.129958ms)
+✔ bounded synthetic evaluation retains every scalar and both complete witness endpoints (39.8855ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 74.712959

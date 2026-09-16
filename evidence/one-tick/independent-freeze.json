@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "experiment": "ZL-012",
+  "session_handle": "20260915_224046_879c81",
+  "author": "Hermes Agent / OpenAI gpt-6-astra, independent oracle author in this session",
+  "frozen_utc": "2026-09-16T04:42:58.995541+00:00",
+  "reference_sha256": "1b81902c0aa2109f5c382b2b71fbbdd0650587566f41797e33c1f6de532802a9",
+  "sha256": {
+    "/Users/tr/Projects/zombie-lab-neural-one-tick/experiments/ZL-012-protocol.md": "76db58aa7cc1cc08232e051d1090bbc9a9b8ab46cd16098412c08118c0cf2728",
+    "/Users/tr/Projects/zombie-lab-neural-one-tick/two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "/Users/tr/Projects/zombie-lab-neural-one-tick/neural-policy.js": "9ef06420501ef4ee617c7bf09b082575340413f8ef226e1bcaa6b3b852cf9ba0",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-012-independent/reference.cjs": "1b81902c0aa2109f5c382b2b71fbbdd0650587566f41797e33c1f6de532802a9",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-012-independent/reference.test.cjs": "b2bb9bdac90cfa311608a5ed8ad4359278adb210bd15219b6454dd0bff22eca2"
+  },
+  "allowed_external_project_content_reads": [
+    "/Users/tr/Projects/zombie-lab-neural-one-tick/experiments/ZL-012-protocol.md",
+    "/Users/tr/Projects/zombie-lab-neural-one-tick/two-zombies.js",
+    "/Users/tr/Projects/zombie-lab-neural-one-tick/neural-policy.js"
+  ],
+  "actual_external_project_content_reads": [
+    "/Users/tr/Projects/zombie-lab-neural-one-tick/experiments/ZL-012-protocol.md",
+    "/Users/tr/Projects/zombie-lab-neural-one-tick/two-zombies.js",
+    "/Users/tr/Projects/zombie-lab-neural-one-tick/neural-policy.js"
+  ],
+  "own_artifact_content_reads": [
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-012-independent/reference.cjs",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-012-independent/reference.test.cjs"
+  ],
+  "skills_read": [
+    "/Users/tr/.hermes/skills/zombie-lab-experiments/SKILL.md",
+    "/Users/tr/.hermes/skills/software-development/test-driven-development/SKILL.md"
+  ],
+  "filename_discovery": {
+    "root": "/Users/tr/Projects/zombie-lab-neural-one-tick",
+    "patterns": [
+      "{two-zombies,neural-policy}.js",
+      "two-zombies.js",
+      "neural-policy.js"
+    ],
+    "additional_path_returned_but_NOT_content_read": "/Users/tr/Projects/zombie-lab-neural-one-tick/evidence/avoidability/engine-source/two-zombies.js"
+  },
+  "tests": {
+    "command": "node reference.test.cjs",
+    "cwd": "/Users/tr/Projects/zombie-lab-evidence/ZL-012-independent",
+    "exit_code": 0,
+    "stdout": "PASS initial shared/cardinal contact; diagonal is not contact\nPASS both pursuers target OLD human; literal simultaneous successors\nPASS pursuer ties E before S, S before W, N before W; overlap permitted\nPASS all four borders reject rather than wrap; invalid actions\nPASS first maximum on retained safe actions, not original unsafe maximum\nPASS all unsafe fallback retains ALL legal actions with original score ties\nPASS safe border masks and first-maximum all-five tie\nPASS terminal decision does not read scores; clock is absent from positional API\nPASS initial contact forbids every tick including a proposed exchange\n",
+    "stderr": "",
+    "passed_groups": 9
+  },
+  "runtime": "v26.8.1",
+  "red_checks": [
+    "Initial require failed MODULE_NOT_FOUND before reference existed.",
+    "Transition tests failed because oracle.transition was not a function.",
+    "Decision tests failed because oracle.decide was not a function."
+  ],
+  "authorship_statement": "Authored independently from the user interface contract, ZL-012 protocol and the two allowed legacy sources. Pursuit uses a coordinate-sign priority decision tree, not production candidate enumeration. No production helpers imported, executed or copied; no new one-tick implementation, evaluator, model, outputs or results were read. Literal fixtures use prescribed cell positions rather than production-generated expectations. Standard-library-only; no installs, training, commits, pushes or worktree writes. Only this evidence directory was written.",
+  "scope_notes": [
+    "Captured legal successors are returned as state IDs; -1 means illegal action or initially terminal source.",
+    "For reachable legal ticks terminal(successor) supplies the capture flag; exchanges are additionally checked in filtering and necessarily begin in terminal adjacency.",
+    "Position-only API has no status/elapsed-clock inputs; clock probe demonstrates ignored extra argument, not a production runner clock test. Scores must be the original finite five logits.",
+    "No exhaustive comparison against new decisions/transitions or evaluated runs has occurred in this session. Those checks remain pending.",
+    "Freeze precedes this author opening any new implementation or evaluation. Other agents execution timing is not observed or certified."
+  ]
+}

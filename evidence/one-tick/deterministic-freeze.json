@@ -1,0 +1,10 @@
+{
+  "encoding": "SHA256 UTF8 JSON.stringify-compatible compact JSON, no trailing newline",
+  "resultsSHA256": "d46996f374d3dc8d613a2149d1b165975f7f0f29f347b0e8eca23099fe95a553",
+  "heldoutResultsSHA256": "2850242e6039062c8bcdca162d22f6823696e729c9d1e2df8c79f6f14feb85bf",
+  "witnessesSHA256": "5e3bb8aee3ee966ba40b0bd5b0d4ad3fd2c60eed7f23a7c3ad2efd656219ca7a",
+  "originalRows": 4761,
+  "heldoutRows": 37730,
+  "witnessCount": 6,
+  "witnessFrames": 155
+}

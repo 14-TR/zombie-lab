@@ -1,0 +1,20 @@
+{
+  "scope": "Real frozen-model worktree browser verification; not downloaded artifact or live publication",
+  "dataFile": "/Users/tr/Projects/zombie-lab-evidence/ZL-012-repeat/one-tick.json",
+  "dataSHA256": "97a365297b6dcd446f651ffabb2179c078159b1585b77f2480a5a7db1727b18e",
+  "viewSHA256": "7d16a0566db4f3e14da969edd9be69feb6ffc73825f0889cd116c53619bcd342",
+  "browser": "cached Chromium via existing Playwright",
+  "widths": [
+    320,
+    390,
+    1200
+  ],
+  "minimumLabelPixels320": 13.727142857142857,
+  "realProductionReplays": 9522,
+  "witnessFrameParity": true,
+  "jsonWrapperParity": true,
+  "controlsAndDownloads": true,
+  "colocatedMarkersNonoverlap": true,
+  "failClosed": true,
+  "visualInspection": "Lead inspected full 320px screenshot and paired replay crop; no substantive visual defect"
+}

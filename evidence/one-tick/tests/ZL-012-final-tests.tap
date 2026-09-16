@@ -1,0 +1,31 @@
+✔ an explicitly requested real viewer artifact cannot silently skip without Playwright (657.579ms)
+✔ release keeps the final model, initialization and wrapper byte-for-byte frozen (0.404208ms)
+✔ malformed model schemas and invalid board positions fail closed (1.842ms)
+✔ position-only trace detects capture before recurrence before cutoff and keeps endpoints (2.389167ms)
+✔ paired statistics separate recovered failures, regressions, finite delay, and contacts (0.315292ms)
+✔ frozen group labels ignore zombie order and witnesses deduplicate in result order (0.760833ms)
+✔ cached production transitions and decisions preserve full fixed-state trajectories (8.615292ms)
+✔ one-step exact labels distinguish all optimal choices from the first canonical action (0.176125ms)
+✔ bounded end-to-end fixture emits paired rows, exact heldout scope and measured benchmark (118.525667ms)
+✔ CLI missing frozen models fails without fabricating outputs (26.624917ms)
+﹣ optional independent NumPy logits and legal actions match fixture JS inference (0.142709ms) # Set ZL_NEURAL_TEST_PYTHON to existing NumPy interpreter; no install
+✔ sparse architecture and overflowing hidden sums are invalid model inputs (0.228167ms)
+✔ evaluation rejects model file changes after identities freeze (83.438375ms)
+✔ 6-32 tanh-5 inference uses specified coordinate normalization and matrix orientation (0.224292ms)
+✔ legal masking preserves N/E/S/W/stay first ties, including contacts before decision (0.833375ms)
+✔ all protected historical model/source/evidence files remain byte-identical (14.187042ms)
+✔ emitted real results match the frozen first-run deterministic rows and witnesses (117.296667ms)
+✔ one tick rejects high-scoring immediate contact but preserves original logits (1.807708ms)
+✔ all-unsafe fallback, first ties, terminal and clock semantics (0.43575ms)
+✔ failure analysis separates first capture, delayed loss and no safe final action (2.463333ms)
+✔ bounded synthetic evaluation retains every scalar and both complete witness endpoints (74.74675ms)
+✔ export verifies classic payload and measures the serialization peak (1.242667ms)
+✔ source dirtiness ignores generated artifacts but detects new evaluator source (28.233833ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 691.949792
