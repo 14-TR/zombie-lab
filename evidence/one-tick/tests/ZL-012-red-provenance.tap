@@ -1,0 +1,39 @@
+✔ one tick rejects high-scoring immediate contact but preserves original logits (1.536167ms)
+✔ all-unsafe fallback, first ties, terminal and clock semantics (0.403416ms)
+✔ failure analysis separates first capture, delayed loss and no safe final action (2.244375ms)
+✔ bounded synthetic evaluation retains every scalar and both complete witness endpoints (41.561542ms)
+✔ export verifies classic payload and measures the serialization peak (1.112334ms)
+✖ source dirtiness ignores generated artifacts but detects new evaluator source (0.417209ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 81.092875
+
+✖ failing tests:
+
+test at scripts/test-one-tick.cjs:54:1
+✖ source dirtiness ignores generated artifacts but detects new evaluator source (0.417209ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-neural-one-tick/scripts/test-one-tick.cjs:56:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

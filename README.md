@@ -1,5 +1,13 @@
 # Zombie Lab
 
+## ZL-012 — One-tick safety filtering helps, but does not replace planning
+
+[Paired phone replay](https://14-tr.github.io/zombie-lab/one-tick.html) · [Protocol](experiments/ZL-012-protocol.md) · [Result report](experiments/ZL-012-one-tick.md)
+
+With the ZL-011 model frozen, immediate-capture filtering reduced avoidable captures **336 → 30** on the same 4,761 starts, recovering 306 failures without losing a neural success. Each planner still had fewer avoidable captures (24); the filter regressed on 12/22 of their cyclic starts. On all 37,730 frozen held-out training configurations: **2,868 → 344** avoidable captures, 2,524 recoveries and no neural regressions. These are previously evaluated configurations, not fresh test data or held-out trajectories; no expanded held-out planner comparison. No retraining. Full source-bound outcomes, first-measurement latency, independent transition checks and synchronized complete replays accompany the report.
+
+Use existing Node: `node --test scripts/test-one-tick.cjs`; generate into a fresh directory with `node --max-old-space-size=384 scripts/build-one-tick.cjs --out-dir /tmp/zl012` under an external 890-second process timeout. Actual PR/Pages workflows package `one-tick.html`, dependencies, reports and both scalar exports. Publication is not established by a local build alone.
+
 ## ZL-011 — A tiny learned policy did not beat the planners
 
 [Frozen-model replay](https://14-tr.github.io/zombie-lab/neural.html) · [Protocol](experiments/ZL-011-protocol.md) · [Negative result report](experiments/ZL-011-feed-forward.md) · [Original evidence](evidence/neural/README.md)

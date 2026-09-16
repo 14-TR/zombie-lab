@@ -1,0 +1,99 @@
+[
+  {
+    "command": [
+      "node",
+      "test-node.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 0.136383791
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-preview.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 6.992193792
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-sweep.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 7.978824750000001
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-sweep-view.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 0.04909166700000078
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-compare.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 0.1361665409999997
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-proof.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 8.031098125
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-planning.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 4.199932750000002
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-planning-view.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 5.261995250000002
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-two-zombies.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 17.993044374999997
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-two-zombies-view.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 10.722217167000004
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-avoidability.cjs"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 30.912998459000008
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "scripts/test-avoidability-checker.py"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 8.425162541999995
+  }
+]

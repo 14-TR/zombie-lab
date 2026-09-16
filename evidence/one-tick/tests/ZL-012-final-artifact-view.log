@@ -1,0 +1,3 @@
+PASS SYNTHETIC: 4761 paired production replays, independent frames, scalar/witness mismatch rejection
+PASS REAL: 9522 production replays, all supplied witness frames, emitted JSON/wrapper parity
+SKIP optional browser (no cached module requested)

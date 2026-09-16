@@ -1,0 +1,868 @@
+{
+  "metadata": {
+    "fixture": false,
+    "commit": "787254a5abc17064748c65dbdeba00a87fda5d24",
+    "worktreeDirty": true,
+    "protocolCommit": "787254a5abc17064748c65dbdeba00a87fda5d24",
+    "modelSHA256": "c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275",
+    "certificateSHA256": "a1f47e74bb5d4f086aedd8d6c01f51edd37e390c74adeb8eae4bc4d0bbc7dfc8",
+    "sourceHashes": {
+      "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+      "neural-policy.js": "9ef06420501ef4ee617c7bf09b082575340413f8ef226e1bcaa6b3b852cf9ba0",
+      "one-tick-policy.js": "62dc237d2acd5f8b5f247f362dd931fb9e60ef22c8c5c421b1a61b4b2d08d36d",
+      "scripts/build-neural.cjs": "689c3f4464b11645ea71b033e7ee3d9d3363fdcbe04532a7366abf0f0239ae64",
+      "scripts/build-one-tick.cjs": "dcceea00bb35d879723e4a2822a89180c7a0d75d121be3ed5a3fcd8d811a1549",
+      "experiments/ZL-012-protocol.md": "76db58aa7cc1cc08232e051d1090bbc9a9b8ab46cd16098412c08118c0cf2728",
+      "scripts/one-tick-reference.cjs": "1b81902c0aa2109f5c382b2b71fbbdd0650587566f41797e33c1f6de532802a9",
+      "evidence/one-tick/independent-freeze.json": "336a362a2b870daed6b3fe69fe5a049bf7fa77bb68cf6a9be443d56cc5dd5822"
+    },
+    "safetyCutoff": 10000,
+    "heldoutScope": "Frozen ZL-011 training split; previously evaluated configurations, not untouched test data or held-out trajectories. Neural vs filtered only; no held-out planner comparison."
+  },
+  "summary": {
+    "original": {
+      "total": 4761,
+      "initialContact": 502,
+      "noninitialUnavoidable": 42,
+      "avoidable": 4217,
+      "splits": {
+        "train": 3809,
+        "validation": 612,
+        "test": 340
+      },
+      "policies": {
+        "greedy": {
+          "capture": 4761,
+          "cycle": 0,
+          "unresolved": 0,
+          "avoidableCaptures": 4217,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 544,
+          "initialContactCaptures": 502,
+          "noninitialUnavoidableCaptures": 42,
+          "captureDelayShortfall": {
+            "capturedStarts": 544,
+            "noninitialCapturedStarts": 42,
+            "positiveStarts": 10,
+            "totalTicks": 21,
+            "maxTicks": 4,
+            "meanTicks": 0.03860294117647059,
+            "noninitialMeanTicks": 0.5,
+            "histogram": {
+              "0": 534,
+              "1": 4,
+              "2": 2,
+              "3": 3,
+              "4": 1
+            }
+          },
+          "avoidableCaptureRate": 1,
+          "exactAvoidabilityGap": {
+            "winningStarts": 4217,
+            "captured": 4217,
+            "unresolved": 0,
+            "provenCycles": 0
+          }
+        },
+        "depth1": {
+          "capture": 568,
+          "cycle": 4193,
+          "unresolved": 0,
+          "avoidableCaptures": 24,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 544,
+          "initialContactCaptures": 502,
+          "noninitialUnavoidableCaptures": 42,
+          "captureDelayShortfall": {
+            "capturedStarts": 544,
+            "noninitialCapturedStarts": 42,
+            "positiveStarts": 1,
+            "totalTicks": 1,
+            "maxTicks": 1,
+            "meanTicks": 0.001838235294117647,
+            "noninitialMeanTicks": 0.023809523809523808,
+            "histogram": {
+              "0": 543,
+              "1": 1
+            }
+          },
+          "avoidableCaptureRate": 0.005691249703580745,
+          "exactAvoidabilityGap": {
+            "winningStarts": 4217,
+            "captured": 24,
+            "unresolved": 0,
+            "provenCycles": 4193
+          }
+        },
+        "depth2": {
+          "capture": 568,
+          "cycle": 4193,
+          "unresolved": 0,
+          "avoidableCaptures": 24,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 544,
+          "initialContactCaptures": 502,
+          "noninitialUnavoidableCaptures": 42,
+          "captureDelayShortfall": {
+            "capturedStarts": 544,
+            "noninitialCapturedStarts": 42,
+            "positiveStarts": 1,
+            "totalTicks": 2,
+            "maxTicks": 2,
+            "meanTicks": 0.003676470588235294,
+            "noninitialMeanTicks": 0.047619047619047616,
+            "histogram": {
+              "0": 543,
+              "2": 1
+            }
+          },
+          "avoidableCaptureRate": 0.005691249703580745,
+          "exactAvoidabilityGap": {
+            "winningStarts": 4217,
+            "captured": 24,
+            "unresolved": 0,
+            "provenCycles": 4193
+          }
+        },
+        "neural": {
+          "capture": 880,
+          "cycle": 3881,
+          "unresolved": 0,
+          "avoidableCaptures": 336,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 544,
+          "initialContactCaptures": 502,
+          "noninitialUnavoidableCaptures": 42,
+          "captureDelayShortfall": {
+            "capturedStarts": 544,
+            "noninitialCapturedStarts": 42,
+            "positiveStarts": 11,
+            "totalTicks": 18,
+            "maxTicks": 5,
+            "meanTicks": 0.03308823529411765,
+            "noninitialMeanTicks": 0.42857142857142855,
+            "histogram": {
+              "0": 533,
+              "1": 7,
+              "2": 3,
+              "5": 1
+            }
+          },
+          "avoidableCaptureRate": 0.07967749585013043,
+          "exactAvoidabilityGap": {
+            "winningStarts": 4217,
+            "captured": 336,
+            "unresolved": 0,
+            "provenCycles": 3881
+          }
+        },
+        "filtered": {
+          "capture": 574,
+          "cycle": 4187,
+          "unresolved": 0,
+          "avoidableCaptures": 30,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 544,
+          "initialContactCaptures": 502,
+          "noninitialUnavoidableCaptures": 42,
+          "captureDelayShortfall": {
+            "capturedStarts": 544,
+            "noninitialCapturedStarts": 42,
+            "positiveStarts": 2,
+            "totalTicks": 3,
+            "maxTicks": 2,
+            "meanTicks": 0.0055147058823529415,
+            "noninitialMeanTicks": 0.07142857142857142,
+            "histogram": {
+              "0": 542,
+              "1": 1,
+              "2": 1
+            }
+          },
+          "avoidableCaptureRate": 0.007114062129475931,
+          "exactAvoidabilityGap": {
+            "winningStarts": 4217,
+            "captured": 30,
+            "unresolved": 0,
+            "provenCycles": 4187
+          }
+        }
+      }
+    },
+    "heldout": {
+      "total": 37730,
+      "initialContact": 4639,
+      "noninitialUnavoidable": 180,
+      "avoidable": 32911,
+      "splits": {
+        "train": 0,
+        "validation": 0,
+        "test": 37730
+      },
+      "policies": {
+        "neural": {
+          "capture": 7687,
+          "cycle": 30043,
+          "unresolved": 0,
+          "avoidableCaptures": 2868,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 4819,
+          "initialContactCaptures": 4639,
+          "noninitialUnavoidableCaptures": 180,
+          "captureDelayShortfall": {
+            "capturedStarts": 4819,
+            "noninitialCapturedStarts": 180,
+            "positiveStarts": 45,
+            "totalTicks": 72,
+            "maxTicks": 4,
+            "meanTicks": 0.014940859099398216,
+            "noninitialMeanTicks": 0.4,
+            "histogram": {
+              "0": 4774,
+              "1": 26,
+              "2": 14,
+              "3": 2,
+              "4": 3
+            }
+          },
+          "avoidableCaptureRate": 0.08714411594907477,
+          "exactAvoidabilityGap": {
+            "winningStarts": 32911,
+            "captured": 2868,
+            "unresolved": 0,
+            "provenCycles": 30043
+          }
+        },
+        "filtered": {
+          "capture": 5163,
+          "cycle": 32567,
+          "unresolved": 0,
+          "avoidableCaptures": 344,
+          "avoidableUnresolved": 0,
+          "unavoidableCaptures": 4819,
+          "initialContactCaptures": 4639,
+          "noninitialUnavoidableCaptures": 180,
+          "captureDelayShortfall": {
+            "capturedStarts": 4819,
+            "noninitialCapturedStarts": 180,
+            "positiveStarts": 16,
+            "totalTicks": 18,
+            "maxTicks": 2,
+            "meanTicks": 0.003735214774849554,
+            "noninitialMeanTicks": 0.1,
+            "histogram": {
+              "0": 4803,
+              "1": 14,
+              "2": 2
+            }
+          },
+          "avoidableCaptureRate": 0.010452432317462247,
+          "exactAvoidabilityGap": {
+            "winningStarts": 32911,
+            "captured": 344,
+            "unresolved": 0,
+            "provenCycles": 32567
+          }
+        }
+      }
+    },
+    "comparisons": {
+      "neural": {
+        "comparator": "neural",
+        "treatment": "filtered",
+        "total": 4761,
+        "crossTab": {
+          "capture->capture": 574,
+          "cycle->cycle": 3881,
+          "capture->cycle": 306
+        },
+        "comparatorCycles": 3881,
+        "recoveredAvoidableCaptures": 306,
+        "newCapturesOnCycles": 0,
+        "unchangedCycles": 3881,
+        "unresolvedOnCycles": 0,
+        "avoidableCaptures": 30,
+        "comparatorAvoidableCaptures": 336,
+        "bothCapturedNoninitial": {
+          "count": 72,
+          "later": 30,
+          "earlier": 0,
+          "same": 42,
+          "totalDeltaTicks": 40,
+          "meanDeltaTicks": 0.5555555555555556
+        },
+        "success": true
+      },
+      "depth1": {
+        "comparator": "depth1",
+        "treatment": "filtered",
+        "total": 4761,
+        "crossTab": {
+          "capture->capture": 562,
+          "cycle->cycle": 4181,
+          "cycle->capture": 12,
+          "capture->cycle": 6
+        },
+        "comparatorCycles": 4193,
+        "recoveredAvoidableCaptures": 6,
+        "newCapturesOnCycles": 12,
+        "unchangedCycles": 4181,
+        "unresolvedOnCycles": 0,
+        "avoidableCaptures": 30,
+        "comparatorAvoidableCaptures": 24,
+        "bothCapturedNoninitial": {
+          "count": 60,
+          "later": 0,
+          "earlier": 2,
+          "same": 58,
+          "totalDeltaTicks": -2,
+          "meanDeltaTicks": -0.03333333333333333
+        },
+        "success": false
+      },
+      "depth2": {
+        "comparator": "depth2",
+        "treatment": "filtered",
+        "total": 4761,
+        "crossTab": {
+          "capture->capture": 552,
+          "cycle->cycle": 4171,
+          "cycle->capture": 22,
+          "capture->cycle": 16
+        },
+        "comparatorCycles": 4193,
+        "recoveredAvoidableCaptures": 16,
+        "newCapturesOnCycles": 22,
+        "unchangedCycles": 4171,
+        "unresolvedOnCycles": 0,
+        "avoidableCaptures": 30,
+        "comparatorAvoidableCaptures": 24,
+        "bothCapturedNoninitial": {
+          "count": 50,
+          "later": 0,
+          "earlier": 1,
+          "same": 49,
+          "totalDeltaTicks": -1,
+          "meanDeltaTicks": -0.02
+        },
+        "success": false
+      },
+      "greedy": {
+        "comparator": "greedy",
+        "treatment": "filtered",
+        "total": 4761,
+        "crossTab": {
+          "capture->capture": 574,
+          "capture->cycle": 4187
+        },
+        "comparatorCycles": 0,
+        "recoveredAvoidableCaptures": 4187,
+        "newCapturesOnCycles": 0,
+        "unchangedCycles": 0,
+        "unresolvedOnCycles": 0,
+        "avoidableCaptures": 30,
+        "comparatorAvoidableCaptures": 4217,
+        "bothCapturedNoninitial": {
+          "count": 72,
+          "later": 12,
+          "earlier": 9,
+          "same": 51,
+          "totalDeltaTicks": -246,
+          "meanDeltaTicks": -3.4166666666666665
+        },
+        "success": true
+      }
+    },
+    "heldoutComparison": {
+      "comparator": "neural",
+      "treatment": "filtered",
+      "total": 37730,
+      "crossTab": {
+        "capture->capture": 5163,
+        "cycle->cycle": 30043,
+        "capture->cycle": 2524
+      },
+      "comparatorCycles": 30043,
+      "recoveredAvoidableCaptures": 2524,
+      "newCapturesOnCycles": 0,
+      "unchangedCycles": 30043,
+      "unresolvedOnCycles": 0,
+      "avoidableCaptures": 344,
+      "comparatorAvoidableCaptures": 2868,
+      "bothCapturedNoninitial": {
+        "count": 524,
+        "later": 177,
+        "earlier": 0,
+        "same": 347,
+        "totalDeltaTicks": 219,
+        "meanDeltaTicks": 0.4179389312977099
+      },
+      "success": true
+    },
+    "failures": {
+      "original": {
+        "captured": 574,
+        "initialContact": 502,
+        "immediate": 0,
+        "delayed": 72,
+        "lostAvoidability": 30,
+        "lossBeforeCapture": 30,
+        "finalAnySafe": 0
+      },
+      "heldout": {
+        "captured": 5163,
+        "initialContact": 4639,
+        "immediate": 18,
+        "delayed": 506,
+        "lostAvoidability": 344,
+        "lossBeforeCapture": 344,
+        "finalAnySafe": 0
+      }
+    },
+    "overlap": {
+      "neural": {
+        "trajectories": 37730,
+        "frameVisits": {
+          "train": 573813,
+          "validation": 57244,
+          "test": 129237
+        },
+        "uniqueStates": {
+          "train": 40039,
+          "validation": 5200,
+          "test": 37730
+        },
+        "uniqueGroups": {
+          "train": 1708,
+          "validation": 213,
+          "test": 273
+        },
+        "trajectoriesVisiting": {
+          "train": 32930,
+          "validation": 22818,
+          "test": 37730
+        },
+        "definition": "All serialized frames including initial and capture/repeated endpoints; unique groups are unordered zombie pairs. Configurations, not trajectories, are held out."
+      },
+      "filtered": {
+        "trajectories": 37730,
+        "frameVisits": {
+          "train": 622347,
+          "validation": 62135,
+          "test": 133998
+        },
+        "uniqueStates": {
+          "train": 39855,
+          "validation": 5178,
+          "test": 37730
+        },
+        "uniqueGroups": {
+          "train": 1709,
+          "validation": 214,
+          "test": 273
+        },
+        "trajectoriesVisiting": {
+          "train": 33043,
+          "validation": 23935,
+          "test": 37730
+        },
+        "definition": "All serialized frames including initial and capture/repeated endpoints; unique groups are unordered zombie pairs. Configurations, not trajectories, are held out."
+      }
+    },
+    "verification": {
+      "fixture": false,
+      "states": 343000,
+      "nonterminalDecisions": 300212,
+      "legalTransitions": 1351892,
+      "directReplayRows": 99265,
+      "independentReplayRows": 84982,
+      "legacyRows": 14283,
+      "frameComparisons": 2137999,
+      "productionStreamSHA256": "560b4dbf49b583af202138e16edee4bfdee9f3b7c945c53518852e4d140410d0",
+      "referenceStreamSHA256": "560b4dbf49b583af202138e16edee4bfdee9f3b7c945c53518852e4d140410d0",
+      "streamEncoding": "UTF8 ascending state: terminal i:T\\n; nonterminal 5 lines i:action:successor(-1 illegal):capture(0/1):retained(0/1)\\n, then i:A:chosenAction\\n"
+    },
+    "latency": {
+      "batchSize": 256,
+      "warmups": 3,
+      "repeats": 11,
+      "stateIndices": [
+        2,
+        1341,
+        2679,
+        4019,
+        5359,
+        6699,
+        8039,
+        9378,
+        10718,
+        12058,
+        13398,
+        14738,
+        16078,
+        17417,
+        18758,
+        20099,
+        21437,
+        22777,
+        24117,
+        25457,
+        26796,
+        28136,
+        29478,
+        30817,
+        32156,
+        33496,
+        34835,
+        36175,
+        37515,
+        38855,
+        40196,
+        41535,
+        42875,
+        44214,
+        45554,
+        46894,
+        48234,
+        49574,
+        50914,
+        52253,
+        53593,
+        54933,
+        56273,
+        57613,
+        58954,
+        60293,
+        61632,
+        62972,
+        64312,
+        65652,
+        66992,
+        68335,
+        69671,
+        71011,
+        72351,
+        73691,
+        75031,
+        76371,
+        77710,
+        79050,
+        80390,
+        81730,
+        83070,
+        84410,
+        85750,
+        87089,
+        88430,
+        89769,
+        91109,
+        92449,
+        93789,
+        95128,
+        96468,
+        97810,
+        99148,
+        100488,
+        101828,
+        103167,
+        104507,
+        105847,
+        107187,
+        108527,
+        109867,
+        111210,
+        112546,
+        113886,
+        115226,
+        116566,
+        117906,
+        119246,
+        120585,
+        121925,
+        123265,
+        124605,
+        125946,
+        127287,
+        128625,
+        129964,
+        131307,
+        132644,
+        133984,
+        135324,
+        136664,
+        138003,
+        139343,
+        140683,
+        142023,
+        143363,
+        144703,
+        146042,
+        147382,
+        148722,
+        150062,
+        151404,
+        152743,
+        154082,
+        155422,
+        156763,
+        158101,
+        159441,
+        160781,
+        162121,
+        163460,
+        164800,
+        166140,
+        167480,
+        168820,
+        170161,
+        171502,
+        172840,
+        174179,
+        175519,
+        176859,
+        178199,
+        179539,
+        180878,
+        182218,
+        183558,
+        184898,
+        186240,
+        187579,
+        188917,
+        190258,
+        191599,
+        192937,
+        194277,
+        195617,
+        196957,
+        198296,
+        199636,
+        200976,
+        202316,
+        203656,
+        204996,
+        206335,
+        207675,
+        209015,
+        210355,
+        211696,
+        213035,
+        214375,
+        215716,
+        217055,
+        218394,
+        219734,
+        221074,
+        222414,
+        223753,
+        225093,
+        226433,
+        227773,
+        229113,
+        230453,
+        231793,
+        233132,
+        234472,
+        235812,
+        237152,
+        238492,
+        239832,
+        241171,
+        242511,
+        243851,
+        245192,
+        246531,
+        247871,
+        249210,
+        250550,
+        251890,
+        253230,
+        254573,
+        255910,
+        257250,
+        258589,
+        259929,
+        261269,
+        262609,
+        263949,
+        265289,
+        266628,
+        267968,
+        269308,
+        270648,
+        271988,
+        273328,
+        274668,
+        276007,
+        277347,
+        278687,
+        280027,
+        281367,
+        282710,
+        284049,
+        285386,
+        286726,
+        288066,
+        289406,
+        290746,
+        292085,
+        293425,
+        294765,
+        296105,
+        297445,
+        298785,
+        300125,
+        301464,
+        302807,
+        304144,
+        305484,
+        306824,
+        308164,
+        309503,
+        310843,
+        312184,
+        313525,
+        314863,
+        316203,
+        317542,
+        318882,
+        320222,
+        321562,
+        322907,
+        324243,
+        325582,
+        326921,
+        328261,
+        329601,
+        330941,
+        332281,
+        333621,
+        334960,
+        336300,
+        337640,
+        338980,
+        340320,
+        341661
+      ],
+      "checksum": 595322,
+      "method": "Uncached same-realm choices; four-policy rotating order; loop/call/checksum overhead measured, not subtracted. No model loading, solver, sweep cache or training timed.",
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "node": "v26.8.1",
+        "cpu": "Apple M4"
+      },
+      "policies": {
+        "neural": {
+          "batchMilliseconds": [
+            0.722833,
+            0.710958,
+            0.720584,
+            0.71625,
+            0.724708,
+            0.72675,
+            0.706334,
+            0.706417,
+            0.726167,
+            0.707417,
+            0.724208
+          ],
+          "medianMicrosecondsPerDecision": 2.81478125,
+          "minMicrosecondsPerDecision": 2.7591171875000002,
+          "maxMicrosecondsPerDecision": 2.8388671875
+        },
+        "filtered": {
+          "batchMilliseconds": [
+            1.590291,
+            1.551458,
+            1.526125,
+            1.587417,
+            1.575792,
+            1.532541,
+            1.578,
+            1.549041,
+            1.5425,
+            1.571417,
+            1.547166
+          ],
+          "medianMicrosecondsPerDecision": 6.0603828125,
+          "minMicrosecondsPerDecision": 5.96142578125,
+          "maxMicrosecondsPerDecision": 6.21207421875
+        },
+        "depth1": {
+          "batchMilliseconds": [
+            0.117584,
+            0.106416,
+            0.104167,
+            0.103875,
+            0.104041,
+            0.123708,
+            0.104833,
+            0.105084,
+            0.106709,
+            0.114333,
+            0.121667
+          ],
+          "medianMicrosecondsPerDecision": 0.4156875,
+          "minMicrosecondsPerDecision": 0.40576171875,
+          "maxMicrosecondsPerDecision": 0.483234375
+        },
+        "depth2": {
+          "batchMilliseconds": [
+            0.828458,
+            0.487584,
+            0.487125,
+            0.501416,
+            0.590791,
+            0.506625,
+            0.512375,
+            0.4845,
+            0.546542,
+            0.482375,
+            0.475833
+          ],
+          "medianMicrosecondsPerDecision": 1.95865625,
+          "minMicrosecondsPerDecision": 1.85872265625,
+          "maxMicrosecondsPerDecision": 3.2361640625000003
+        },
+        "overhead": {
+          "batchMilliseconds": [
+            0.003291,
+            0.003125,
+            0.003041,
+            0.002958,
+            0.003083,
+            0.003,
+            0.003208,
+            0.003208,
+            0.00325,
+            0.003333,
+            0.002875
+          ],
+          "medianMicrosecondsPerDecision": 0.01220703125,
+          "minMicrosecondsPerDecision": 0.01123046875,
+          "maxMicrosecondsPerDecision": 0.01301953125
+        }
+      }
+    }
+  },
+  "resources": {
+    "elapsedMs": 12648.424709,
+    "maxRSSKiB": 195776,
+    "currentRSSBytes": 200458240,
+    "userCPUTimeUs": 12856160,
+    "systemCPUTimeUs": 60545
+  },
+  "artifactBytes": {
+    "one-tick.json": 2729661,
+    "one-tick-data.js": 2729766,
+    "one-tick-heldout.json": 13312942
+  },
+  "outputBytes": 18772369,
+  "artifactHashes": {
+    "one-tick.json": "0cc67f9f3ab52cf6831d9e6e4d007c9579694f1411207ad1b0a27a83bb007860",
+    "one-tick-data.js": "19d4e1de9e632a27bf665090d0adfc326262736078e5cd32e9ed36c66784ff60",
+    "one-tick-heldout.json": "c8463873a9e4f51e01b77278d0802b90bfc9ee1f76b1035722a0eeef223ebb03"
+  },
+  "emittedParity": true
+}
