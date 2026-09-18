@@ -1,0 +1,12 @@
+{
+  "source": "/Users/tr/Projects/zombie-lab-evidence/ZL-012-pages-artifact/site",
+  "counts": {
+    "original": 4761,
+    "heldout": 37730
+  },
+  "passed": true,
+  "oldHashes": {
+    "one-tick.json": "efbdec98b7b61c40aa38e05f62f17767fbbbf90345ae7c01e9773b39f97d8fb8",
+    "one-tick-heldout.json": "b77693f324c68585fc24b9ea307ce611815b54bc8d326348fdb2cb23ee3e9f60"
+  }
+}

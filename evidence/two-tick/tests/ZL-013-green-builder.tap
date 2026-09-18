@@ -1,0 +1,11 @@
+✔ existential two-tick mask rejects a safe first tick with no continuation (2.031458ms)
+✔ depth1 then all-legal fallback, first ties, terminal and clock invariance (0.598917ms)
+✔ bounded fixture covers six original policies and complete three-policy witness frames (69.996792ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 105.567708

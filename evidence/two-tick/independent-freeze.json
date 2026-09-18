@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "experiment": "ZL-013",
+  "role": "independent reference author; not implementer or final reviewer",
+  "session_id": "20260917_183723_c97826",
+  "frozen_at_utc": "2026-09-18T00:39:38.696Z",
+  "reference_sha256": "f14457d7fda57610de805078ddcec99ec99c75011e127d4693598476342235c4",
+  "protocol_sha256": "ade4d73415cb046903ec34fb93c3443408dfcf08b04d4982e804f1415265c17f",
+  "physics_sha256": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+  "neural_interface_sha256": "9ef06420501ef4ee617c7bf09b082575340413f8ef226e1bcaa6b3b852cf9ba0",
+  "allowed_source_files": [
+    "/Users/tr/Projects/zombie-lab-neural-two-tick/experiments/ZL-013-protocol.md",
+    "/Users/tr/Projects/zombie-lab-neural-two-tick/two-zombies.js",
+    "/Users/tr/Projects/zombie-lab-neural-two-tick/neural-policy.js"
+  ],
+  "read_source_files": [
+    "/Users/tr/Projects/zombie-lab-neural-two-tick/experiments/ZL-013-protocol.md",
+    "/Users/tr/Projects/zombie-lab-neural-two-tick/two-zombies.js",
+    "/Users/tr/Projects/zombie-lab-neural-two-tick/neural-policy.js"
+  ],
+  "required_skill_reads": [
+    "/Users/tr/.hermes/skills/zombie-lab-experiments/SKILL.md",
+    "/Users/tr/.hermes/skills/software-development/test-driven-development/SKILL.md"
+  ],
+  "authored_local_files_read": [
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/freeze.cjs",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-literals-final.txt",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-properties.txt",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-terminal-transition.txt",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-terminal.txt",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-transition.txt",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/properties.cjs",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/red-decide.txt",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/red-terminal.txt",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/red-transition.txt",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/reference.cjs",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/test-evidence.json",
+    "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/tests.cjs"
+  ],
+  "source_read_scope": "Only three permitted project sources; required skill content and worker-authored files additionally read. Node built-in runtime modules used; no third-party dependencies.",
+  "write_scope": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent",
+  "prohibited_sources_read": [],
+  "production_comparison_performed": false,
+  "frozen_before_comparison_statement": "Reference and tests frozen before any comparison with new policy/builder/tests or evaluation outputs. None of those files, nor old one-tick reference/builder, were read. No exhaustive production comparison is claimed.",
+  "interface": {
+    "terminal": "terminal(index): boolean initial/endpoint contact",
+    "transition": "transition(index,action): successor ID including captured endpoint; -1 for terminal input or illegal action",
+    "decide": "decide(index,scores): {action,mask,depth1,depth2,horizon}; each mask is a five-element boolean array, N/E/S/W/stay",
+    "crossing": "A one-cell exchange starts cardinal-adjacent, so it is terminal before movement. All reachable capture flags equal endpoint contact; independently checked for every legal nonterminal transition.",
+    "clock": "Index-only state contains no elapsed clock; extra clock arguments tested without effect. This is not a stopped-state object adapter.",
+    "scores": "Five finite current-state scores required for nonterminal decisions; no model loaded or future neural ranking."
+  },
+  "tests": {
+    "commands": [
+      "node tests.cjs",
+      "node properties.cjs"
+    ],
+    "status": "PASS",
+    "red_receipts": [
+      "red-terminal.txt",
+      "red-transition.txt",
+      "red-decide.txt"
+    ],
+    "tdd": "Three missing-API assertion RED stages followed by GREEN; literal fallback regression fixtures pinned after independently enumerated property tests passed.",
+    "evidence": {
+      "status": "PASS",
+      "totals": {
+        "states": 343000,
+        "terminal": 42788,
+        "legalTransitions": 1351892,
+        "capturedTransitions": 198419,
+        "horizon0": 206,
+        "horizon1": 264,
+        "horizon2": 299742,
+        "existentialNotUniversal": 557826
+      },
+      "witnesses": {
+        "existential": {
+          "index": 2,
+          "action": 1,
+          "continuations": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "result": {
+            "action": 2,
+            "mask": [
+              false,
+              true,
+              true,
+              false,
+              false
+            ],
+            "depth1": [
+              false,
+              true,
+              true,
+              false,
+              false
+            ],
+            "depth2": [
+              false,
+              true,
+              true,
+              false,
+              false
+            ],
+            "horizon": 2
+          }
+        },
+        "horizon2": {
+          "index": 2,
+          "scores": [
+            -1,
+            -3,
+            0,
+            2,
+            -2
+          ],
+          "result": {
+            "action": 2,
+            "mask": [
+              false,
+              true,
+              true,
+              false,
+              false
+            ],
+            "depth1": [
+              false,
+              true,
+              true,
+              false,
+              false
+            ],
+            "depth2": [
+              false,
+              true,
+              true,
+              false,
+              false
+            ],
+            "horizon": 2
+          }
+        },
+        "horizon0": {
+          "index": 1612,
+          "scores": [
+            -1,
+            1,
+            0,
+            2,
+            -2
+          ],
+          "result": {
+            "action": 3,
+            "mask": [
+              false,
+              true,
+              true,
+              true,
+              true
+            ],
+            "depth1": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "depth2": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "horizon": 0
+          }
+        },
+        "horizon1": {
+          "index": 7010,
+          "scores": [
+            0,
+            -2,
+            0,
+            2,
+            -2
+          ],
+          "result": {
+            "action": 0,
+            "mask": [
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "depth1": [
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "depth2": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "horizon": 1
+          }
+        }
+      },
+      "stream_sha256": "5050ce041907c28bdb27f657f3b5ce10dd94d275a7f59b19c0827d88b62237e1",
+      "stream_record_bytes": 47,
+      "stream_records": 343000,
+      "stream_description": "Ascending state IDs 0..342999. uint32LE ID; uint8 terminal; N/E/S/W/stay each int32LE successor (-1 unavailable), uint8 captured (0 unavailable), uint8 selected-mask, uint8 depth1, uint8 depth2; int8 action with all-zero scores; uint8 horizon. No header.",
+      "elapsed_seconds": 1.307740458,
+      "comparison_scope": "Independent closed-form oracle vs independently authored reference ONLY; no production comparison."
+    }
+  },
+  "artifacts": [
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/freeze.cjs",
+      "sha256": "b4da069e460da17b513e9b2dbc3dc7eb296eb448ac572968a4622984949235ec"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-literals-final.txt",
+      "sha256": "675dae9036ba5b4c2ea760fbf4b45658fa348176b4aa336d187b555d58309146"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-properties.txt",
+      "sha256": "2337b16916caa253e7e23fab2e982b4b794d3b4be158f32379c438c81219b591"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-terminal-transition.txt",
+      "sha256": "9a2b14430c6ddf0abbc00105ea23cb51655df94b0f25368f89acdd1cbb249a39"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-terminal.txt",
+      "sha256": "97d166b27d443de11ee872cef3e061aa831f40bb45892b26ea5ee9ef73ad7495"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/green-transition.txt",
+      "sha256": "9a2b14430c6ddf0abbc00105ea23cb51655df94b0f25368f89acdd1cbb249a39"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/properties.cjs",
+      "sha256": "82f0d2fb77433837d6eeb95e48f6a62fc902cad59d52fa44a6c6bcde6adda278"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/red-decide.txt",
+      "sha256": "f6b35c445745a76d63d6a52a04385d779bbf1c871365ed6fc7d63677c86333d7"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/red-terminal.txt",
+      "sha256": "da0f317c7654a45baec1df49f55f55adca5c08bcf4fb00358af2f5bba93b91a8"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/red-transition.txt",
+      "sha256": "ae87658b6c58e76c91f5f37496adcb27becd4551f203c239f7b413cd63786b6f"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/reference.cjs",
+      "sha256": "f14457d7fda57610de805078ddcec99ec99c75011e127d4693598476342235c4"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/test-evidence.json",
+      "sha256": "2337b16916caa253e7e23fab2e982b4b794d3b4be158f32379c438c81219b591"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-independent/tests.cjs",
+      "sha256": "4d0b575ccef105d2b30cf0c47504417c244175fef3d1a2439607bb5674c4cb7d"
+    }
+  ],
+  "remaining": [
+    "Supervisor must perform exhaustive production comparison and independent trajectory checks.",
+    "Different final reviewer required."
+  ],
+  "restrictions": "No git, installs, training, network research, delegation, notes/config/profile changes; worker artifacts only."
+}

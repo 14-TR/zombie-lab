@@ -1,0 +1,16 @@
+✔ all protected historical model/source/evidence files remain byte-identical (16.047833ms)
+✔ emitted real results match the frozen first-run deterministic rows and witnesses (132.855834ms)
+✔ both publication workflows execute and package the two-tick experiment (0.216917ms)
+✔ original neural loss candidates never claim a safety mask (8.366125ms)
+✔ loss witnesses independently re-enumerate every production successor and rank (11.4475ms)
+✔ existential two-tick mask rejects a safe first tick with no continuation (2.196708ms)
+✔ depth1 then all-legal fallback, first ties, terminal and clock invariance (0.565583ms)
+✔ bounded fixture covers six original policies and complete three-policy witness frames (84.674792ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 207.442709

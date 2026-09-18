@@ -1,0 +1,154 @@
+[
+  {
+    "command": [
+      "node",
+      "test-node.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.1544139579636976,
+    "log": "ZL-013-regression-00.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-preview.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 6.404212333960459,
+    "log": "ZL-013-regression-01.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-sweep.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 8.487991499947384,
+    "log": "ZL-013-regression-02.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-sweep-view.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.10214283398818225,
+    "log": "ZL-013-regression-03.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-compare.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.14433999999891967,
+    "log": "ZL-013-regression-04.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-proof.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 8.440148917026818,
+    "log": "ZL-013-regression-05.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-planning.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 4.1775860419729725,
+    "log": "ZL-013-regression-06.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-planning-view.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 5.3203783329809085,
+    "log": "ZL-013-regression-07.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-two-zombies.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 18.08951195795089,
+    "log": "ZL-013-regression-08.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-two-zombies-view.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 11.204876665957272,
+    "log": "ZL-013-regression-09.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-avoidability.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 31.032617749995552,
+    "log": "ZL-013-regression-10.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-one-tick-reference.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.1031696250429377,
+    "log": "ZL-013-regression-11.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-two-tick-reference.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.12972591596189886,
+    "log": "ZL-013-regression-12.log"
+  },
+  {
+    "command": [
+      "node",
+      "scripts/test-two-tick-reference-properties.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 1.4277925419155508,
+    "log": "ZL-013-regression-13.log"
+  },
+  {
+    "command": [
+      "node",
+      "--max-old-space-size=384",
+      "--test",
+      "scripts/test-neural.cjs",
+      "scripts/test-neural-release.cjs",
+      "scripts/test-one-tick.cjs",
+      "scripts/test-one-tick-release.cjs",
+      "scripts/test-two-tick.cjs",
+      "scripts/test-two-tick-release.cjs"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.8088024579919875,
+    "log": "ZL-013-regression-14.log"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "scripts/test-avoidability-checker.py"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 4.5321800409583375,
+    "log": "ZL-013-regression-15.log"
+  }
+]

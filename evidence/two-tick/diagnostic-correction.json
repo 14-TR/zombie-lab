@@ -1,0 +1,54 @@
+{
+  "changes": [
+    {
+      "id": "z2-0-h11",
+      "action": 0,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-0-h11",
+      "action": 4,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-0-h20",
+      "action": 0,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-0-h20",
+      "action": 4,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-34-h3",
+      "action": 1,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-34-h3",
+      "action": 2,
+      "old": false,
+      "new": true
+    }
+  ],
+  "resultsUnchanged": true,
+  "framesUnchanged": true,
+  "resources": {
+    "elapsedMs": 24675.520875,
+    "maxRSSKiB": 208880,
+    "currentRSSBytes": 208502784,
+    "userCPUTimeUs": 24907726,
+    "systemCPUTimeUs": 155066
+  },
+  "finalResources": {
+    "elapsedMs": 24754.427916999997,
+    "maxRSSKiB": 296016,
+    "currentRSSBytes": 299909120
+  }
+}

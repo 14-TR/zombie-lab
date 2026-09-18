@@ -1,0 +1,32 @@
+✔ all protected historical model/source/evidence files remain byte-identical (13.96975ms)
+✔ emitted real results match the frozen first-run deterministic rows and witnesses (125.571875ms)
+✔ both publication workflows execute and package the two-tick experiment (0.2405ms)
+✖ original neural loss candidates never claim a safety mask (8.362583ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 182.786083
+
+✖ failing tests:
+
+test at scripts/test-two-tick-release.cjs:25:1
+✖ original neural loss candidates never claim a safety mask (8.362583ms)
+  AssertionError [ERR_ASSERTION]: unfiltered neural keeps every legal candidate
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-neural-two-tick/scripts/test-two-tick-release.cjs:28:65)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
