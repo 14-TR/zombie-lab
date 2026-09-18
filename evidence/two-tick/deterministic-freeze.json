@@ -1,0 +1,45 @@
+{
+  "resultsSHA256": "dc1f753f728cf346dfa2df68c36d6004b3b9f6288d2839fda3f41935b9c09eab",
+  "heldoutResultsSHA256": "a8c06fa346a592a1fb85a8779ca09a0d9b4227749195b566342c5e8e6f678a12",
+  "witnessesSHA256": "be71c2dacad8f8e80cd7aabe431e03eb3ad03dfe5c3155c0b8e0b6c35b03ed47",
+  "firstWitnessesSHA256": "9afc747f50756d408003b50b5ff3c565ceacf2f1c8f32687ae25bdc9ad25fc7b",
+  "diagnosticCorrections": [
+    {
+      "id": "z2-0-h11",
+      "action": 0,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-0-h11",
+      "action": 4,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-0-h20",
+      "action": 0,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-0-h20",
+      "action": 4,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-34-h3",
+      "action": 1,
+      "old": false,
+      "new": true
+    },
+    {
+      "id": "z2-34-h3",
+      "action": 2,
+      "old": false,
+      "new": true
+    }
+  ],
+  "note": "Only original-neural loss candidate keep flags corrected; all scalar results and every replay frame unchanged. Original exports retained externally."
+}

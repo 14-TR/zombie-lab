@@ -1,0 +1,6 @@
+PASS SYNTHETIC: 4761 paired production replays, independent frames, scalar/witness mismatch rejection
+PASS REAL: 14283 production replays, all supplied witness frames, emitted JSON/wrapper parity
+PASS browser width 320; measured minimum label 13.727142857142857px
+PASS browser width 390; measured minimum label 17.087142857142855px
+PASS browser width 1200; measured minimum label 23.759999999999998px
+PASS browser fail-closed stale replay/history/export clearing

@@ -1,0 +1,11 @@
+✔ all protected historical model/source/evidence files remain byte-identical (13.245667ms)
+﹣ emitted real results match the frozen first-run deterministic rows and witnesses (0.097959ms) # Supply ZL013_DATA for the mandatory release-artifact gate
+✔ both publication workflows execute and package the two-tick experiment (0.155875ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 46.689666

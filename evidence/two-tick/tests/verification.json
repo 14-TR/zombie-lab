@@ -1,0 +1,453 @@
+{
+  "target": "/Users/tr/Projects/zombie-lab-evidence/ZL-013-worktree-site",
+  "expectedCommit": "48f762a5c9e954f7378a19eb30b9fe879454d670",
+  "startedAt": "2026-09-18T00:51:43.959Z",
+  "sourceChecks": [
+    {
+      "path": "two-tick.html",
+      "sha256": "666ad10495eec6507bd9db1b8a6a563cf78ce9a358e46011cbf85cda9bd9da96",
+      "bytes": 7093
+    },
+    {
+      "path": "two-tick-view.js",
+      "sha256": "14e32fe036eddf6b8f0658287ab972bcab20c70a982bc807078bb2c48fd031de",
+      "bytes": 13059
+    },
+    {
+      "path": "two-tick-policy.js",
+      "sha256": "895897d0977e22c2883b32c4ab8e18549b6c341d68697eff99be2d0ef8a2b98a",
+      "bytes": 1861
+    },
+    {
+      "path": "one-tick-policy.js",
+      "sha256": "62dc237d2acd5f8b5f247f362dd931fb9e60ef22c8c5c421b1a61b4b2d08d36d",
+      "bytes": 1847
+    },
+    {
+      "path": "two-zombies.js",
+      "sha256": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+      "bytes": 4968
+    },
+    {
+      "path": "neural-policy.js",
+      "sha256": "9ef06420501ef4ee617c7bf09b082575340413f8ef226e1bcaa6b3b852cf9ba0",
+      "bytes": 3257
+    },
+    {
+      "path": "neural-view.js",
+      "sha256": "1b49ba8b1b2c8e22dada5384b323b4383491b3e624f4a4a0bcfa812c14a2071f",
+      "bytes": 18252
+    },
+    {
+      "path": "models/feed-forward.json",
+      "sha256": "c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275",
+      "bytes": 13716
+    },
+    {
+      "path": "models/feed-forward.js",
+      "sha256": "d995296cb49c23ed69fb9f330c15bcbc2d05209e302e0a3e3774013cfabdec13",
+      "bytes": 10289
+    },
+    {
+      "path": "experiments/ZL-013-protocol.md",
+      "sha256": "ade4d73415cb046903ec34fb93c3443408dfcf08b04d4982e804f1415265c17f",
+      "bytes": 6515
+    },
+    {
+      "path": "experiments/ZL-013-two-tick.md",
+      "sha256": "49de2053eb270d0caef9555e8815914df726903b41b84a49847b71dc56cdd74b",
+      "bytes": 9045
+    },
+    {
+      "path": "evidence/two-tick/first-evaluation.json",
+      "sha256": "7909392c43801a575b442be53182136b888696e03318f0c6c7645ef09627a2b1",
+      "bytes": 205642
+    },
+    {
+      "path": "evidence/two-tick/independent-freeze.json",
+      "sha256": "65a413ca39270162f0237991d9ff3591d220c5108afe89e5b37cbbacd9cb68fb",
+      "bytes": 10696
+    }
+  ],
+  "links": [
+    {
+      "href": "two-tick.json",
+      "bytes": 3195648,
+      "sha256": "aef399525823728c23dffdd34a8869dc13e40f06f22bde57528035a42fb8f4ee"
+    },
+    {
+      "href": "two-tick-heldout.json",
+      "bytes": 16120755,
+      "sha256": "15d8431feef38f568110d62a399e72346da17c2474d26dff10771e8ec9e1c22b"
+    },
+    {
+      "href": "two-tick-evaluation.json",
+      "bytes": 205627,
+      "sha256": "98909b7444ca538f4c9759890230a05c1fe005e3b76c26145cebcbe0df8f9435"
+    },
+    {
+      "href": "experiments/ZL-013-two-tick.md",
+      "bytes": 9045,
+      "sha256": "49de2053eb270d0caef9555e8815914df726903b41b84a49847b71dc56cdd74b"
+    },
+    {
+      "href": "experiments/ZL-013-protocol.md",
+      "bytes": 6515,
+      "sha256": "ade4d73415cb046903ec34fb93c3443408dfcf08b04d4982e804f1415265c17f"
+    },
+    {
+      "href": "two-tick-policy.js",
+      "bytes": 1861,
+      "sha256": "895897d0977e22c2883b32c4ab8e18549b6c341d68697eff99be2d0ef8a2b98a"
+    },
+    {
+      "href": "models/feed-forward.json",
+      "bytes": 13716,
+      "sha256": "c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275"
+    }
+  ],
+  "cases": [
+    {
+      "width": 320,
+      "id": "z2-0-h1",
+      "sharedTick": 0
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h2",
+      "sharedTick": 0
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h2",
+      "sharedTick": 19
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h2",
+      "sharedTick": 38
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h11",
+      "sharedTick": 0
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h11",
+      "sharedTick": 7
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h11",
+      "sharedTick": 15
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h20",
+      "sharedTick": 0
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h20",
+      "sharedTick": 2
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h20",
+      "sharedTick": 5
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h30",
+      "sharedTick": 0
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h30",
+      "sharedTick": 2
+    },
+    {
+      "width": 320,
+      "id": "z2-0-h30",
+      "sharedTick": 5
+    },
+    {
+      "width": 320,
+      "id": "z2-5-h3",
+      "sharedTick": 0
+    },
+    {
+      "width": 320,
+      "id": "z2-5-h3",
+      "sharedTick": 8
+    },
+    {
+      "width": 320,
+      "id": "z2-5-h3",
+      "sharedTick": 16
+    },
+    {
+      "width": 320,
+      "id": "z2-34-h3",
+      "sharedTick": 0
+    },
+    {
+      "width": 320,
+      "id": "z2-34-h3",
+      "sharedTick": 8
+    },
+    {
+      "width": 320,
+      "id": "z2-34-h3",
+      "sharedTick": 17
+    },
+    {
+      "width": 320,
+      "controls": true,
+      "minLabelPixels": 13.727142857142857
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h1",
+      "sharedTick": 0
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h2",
+      "sharedTick": 0
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h2",
+      "sharedTick": 19
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h2",
+      "sharedTick": 38
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h11",
+      "sharedTick": 0
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h11",
+      "sharedTick": 7
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h11",
+      "sharedTick": 15
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h20",
+      "sharedTick": 0
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h20",
+      "sharedTick": 2
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h20",
+      "sharedTick": 5
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h30",
+      "sharedTick": 0
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h30",
+      "sharedTick": 2
+    },
+    {
+      "width": 390,
+      "id": "z2-0-h30",
+      "sharedTick": 5
+    },
+    {
+      "width": 390,
+      "id": "z2-5-h3",
+      "sharedTick": 0
+    },
+    {
+      "width": 390,
+      "id": "z2-5-h3",
+      "sharedTick": 8
+    },
+    {
+      "width": 390,
+      "id": "z2-5-h3",
+      "sharedTick": 16
+    },
+    {
+      "width": 390,
+      "id": "z2-34-h3",
+      "sharedTick": 0
+    },
+    {
+      "width": 390,
+      "id": "z2-34-h3",
+      "sharedTick": 8
+    },
+    {
+      "width": 390,
+      "id": "z2-34-h3",
+      "sharedTick": 17
+    },
+    {
+      "width": 390,
+      "controls": true,
+      "minLabelPixels": 17.087142857142855
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h1",
+      "sharedTick": 0
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h2",
+      "sharedTick": 0
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h2",
+      "sharedTick": 19
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h2",
+      "sharedTick": 38
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h11",
+      "sharedTick": 0
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h11",
+      "sharedTick": 7
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h11",
+      "sharedTick": 15
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h20",
+      "sharedTick": 0
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h20",
+      "sharedTick": 2
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h20",
+      "sharedTick": 5
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h30",
+      "sharedTick": 0
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h30",
+      "sharedTick": 2
+    },
+    {
+      "width": 1200,
+      "id": "z2-0-h30",
+      "sharedTick": 5
+    },
+    {
+      "width": 1200,
+      "id": "z2-5-h3",
+      "sharedTick": 0
+    },
+    {
+      "width": 1200,
+      "id": "z2-5-h3",
+      "sharedTick": 8
+    },
+    {
+      "width": 1200,
+      "id": "z2-5-h3",
+      "sharedTick": 16
+    },
+    {
+      "width": 1200,
+      "id": "z2-34-h3",
+      "sharedTick": 0
+    },
+    {
+      "width": 1200,
+      "id": "z2-34-h3",
+      "sharedTick": 8
+    },
+    {
+      "width": 1200,
+      "id": "z2-34-h3",
+      "sharedTick": 17
+    },
+    {
+      "width": 1200,
+      "controls": true,
+      "minLabelPixels": 23.759999999999998
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "artifactChecks": {
+    "originalRows": 4761,
+    "heldoutRows": 37730,
+    "witnesses": 7,
+    "sourceClean": false,
+    "metadata": {
+      "fixture": false,
+      "commit": "48f762a5c9e954f7378a19eb30b9fe879454d670",
+      "worktreeDirty": true,
+      "sourceIdentityScope": "Hashed evaluator sources and frozen model versus HEAD; generated output files excluded",
+      "protocolCommit": "48f762a5c9e954f7378a19eb30b9fe879454d670",
+      "modelSHA256": "c2c007bcb27c68e7f52d61d8e21c3d2003c7331ccb16b84aa46adef87de48275",
+      "certificateSHA256": "a1f47e74bb5d4f086aedd8d6c01f51edd37e390c74adeb8eae4bc4d0bbc7dfc8",
+      "sourceHashes": {
+        "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+        "neural-policy.js": "9ef06420501ef4ee617c7bf09b082575340413f8ef226e1bcaa6b3b852cf9ba0",
+        "one-tick-policy.js": "62dc237d2acd5f8b5f247f362dd931fb9e60ef22c8c5c421b1a61b4b2d08d36d",
+        "two-tick-policy.js": "895897d0977e22c2883b32c4ab8e18549b6c341d68697eff99be2d0ef8a2b98a",
+        "scripts/build-neural.cjs": "689c3f4464b11645ea71b033e7ee3d9d3363fdcbe04532a7366abf0f0239ae64",
+        "scripts/build-two-tick.cjs": "af933c59149e1bb1109ca4f12a8345c74fb31bb48694b6f7648f3b7396040e84",
+        "experiments/ZL-013-protocol.md": "ade4d73415cb046903ec34fb93c3443408dfcf08b04d4982e804f1415265c17f",
+        "scripts/two-tick-reference.cjs": "f14457d7fda57610de805078ddcec99ec99c75011e127d4693598476342235c4",
+        "evidence/two-tick/independent-freeze.json": "65a413ca39270162f0237991d9ff3591d220c5108afe89e5b37cbbacd9cb68fb"
+      },
+      "safetyCutoff": 10000,
+      "heldoutScope": "Frozen ZL-011 training split; previously evaluated configurations, not untouched test data or held-out trajectories. Neural vs one-tick vs two-tick only; no held-out planner comparison."
+    },
+    "artifactHashes": {
+      "two-tick.json": "aef399525823728c23dffdd34a8869dc13e40f06f22bde57528035a42fb8f4ee",
+      "two-tick-data.js": "390c4e4d1d63eb58758142100e524fa507e59e2cb841c461a88ba19b37bc4873",
+      "two-tick-heldout.json": "15d8431feef38f568110d62a399e72346da17c2474d26dff10771e8ec9e1c22b"
+    },
+    "finalResources": {
+      "elapsedMs": 24754.427916999997,
+      "maxRSSKiB": 296016,
+      "currentRSSBytes": 299909120
+    }
+  },
+  "passed": true,
+  "finishedAt": "2026-09-18T00:51:49.721Z"
+}

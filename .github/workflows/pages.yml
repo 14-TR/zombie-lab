@@ -40,6 +40,9 @@ jobs:
           node scripts/test-avoidability.cjs
           node --max-old-space-size=384 --test scripts/test-neural.cjs scripts/test-neural-release.cjs
           node scripts/test-one-tick-reference.cjs
+          node scripts/test-two-tick-reference.cjs
+          node scripts/test-two-tick-reference-properties.cjs
+          node --test scripts/test-two-tick.cjs scripts/test-two-tick-release.cjs
           node --test scripts/test-one-tick.cjs scripts/test-one-tick-release.cjs
           python3 -B scripts/test-avoidability-checker.py
           node scripts/build-preview.cjs preview
@@ -55,6 +58,10 @@ jobs:
           timeout 890s node --max-old-space-size=384 scripts/build-one-tick.cjs --out-dir preview
           ZL012_DATA=preview/one-tick.json node --test scripts/test-one-tick-release.cjs
           ZL012_DATA=preview/one-tick.json node scripts/test-one-tick-view.cjs
+          timeout 890s node --max-old-space-size=384 scripts/build-two-tick.cjs --out-dir preview
+          ZL013_DATA=preview/two-tick.json node --test scripts/test-two-tick-release.cjs
+          ZL013_DATA=preview/two-tick.json node scripts/test-two-tick-view.cjs
+          cp two-tick.html two-tick-view.js two-tick-policy.js preview/
           cp one-tick.html one-tick-view.js one-tick-policy.js preview/
           cp neural.html neural-view.js neural-policy.js preview/
           mkdir -p preview/models
@@ -68,6 +75,8 @@ jobs:
           mkdir -p preview/evidence
           cp -R evidence/neural preview/evidence/
           cp -R evidence/one-tick preview/evidence/
+          cp -R evidence/two-tick preview/evidence/
+          cp experiments/ZL-013-protocol.md experiments/ZL-013-two-tick.md preview/experiments/
           cp experiments/ZL-012-protocol.md experiments/ZL-012-one-tick.md preview/experiments/
           cp experiments/ZL-010-avoidability.md experiments/ZL-010-protocol.md preview/experiments/
           cp experiments/ZL-009-two-zombies.md experiments/ZL-009-protocol.md preview/experiments/

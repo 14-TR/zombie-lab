@@ -1,0 +1,2 @@
+PASS SYNTHETIC: 4761 paired production replays, independent frames, scalar/witness mismatch rejection
+SKIP optional browser (no cached module requested)

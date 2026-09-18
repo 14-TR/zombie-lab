@@ -1,0 +1,31 @@
+✔ existential two-tick mask rejects a safe first tick with no continuation (1.946917ms)
+✔ depth1 then all-legal fallback, first ties, terminal and clock invariance (0.550625ms)
+✖ bounded fixture covers six original policies and complete three-policy witness frames (0.304042ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32.850625
+
+✖ failing tests:
+
+test at scripts/test-two-tick.cjs:24:1
+✖ bounded fixture covers six original policies and complete three-policy witness frames (0.304042ms)
+  AssertionError [ERR_ASSERTION]: two-tick builder exists
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-neural-two-tick/scripts/test-two-tick.cjs:25:55)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
