@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_failures_consume_admission_before_transport_and_no_retry (__main__.AdmissionTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev/scripts/test-jev-runner.py", line 17, in test_failures_consume_admission_before_transport_and_no_retry
+    self.assertIsNotNone(runner, 'bounded runner exists')
+AssertionError: unexpectedly None : bounded runner exists
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

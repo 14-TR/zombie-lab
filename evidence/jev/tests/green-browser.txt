@@ -1,0 +1,15 @@
+locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('#back')
+    - locator resolved to <button id="back">Initial</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+
+    at /Users/tr/Projects/zombie-lab-jev/scripts/check-jev-browser.cjs:27:39 {
+  log: [
+    "  - waiting for locator('#back')",
+    '    - locator resolved to <button id="back">Initial</button>',
+    '  - attempting click action',
+    '    - waiting for element to be visible, enabled and stable'
+  ]
+}

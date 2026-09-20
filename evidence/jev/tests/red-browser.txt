@@ -1,0 +1,9 @@
+AssertionError [ERR_ASSERTION]: phone SVG labels below 12px: 11.351607142857143
+    at /Users/tr/Projects/zombie-lab-jev/scripts/check-jev-browser.cjs:32:7 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

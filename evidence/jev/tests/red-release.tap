@@ -1,0 +1,49 @@
+✖ offline release verifies frozen recordings and emits matching downloadable static artifacts (0.476541ms)
+✖ normal PR and Pages builds only run offline pilot code (2.893417ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33.729875
+
+✖ failing tests:
+
+test at scripts/test-jev-release.cjs:4:1
+✖ offline release verifies frozen recordings and emits matching downloadable static artifacts (0.476541ms)
+  AssertionError [ERR_ASSERTION]: offline builder exists
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-jev/scripts/test-jev-release.cjs:5:51)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at scripts/test-jev-release.cjs:20:1
+✖ normal PR and Pages builds only run offline pilot code (2.893417ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(text.includes('node scripts/build-jev.cjs preview'))
+  
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-jev/scripts/test-jev-release.cjs:23:5)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

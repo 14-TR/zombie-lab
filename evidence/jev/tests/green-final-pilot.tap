@@ -1,0 +1,16 @@
+✔ offline release verifies frozen recordings and emits matching downloadable static artifacts (58.873541ms)
+✔ normal PR and Pages builds only run offline pilot code (0.130917ms)
+✔ static viewer selects exact initial and one-step endpoints for every legal action (10.497208ms)
+✔ frozen endpoint-inclusive sample is legal, ordered and production-labeled (8.373208ms)
+✔ evaluation keeps missing answers in denominator and separates oracle action quality (7.821375ms)
+✔ independent reference comparison rejects changed state, action and rank labels (9.813333ms)
+✔ strict answer validation rejects malformed probability and choice schemas (0.135667ms)
+✔ requests are bounded, independent, and cannot leak oracle labels (5.897291ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 91.085959

@@ -1,0 +1,85 @@
+{"actualSource":"actual buildAvoidability() / current worktree","rows":4761,"witnesses":32,"frames":734,"disagreements":30,"stats":{"total":4761,"initialContact":502,"unavoidableNoninitial":42,"avoidable":4217,"maxCaptureTicks":8,"policies":{"greedy":{"avoidableCaptures":4217,"unavoidableCaptured":544,"delayShortfallStarts":10,"totalDelayShortfall":21,"maxDelayShortfall":4},"depth1":{"avoidableCaptures":24,"unavoidableCaptured":544,"delayShortfallStarts":1,"totalDelayShortfall":1,"maxDelayShortfall":1},"depth2":{"avoidableCaptures":24,"unavoidableCaptured":544,"delayShortfallStarts":1,"totalDelayShortfall":2,"maxDelayShortfall":2}}}}
+✔ validates every provided frame with legal old-state actions and production capture/first recurrence (23.294916ms)
+✔ never labels an unresolved cutoff as a measured capture-delay shortfall (0.628334ms)
+✔ compares frozen legacy outcomes and identifies the first action divergence, not just outcomes (4.348375ms)
+✔ file-compatible page shows witness identities, complete history and working playback; mismatch clears stale UI (32.174916ms)
+✔ actual data: every supplied witness and all 30 outcome-disagreement action divergences (10556.790708ms)
+﹣ cached Chromium: real file:// classic scripts, playback, mobile labels, co-location and fail-closed mismatch (0.063625ms) # SKIP
+✔ indexes the complete frozen fixed-Z1 slice without inventing absent witness categories (34.193125ms)
+✔ solveGraph covers every ordered position and legal production action with typed storage (4614.514ms)
+✔ controlled ranks use ALL successors, maximum delay, cycle closure and first tied action (0.3555ms)
+✔ complete graph ranks certify contact iff zero and the exact maximum-delay Bellman law (9.479792ms)
+✔ internal certificate checks reject incomplete, corrupted and noncanonical strategies (13.088625ms)
+✔ certified traces replay actual production to first recurrence or rank-exact capture (5.698583ms)
+✔ buildAvoidability preserves all 4761 legacy rows and separates impossibility from policy failures (15300.0265ms)
+✔ all 30 depth disagreements identify the first actual action divergence and successor ranks (13.030333ms)
+✔ witnesses are exactly the frozen ordered selection and every frame is a production transition (7.944666ms)
+✔ wall-clock watchdog interrupts synchronous work and cannot exceed the preregistered bound (22.686792ms)
+✔ CLI exports a complete rank certificate, safe browser data and exact resource receipts without cleaning neighbors (10102.188375ms)
+✔ indexes every frozen scalar row without running trajectories or mutating data (5.510833ms)
+✔ rejects missing, malformed, duplicate, noncapture or inconsistent frozen rows safely (16.320125ms)
+✔ one-cell sensitivity and witnesses match an independent exhaustive cardinal-neighbor scan (10.49125ms)
+✔ synchronized production A/B replay holds tick 11 while the shared timeline reaches 73 (7.237625ms)
+✔ standalone classic page exposes accessible comparison controls and source links without auto-mounting sweep (0.582834ms)
+✔ offline release verifies frozen recordings and emits matching downloadable static artifacts (54.735542ms)
+✔ normal PR and Pages builds only run offline pilot code (0.165333ms)
+✔ static viewer selects exact initial and one-step endpoints for every legal action (9.547583ms)
+✔ frozen endpoint-inclusive sample is legal, ordered and production-labeled (7.012459ms)
+✔ evaluation keeps missing answers in denominator and separates oracle action quality (6.732291ms)
+✔ independent reference comparison rejects changed state, action and rank labels (8.739ms)
+✔ strict answer validation rejects malformed probability and choice schemas (0.110625ms)
+✔ requests are bounded, independent, and cannot leak oracle labels (5.378334ms)
+✔ an explicitly requested real viewer artifact cannot silently skip without Playwright (641.73875ms)
+✔ release keeps the final model, initialization and wrapper byte-for-byte frozen (0.41775ms)
+PASS immutable frozen model schema, epoch and finite weights
+PASS initial-before-decision, synthetic cutoff/recurrence precedence, regression-safe criterion
+PASS complete fixture indexing, split totals, selected production/model replay, mismatch rejection, negative criterion
+PASS production NeuralPolicy + zero-weight fixture model: 4761 complete production replays
+SKIP browser: set ZL011_PLAYWRIGHT to cached module path (no install)
+✔ scripts/test-neural-view.cjs (628.241125ms)
+✔ malformed model schemas and invalid board positions fail closed (1.540833ms)
+✔ position-only trace detects capture before recurrence before cutoff and keeps endpoints (1.902042ms)
+✔ paired statistics separate recovered failures, regressions, finite delay, and contacts (0.257208ms)
+✔ frozen group labels ignore zombie order and witnesses deduplicate in result order (0.61725ms)
+✔ cached production transitions and decisions preserve full fixed-state trajectories (7.230083ms)
+✔ one-step exact labels distinguish all optimal choices from the first canonical action (0.167208ms)
+✔ bounded end-to-end fixture emits paired rows, exact heldout scope and measured benchmark (99.808208ms)
+✔ CLI missing frozen models fails without fabricating outputs (25.165916ms)
+﹣ optional independent NumPy logits and legal actions match fixture JS inference (0.122542ms) # Set ZL_NEURAL_TEST_PYTHON to existing NumPy interpreter; no install
+✔ sparse architecture and overflowing hidden sums are invalid model inputs (0.215042ms)
+✔ evaluation rejects model file changes after identities freeze (75.560667ms)
+✔ 6-32 tanh-5 inference uses specified coordinate normalization and matrix orientation (0.210834ms)
+✔ legal masking preserves N/E/S/W/stay first ties, including contacts before decision (1.458583ms)
+PASS initial shared/cardinal contact; diagonal is not contact
+PASS both pursuers target OLD human; literal simultaneous successors
+PASS pursuer ties E before S, S before W, N before W; overlap permitted
+PASS all four borders reject rather than wrap; invalid actions
+PASS first maximum on retained safe actions, not original unsafe maximum
+PASS all unsafe fallback retains ALL legal actions with original score ties
+PASS safe border masks and first-maximum all-five tie
+PASS terminal decision does not read scores; clock is absent from positional API
+PASS initial contact forbids every tick including a proposed exchange
+✔ scripts/test-one-tick-reference.cjs (22.041ms)
+✔ all protected historical model/source/evidence files remain byte-identical (12.739ms)
+﹣ emitted real results match the frozen first-run deterministic rows and witnesses (0.093709ms) # Supply ZL012_DATA for the mandatory release-artifact gate
+PASS SYNTHETIC: 4761 paired production replays, independent frames, scalar/witness mismatch rejection
+SKIP optional browser (no cached module requested)
+✔ scripts/test-one-tick-view.cjs (17889.462167ms)
+✔ one tick rejects high-scoring immediate contact but preserves original logits (1.535958ms)
+✔ all-unsafe fallback, first ties, terminal and clock semantics (0.38475ms)
+✔ failure analysis separates first capture, delayed loss and no safe final action (2.088208ms)
+✔ bounded synthetic evaluation retains every scalar and both complete witness endpoints (87.948792ms)
+✔ export verifies classic payload and measures the serialization peak (1.126583ms)
+✔ source dirtiness ignores generated artifacts but detects new evaluator source (17.509959ms)
+✔ complete scalar index validates every category, ID, outcome and summary without replay (1.874458ms)
+✔ same-start replay retains all frames and freezes capture and first-repeat endpoints (1.505375ms)
+✔ standalone paired UI mounts selectors, map, full histories, controls and fail-closed mismatch (1.851792ms)
+✔ actual planner replays all frozen pairs with complete histories and numerical outcome descriptions (5116.596167ms)
+﹣ cached Chromium exercises actual desktop/mobile playback, map, all selectors and mismatch (0.113834ms) # SKIP
+✔ default example follows frozen priority and enumeration ties, never claims representative (0.571125ms)
+✔ classifyRun records first ordered recurrence and capture-cycle-cutoff precedence (9.299458ms)
+✔ paired sweep covers all 4830 starts and reproduces every frozen baseline row (1313.123042ms)
+✔ CLI preserves neighbors, escapes metadata, repeats bytes and reports measured costs (2708.038334ms)
+✔ two-transition choice scores survival before distance and keeps first sequence on ties (21.774625ms)
+✔ step executes only the selected first action with an old-state zombie and real clock (58.905167ms)
+✔ terminal normalization exactly matches baseline without consuming a tick (0.494ms)

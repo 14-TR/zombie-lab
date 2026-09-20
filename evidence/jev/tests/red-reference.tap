@@ -1,0 +1,33 @@
+✔ frozen endpoint-inclusive sample is legal, ordered and production-labeled (6.97575ms)
+✔ evaluation keeps missing answers in denominator and separates oracle action quality (6.711792ms)
+✖ independent reference comparison rejects changed state, action and rank labels (0.290667ms)
+✔ strict answer validation rejects malformed probability and choice schemas (0.096958ms)
+✔ requests are bounded, independent, and cannot leak oracle labels (5.691708ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 51.663208
+
+✖ failing tests:
+
+test at scripts/test-jev.cjs:43:1
+✖ independent reference comparison rejects changed state, action and rank labels (0.290667ms)
+  AssertionError [ERR_ASSERTION]: independent comparison exists
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-jev/scripts/test-jev.cjs:44:59)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

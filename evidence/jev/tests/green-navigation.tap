@@ -1,0 +1,17 @@
+✔ offline release verifies frozen recordings and emits matching downloadable static artifacts (52.317ms)
+✔ normal PR and Pages builds only run offline pilot code (0.120958ms)
+✔ all protected historical model/source/evidence files remain byte-identical (14.30575ms)
+﹣ emitted real results match the frozen first-run deterministic rows and witnesses (0.104583ms) # Supply ZL012_DATA for the mandatory release-artifact gate
+✔ all protected historical model/source/evidence files remain byte-identical (14.48675ms)
+﹣ emitted real results match the frozen first-run deterministic rows and witnesses (0.10075ms) # Supply ZL013_DATA for the mandatory release-artifact gate
+✔ both publication workflows execute and package the two-tick experiment (0.163417ms)
+﹣ original neural loss candidates never claim a safety mask (0.062667ms) # Supply real artifact
+﹣ loss witnesses independently re-enumerate every production successor and rank (0.103042ms) # Supply real artifact
+ℹ tests 9
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 4
+ℹ todo 0
+ℹ duration_ms 84.527334

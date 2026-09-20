@@ -78,6 +78,14 @@ Open `preview/jev.html` locally. The normal PR and Pages pipelines execute this 
 
 Browser verification uses the existing cached Playwright/Chromium installation; no packages or browser downloads are required. The browser receipt and release/build resource receipts are separate from the immutable first-run API measurements. Public deployment, downloaded-PR-artifact checks and independent exact-source implementation review are parent-owned release gates, not implied by local tests.
 
+## Local verification and measured build resources
+
+The complete Node regression command `node --test --test-concurrency=1 test-node.cjs scripts/test-*.cjs` returned **129 pass, 0 fail, 8 explicitly skipped legacy optional/artifact gates** (137 tests; 161,881.284 ms). The four runner tests and the legacy certificate-checker and independent-reference Python suites passed. The initial regression detected navigation edits to historically protected source files; those edits were reverted, and only the generated preview index receives the new link. Original historical files and preservation manifests remain unchanged.
+
+Real local Chromium exercised all 24 states and 108 action endpoints at **320, 390 and 1200 px**, plus selection, initial/successor buttons, scrubber, play and pause. Browser data matched the exported JSON; no script errors, external requests, page overflow or overlapping agent-label boxes were detected. Minimum rendered glyph sizes were **12.384, 15.744 and 38.400 px** respectively. Browser Use rejected the machine's unsupported default-browser profile; verification used the already-installed local Playwright/Chromium instead, without changing browser settings or downloading anything. An initial 11.352 px phone-label failure was corrected and rerun. Screenshot inspection covered the actual phone layout. These are local production-artifact checks, not downloaded-artifact or live Pages checks.
+
+A measured offline build took **38.995 ms**, with peak process RSS **80,960 KiB** and post-export RSS **82,919,424 bytes** on this Mac. First-run inference-process RSS was not sampled; no paid call was repeated to obtain it. Build resource measurements are distinct from the recorded API latencies. See the detailed handoff for inclusive retained-storage totals and source-bound receipts.
+
 ## Interpretation and limitations
 
 This pilot supports keeping the exact simulator and certificate as truth. It does not support replacing their physics or long-horizon avoidability with these Jev predictions. The direct choice result is more favorable than the indefinite-avoidability judgments, but 23/24 one-step choices in an all-winning, purposive sample cannot establish a safe policy. Repeating the run, tuning prompts or adding samples would be a new preregistered experiment with new authorization, not a repair of these negative results.

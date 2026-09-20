@@ -1,0 +1,37 @@
+✔ frozen endpoint-inclusive sample is legal, ordered and production-labeled (7.011625ms)
+✖ evaluation keeps missing answers in denominator and separates oracle action quality (0.432167ms)
+✔ strict answer validation rejects malformed probability and choice schemas (0.121791ms)
+✔ requests are bounded, independent, and cannot leak oracle labels (6.501875ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 46.860458
+
+✖ failing tests:
+
+test at scripts/test-jev.cjs:22:1
+✖ evaluation keeps missing answers in denominator and separates oracle action quality (0.432167ms)
+  AssertionError [ERR_ASSERTION]: evaluator exists
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-jev/scripts/test-jev.cjs:23:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

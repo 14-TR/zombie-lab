@@ -1,0 +1,28 @@
+✖ offline release verifies frozen recordings and emits matching downloadable static artifacts (48.093583ms)
+✔ normal PR and Pages builds only run offline pilot code (0.163625ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 81.505959
+
+✖ failing tests:
+
+test at scripts/test-jev-release.cjs:4:1
+✖ offline release verifies frozen recordings and emits matching downloadable static artifacts (48.093583ms)
+  AssertionError [ERR_ASSERTION]: CSV human truth is the full optimal set, matching correctness
+      at TestContext.<anonymous> (/Users/tr/Projects/zombie-lab-jev/scripts/test-jev-release.cjs:18:33)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

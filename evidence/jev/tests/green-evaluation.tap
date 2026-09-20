@@ -1,0 +1,12 @@
+✔ frozen endpoint-inclusive sample is legal, ordered and production-labeled (6.8905ms)
+✔ evaluation keeps missing answers in denominator and separates oracle action quality (6.781083ms)
+✔ strict answer validation rejects malformed probability and choice schemas (0.103625ms)
+✔ requests are bounded, independent, and cannot leak oracle labels (5.653583ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 51.556917
