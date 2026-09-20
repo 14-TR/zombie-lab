@@ -1,0 +1,4543 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": "ZL-014-v1",
+  "model": "jev-1.13.0",
+  "population": 4259,
+  "selection": "floor(i*(N-1)/23), i=0..23; ascending ordered state ID",
+  "sourceHashes": {
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "evidence/avoidability/data/avoidability-certificate.json": "a1f47e74bb5d4f086aedd8d6c01f51edd37e390c74adeb8eae4bc4d0bbc7dfc8",
+    "experiments/ZL-014-protocol.md": "811efb40e091fa6b30b8bf902970a55a75b81d3546fd597e561d9bb066cec665"
+  },
+  "samples": [
+    {
+      "id": "sample-01",
+      "selectionIndex": 0,
+      "stateIndex": 205802,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 2,
+          "y": 0
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "E",
+          "destination": {
+            "x": 3,
+            "y": 0
+          },
+          "successorIndex": 156873,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 2,
+            "y": 1
+          },
+          "successorIndex": 156882,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 2,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 1,
+            "y": 0
+          },
+          "successorIndex": 156871,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 1,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 0
+              }
+            ],
+            "status": "caught",
+            "reason": "shared destination"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 2,
+            "y": 0
+          },
+          "successorIndex": 156872,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 2,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 0
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "E",
+        "S"
+      ],
+      "canonicalAction": "E"
+    },
+    {
+      "id": "sample-02",
+      "selectionIndex": 185,
+      "stateIndex": 206011,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 1,
+          "y": 0
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 0
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "W"
+      ],
+      "actions": [
+        {
+          "action": "E",
+          "destination": {
+            "x": 2,
+            "y": 0
+          },
+          "successorIndex": 156942,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 2,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 0
+              }
+            ],
+            "status": "caught",
+            "reason": "shared destination"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 1,
+            "y": 1
+          },
+          "successorIndex": 156951,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 1,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 0,
+            "y": 0
+          },
+          "successorIndex": 156940,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 0,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 1,
+            "y": 0
+          },
+          "successorIndex": 156941,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 1,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 0
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "S",
+        "W"
+      ],
+      "canonicalAction": "S"
+    },
+    {
+      "id": "sample-03",
+      "selectionIndex": 370,
+      "stateIndex": 206223,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 3,
+          "y": 0
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 6,
+            "y": 0
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "W"
+      ],
+      "actions": [
+        {
+          "action": "E",
+          "destination": {
+            "x": 4,
+            "y": 0
+          },
+          "successorIndex": 157154,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 0
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 3,
+            "y": 1
+          },
+          "successorIndex": 157163,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 2,
+            "y": 0
+          },
+          "successorIndex": 157152,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 2,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 3,
+            "y": 0
+          },
+          "successorIndex": 157153,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "S",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "S"
+    },
+    {
+      "id": "sample-04",
+      "selectionIndex": 555,
+      "stateIndex": 206435,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 5,
+          "y": 0
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 9,
+            "y": 0
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "W"
+      ],
+      "actions": [
+        {
+          "action": "E",
+          "destination": {
+            "x": 6,
+            "y": 0
+          },
+          "successorIndex": 157366,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 8,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 5,
+            "y": 1
+          },
+          "successorIndex": 157375,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 8,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 4,
+            "y": 0
+          },
+          "successorIndex": 157364,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 8,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 5,
+            "y": 0
+          },
+          "successorIndex": 157365,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 8,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "E",
+        "S",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "E"
+    },
+    {
+      "id": "sample-05",
+      "selectionIndex": 740,
+      "stateIndex": 206648,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 8,
+          "y": 0
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 2,
+            "y": 1
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "N"
+      ],
+      "actions": [
+        {
+          "action": "E",
+          "destination": {
+            "x": 9,
+            "y": 0
+          },
+          "successorIndex": 156949,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 9,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 8,
+            "y": 1
+          },
+          "successorIndex": 156958,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 7,
+            "y": 0
+          },
+          "successorIndex": 156947,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 8,
+            "y": 0
+          },
+          "successorIndex": 156948,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 0
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "E",
+        "S",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "E"
+    },
+    {
+      "id": "sample-06",
+      "selectionIndex": 925,
+      "stateIndex": 206863,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 3,
+          "y": 1
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 5,
+            "y": 1
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "W"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 3,
+            "y": 0
+          },
+          "successorIndex": 157783,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 0
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 1
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 4,
+            "y": 1
+          },
+          "successorIndex": 157794,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 1
+              }
+            ],
+            "status": "caught",
+            "reason": "shared destination"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 3,
+            "y": 2
+          },
+          "successorIndex": 157803,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 1
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 2,
+            "y": 1
+          },
+          "successorIndex": 157792,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 2,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 1
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 3,
+            "y": 1
+          },
+          "successorIndex": 157793,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 1
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "S",
+        "W"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-07",
+      "selectionIndex": 1110,
+      "stateIndex": 207081,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 1,
+          "y": 2
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 8,
+            "y": 1
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "S"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 1,
+            "y": 1
+          },
+          "successorIndex": 158771,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 1,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 8,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 2,
+            "y": 2
+          },
+          "successorIndex": 158782,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 2,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 8,
+                "y": 2
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 1,
+            "y": 3
+          },
+          "successorIndex": 158791,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 1,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 8,
+                "y": 2
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 0,
+            "y": 2
+          },
+          "successorIndex": 158780,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 0,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 8,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 1,
+            "y": 2
+          },
+          "successorIndex": 158781,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 1,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 8,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-08",
+      "selectionIndex": 1295,
+      "stateIndex": 207294,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 4,
+          "y": 2
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 1,
+            "y": 2
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 4,
+            "y": 1
+          },
+          "successorIndex": 158354,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 5,
+            "y": 2
+          },
+          "successorIndex": 158365,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 4,
+            "y": 3
+          },
+          "successorIndex": 158374,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 3,
+            "y": 2
+          },
+          "successorIndex": 158363,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 2
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 4,
+            "y": 2
+          },
+          "successorIndex": 158364,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "E",
+        "S",
+        "stay"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-09",
+      "selectionIndex": 1481,
+      "stateIndex": 207509,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 9,
+          "y": 2
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 4,
+            "y": 2
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 9,
+            "y": 1
+          },
+          "successorIndex": 158569,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 9,
+              "y": 1
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 9,
+            "y": 3
+          },
+          "successorIndex": 158589,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 9,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 8,
+            "y": 2
+          },
+          "successorIndex": 158578,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 9,
+            "y": 2
+          },
+          "successorIndex": 158579,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 9,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 2
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "S",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-10",
+      "selectionIndex": 1666,
+      "stateIndex": 207725,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 5,
+          "y": 3
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 7,
+            "y": 2
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "S"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 5,
+            "y": 2
+          },
+          "successorIndex": 159415,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 7,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 6,
+            "y": 3
+          },
+          "successorIndex": 159426,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 7,
+                "y": 3
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 5,
+            "y": 4
+          },
+          "successorIndex": 159435,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 7,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 4,
+            "y": 3
+          },
+          "successorIndex": 159424,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 7,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 5,
+            "y": 3
+          },
+          "successorIndex": 159425,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 7,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "S",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-11",
+      "selectionIndex": 1851,
+      "stateIndex": 207938,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 8,
+          "y": 3
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 0,
+            "y": 3
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 8,
+            "y": 2
+          },
+          "successorIndex": 158998,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 9,
+            "y": 3
+          },
+          "successorIndex": 159009,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 9,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 8,
+            "y": 4
+          },
+          "successorIndex": 159018,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 7,
+            "y": 3
+          },
+          "successorIndex": 159007,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 8,
+            "y": 3
+          },
+          "successorIndex": 159008,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-12",
+      "selectionIndex": 2036,
+      "stateIndex": 208148,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 8,
+          "y": 3
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 3
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "N",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 8,
+            "y": 2
+          },
+          "successorIndex": 159208,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 2
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 9,
+            "y": 3
+          },
+          "successorIndex": 159219,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 9,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 8,
+            "y": 4
+          },
+          "successorIndex": 159228,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 7,
+            "y": 3
+          },
+          "successorIndex": 159217,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 8,
+            "y": 3
+          },
+          "successorIndex": 159218,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-13",
+      "selectionIndex": 2221,
+      "stateIndex": 208365,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 5,
+          "y": 4
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 6,
+            "y": 3
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "S"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 5,
+            "y": 3
+          },
+          "successorIndex": 213955,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 6,
+            "y": 4
+          },
+          "successorIndex": 213966,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "caught",
+            "reason": "shared destination"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 5,
+            "y": 5
+          },
+          "successorIndex": 213975,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 4,
+            "y": 4
+          },
+          "successorIndex": 213964,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 5,
+            "y": 4
+          },
+          "successorIndex": 213965,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "S"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-14",
+      "selectionIndex": 2406,
+      "stateIndex": 208580,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 0,
+          "y": 5
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 9,
+            "y": 3
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "S",
+        "S"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 0,
+            "y": 4
+          },
+          "successorIndex": 258270,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 0,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 9,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 1,
+            "y": 5
+          },
+          "successorIndex": 258281,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 1,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 9,
+                "y": 4
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 0,
+            "y": 6
+          },
+          "successorIndex": 258290,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 0,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 9,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 0,
+            "y": 5
+          },
+          "successorIndex": 258280,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 0,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 9,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "S",
+        "stay"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-15",
+      "selectionIndex": 2591,
+      "stateIndex": 208786,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 6,
+          "y": 4
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 2,
+            "y": 4
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 6,
+            "y": 3
+          },
+          "successorIndex": 213746,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 7,
+            "y": 4
+          },
+          "successorIndex": 213757,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 6,
+            "y": 5
+          },
+          "successorIndex": 213766,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 5,
+            "y": 4
+          },
+          "successorIndex": 213755,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 6,
+            "y": 4
+          },
+          "successorIndex": 213756,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-16",
+      "selectionIndex": 2776,
+      "stateIndex": 208997,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 7,
+          "y": 4
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 5,
+            "y": 4
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 7,
+            "y": 3
+          },
+          "successorIndex": 213957,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 3
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 8,
+            "y": 4
+          },
+          "successorIndex": 213968,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 7,
+            "y": 5
+          },
+          "successorIndex": 213977,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 6,
+            "y": 4
+          },
+          "successorIndex": 213966,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "caught",
+            "reason": "shared destination"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 7,
+            "y": 4
+          },
+          "successorIndex": 213967,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "E",
+        "S"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-17",
+      "selectionIndex": 2962,
+      "stateIndex": 209214,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 4,
+          "y": 5
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 8,
+            "y": 4
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "S"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 4,
+            "y": 4
+          },
+          "successorIndex": 214804,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 8,
+                "y": 5
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 5,
+            "y": 5
+          },
+          "successorIndex": 214815,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 8,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 4,
+            "y": 6
+          },
+          "successorIndex": 214824,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 8,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 3,
+            "y": 5
+          },
+          "successorIndex": 214813,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 8,
+                "y": 5
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 4,
+            "y": 5
+          },
+          "successorIndex": 214814,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 8,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "E",
+        "S",
+        "stay"
+      ],
+      "canonicalAction": "E"
+    },
+    {
+      "id": "sample-18",
+      "selectionIndex": 3147,
+      "stateIndex": 209425,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 5,
+          "y": 5
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 1,
+            "y": 5
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 5,
+            "y": 4
+          },
+          "successorIndex": 214385,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 6,
+            "y": 5
+          },
+          "successorIndex": 214396,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 5,
+            "y": 6
+          },
+          "successorIndex": 214405,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 4,
+            "y": 5
+          },
+          "successorIndex": 214394,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 5,
+            "y": 5
+          },
+          "successorIndex": 214395,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-19",
+      "selectionIndex": 3332,
+      "stateIndex": 209636,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 6,
+          "y": 5
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 4,
+            "y": 5
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 6,
+            "y": 4
+          },
+          "successorIndex": 214596,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 4
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 7,
+            "y": 5
+          },
+          "successorIndex": 214607,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "S",
+          "destination": {
+            "x": 6,
+            "y": 6
+          },
+          "successorIndex": 214616,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 5
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 5,
+            "y": 5
+          },
+          "successorIndex": 214605,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 5
+              }
+            ],
+            "status": "caught",
+            "reason": "shared destination"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 6,
+            "y": 5
+          },
+          "successorIndex": 214606,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 5
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "E",
+        "S"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-20",
+      "selectionIndex": 3517,
+      "stateIndex": 209851,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 1,
+          "y": 6
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 7,
+            "y": 5
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "S",
+        "S"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 1,
+            "y": 5
+          },
+          "successorIndex": 259541,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 1,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 7,
+                "y": 6
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 2,
+            "y": 6
+          },
+          "successorIndex": 259552,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 2,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 7,
+                "y": 6
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 0,
+            "y": 6
+          },
+          "successorIndex": 259550,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 0,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 7,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 1,
+            "y": 6
+          },
+          "successorIndex": 259551,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 1,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 7,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        }
+      ],
+      "optimalActions": [
+        "W",
+        "stay"
+      ],
+      "canonicalAction": "W"
+    },
+    {
+      "id": "sample-21",
+      "selectionIndex": 3702,
+      "stateIndex": 210064,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 4,
+          "y": 6
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 0,
+            "y": 6
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 4,
+            "y": 5
+          },
+          "successorIndex": 215024,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 5,
+            "y": 6
+          },
+          "successorIndex": 215035,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 3,
+            "y": 6
+          },
+          "successorIndex": 215033,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": 7,
+          "capture": false,
+          "avoidable": false
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 4,
+            "y": 6
+          },
+          "successorIndex": 215034,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": 7,
+          "capture": false,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "E"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-22",
+      "selectionIndex": 3887,
+      "stateIndex": 210275,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 5,
+          "y": 6
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 6
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "E"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 5,
+            "y": 5
+          },
+          "successorIndex": 215235,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 6,
+            "y": 6
+          },
+          "successorIndex": 215246,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 4,
+            "y": 6
+          },
+          "successorIndex": 215244,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 6
+              }
+            ],
+            "status": "caught",
+            "reason": "shared destination"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 5,
+            "y": 6
+          },
+          "successorIndex": 215245,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 6
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "E"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-23",
+      "selectionIndex": 4072,
+      "stateIndex": 210484,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 4,
+          "y": 6
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 6,
+            "y": 6
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "W"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 4,
+            "y": 5
+          },
+          "successorIndex": 215304,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 5,
+            "y": 6
+          },
+          "successorIndex": 215315,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 5,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 6
+              }
+            ],
+            "status": "caught",
+            "reason": "shared destination"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 3,
+            "y": 6
+          },
+          "successorIndex": 215313,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 3,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 4,
+            "y": 6
+          },
+          "successorIndex": 215314,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 4,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 6
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "W"
+      ],
+      "canonicalAction": "N"
+    },
+    {
+      "id": "sample-24",
+      "selectionIndex": 4258,
+      "stateIndex": 210697,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 10000,
+        "human": {
+          "x": 7,
+          "y": 6
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 9,
+            "y": 6
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      },
+      "rank": -1,
+      "zombieMoves": [
+        "E",
+        "W"
+      ],
+      "actions": [
+        {
+          "action": "N",
+          "destination": {
+            "x": 7,
+            "y": 5
+          },
+          "successorIndex": 215517,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 5
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 8,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "E",
+          "destination": {
+            "x": 8,
+            "y": 6
+          },
+          "successorIndex": 215528,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 8,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 8,
+                "y": 6
+              }
+            ],
+            "status": "caught",
+            "reason": "shared destination"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        },
+        {
+          "action": "W",
+          "destination": {
+            "x": 6,
+            "y": 6
+          },
+          "successorIndex": 215526,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 6,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 8,
+                "y": 6
+              }
+            ],
+            "status": "running",
+            "reason": ""
+          },
+          "rank": -1,
+          "capture": false,
+          "avoidable": true
+        },
+        {
+          "action": "stay",
+          "destination": {
+            "x": 7,
+            "y": 6
+          },
+          "successorIndex": 215527,
+          "successor": {
+            "width": 10,
+            "height": 7,
+            "tick": 1,
+            "tickLimit": 10000,
+            "human": {
+              "x": 7,
+              "y": 6
+            },
+            "zombies": [
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 8,
+                "y": 6
+              }
+            ],
+            "status": "caught",
+            "reason": "orthogonally adjacent"
+          },
+          "rank": 0,
+          "capture": true,
+          "avoidable": false
+        }
+      ],
+      "optimalActions": [
+        "N",
+        "W"
+      ],
+      "canonicalAction": "N"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "model": "jev-1.13.0",
+  "sourceCommit": "f55100b6be0db783a4831e40a519e56896dd936d",
+  "sourceHashes": {
+    "scripts/jev-pilot.cjs": "1b9ab1425b19a441e18e773c620e846d3e3b53cb3d197358593e18ad18fb3950",
+    "scripts/evaluate-jev.cjs": "3279364aa077775492a67d5927d3c03bf3e033cb5ebbd06830b8157be2d2f6bb",
+    "experiments/ZL-014-protocol.md": "811efb40e091fa6b30b8bf902970a55a75b81d3546fd597e561d9bb066cec665"
+  },
+  "datasetSHA256": "c79771b3df75a802197f61829784bbf8e2251abeda28a54a4dfe2284c1cff7aa",
+  "requests": [
+    {
+      "id": "sample-01",
+      "stateIndex": 205802,
+      "file": "requests/sample-01.json",
+      "sha256": "2609f6a854514bf6f1bda9a50ba05902bfb0444f4677a378dfd1abec3662aef3",
+      "bytes": 6507,
+      "questions": 11
+    },
+    {
+      "id": "sample-02",
+      "stateIndex": 206011,
+      "file": "requests/sample-02.json",
+      "sha256": "fb288c136620b709f7468d8e2f268ac49891ca4857b816293c31b309cfb4e688",
+      "bytes": 6554,
+      "questions": 11
+    },
+    {
+      "id": "sample-03",
+      "stateIndex": 206223,
+      "file": "requests/sample-03.json",
+      "sha256": "cab093235817dc5619f42269400c6a2e9308c6ebf9c6e7ff0945bd7f46cbb657",
+      "bytes": 6554,
+      "questions": 11
+    },
+    {
+      "id": "sample-04",
+      "stateIndex": 206435,
+      "file": "requests/sample-04.json",
+      "sha256": "03b55f3e0214dd30ee25b51fab3ab3145ff8eef88674550461d9d63bc371359a",
+      "bytes": 6507,
+      "questions": 11
+    },
+    {
+      "id": "sample-05",
+      "stateIndex": 206648,
+      "file": "requests/sample-05.json",
+      "sha256": "f79341e4fc3b077b0c3cc7e98c98790fd4a88cc50d018d9d51f84ccca321bd88",
+      "bytes": 6601,
+      "questions": 11
+    },
+    {
+      "id": "sample-06",
+      "stateIndex": 206863,
+      "file": "requests/sample-06.json",
+      "sha256": "43d4b54a7952bcb267d70a04f6d24aca3fc1a14891befa95c132e1478e3ac19f",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-07",
+      "stateIndex": 207081,
+      "file": "requests/sample-07.json",
+      "sha256": "003682a33a2449d9625c66e869bcec34f6ec04074424d2d755f66775be75dab4",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-08",
+      "stateIndex": 207294,
+      "file": "requests/sample-08.json",
+      "sha256": "52119801dc8e17cb3dbd4989b8848ea8d928a8f0c74b79169341a4dc6345f831",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-09",
+      "stateIndex": 207509,
+      "file": "requests/sample-09.json",
+      "sha256": "5173294767a4a6eba5d08a013791607e58a574a23186058e642c9e79c62a2b21",
+      "bytes": 6601,
+      "questions": 11
+    },
+    {
+      "id": "sample-10",
+      "stateIndex": 207725,
+      "file": "requests/sample-10.json",
+      "sha256": "ae7a2b17fbf0ea06c617cbd9e997c9c35942e66838ff69f1a377a1b5fb763713",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-11",
+      "stateIndex": 207938,
+      "file": "requests/sample-11.json",
+      "sha256": "3d17c42bd548f398a520ec735bbdef40892bd53b28163daa1b3725e67d623327",
+      "bytes": 7523,
+      "questions": 13
+    },
+    {
+      "id": "sample-12",
+      "stateIndex": 208148,
+      "file": "requests/sample-12.json",
+      "sha256": "aa3e04809b2488a5b8969f9de870bc868734cd7526a1d3807f9d1d3c8d0f46b0",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-13",
+      "stateIndex": 208365,
+      "file": "requests/sample-13.json",
+      "sha256": "865582ee10c33c03489b4f0efab243d340fc8355c29cf8dab8263802f0a1a648",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-14",
+      "stateIndex": 208580,
+      "file": "requests/sample-14.json",
+      "sha256": "025dad6ca1fe0b842bf6ff709fa6f12558c72f47bedaa371de30990fe8567487",
+      "bytes": 6554,
+      "questions": 11
+    },
+    {
+      "id": "sample-15",
+      "stateIndex": 208786,
+      "file": "requests/sample-15.json",
+      "sha256": "5c3de092e5bcf46efce5e8d3c058a2ef7e5f8e355301448f0dea393a03047335",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-16",
+      "stateIndex": 208997,
+      "file": "requests/sample-16.json",
+      "sha256": "210ad035bc75f952ad1f01784354b94062f8efe420b897b0d5afa2a0e14756a0",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-17",
+      "stateIndex": 209214,
+      "file": "requests/sample-17.json",
+      "sha256": "298035f2483fa10a56b5d2af76826a744d5c47ff556255daf99fff14cfddabf2",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-18",
+      "stateIndex": 209425,
+      "file": "requests/sample-18.json",
+      "sha256": "567088ee7b1a630d5f58234ada82cb81418d9a21cec1f65d320ab7e422dae05a",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-19",
+      "stateIndex": 209636,
+      "file": "requests/sample-19.json",
+      "sha256": "665950cd23f3d0784f8c2e9b8cd17d1b26a6815b8bf45de67dfad4b6c0062721",
+      "bytes": 7570,
+      "questions": 13
+    },
+    {
+      "id": "sample-20",
+      "stateIndex": 209851,
+      "file": "requests/sample-20.json",
+      "sha256": "50283d4a271a013a6c2fd1f209632d961ca02b6d48d61f1a83c64c7409723dfd",
+      "bytes": 6601,
+      "questions": 11
+    },
+    {
+      "id": "sample-21",
+      "stateIndex": 210064,
+      "file": "requests/sample-21.json",
+      "sha256": "4f6e3497733a4ca6f7a2e926ecda59d6207e942398f0ec3dd0c83637e294c808",
+      "bytes": 6507,
+      "questions": 11
+    },
+    {
+      "id": "sample-22",
+      "stateIndex": 210275,
+      "file": "requests/sample-22.json",
+      "sha256": "a0482917bf1f89baa40452086b6c48aea1020638a21225ce591dc427ce3a5d36",
+      "bytes": 6554,
+      "questions": 11
+    },
+    {
+      "id": "sample-23",
+      "stateIndex": 210484,
+      "file": "requests/sample-23.json",
+      "sha256": "37faee740db044f772ef7bdc6df640113bb908de93eb1d368f46fec5ac43b16b",
+      "bytes": 6554,
+      "questions": 11
+    },
+    {
+      "id": "sample-24",
+      "stateIndex": 210697,
+      "file": "requests/sample-24.json",
+      "sha256": "e9c74bbfc8fd2713d0707a0d1360938b1d0c271fd3557af1f3b2da32721fb321",
+      "bytes": 6507,
+      "questions": 11
+    }
+  ],
+  "preflightEstimatedUSD": 0.015372084000000001
+}
