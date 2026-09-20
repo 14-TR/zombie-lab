@@ -40,6 +40,15 @@ test('evaluation keeps missing answers in denominator and separates oracle actio
   responses[d.samples[0].id].model='wrong';
   assert.equal(evaluator.evaluate(d,responses).summary.actions.valid,23);
 });
+test('independent reference comparison rejects changed state, action and rank labels',()=>{
+  const f=path.join(__dirname,'verify-jev-reference.cjs');assert(fs.existsSync(f),'independent comparison exists');
+  const check=require(f).compare,d=api.buildDataset();
+  const reference=JSON.parse(fs.readFileSync(path.join(__dirname,'../evidence/jev/reference-truth.json')));
+  assert.equal(check(d,reference).states,24);
+  for(const change of [s=>s.rank=999,s=>s.zombieMoves[0]='stay',s=>s.actions[0].capture=!s.actions[0].capture,s=>s.actions[0].rank=999,s=>s.actions.pop(),s=>s.actions[0].successor.human.x=99,s=>s.state.human.x=99]){
+    const bad=JSON.parse(JSON.stringify(d));change(bad.samples[0]);assert.throws(()=>check(bad,reference));
+  }
+});
 test('strict answer validation rejects malformed probability and choice schemas',()=>{
   assert.equal(typeof evaluator.validAnswer,'function','answer validator exists');
   const q={type:'choice',criteria:{N:null,E:null}}, good={type:'choice',choice:'N',confidence:.6,probabilities:{N:.8,E:.2}};

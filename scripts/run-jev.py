@@ -80,18 +80,20 @@ def attempt(row, raw, directory, transport):
 def alarm_handler(signum, frame):
     raise TimeoutError('Absolute request deadline')
 
-def send(raw, key):
+def send(raw, key, seconds=30):
     """No redirect handling, retry layer, cookies, proxy or alternate host."""
-    conn = http.client.HTTPSConnection('api.typesafe.ai',timeout=30,context=ssl.create_default_context())
+    if not 0 < seconds <= 30:
+        raise ValueError('Request deadline must be in (0,30] seconds')
+    conn = http.client.HTTPSConnection('api.typesafe.ai',timeout=seconds,context=ssl.create_default_context())
     old = signal.signal(signal.SIGALRM,alarm_handler)
-    signal.setitimer(signal.ITIMER_REAL,30)
+    signal.setitimer(signal.ITIMER_REAL,seconds)
     started = time.monotonic()
     try:
         conn.request('POST','/v1/systemone',body=raw,headers={
             'Authorization':'Bearer '+key,'Content-Type':'application/json','Accept':'application/json','Content-Length':str(len(raw))})
         response = conn.getresponse()
         body = response.read(MAX_RESPONSE+1)
-        if time.monotonic()-started >= 30:
+        if time.monotonic()-started >= seconds:
             raise TimeoutError('Absolute request deadline')
         return response.status, body
     finally:
@@ -162,7 +164,7 @@ def main():
         for row in manifest['requests']:
             if time.monotonic()-start >= 900:
                 break
-            result=attempt(row,(FROZEN/row['file']).read_bytes(),RECORDING,lambda raw:send(raw,key))
+            result=attempt(row,(FROZEN/row['file']).read_bytes(),RECORDING,lambda raw:send(raw,key,min(30,900-(time.monotonic()-start))))
             print(json.dumps({k:result[k] for k in ['id','outcome','httpStatus','latencyMs']}),flush=True)
             if result['outcome'] not in ['received','invalid_json']:
                 break

@@ -1,0 +1,11 @@
+{
+  "valid": true,
+  "states": 24,
+  "actions": 108,
+  "zombieMoves": 48,
+  "datasetSHA256": "c79771b3df75a802197f61829784bbf8e2251abeda28a54a4dfe2284c1cff7aa",
+  "referenceSHA256": "df93a48ccced0a322b6e4a1e13365e2a52f596e1fdedecbb158ef00b19aa98ef",
+  "certificateProofSHA256": "d9c7bd48df5af0ac295bfdbf50000dd012925a5a4183ac173655f86a72e85e04",
+  "legacyParitySHA256": "822d39ce4c337af46f348c4f251c27567edda875c9744f0e4e7c913ef0c81ae8",
+  "scope": "Full pilot label parity plus independently checked legacy certificate; not implementation review"
+}
