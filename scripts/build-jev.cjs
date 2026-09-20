@@ -59,7 +59,13 @@ function build(out){
   const started=process.hrtime.bigint(),data=recordingData();
   data.metadata.buildCommit=process.env.PREVIEW_COMMIT||cp.execFileSync('git',['rev-parse','HEAD'],{cwd:ROOT,encoding:'utf8'}).trim();
   data.metadata.buildSourceHashes=Object.fromEntries(['scripts/build-jev.cjs','scripts/evaluate-jev.cjs','scripts/jev-pilot.cjs','scripts/verify-jev-reference.cjs','jev.html','jev-view.js'].map(p=>[p,pilot.sha(fs.readFileSync(path.join(ROOT,p)))]));
-  fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'jev.json'),JSON.stringify(data,null,2)+'\n');
+  fs.mkdirSync(out,{recursive:true});
+  const indexPath=path.join(out,'index.html');
+  if(fs.existsSync(indexPath)){
+    const html=fs.readFileSync(indexPath,'utf8');
+    if(!html.includes('href="jev.html"'))fs.writeFileSync(indexPath,html.replace('<body>','<body>\n<p><a href="jev.html">ZL-014 · Prerecorded Jev prediction pilot</a></p>'));
+  }
+  fs.writeFileSync(path.join(out,'jev.json'),JSON.stringify(data,null,2)+'\n');
   fs.writeFileSync(path.join(out,'jev-data.js'),'globalThis.ZL_JEV_DATA='+JSON.stringify(data).replace(/[<>&\u2028\u2029]/g,c=>'\\u'+c.charCodeAt(0).toString(16).padStart(4,'0'))+';\n');
   fs.writeFileSync(path.join(out,'jev.csv'),csv(data));
   for(const file of ['jev.html','jev-view.js','experiments/ZL-014-protocol.md','experiments/ZL-014-jev.md']){

@@ -5,7 +5,9 @@ test('offline release verifies frozen recordings and emits matching downloadable
   const file=path.join(__dirname,'build-jev.cjs');assert(fs.existsSync(file),'offline builder exists');
   const build=require(file),dir=fs.mkdtempSync(path.join(os.tmpdir(),'zl014-site-'));
   try{
+    fs.writeFileSync(path.join(dir,'index.html'),'<body><h1>Earlier replay</h1></body>');
     const data=build.build(dir);
+    assert(fs.readFileSync(path.join(dir,'index.html'),'utf8').includes('href="jev.html"'),'generated legacy replay links to pilot');
     assert.equal(data.results.length,24);assert.equal(data.summary.recording.admitted,24);
     assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dir,'jev.json'))),data);
     const ctx=vm.createContext({});vm.runInContext(fs.readFileSync(path.join(dir,'jev-data.js'),'utf8'),ctx);
