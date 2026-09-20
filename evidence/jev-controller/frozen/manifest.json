@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "model": "jev-1.13.0",
+  "maxRequests": 24,
+  "ticksPerRun": 12,
+  "sourceCommit": "df1d10667b5e730f5645d426b145235a623c08b1",
+  "sourceHashes": {
+    "experiments/ZL-015-protocol.md": "d67fcf9890e8745204283f047e0750214f397ea9a3af215db41fbec4b9e8c416",
+    "scripts/jev-controller.cjs": "0d5d4e0337e65466d007008c98387013513851ea183a5215aba56b759b513928",
+    "scripts/run-jev-controller.py": "b69e71e3f8ef239ee131e2e2e74df2197b45e9267a0f1ae68d26fe6099bef7ab",
+    "scripts/jev-pilot.cjs": "1b9ab1425b19a441e18e773c620e846d3e3b53cb3d197358593e18ad18fb3950",
+    "scripts/evaluate-jev.cjs": "3279364aa077775492a67d5927d3c03bf3e033cb5ebbd06830b8157be2d2f6bb",
+    "scripts/run-jev.py": "f27f35c8c10c31448f82575f9f0d8e46678e0ec222bd304944392e78fdbc11e3",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+    "evidence/avoidability/data/avoidability-certificate.json": "a1f47e74bb5d4f086aedd8d6c01f51edd37e390c74adeb8eae4bc4d0bbc7dfc8",
+    "evidence/jev/independent-reference/oracle.py": "c7067696907f066498c0299ae5814a14b85fb3e110a5703dc28401fbb9856b5b"
+  },
+  "starts": [
+    {
+      "id": "run-01",
+      "originalPilotId": "sample-01",
+      "stateIndex": 205802,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 12,
+        "human": {
+          "x": 2,
+          "y": 0
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      }
+    },
+    {
+      "id": "run-02",
+      "originalPilotId": "sample-24",
+      "stateIndex": 210697,
+      "state": {
+        "width": 10,
+        "height": 7,
+        "tick": 0,
+        "tickLimit": 12,
+        "human": {
+          "x": 7,
+          "y": 6
+        },
+        "zombies": [
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 9,
+            "y": 6
+          }
+        ],
+        "status": "running",
+        "reason": ""
+      }
+    }
+  ],
+  "maxPreflightEstimatedUSD": 0.024772608
+}
