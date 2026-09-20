@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_invalid_human_choice_consumes_one_call_and_never_moves_or_retries (__main__.ControllerAdmission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-controller/scripts/test-jev-controller-runner.py", line 8, in test_invalid_human_choice_consumes_one_call_and_never_moves_or_retries
+    self.assertIsNotNone(runner,'controller runner exists')
+AssertionError: unexpectedly None : controller runner exists
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

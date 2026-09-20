@@ -1,0 +1,1 @@
+{"valid":true,"buildCommit":"5a5555ae7c22151cd5ebe70ffe3c0502909c3630","widths":[{"width":320,"pairedTicks":26,"minFont":14.895},{"width":390,"pairedTicks":26,"minFont":18.814999999999998},{"width":1200,"pairedTicks":26,"minFont":19.040000000000003}],"errors":[],"externalRequests":[],"scope":"local prerecorded production artifact, not deployed Pages"}

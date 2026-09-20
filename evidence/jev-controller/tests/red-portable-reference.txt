@@ -1,0 +1,13 @@
+.F
+======================================================================
+FAIL: test_portable_independent_checker_catches_mutated_actual_successor (__main__.ControllerAdmission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-controller/scripts/test-jev-controller-runner.py", line 25, in test_portable_independent_checker_catches_mutated_actual_successor
+    self.assertTrue(file.exists(),'portable independent checker exists')
+AssertionError: False is not true : portable independent checker exists
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.082s
+
+FAILED (failures=1)

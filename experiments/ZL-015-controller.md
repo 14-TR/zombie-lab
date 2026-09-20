@@ -69,6 +69,14 @@ node scripts/build-jev-controller.cjs preview
 
 Open `preview/jev-controller.html`. The read-only viewer synchronizes Jev, greedy and depth2 on a shared timeline, labels local ticks, holds each captured endpoint, exposes every original frame, and compares per-tick zombie predictions with actual simulator moves. There is no live API connection. Original ZL-014 files remain unchanged in this isolated follow-up worktree except additive offline workflow integration.
 
+## Verification
+
+The complete Node regression suite returned **133 passed, 0 failed, 8 explicitly skipped legacy optional/artifact gates** (141 tests, 158,654.395 ms). Two Python controller tests passed, including an invalid-human-answer admission case and a mutated-reference-label rejection. The portable independent checker accepted all **19 visited decisions and 80 legal action labels** using the original frozen oracle algorithm and certificate, with only its filesystem root rebound for CI portability. Explicit CI live invocation was rejected before any network admission; the real ledger remains at 19.
+
+The actual exported artifact was exercised in cached local Chromium at **320, 390 and 1200 px**, all 26 paired shared-tick selections at each width, exact endpoint holding and full histories, JSON parity, play/pause/back/next, and per-tick prediction/actual distinctions. There were no page errors, external requests, document overflows or overlapping labels. Minimum displayed agent glyph sizes were **14.895, 18.815 and 19.040 px**. Phone screenshots were visually inspected. No new browser/tool installation or server was used. This is local artifact verification, not live Pages verification.
+
+A measured offline build took **35.590 ms** with peak process RSS **77,824 KiB**. This is builder memory, not hosted-model/server memory; inference-process RSS was not separately sampled. Retained-storage totals and exact changed-file SHA-256 values are in the implementation handoff. All experiment code, frozen inputs, original requests/responses and tests are locally committed; no push/merge/publication is claimed.
+
 ## What this is useful for
 
 The experiment separates three questions: can the integration execute Jev's decisions safely as code; does Jev anticipate the zombies correctly; and does its human policy actually avoid capture? The first worked, while the latter two have measurable errors. It provides a reproducible controller testbed, **not evidence that Jev is needed or superior in this exact-solver toy world**. Larger samples, longer horizons, a safety-filter condition or changed prompts would be separate preregistered work, not a retroactive improvement to these results. Independent review, PR/CI and live publication are separate release gates.
