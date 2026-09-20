@@ -66,6 +66,7 @@ tr[aria-current="true"] { background: #dcedf7; font-weight: 700; }
 </style>
 </head>
 <body>
+<p><a href="jev.html">ZL-014 · Prerecorded Jev prediction pilot</a></p>
 <h1>Zombie Lab · Offline replay</h1>
 <h2>ZL-005 · Position and adjacency integration</h2>
 <p>Combined comparison: control H (7, 2), treatment H (6, 2); Z stays (2, 4). Between these runs only human.x changes: 7 → 6. Both runs use the production shared-cell or orthogonally adjacent capture rule (Manhattan distance 1, not diagonal), checked before movement (including tick 0) and after simultaneous moves; exchanged positions still count. Board, movement and tie-breaking are unchanged. The common experiment-only safety limit is 10000 ticks (manual app: 40). Stop at capture, first repeated position pair, or safety limit, in that order. This integration is not the original ZL-003 position-only or ZL-004 capture-only result; those reports and evidence remain historical snapshots.</p>

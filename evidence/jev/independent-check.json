@@ -1,0 +1,9 @@
+{
+  "fieldChecks": 2232,
+  "mismatchCount": 0,
+  "mismatches": [],
+  "ok": true,
+  "recordCount": 24,
+  "schemaVersion": 1,
+  "scope": "only supplied expected fields; not a full producer audit"
+}

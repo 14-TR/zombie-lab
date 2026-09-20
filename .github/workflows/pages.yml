@@ -45,7 +45,10 @@ jobs:
           node --test scripts/test-two-tick.cjs scripts/test-two-tick-release.cjs
           node --test scripts/test-one-tick.cjs scripts/test-one-tick-release.cjs
           python3 -B scripts/test-avoidability-checker.py
+          node --test scripts/test-jev.cjs scripts/test-jev-view.cjs scripts/test-jev-release.cjs
+          python3 -B scripts/test-jev-runner.py
           node scripts/build-preview.cjs preview
+          node scripts/build-jev.cjs preview
           node scripts/build-sweep.cjs preview
           node scripts/build-proof.cjs preview
           node scripts/build-planning.cjs preview
