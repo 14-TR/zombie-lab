@@ -40,7 +40,7 @@ function mount(data,doc){
       if(shared.length===2)dx=i===0?12.5:37.5;
       if(shared.length===3){dx=i===0?25:i===1?12.5:37.5;dy=i===0?12.5:37.5;}
       const x=a.p.x*50+dx,y=a.p.y*50+dy;
-      const text=shape('text',{x,y,fill:a.color,'text-anchor':'middle','dominant-baseline':'central','font-size':22,'font-weight':800,'data-agent':a.label});text.textContent=a.label;
+      const text=shape('text',{x,y,fill:a.color,'text-anchor':'middle','dominant-baseline':'central','font-size':24,'font-weight':800,'data-agent':a.label});text.textContent=a.label;
     }
     wrap.append(svg);by('scrubber').value=String(tick);by('back').disabled=tick===0;by('next').disabled=tick===1;
     by('readout').textContent=`Tick ${tick} / 1 · inspected ${a} · ${current.status}${current.reason?' · '+current.reason:''}`;
