@@ -1,0 +1,79 @@
+{
+  "samples": 24,
+  "population": 4259,
+  "capture": {
+    "total": 108,
+    "positiveTruth": 29,
+    "valid": 108,
+    "missingInvalid": 0,
+    "correct": 94,
+    "modelMistakes": 14,
+    "accuracy": 0.8703703703703703,
+    "brierValid": 0.12080740740740746,
+    "brierPenalized": 0.12080740740740745
+  },
+  "avoidability": {
+    "total": 108,
+    "positiveTruth": 77,
+    "valid": 108,
+    "missingInvalid": 0,
+    "correct": 34,
+    "modelMistakes": 74,
+    "accuracy": 0.3148148148148148,
+    "brierValid": 0.31321481481481483,
+    "brierPenalized": 0.31321481481481483
+  },
+  "zombies": {
+    "total": 48,
+    "valid": 48,
+    "correct": 35,
+    "jointCorrect": 12,
+    "byZombie": [
+      {
+        "total": 24,
+        "valid": 24,
+        "correct": 17
+      },
+      {
+        "total": 24,
+        "valid": 24,
+        "correct": 18
+      }
+    ],
+    "accuracy": 0.7291666666666666
+  },
+  "actions": {
+    "total": 24,
+    "valid": 24,
+    "safe": 23,
+    "avoidable": 23,
+    "optimal": 23,
+    "canonical": 8,
+    "oracleWinningStates": 24,
+    "avoidableOnWinningStates": 23,
+    "oracleLosingStates": 0
+  },
+  "usage": {
+    "responsesWithUsage": 24,
+    "inputTokens": 52984,
+    "outputTokens": 7354,
+    "estimatedUSD": 0.002225328,
+    "inputUSDPerMillion": 0.042,
+    "invoice": false
+  },
+  "recording": {
+    "admitted": 24,
+    "received": 24,
+    "serviceOrFormatFailures": 0,
+    "unattempted": 0,
+    "complete": true,
+    "elapsedMs": 6682.848208,
+    "latencyMs": {
+      "count": 24,
+      "min": 210.448709,
+      "median": 255.71866649999998,
+      "max": 528.1879169999999,
+      "mean": 276.7896631666667
+    }
+  }
+}
