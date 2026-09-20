@@ -48,12 +48,16 @@ jobs:
           python3 -B scripts/test-avoidability-checker.py
           node --test scripts/test-jev.cjs scripts/test-jev-view.cjs scripts/test-jev-release.cjs
           python3 -B scripts/test-jev-runner.py
+          node --test scripts/test-jev-controller.cjs scripts/test-jev-controller-release.cjs scripts/test-jev-controller-view.cjs
+          python3 -B scripts/test-jev-controller-runner.py
+          python3 -B scripts/check-jev-controller-reference.py
       - name: Generate full position replay
         env:
           PREVIEW_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
           node scripts/build-preview.cjs preview
           node scripts/build-jev.cjs preview
+          node scripts/build-jev-controller.cjs preview
           node scripts/build-sweep.cjs preview
           node scripts/build-proof.cjs preview
           node scripts/build-planning.cjs preview

@@ -47,8 +47,12 @@ jobs:
           python3 -B scripts/test-avoidability-checker.py
           node --test scripts/test-jev.cjs scripts/test-jev-view.cjs scripts/test-jev-release.cjs
           python3 -B scripts/test-jev-runner.py
+          node --test scripts/test-jev-controller.cjs scripts/test-jev-controller-release.cjs scripts/test-jev-controller-view.cjs
+          python3 -B scripts/test-jev-controller-runner.py
+          python3 -B scripts/check-jev-controller-reference.py
           node scripts/build-preview.cjs preview
           node scripts/build-jev.cjs preview
+          node scripts/build-jev-controller.cjs preview
           node scripts/build-sweep.cjs preview
           node scripts/build-proof.cjs preview
           node scripts/build-planning.cjs preview
