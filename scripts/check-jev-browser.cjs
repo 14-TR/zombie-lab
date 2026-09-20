@@ -14,19 +14,22 @@ const {chromium}=require(modulePath),data=JSON.parse(fs.readFileSync(path.join(s
       assert.equal(await page.locator('#error').isVisible(),false);assert.equal(await page.locator('#sample option').count(),24);
       assert.equal(await page.evaluate(()=>JSON.stringify(ZL_JEV_DATA)),JSON.stringify(data));
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'page overflow');
-      let checkedActions=0;
-      for(const row of data.results){
-        await page.selectOption('#sample',row.id);assert.equal(await page.locator('#predictions .card').count(),row.actions.length);
-        assert.equal(await page.locator('#action').inputValue(),row.selectedAction??row.actions[0].action);
-        for(const a of row.actions){
-          await page.selectOption('#action',a.action);await page.locator('#next').click();
-          assert((await page.locator('#readout').textContent()).includes(`Tick 1 / 1 · inspected ${a.action} · ${a.successor.status}`));
-          const text=await page.locator('#history').textContent();assert(text.includes(`H (${a.successor.human.x},${a.successor.human.y})`));
-          const boxes=await page.locator('#world [data-agent]').evaluateAll(ns=>ns.map(n=>{const b=n.getBoundingClientRect();return {x:b.x,y:b.y,right:b.right,bottom:b.bottom};}));
-          for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){const a=boxes[i],b=boxes[j];assert(a.right<=b.x||b.right<=a.x||a.bottom<=b.y||b.bottom<=a.y,'agent labels overlap');}
-          await page.locator('#back').click();checkedActions++;
-        }
-      }
+      const checkedActions=await page.evaluate(()=>{
+        const by=id=>document.getElementById(id),check=(ok,message)=>{if(!ok)throw Error(message);};let count=0;
+        for(const row of ZL_JEV_DATA.results){
+          by('sample').value=row.id;by('sample').dispatchEvent(new Event('change'));
+          check(document.querySelectorAll('#predictions .card').length===row.actions.length,'Action card count');
+          check(by('action').value===(row.selectedAction??row.actions[0].action),'Default choice');
+          for(const a of row.actions){
+            by('action').value=a.action;by('action').dispatchEvent(new Event('change'));by('next').click();
+            check(by('readout').textContent.includes(`Tick 1 / 1 · inspected ${a.action} · ${a.successor.status}`),'Successor readout');
+            check(by('history').textContent.includes(`H (${a.successor.human.x},${a.successor.human.y})`),'Coordinates');
+            const boxes=[...document.querySelectorAll('#world [data-agent]')].map(n=>n.getBoundingClientRect());
+            for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){const a=boxes[i],b=boxes[j];check(a.right<=b.x||b.right<=a.x||a.bottom<=b.y||b.bottom<=a.y,'Agent labels overlap');}
+            by('back').click();count++;
+          }
+        }return count;
+      });
       await page.selectOption('#sample','sample-03');await page.locator('#next').click();
       await page.locator('#world').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,`world-${width}.png`)});
       const minGlyph=await page.locator('#world text').evaluateAll(nodes=>Math.min(...nodes.map(n=>parseFloat(getComputedStyle(n).fontSize)*n.getScreenCTM().a)));
