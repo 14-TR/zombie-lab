@@ -1,0 +1,15 @@
+test_corner_actions_are_in_bounds_in_original_tie_order (__main__.PhysicsTests) ... ok
+test_simultaneous_transition_and_contact_edges (__main__.PhysicsTests) ... FAIL
+
+======================================================================
+FAIL: test_simultaneous_transition_and_contact_edges (__main__.PhysicsTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-evidence/ZL-014-reference/test_oracle.py", line 32, in test_simultaneous_transition_and_contact_edges
+    self.assertTrue(hasattr(o, 'transition'), 'transition feature is missing')
+AssertionError: False is not true : transition feature is missing
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)

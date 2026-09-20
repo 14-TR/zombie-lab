@@ -1,0 +1,17 @@
+test_certificate_identity_and_rank_laws_reject_adversarial_mutations (__main__.PhysicsTests) ... FAIL
+test_corner_actions_are_in_bounds_in_original_tie_order (__main__.PhysicsTests) ... ok
+test_pilot_sample_is_endpoint_inclusive_over_ascending_numeric_ids (__main__.PhysicsTests) ... ok
+test_simultaneous_transition_and_contact_edges (__main__.PhysicsTests) ... ok
+
+======================================================================
+FAIL: test_certificate_identity_and_rank_laws_reject_adversarial_mutations (__main__.PhysicsTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-evidence/ZL-014-reference/test_oracle.py", line 73, in test_certificate_identity_and_rank_laws_reject_adversarial_mutations
+    self.assertTrue(hasattr(o, 'load_certificate'), 'certificate feature is missing')
+AssertionError: False is not true : certificate feature is missing
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.009s
+
+FAILED (failures=1)

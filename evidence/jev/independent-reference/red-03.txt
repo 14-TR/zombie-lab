@@ -1,0 +1,16 @@
+test_corner_actions_are_in_bounds_in_original_tie_order (__main__.PhysicsTests) ... ok
+test_pilot_sample_is_endpoint_inclusive_over_ascending_numeric_ids (__main__.PhysicsTests) ... FAIL
+test_simultaneous_transition_and_contact_edges (__main__.PhysicsTests) ... ok
+
+======================================================================
+FAIL: test_pilot_sample_is_endpoint_inclusive_over_ascending_numeric_ids (__main__.PhysicsTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-evidence/ZL-014-reference/test_oracle.py", line 51, in test_pilot_sample_is_endpoint_inclusive_over_ascending_numeric_ids
+    self.assertTrue(hasattr(o, 'select_pilot'), 'selection feature is missing')
+AssertionError: False is not true : selection feature is missing
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (failures=1)

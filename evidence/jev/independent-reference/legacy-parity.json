@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "scope": "legacy production parity; NOT Jev implementation review",
+  "states": 33,
+  "actions": 137,
+  "terminalChecks": 2,
+  "zombieMoveComparisons": 62,
+  "originalStarts": 4761,
+  "nonterminalStarts": 4259,
+  "selectedIdsVerified": [
+    205802,
+    206011,
+    206223,
+    206435,
+    206648,
+    206863,
+    207081,
+    207294,
+    207509,
+    207725,
+    207938,
+    208148,
+    208365,
+    208580,
+    208786,
+    208997,
+    209214,
+    209425,
+    209636,
+    209851,
+    210064,
+    210275,
+    210484,
+    210697
+  ],
+  "outOfBoundsRejection": true,
+  "sourceSha256": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243",
+  "referenceHashes": {
+    "reference.json": "df93a48ccced0a322b6e4a1e13365e2a52f596e1fdedecbb158ef00b19aa98ef",
+    "edge-reference.json": "9a86579bf08493b45cc4c3c6aab3b7e7d493912f3cb4f6a33b5c99a6119f8a2d"
+  }
+}

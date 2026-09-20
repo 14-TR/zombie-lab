@@ -1,0 +1,16 @@
+test_corner_actions_are_in_bounds_in_original_tie_order (__main__.PhysicsTests) ... FAIL
+
+======================================================================
+FAIL: test_corner_actions_are_in_bounds_in_original_tie_order (__main__.PhysicsTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-evidence/ZL-014-reference/test_oracle.py", line 22, in test_corner_actions_are_in_bounds_in_original_tie_order
+    o = oracle()
+  File "/Users/tr/Projects/zombie-lab-evidence/ZL-014-reference/test_oracle.py", line 13, in oracle
+    raise AssertionError('Independent oracle has not been implemented')
+AssertionError: Independent oracle has not been implemented
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

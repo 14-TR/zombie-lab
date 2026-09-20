@@ -1,0 +1,607 @@
+{
+  "kind": "ZL014-answer-free-inputs",
+  "records": [
+    {
+      "eligibleIndex": 0,
+      "human": {
+        "x": 2,
+        "y": 0
+      },
+      "id": "z2-0-h2",
+      "legalActions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 0,
+      "stateIndex": 205802,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "eligibleIndex": 185,
+      "human": {
+        "x": 1,
+        "y": 0
+      },
+      "id": "z2-3-h1",
+      "legalActions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 1,
+      "stateIndex": 206011,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 3,
+        "y": 0
+      }
+    },
+    {
+      "eligibleIndex": 370,
+      "human": {
+        "x": 3,
+        "y": 0
+      },
+      "id": "z2-6-h3",
+      "legalActions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 2,
+      "stateIndex": 206223,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 6,
+        "y": 0
+      }
+    },
+    {
+      "eligibleIndex": 555,
+      "human": {
+        "x": 5,
+        "y": 0
+      },
+      "id": "z2-9-h5",
+      "legalActions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 3,
+      "stateIndex": 206435,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 9,
+        "y": 0
+      }
+    },
+    {
+      "eligibleIndex": 740,
+      "human": {
+        "x": 8,
+        "y": 0
+      },
+      "id": "z2-12-h8",
+      "legalActions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 4,
+      "stateIndex": 206648,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 2,
+        "y": 1
+      }
+    },
+    {
+      "eligibleIndex": 925,
+      "human": {
+        "x": 3,
+        "y": 1
+      },
+      "id": "z2-15-h13",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 5,
+      "stateIndex": 206863,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 5,
+        "y": 1
+      }
+    },
+    {
+      "eligibleIndex": 1110,
+      "human": {
+        "x": 1,
+        "y": 2
+      },
+      "id": "z2-18-h21",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 6,
+      "stateIndex": 207081,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 8,
+        "y": 1
+      }
+    },
+    {
+      "eligibleIndex": 1295,
+      "human": {
+        "x": 4,
+        "y": 2
+      },
+      "id": "z2-21-h24",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 7,
+      "stateIndex": 207294,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 2
+      }
+    },
+    {
+      "eligibleIndex": 1481,
+      "human": {
+        "x": 9,
+        "y": 2
+      },
+      "id": "z2-24-h29",
+      "legalActions": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 8,
+      "stateIndex": 207509,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 4,
+        "y": 2
+      }
+    },
+    {
+      "eligibleIndex": 1666,
+      "human": {
+        "x": 5,
+        "y": 3
+      },
+      "id": "z2-27-h35",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 9,
+      "stateIndex": 207725,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 7,
+        "y": 2
+      }
+    },
+    {
+      "eligibleIndex": 1851,
+      "human": {
+        "x": 8,
+        "y": 3
+      },
+      "id": "z2-30-h38",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 10,
+      "stateIndex": 207938,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 3
+      }
+    },
+    {
+      "eligibleIndex": 2036,
+      "human": {
+        "x": 8,
+        "y": 3
+      },
+      "id": "z2-33-h38",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 11,
+      "stateIndex": 208148,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 3,
+        "y": 3
+      }
+    },
+    {
+      "eligibleIndex": 2221,
+      "human": {
+        "x": 5,
+        "y": 4
+      },
+      "id": "z2-36-h45",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 12,
+      "stateIndex": 208365,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    {
+      "eligibleIndex": 2406,
+      "human": {
+        "x": 0,
+        "y": 5
+      },
+      "id": "z2-39-h50",
+      "legalActions": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "selectionIndex": 13,
+      "stateIndex": 208580,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 9,
+        "y": 3
+      }
+    },
+    {
+      "eligibleIndex": 2591,
+      "human": {
+        "x": 6,
+        "y": 4
+      },
+      "id": "z2-42-h46",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 14,
+      "stateIndex": 208786,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 2,
+        "y": 4
+      }
+    },
+    {
+      "eligibleIndex": 2776,
+      "human": {
+        "x": 7,
+        "y": 4
+      },
+      "id": "z2-45-h47",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 15,
+      "stateIndex": 208997,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "eligibleIndex": 2962,
+      "human": {
+        "x": 4,
+        "y": 5
+      },
+      "id": "z2-48-h54",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 16,
+      "stateIndex": 209214,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 8,
+        "y": 4
+      }
+    },
+    {
+      "eligibleIndex": 3147,
+      "human": {
+        "x": 5,
+        "y": 5
+      },
+      "id": "z2-51-h55",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 17,
+      "stateIndex": 209425,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 1,
+        "y": 5
+      }
+    },
+    {
+      "eligibleIndex": 3332,
+      "human": {
+        "x": 6,
+        "y": 5
+      },
+      "id": "z2-54-h56",
+      "legalActions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selectionIndex": 18,
+      "stateIndex": 209636,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 4,
+        "y": 5
+      }
+    },
+    {
+      "eligibleIndex": 3517,
+      "human": {
+        "x": 1,
+        "y": 6
+      },
+      "id": "z2-57-h61",
+      "legalActions": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "selectionIndex": 19,
+      "stateIndex": 209851,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 7,
+        "y": 5
+      }
+    },
+    {
+      "eligibleIndex": 3702,
+      "human": {
+        "x": 4,
+        "y": 6
+      },
+      "id": "z2-60-h64",
+      "legalActions": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "selectionIndex": 20,
+      "stateIndex": 210064,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 0,
+        "y": 6
+      }
+    },
+    {
+      "eligibleIndex": 3887,
+      "human": {
+        "x": 5,
+        "y": 6
+      },
+      "id": "z2-63-h65",
+      "legalActions": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "selectionIndex": 21,
+      "stateIndex": 210275,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 3,
+        "y": 6
+      }
+    },
+    {
+      "eligibleIndex": 4072,
+      "human": {
+        "x": 4,
+        "y": 6
+      },
+      "id": "z2-66-h64",
+      "legalActions": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "selectionIndex": 22,
+      "stateIndex": 210484,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 6,
+        "y": 6
+      }
+    },
+    {
+      "eligibleIndex": 4258,
+      "human": {
+        "x": 7,
+        "y": 6
+      },
+      "id": "z2-69-h67",
+      "legalActions": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "selectionIndex": 23,
+      "stateIndex": 210697,
+      "zombie1": {
+        "x": 2,
+        "y": 4
+      },
+      "zombie2": {
+        "x": 9,
+        "y": 6
+      }
+    }
+  ],
+  "schemaVersion": 1,
+  "selection": {
+    "fixedZombie1": {
+      "x": 2,
+      "y": 4
+    },
+    "indexRule": "floor(i * (M - 1) / (24 - 1)), i=0..23, M=4259",
+    "nonterminalCount": 4259,
+    "nonterminalFilter": "Manhattan(human,zombie1)>1 AND Manhattan(human,zombie2)>1",
+    "originalExclusions": "human==zombie1 OR human==zombie2; zombie1==zombie2 allowed",
+    "originalSliceCount": 4761,
+    "sampleCount": 24,
+    "sort": "ascending numeric stateIndex, NOT lexicographic legacy id"
+  }
+}

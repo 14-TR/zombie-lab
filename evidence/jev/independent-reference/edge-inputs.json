@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "kind": "synthetic-offline-edge-inputs-not-pilot-starts",
+  "caseNamesInOrder": ["initial-shared-cell", "initial-cardinal-contact", "diagonal-not-contact", "old-state-tied-pursuit", "colocated-zombies", "top-left-bounds", "bottom-right-bounds", "shared-destination", "post-move-cardinal-contact"],
+  "records": [
+    {"human": {"x": 0, "y": 0}, "zombie1": {"x": 0, "y": 0}, "zombie2": {"x": 9, "y": 6}},
+    {"human": {"x": 0, "y": 0}, "zombie1": {"x": 1, "y": 0}, "zombie2": {"x": 9, "y": 6}},
+    {"human": {"x": 1, "y": 1}, "zombie1": {"x": 0, "y": 0}, "zombie2": {"x": 9, "y": 6}},
+    {"human": {"x": 2, "y": 2}, "zombie1": {"x": 1, "y": 1}, "zombie2": {"x": 4, "y": 4}},
+    {"human": {"x": 2, "y": 2}, "zombie1": {"x": 1, "y": 1}, "zombie2": {"x": 1, "y": 1}},
+    {"human": {"x": 0, "y": 0}, "zombie1": {"x": 2, "y": 2}, "zombie2": {"x": 9, "y": 6}},
+    {"human": {"x": 9, "y": 6}, "zombie1": {"x": 0, "y": 0}, "zombie2": {"x": 2, "y": 4}},
+    {"human": {"x": 2, "y": 2}, "zombie1": {"x": 4, "y": 2}, "zombie2": {"x": 6, "y": 6}},
+    {"human": {"x": 0, "y": 0}, "zombie1": {"x": 2, "y": 0}, "zombie2": {"x": 9, "y": 6}}
+  ]
+}

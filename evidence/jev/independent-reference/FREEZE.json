@@ -1,0 +1,110 @@
+{
+  "certificateSha256": "a1f47e74bb5d4f086aedd8d6c01f51edd37e390c74adeb8eae4bc4d0bbc7dfc8",
+  "completeCertificateActionsChecked": 1351892,
+  "completeCertificateStatesChecked": 343000,
+  "contractBaselineCommit": "7bb12e5b0c84bd2f14c2e90360dfca64c8313d17",
+  "fileBytesExcludingFreezeAndChecksumList": 190815,
+  "fileCountExcludingFreezeAndChecksumList": 19,
+  "files": {
+    "README.md": {
+      "bytes": 10703,
+      "sha256": "cae96716ac978571ddac6483152e7048bcfb73c563267d05c41bbbb961ffc1b0"
+    },
+    "artifact-summary.json": {
+      "bytes": 2515,
+      "sha256": "d2f6e605e38e08c955e71fb5b40fea139e416a2955cd94f431379e04f040c10f"
+    },
+    "certificate-verification.json": {
+      "bytes": 9565,
+      "sha256": "d9c7bd48df5af0ac295bfdbf50000dd012925a5a4183ac173655f86a72e85e04"
+    },
+    "edge-inputs.json": {
+      "bytes": 1163,
+      "sha256": "8c47c68736fba60b708ceee055bd09e65751c3e3926b0a8cc131da56ea7a1d8f"
+    },
+    "edge-reference.json": {
+      "bytes": 24588,
+      "sha256": "9a86579bf08493b45cc4c3c6aab3b7e7d493912f3cb4f6a33b5c99a6119f8a2d"
+    },
+    "freeze_reference.py": {
+      "bytes": 5152,
+      "sha256": "7a1606dde39dda33d5ff300a83d71473b308894579d2367b448f6c49d4d80906"
+    },
+    "legacy-parity.cjs": {
+      "bytes": 5135,
+      "sha256": "1d07b4ba29c9fb9b030b5020c4f1447bf1346efe20a7ba6ddbc9e519eb3d7811"
+    },
+    "legacy-parity.json": {
+      "bytes": 879,
+      "sha256": "6020ed2ca8047ee5f903da0b1c41e54d2b6a876d99b0c960515fbba9aa5416b8"
+    },
+    "oracle.py": {
+      "bytes": 18650,
+      "sha256": "c7067696907f066498c0299ae5814a14b85fb3e110a5703dc28401fbb9856b5b"
+    },
+    "red-01.txt": {
+      "bytes": 865,
+      "sha256": "24bfe5b6bf2283ffb2742dcbd382f87c664e1cfbecdcc6c5da68b1e83f240fb3"
+    },
+    "red-02.txt": {
+      "bytes": 822,
+      "sha256": "15349ae42318f0335619112bc047c745db423b414ff61e6e53bc6dda7a67289d"
+    },
+    "red-03.txt": {
+      "bytes": 960,
+      "sha256": "9d249b184ddad6e065b84056c8cff58be3e5864624995427c3b50e1a432b03ca"
+    },
+    "red-04.txt": {
+      "bytes": 1072,
+      "sha256": "b3a52fc7e6427e5452cd467bd20d6ee62284d7e58deb16e0ad57ad9e78db07fe"
+    },
+    "red-05.txt": {
+      "bytes": 1124,
+      "sha256": "4518156385449c2dcdc0e366b24f46cdbb507caecf926498b3d46ba6520f045b"
+    },
+    "red-06.txt": {
+      "bytes": 1258,
+      "sha256": "29e6ee172cca7c949cef5efe05b0d80034ede0234fca2a80e7e2808d90aa29dc"
+    },
+    "reference.json": {
+      "bytes": 87450,
+      "sha256": "df93a48ccced0a322b6e4a1e13365e2a52f596e1fdedecbb158ef00b19aa98ef"
+    },
+    "selected-inputs.json": {
+      "bytes": 9615,
+      "sha256": "b206e961141155ea6e4d70f3a6efc76c80d69d313b40d9ccee25b1c6f28207f1"
+    },
+    "test_oracle.py": {
+      "bytes": 8655,
+      "sha256": "25cc1c50f96f7e7e05ae6898401d7632444e8c793538c17f618976f4f34c53a8"
+    },
+    "tests.txt": {
+      "bytes": 644,
+      "sha256": "3e99e582a949888b9708e1ae0ddffc06944156d14c011fe2e815d32ba2c52bf3"
+    }
+  },
+  "frozenAtUtc": "2026-09-20T22:25:11.348194+00:00",
+  "goalPath": "/Users/tr/Projects/zombie-lab-evidence/ZL-014-goal.md",
+  "goalSha256": "36ea03bb8108bdf84371cdde2edbb52795e3e7aea759d2d2edc49de4be0f6c50",
+  "immutability": "SHA-256 snapshot plus read-only files, not an operating-system security boundary",
+  "kind": "ZL014-independent-reference-freeze",
+  "legacyCommit": "1bf90b4584fad715dcca2686a9e242b6c2a2195f",
+  "legacyRoot": "/Users/tr/Projects/zombie-lab-neural-two-tick",
+  "legacyWorktreeClean": true,
+  "pilotActions": 108,
+  "pilotStates": 24,
+  "proofPeakRssBytes": 22970368,
+  "proofWallSeconds": 0.704221416,
+  "rankSha256": "2680dbfb1f30e6c5264a11f1d263a4fd0e6f39040f57e1c5da1d46a516eeaae1",
+  "schemaVersion": 1,
+  "scope": "oracle preparation only; no new Jev implementation or results review",
+  "sharedTree": "03ae34d74ed14e3ab5124f5844c3d8a39e2b8b31",
+  "sourceHashes": {
+    "experiments/ZL-010-protocol.md": "c809145e263e8f360b587b16a25183bcf3e55f21cdffad0a713212baa9757f33",
+    "scripts/build-avoidability.cjs": "3695964bf1f7a71094f3cd795b264cde5a0d3faa76418c7eaad348e4ca36ace1",
+    "scripts/build-two-zombies.cjs": "5a5a403b30a0ba1242a0411ff6aee769d787a86d277e1e3cf11d160f69f965c2",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243"
+  },
+  "status": "frozen-before-any-new-implementation-or-results-access-by-this-worker",
+  "transitionSha256": "6385ad2fca93170d1367b84315b88188dc71b47970f28ab836e64cfc63abedef"
+}

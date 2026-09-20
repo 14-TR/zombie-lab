@@ -51,7 +51,7 @@ function csv(data){
   for(const r of data.results){
     for(let i=0;i<2;i++){const z=r.zombiePredictions[i];rows.push([r.id,r.stateIndex,`zombie${i+1}_move`,'choice','',z.answer?.choice??'',z.truth,!!z.answer,z.correct,JSON.stringify(z.answer?.probabilities??{})]);}
     for(const a of r.actions)for(const [k,p,t]of [['capture',a.captureProbability,a.capture],['avoid',a.avoidabilityProbability,a.avoidable]])rows.push([r.id,r.stateIndex,k+'_'+a.action,'noul',p??'','',t,p!==null,p!==null&&(p>=.5)===t,'']);
-    rows.push([r.id,r.stateIndex,'human_action','choice','',r.selectedAction??'',r.canonicalAction,!!r.humanChoice,!!r.humanChoice&&r.optimalActions.includes(r.selectedAction),JSON.stringify(r.humanChoice?.probabilities??{})]);
+    rows.push([r.id,r.stateIndex,'human_action','choice','',r.selectedAction??'',r.optimalActions.join('|'),!!r.humanChoice,!!r.humanChoice&&r.optimalActions.includes(r.selectedAction),JSON.stringify(r.humanChoice?.probabilities??{})]);
   }
   return rows.map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\n')+'\n';
 }
