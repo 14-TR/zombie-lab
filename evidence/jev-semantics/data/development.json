@@ -1,0 +1,68 @@
+[
+  {
+    "group": "dev-direct",
+    "text": "I see Mara at the depot. I see Ash in the east passage. I checked the west passage is clear. Evacuate with Mara.",
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "known",
+      "west_blocked": "negated",
+      "policy": "together",
+      "clarification": "none"
+    }
+  },
+  {
+    "group": "dev-hearsay",
+    "text": "Niko reports Mara at the depot. Leave without Mara.",
+    "interpretation": {
+      "mara_at_depot": "suspected_positive",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "solo",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-quoted-denial",
+    "text": "Niko says \"I see Ash is not in the east passage\". I see the west passage is blocked. Stay here.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "suspected_negative",
+      "west_blocked": "known",
+      "policy": "hold",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-conflict",
+    "text": "I see Mara at the depot. Niko reports Mara is not at the depot. I see Ash in the east passage. The west passage is blocked. Hold position.",
+    "interpretation": {
+      "mara_at_depot": "conflicting",
+      "ash_in_east": "known",
+      "west_blocked": "known",
+      "policy": "hold",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-both",
+    "text": "Niko reports Mara is not at the depot. I checked the west passage is clear. What should we do?",
+    "interpretation": {
+      "mara_at_depot": "suspected_negative",
+      "ash_in_east": "unreported",
+      "west_blocked": "negated",
+      "policy": "unclear",
+      "clarification": "both"
+    }
+  },
+  {
+    "group": "dev-silence",
+    "text": "If Mara is at the depot, wave. I do not know whether Ash is in the east passage. Stay here.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "hold",
+      "clarification": "none"
+    }
+  }
+]

@@ -1,0 +1,13 @@
+.F
+======================================================================
+FAIL: test_firsthand_reported_negated_conflict_and_clarification (test_semantics.ParserTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-semantics/scripts/test_semantics.py", line 26, in test_firsthand_reported_negated_conflict_and_clarification
+    self.assertTrue(hasattr(s, 'parse'), 'same-input parser not implemented')
+AssertionError: False is not true : same-input parser not implemented
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)

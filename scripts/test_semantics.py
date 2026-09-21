@@ -20,4 +20,23 @@ class CoreTests(unittest.TestCase):
         state['mara_at_depot'] = 'suspected_positive'
         self.assertEqual(s.assertions(state)['mara_at_depot']['status'], 'suspected')
 
+class ParserTests(unittest.TestCase):
+    def test_firsthand_reported_negated_conflict_and_clarification(self):
+        import semantics_core as s
+        self.assertTrue(hasattr(s, 'parse'), 'same-input parser not implemented')
+        cases = [
+            ('I see Mara at the depot. I checked the west passage is clear. Evacuate with Mara.', 'known', 'negated', 'together', 'none'),
+            ('Niko reports Mara at the depot. Leave without Mara.', 'suspected_positive', 'unreported', 'solo', 'evidence'),
+            ('Niko says "I see Mara at the depot". Stay here.', 'suspected_positive', 'unreported', 'hold', 'evidence'),
+            ('I see Mara at the depot. I see Mara is not at the depot. Stay here.', 'conflicting', 'unreported', 'hold', 'evidence'),
+            ('Niko reports Mara is not at the depot. What should we do?', 'suspected_negative', 'unreported', 'unclear', 'both'),
+            ('If Mara is at the depot, wave. I do not know whether the west passage is blocked. Stay here.', 'unreported', 'unreported', 'hold', 'none'),
+            ('I see Mara at the depot. Leave without Mara. Do not leave Mara behind.', 'known', 'unreported', 'unclear', 'goal'),
+        ]
+        for text, mara, west, policy, clarification in cases:
+            with self.subTest(text=text):
+                out = s.parse({'state': {'text': text}})
+                self.assertEqual([out['interpretation'][k] for k in ['mara_at_depot','west_blocked','policy','clarification']], [mara,west,policy,clarification])
+                self.assertIn('matched_claims', out)
+
 if __name__ == '__main__': unittest.main()

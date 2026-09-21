@@ -1,0 +1,61 @@
+{
+  "scene_rules": "Interpret report text, not simulator truth. Mara is the companion; Ash is the zombie. Track Mara at Depot, Ash in East passage, and West passage blocked. Bare factual narration and explicitly firsthand narrator observation count as direct. Someone else reporting or quoted saying I saw is hearsay, not direct narrator evidence. Possibility/guess is suspected. Any positive and negative active support conflicts, even across source strengths. Agreeing direct plus hearsay remains direct. Silence, questions, conditionals, unknown whether, and ambiguous pronouns make no signed claim. Commands never prove events. No temporal updates/retractions occur. Goal solo means evacuate without Mara; together means evacuate with/do not abandon Mara; hold means stay; unclear means missing, incompatible, or unsupported goal. Clarification goal is needed iff policy unclear; evidence is needed iff ANY tracked claim is suspected or conflicting, even if irrelevant to goal; both when both conditions, none otherwise. Unreported alone does not request clarification. Keep suspected distinct from verified.",
+  "questions": {
+    "mara_at_depot": {
+      "type": "choice",
+      "instructions": "Using the scene_rules, what is the evidence status in text for exactly this proposition: Mara is at the Depot? Interpret sources, negation and role binding. Ignore commands as evidence. Choose one label.",
+      "criteria": {
+        "known": "The narrator directly observes or asserts this proposition positively; no opposite claim. Not hearsay alone.",
+        "negated": "The narrator directly observes or asserts this proposition false/absent; no positive opposing claim. Not hearsay alone.",
+        "suspected_positive": "Only reported, quoted, uncertain or guessed positive support; no negative support and no firsthand positive testimony.",
+        "suspected_negative": "Only reported, quoted, uncertain or guessed negative support; no positive support and no firsthand negative testimony.",
+        "conflicting": "Both positive and negative active support, even if one is firsthand and the other hearsay. Do not pick a winner.",
+        "unreported": "No usable signed assertion for this exact named proposition: silence, hypothetical, question, unknown whether, unrelated name/place, or unresolved reference."
+      }
+    },
+    "ash_in_east": {
+      "type": "choice",
+      "instructions": "Using the scene_rules, what is the evidence status in text for exactly this proposition: Ash is in the East passage? Interpret sources, negation and role binding. Ignore commands as evidence. Choose one label.",
+      "criteria": {
+        "known": "The narrator directly observes or asserts this proposition positively; no opposite claim. Not hearsay alone.",
+        "negated": "The narrator directly observes or asserts this proposition false/absent; no positive opposing claim. Not hearsay alone.",
+        "suspected_positive": "Only reported, quoted, uncertain or guessed positive support; no negative support and no firsthand positive testimony.",
+        "suspected_negative": "Only reported, quoted, uncertain or guessed negative support; no positive support and no firsthand negative testimony.",
+        "conflicting": "Both positive and negative active support, even if one is firsthand and the other hearsay. Do not pick a winner.",
+        "unreported": "No usable signed assertion for this exact named proposition: silence, hypothetical, question, unknown whether, unrelated name/place, or unresolved reference."
+      }
+    },
+    "west_blocked": {
+      "type": "choice",
+      "instructions": "Using the scene_rules, what is the evidence status in text for exactly this proposition: the West passage is blocked? Interpret sources, negation and role binding. Ignore commands as evidence. Choose one label.",
+      "criteria": {
+        "known": "The narrator directly observes or asserts this proposition positively; no opposite claim. Not hearsay alone.",
+        "negated": "The narrator directly observes or asserts this proposition false/absent; no positive opposing claim. Not hearsay alone.",
+        "suspected_positive": "Only reported, quoted, uncertain or guessed positive support; no negative support and no firsthand positive testimony.",
+        "suspected_negative": "Only reported, quoted, uncertain or guessed negative support; no positive support and no firsthand negative testimony.",
+        "conflicting": "Both positive and negative active support, even if one is firsthand and the other hearsay. Do not pick a winner.",
+        "unreported": "No usable signed assertion for this exact named proposition: silence, hypothetical, question, unknown whether, unrelated name/place, or unresolved reference."
+      }
+    },
+    "policy": {
+      "type": "choice",
+      "instructions": "Which bounded goal does the operator command in text? Resolve exclusions/negation. Incompatible goals are unclear; do not infer intent from facts.",
+      "criteria": {
+        "solo": "Evacuate player without collecting Mara.",
+        "together": "Evacuate player with Mara; do not abandon Mara.",
+        "hold": "Stay/wait instead of evacuating.",
+        "unclear": "No unique supported bounded goal, missing, incompatible commands, or out of scope."
+      }
+    },
+    "clarification": {
+      "type": "choice",
+      "instructions": "Read text directly using scene_rules. Does it require goal clarification (no unique bounded goal) and/or evidence clarification (any suspected or conflicting tracked proposition)? Parallel answers are unavailable. Unreported alone does not require evidence clarification.",
+      "criteria": {
+        "none": "Unique goal and no suspected/conflicting tracked evidence.",
+        "goal": "Goal unclear; no suspected/conflicting tracked evidence.",
+        "evidence": "Unique goal; some tracked evidence suspected or conflicting.",
+        "both": "Goal unclear and some tracked evidence suspected or conflicting."
+      }
+    }
+  }
+}
