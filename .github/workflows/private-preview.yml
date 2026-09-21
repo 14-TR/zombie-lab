@@ -54,6 +54,10 @@ jobs:
           node --test scripts/test-jev-policy.cjs scripts/test-jev-policy-release.cjs scripts/test-jev-policy-view.cjs
           python3 -B scripts/test-jev-policy-runner.py
           python3 -B scripts/check-jev-policy-reference.py
+          node --test scripts/test-jev-safe*.cjs
+          python3 -B scripts/test-jev-safe-runner.py
+          python3 -B scripts/test-jev-safe-reference.py
+          python3 -B scripts/check-jev-safe-reference.py
       - name: Generate full position replay
         env:
           PREVIEW_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -62,6 +66,7 @@ jobs:
           node scripts/build-jev.cjs preview
           node scripts/build-jev-controller.cjs preview
           node scripts/build-jev-policy.cjs preview
+          node scripts/build-jev-safe.cjs preview
           node scripts/build-sweep.cjs preview
           node scripts/build-proof.cjs preview
           node scripts/build-planning.cjs preview
@@ -111,4 +116,4 @@ jobs:
           ARTIFACT_URL: ${{ steps.artifact.outputs.artifact-url }}
           SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
-          printf '## Zombie Lab PR replay\n\n[Download replay ZIP](%s) (GitHub sign-in required to download the artifact).\n\nUnzip, then open `jev-policy.html` for ZL-016 original versus policy-guided prompt replay and negative results, or `index.html` for earlier comparisons. Includes full replay history, JSON, frozen models, reports and compact original evidence. No training is run in CI. Main publishes on GitHub Pages.\n\nSource commit: `%s`. Artifact expires after seven days.\n' "$ARTIFACT_URL" "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
+          printf '## Zombie Lab PR replay\n\n[Download replay ZIP](%s) (GitHub sign-in required to download the artifact).\n\nUnzip, then open `jev-safe.html` for ZL-017 original versus immediate-safe guardrail versus exact-planner replay, or `index.html` for earlier comparisons. Includes full replay history, JSON/CSV, frozen inputs, reports and original evidence. No training or paid inference is run in CI. Main publishes on GitHub Pages.\n\nSource commit: `%s`. Artifact expires after seven days.\n' "$ARTIFACT_URL" "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
