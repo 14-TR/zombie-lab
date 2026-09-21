@@ -1,0 +1,15 @@
+{
+  "estimated_ceiling_usd": 0.012976488000000001,
+  "hard_admission_cap": 24,
+  "metadata": {
+    "freeze_commit": "e8e69d486e6a42adcb2abd725b59dd468c1286a7",
+    "input_usd_per_million": 0.042,
+    "output_usd_per_million": 0,
+    "price_checked_utc": "2026-09-21T04:24:29.914289+00:00",
+    "price_sha256": "9d20bb3c90a0147532d0b20ddc4c64579391be7842e965543b27bad684eeb4d6",
+    "price_url": "https://docs.typesafe.ai/models.md"
+  },
+  "model": "jev-1.13.0",
+  "planned": 20,
+  "started_utc": "2026-09-21T04:24:29.914466+00:00"
+}
