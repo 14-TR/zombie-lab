@@ -1,0 +1,21 @@
+..FF
+======================================================================
+FAIL: test_world_truth_not_interpretation_drives_observable_consequences (test_semantics.SimulationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-semantics/scripts/test_semantics.py", line 45, in test_world_truth_not_interpretation_drives_observable_consequences
+    self.assertTrue(hasattr(s, 'simulate'), 'simulator not implemented')
+AssertionError: False is not true : simulator not implemented
+
+======================================================================
+FAIL: test_request_whitelist_and_strict_decode (test_semantics_io.IOTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-semantics/scripts/test_semantics_io.py", line 9, in test_request_whitelist_and_strict_decode
+    self.assertTrue(Path(__file__).with_name('semantics_io.py').exists(), 'request/response boundary not implemented')
+AssertionError: False is not true : request/response boundary not implemented
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+FAILED (failures=2)

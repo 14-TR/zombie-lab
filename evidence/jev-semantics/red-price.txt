@@ -1,0 +1,13 @@
+......F..
+======================================================================
+FAIL: test_live_price_table_is_parsed_not_substring_matched (test_semantics_runner.RunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-semantics/scripts/test_semantics_runner.py", line 36, in test_live_price_table_is_parsed_not_substring_matched
+    self.assertTrue(hasattr(s,'checked_price'),'live price parser not implemented')
+AssertionError: False is not true : live price parser not implemented
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.019s
+
+FAILED (failures=1)

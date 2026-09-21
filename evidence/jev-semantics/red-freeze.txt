@@ -1,0 +1,13 @@
+....F...
+======================================================================
+FAIL: test_split_blind_bundle_whitelist_and_historical_corruption (test_semantics_freeze.FreezeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-semantics/scripts/test_semantics_freeze.py", line 7, in test_split_blind_bundle_whitelist_and_historical_corruption
+    self.assertTrue(Path(__file__).with_name('freeze_semantics.py').exists(), 'freeze integrity not implemented')
+AssertionError: False is not true : freeze integrity not implemented
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.017s
+
+FAILED (failures=1)

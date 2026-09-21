@@ -80,3 +80,27 @@ def parse(request):
     uncertain = any(state[k] in ('suspected_positive','suspected_negative','conflicting') for k in FACTS)
     state['clarification'] = 'both' if goal and uncertain else 'goal' if goal else 'evidence' if uncertain else 'none'
     return dict(interpretation=state, matched_claims=matched, recognized_policies=sorted(policies))
+
+
+def simulate(decision, world, authorized_goal):
+    """Only this function sees hidden world; interpreter cannot write it."""
+    companion = False
+    frames = [dict(tick=0, location='Yard', companion=False, event='initial')]
+    outcome = decision['action']
+    for location in decision['route'][1:]:
+        event = 'move'
+        if location == 'Depot' and decision['collect']:
+            companion = world['mara_at_depot']
+            event = 'collected_Mara' if companion else 'Mara_absent'
+        if location == 'East' and world['ash_in_east']:
+            event = outcome = 'captured'
+        elif location == 'West' and world['west_blocked']:
+            event = outcome = 'blocked'
+        elif location == 'Shelter':
+            event = outcome = 'shelter'
+        frames.append(dict(tick=len(frames),location=location,companion=companion,event=event))
+        if outcome in ('captured','blocked','shelter'):
+            break
+    completed = (authorized_goal == 'hold' and decision['action'] == 'wait') or (outcome == 'shelter' and authorized_goal in ('solo','together') and (authorized_goal != 'together' or companion))
+    return dict(decision=decision, frames=frames, outcome=outcome, goal_completed=completed)
+

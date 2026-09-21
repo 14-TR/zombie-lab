@@ -1,0 +1,464 @@
+{
+  "s01a": {
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "negated",
+      "west_blocked": "known",
+      "policy": "solo",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": false,
+      "west_blocked": true
+    },
+    "annotation": "Narrator directly denies Ash East and affirms West blocked; no Mara location; explicit solo.",
+    "expected_decision": {
+      "action": "move",
+      "route": [
+        "Yard",
+        "East",
+        "Shelter"
+      ],
+      "collect": false
+    }
+  },
+  "s01b": {
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "negated",
+      "west_blocked": "known",
+      "policy": "solo",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": false,
+      "west_blocked": true
+    },
+    "annotation": "Narrator directly denies Ash East and affirms West blocked; no Mara location; explicit solo.",
+    "expected_decision": {
+      "action": "move",
+      "route": [
+        "Yard",
+        "East",
+        "Shelter"
+      ],
+      "collect": false
+    }
+  },
+  "s02a": {
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "negated",
+      "west_blocked": "negated",
+      "policy": "together",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": false,
+      "west_blocked": false
+    },
+    "annotation": "Direct Mara presence, Ash absence, West clearance. Unique her refers Mara; together goal.",
+    "expected_decision": {
+      "action": "move",
+      "route": [
+        "Yard",
+        "Depot",
+        "West",
+        "Shelter"
+      ],
+      "collect": true
+    }
+  },
+  "s02b": {
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "negated",
+      "west_blocked": "negated",
+      "policy": "together",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": false,
+      "west_blocked": false
+    },
+    "annotation": "Direct Mara presence, Ash absence, West clearance. Unique her refers Mara; together goal.",
+    "expected_decision": {
+      "action": "move",
+      "route": [
+        "Yard",
+        "Depot",
+        "West",
+        "Shelter"
+      ],
+      "collect": true
+    }
+  },
+  "s03a": {
+    "interpretation": {
+      "mara_at_depot": "negated",
+      "ash_in_east": "known",
+      "west_blocked": "negated",
+      "policy": "solo",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": true,
+      "west_blocked": false
+    },
+    "annotation": "Direct Mara absence, Ash presence, West clearance. Do not collect means solo, not hold.",
+    "expected_decision": {
+      "action": "move",
+      "route": [
+        "Yard",
+        "Depot",
+        "West",
+        "Shelter"
+      ],
+      "collect": false
+    }
+  },
+  "s03b": {
+    "interpretation": {
+      "mara_at_depot": "negated",
+      "ash_in_east": "known",
+      "west_blocked": "negated",
+      "policy": "solo",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": true,
+      "west_blocked": false
+    },
+    "annotation": "Direct Mara absence, Ash presence, West clearance. Do not collect means solo, not hold.",
+    "expected_decision": {
+      "action": "move",
+      "route": [
+        "Yard",
+        "Depot",
+        "West",
+        "Shelter"
+      ],
+      "collect": false
+    }
+  },
+  "s04a": {
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "known",
+      "west_blocked": "unreported",
+      "policy": "hold",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": true,
+      "west_blocked": true
+    },
+    "annotation": "Direct Mara/Ash presence; no West claim. Hold cancels departure, not unsupported goal.",
+    "expected_decision": {
+      "action": "wait",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s04b": {
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "known",
+      "west_blocked": "unreported",
+      "policy": "hold",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": true,
+      "west_blocked": true
+    },
+    "annotation": "Direct Mara/Ash presence; no West claim. Hold cancels departure, not unsupported goal.",
+    "expected_decision": {
+      "action": "wait",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s05a": {
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "negated",
+      "policy": "solo",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": true,
+      "west_blocked": false
+    },
+    "annotation": "Niko is not Mara. Conditional/unknown Ash gives no assertion. Direct West clear. Solo.",
+    "expected_decision": {
+      "action": "move",
+      "route": [
+        "Yard",
+        "Depot",
+        "West",
+        "Shelter"
+      ],
+      "collect": false
+    }
+  },
+  "s05b": {
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "negated",
+      "policy": "solo",
+      "clarification": "none"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": true,
+      "west_blocked": false
+    },
+    "annotation": "Niko is not Mara. Conditional/unknown Ash gives no assertion. Direct West clear. Solo.",
+    "expected_decision": {
+      "action": "move",
+      "route": [
+        "Yard",
+        "Depot",
+        "West",
+        "Shelter"
+      ],
+      "collect": false
+    }
+  },
+  "s06a": {
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "suspected_positive",
+      "west_blocked": "negated",
+      "policy": "together",
+      "clarification": "evidence"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": false,
+      "west_blocked": false
+    },
+    "annotation": "Quoted Niko observation remains reported/suspected Ash. Direct Mara and West. Together; evidence clarification even irrelevant Ash.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s06b": {
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "suspected_positive",
+      "west_blocked": "negated",
+      "policy": "together",
+      "clarification": "evidence"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": false,
+      "west_blocked": false
+    },
+    "annotation": "Quoted Niko observation remains reported/suspected Ash. Direct Mara and West. Together; evidence clarification even irrelevant Ash.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s07a": {
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "suspected_negative",
+      "west_blocked": "known",
+      "policy": "solo",
+      "clarification": "evidence"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": true,
+      "west_blocked": true
+    },
+    "annotation": "Secondhand negative Ash is suspected_negative, not verified safety; direct West blocked; solo.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s07b": {
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "suspected_negative",
+      "west_blocked": "known",
+      "policy": "solo",
+      "clarification": "evidence"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": true,
+      "west_blocked": true
+    },
+    "annotation": "Secondhand negative Ash is suspected_negative, not verified safety; direct West blocked; solo.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s08a": {
+    "interpretation": {
+      "mara_at_depot": "conflicting",
+      "ash_in_east": "negated",
+      "west_blocked": "negated",
+      "policy": "together",
+      "clarification": "evidence"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": false,
+      "west_blocked": false
+    },
+    "annotation": "Opposing direct positive / reported negative Mara conflict; direct Ash absence/West clearance; together.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s08b": {
+    "interpretation": {
+      "mara_at_depot": "conflicting",
+      "ash_in_east": "negated",
+      "west_blocked": "negated",
+      "policy": "together",
+      "clarification": "evidence"
+    },
+    "world": {
+      "mara_at_depot": true,
+      "ash_in_east": false,
+      "west_blocked": false
+    },
+    "annotation": "Opposing direct positive / reported negative Mara conflict; direct Ash absence/West clearance; together.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s09a": {
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "conflicting",
+      "west_blocked": "negated",
+      "policy": "solo",
+      "clarification": "evidence"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": true,
+      "west_blocked": false
+    },
+    "annotation": "Opposing direct negative/reported positive Ash conflict, no source override. Direct West clear; solo.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s09b": {
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "conflicting",
+      "west_blocked": "negated",
+      "policy": "solo",
+      "clarification": "evidence"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": true,
+      "west_blocked": false
+    },
+    "annotation": "Opposing direct negative/reported positive Ash conflict, no source override. Direct West clear; solo.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s10a": {
+    "interpretation": {
+      "mara_at_depot": "suspected_positive",
+      "ash_in_east": "negated",
+      "west_blocked": "negated",
+      "policy": "unclear",
+      "clarification": "both"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": false,
+      "west_blocked": false
+    },
+    "annotation": "Unverified positive Mara. Direct Ash absence/West clear. Simultaneous incompatible solo/together goals -> unclear and both.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  },
+  "s10b": {
+    "interpretation": {
+      "mara_at_depot": "suspected_positive",
+      "ash_in_east": "negated",
+      "west_blocked": "negated",
+      "policy": "unclear",
+      "clarification": "both"
+    },
+    "world": {
+      "mara_at_depot": false,
+      "ash_in_east": false,
+      "west_blocked": false
+    },
+    "annotation": "Unverified positive Mara. Direct Ash absence/West clear. Simultaneous incompatible solo/together goals -> unclear and both.",
+    "expected_decision": {
+      "action": "ask",
+      "route": [
+        "Yard"
+      ],
+      "collect": false
+    }
+  }
+}
