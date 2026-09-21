@@ -25,7 +25,7 @@ test('PR and Pages integrate only offline safe builds and tests',()=>{
  for(const name of ['pages.yml','private-preview.yml']){
   const text=fs.readFileSync(path.join(__dirname,'../.github/workflows',name),'utf8');
   assert(text.includes('node scripts/build-jev-safe.cjs preview'));assert(text.includes('scripts/test-jev-safe-runner.py'));assert(text.includes('scripts/check-jev-safe-reference.py'));
-  assert(!text.includes('--live-authorized'));assert(!text.includes('TYPESAFE_API_KEY'));
+  assert(!text.includes('--live-authorized'));assert(!text.includes('TYPESAFE_API_KEY'));assert(text.includes('fetch-depth: 0'),'Historical inference-commit proof requires fetched history');
  }
 });
 test('browser harness refuses absent actual artifact before optional browser loading',()=>{
@@ -38,8 +38,11 @@ test('mutated raw response, forced agency, and old recording bytes cannot pass c
  const out=fs.mkdtempSync(path.join(os.tmpdir(),'zl017-corruption-'));
  try{
  fs.cpSync(path.join(__dirname,'../evidence/jev-safe/recording'),out,{recursive:true});
- const f=path.join(out,'run-02.trajectory.json'),r=JSON.parse(fs.readFileSync(f));r.decisions[6].agency='jev_choice';fs.writeFileSync(f,JSON.stringify(r));
- assert.throws(()=>require(file).collect({recordingDir:out}));
+ const f=path.join(out,'run-02.trajectory.json'),r=JSON.parse(fs.readFileSync(f));
+ const originalTrace=fs.readFileSync(f);r.decisions[6].agency='jev_choice';fs.writeFileSync(f,JSON.stringify(r));
+ assert.throws(()=>require(file).collect({recordingDir:out}));fs.writeFileSync(f,originalTrace);
+ const response=path.join(out,'run-02-tick-01.response.json');const responseBytes=fs.readFileSync(response);fs.writeFileSync(response,'{}');assert.throws(()=>require(file).collect({recordingDir:out}));fs.writeFileSync(response,responseBytes);
+ const runfile=path.join(out,'run.json'),record=JSON.parse(fs.readFileSync(runfile));record.sourceCommit='ac5f0c72d42356122419442656420f1aafa239d2';fs.writeFileSync(runfile,JSON.stringify(record));assert.throws(()=>require(file).collect({recordingDir:out}),'Inference source must contain exact committed freeze');
  }finally{fs.rmSync(out,{recursive:true,force:true});}
  const manifest=require('../evidence/jev-safe/frozen/manifest.json'),pilot=require('./jev-pilot.cjs');
  for(const [f,hash]of Object.entries(manifest.baselineHashes))assert.equal(pilot.sha(fs.readFileSync(path.join(pilot.ROOT,f))),hash,f);

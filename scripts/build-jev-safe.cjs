@@ -11,6 +11,9 @@ function metrics(trace){
 }
 function collect({recordingDir=REC}={}){
  const manifest=read(path.join(DIR,'frozen/manifest.json')),complete=read(path.join(recordingDir,'complete.json')),recording=read(path.join(recordingDir,'run.json'));
+ assert.match(recording.sourceCommit,/^[0-9a-f]{40}$/,'Literal committed source identity');
+ assert.deepEqual(cp.execFileSync('git',['show',recording.sourceCommit+':evidence/jev-safe/frozen/manifest.json'],{cwd:ROOT,stdio:['ignore','pipe','pipe']}),fs.readFileSync(path.join(DIR,'frozen/manifest.json')),'Exact source/input freeze existed in inference commit');
+ assert.equal(recording.runnerSHA256,manifest.sourceHashes['scripts/run-jev-safe.py']);
  for(const [f,h]of Object.entries({...manifest.sourceHashes,...manifest.baselineHashes,...manifest.inputHashes}))assert.equal(pilot.sha(fs.readFileSync(path.join(ROOT,f))),h,'Frozen source/input/history changed: '+f);
  const historical=require('./build-jev-controller.cjs').collect();assert.deepEqual(manifest.starts,historical.manifest.starts);
  const ledgerFile=path.join(recordingDir,'admission.jsonl'),ledger=fs.existsSync(ledgerFile)?fs.readFileSync(ledgerFile,'utf8').trim().split('\n').filter(Boolean).map(JSON.parse):[];
