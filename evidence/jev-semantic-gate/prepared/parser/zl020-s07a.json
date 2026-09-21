@@ -1,0 +1,69 @@
+{
+  "interpretation": {
+    "ash_in_east": "negated",
+    "clarification": "none",
+    "mara_at_depot": "known",
+    "policy": "together",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "i personally see mara at the depot, have checked that ash is absent from the east passage, and have found the west passage clear.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara at the depot"
+    },
+    {
+      "clause": "i personally see mara at the depot, have checked that ash is absent from the east passage, and have found the west passage clear.",
+      "field": "ash_in_east",
+      "positive": false,
+      "reported": false,
+      "span": "ash is absent from the east"
+    },
+    {
+      "clause": "i personally see mara at the depot, have checked that ash is absent from the east passage, and have found the west passage clear.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "west passage clear"
+    },
+    {
+      "clause": "someone else's report agrees on all three: mara is at the depot, ash is not in east, and west is not blocked.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": true,
+      "span": "mara is at the depot"
+    },
+    {
+      "clause": "someone else's report agrees on all three: mara is at the depot, ash is not in east, and west is not blocked.",
+      "field": "ash_in_east",
+      "positive": false,
+      "reported": true,
+      "span": "ash is not in east"
+    },
+    {
+      "clause": "someone else's report agrees on all three: mara is at the depot, ash is not in east, and west is not blocked.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": true,
+      "span": "west is not blocked"
+    }
+  ],
+  "policy_matches": [
+    {
+      "clause": "evacuate with mara.",
+      "policy": "together",
+      "span": "evacuate with mara"
+    }
+  ],
+  "recognized_policies": [
+    "together"
+  ],
+  "skipped_clauses": [
+    {
+      "clause": "evacuate with mara.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

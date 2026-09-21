@@ -1,0 +1,35 @@
+{
+  "interpretation": {
+    "ash_in_east": "negated",
+    "clarification": "goal",
+    "mara_at_depot": "known",
+    "policy": "unclear",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "from my own inspection: mara is at the depot, ash is absent from the east passage, and the west passage has no obstruction.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara is at the depot"
+    },
+    {
+      "clause": "from my own inspection: mara is at the depot, ash is absent from the east passage, and the west passage has no obstruction.",
+      "field": "ash_in_east",
+      "positive": false,
+      "reported": false,
+      "span": "ash is absent from the east"
+    },
+    {
+      "clause": "from my own inspection: mara is at the depot, ash is absent from the east passage, and the west passage has no obstruction.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "west passage has no obstruction"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": []
+}

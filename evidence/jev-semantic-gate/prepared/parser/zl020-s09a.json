@@ -1,0 +1,30 @@
+{
+  "interpretation": {
+    "ash_in_east": "unreported",
+    "clarification": "goal",
+    "mara_at_depot": "unreported",
+    "policy": "unclear",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "i also inspected the west passage: it is not blocked.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "west passage: it is not blocked"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "evacuate",
+      "reason": "nonassertion_or_command"
+    },
+    {
+      "clause": "do not bring the companion with you.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

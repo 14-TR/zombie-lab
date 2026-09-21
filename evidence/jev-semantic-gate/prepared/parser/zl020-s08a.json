@@ -1,0 +1,30 @@
+{
+  "interpretation": {
+    "ash_in_east": "unreported",
+    "clarification": "goal",
+    "mara_at_depot": "unreported",
+    "policy": "unclear",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "my own inspection of the west passage establishes that it is clear.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "west passage establishes that it is clear"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "mara asks, 'is ash in the east passage?",
+      "reason": "nonassertion_or_command"
+    },
+    {
+      "clause": "evacuate without collecting mara.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

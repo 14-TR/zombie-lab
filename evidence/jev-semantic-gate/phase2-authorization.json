@@ -1,0 +1,22 @@
+{
+  "experiment": "ZL020",
+  "authorization": "TR1551455837673881603; parent explicit PHASE2 AUTHORIZED continuation",
+  "source_freeze_commit": "073da696555a7370ac292f665446695dbd20560f",
+  "source_tree": "3b70ce3455c797760a9e6e7fe5a55001ae98b59a",
+  "review_json_sha256": "83a914aeedb736c68d73f30ecc10e7dd2a83033496ec5a6314814b0c0830e3c9",
+  "inputs_sha256": "dc42a6270c2d9628cade3f726f720f3dbcd8b79c05fee2ff31c07b39392261e4",
+  "gold_sha256": "d5edb0e418deb59c35fffc86269bab9cb5b143472e864e43b56e34cbd61800a1",
+  "request_manifest_sha256": "da97ed590ef3cd09983448287e50eeaa8a0d5d2eb517f7fcbbe5d0213ad53e80",
+  "reviewed_request_preview_matches": 24,
+  "initial_no_ledger_verified": true,
+  "initial_worktree_clean": true,
+  "planned_admissions": 24,
+  "maximum_admissions_including_failures": 24,
+  "conservative_estimate_usd": 0.02020872,
+  "model": "jev-1.13.0",
+  "retry_warmup_refill_replacement": "forbidden",
+  "execution": "one invocation of the frozen runner after this complete freeze is committed; live price preflight required",
+  "author_caveat": "Retained verbatim in authoring/authoring-protocol.md and review/ZL-020-pre-admission-review.json; not perfectly blind to historical outcomes",
+  "blind_comparator": "parent-owned pending; not part of Jev request state",
+  "release": "local commits only; no push, merge, publication"
+}

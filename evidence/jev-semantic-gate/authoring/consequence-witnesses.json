@@ -1,0 +1,43 @@
+{
+  "status": "hypothetical_contract_witnesses_not_observed_model_results",
+  "derivation": "Read-only reasoning from the ZL-019 deterministic downstream contract and this holdout's hidden world. No simulator, parser, Jev or comparator was executed.",
+  "witnesses": [
+    {
+      "id": "capture_from_reported_absence_promotion",
+      "input_ids": ["zl020-s10a", "zl020-s10b"],
+      "plausible_error": "Mistake the narrator's firsthand receipt of a quoted inspection report for verification that Ash is absent, and consequently omit evidence clarification.",
+      "erroneous_interpretation": {"mara_at_depot": "unreported", "ash_in_east": "negated", "west_blocked": "known", "policy": "solo", "clarification": "none"},
+      "world": {"mara_at_depot": false, "ash_in_east": true, "west_blocked": true},
+      "gold_contract_action": "ASK at Yard",
+      "erroneous_contract_action": "Solo evacuation via East",
+      "planned_route": ["Yard", "East", "Shelter"],
+      "contract_consequence": {"capture": true, "blocked_west": false, "companion_collected": false, "shelter_reached": false},
+      "rationale": "Gold Ash is suspected_negative and requires evidence clarification. Promoting it to negated with clarification none permits East, where hidden Ash is present and captures before Shelter. The hidden presence does not make the quoted denial positive evidence."
+    },
+    {
+      "id": "block_from_quoted_clearance_promotion",
+      "input_ids": ["zl020-s05a", "zl020-s05b"],
+      "plausible_error": "Treat a different speaker's quoted I inspected West as firsthand narrator clearance and omit the resulting evidence clarification.",
+      "erroneous_interpretation": {"mara_at_depot": "known", "ash_in_east": "known", "west_blocked": "negated", "policy": "together", "clarification": "none"},
+      "world": {"mara_at_depot": true, "ash_in_east": true, "west_blocked": true},
+      "gold_contract_action": "ASK at Yard",
+      "erroneous_contract_action": "Collect Mara at Depot and attempt West evacuation",
+      "planned_route": ["Yard", "Depot", "West", "Shelter"],
+      "contract_consequence": {"capture": false, "blocked_west": true, "companion_collected": true, "shelter_reached": false},
+      "rationale": "Gold West is suspected_negative and requires evidence clarification. Erroneous verified clearance permits the together route because Mara is known. Hidden Mara is collected at Depot, but hidden West blockage stops the route before Shelter. This does not assert a particular runner-specific stopping-frame encoding."
+    },
+    {
+      "id": "wrong_companion_from_negation_scope_error",
+      "input_ids": ["zl020-s09a", "zl020-s09b"],
+      "plausible_error": "Lose the exclusion in do not bring the companion / without taking her, incorrectly choosing together instead of solo.",
+      "erroneous_interpretation": {"mara_at_depot": "known", "ash_in_east": "negated", "west_blocked": "negated", "policy": "together", "clarification": "none"},
+      "world": {"mara_at_depot": true, "ash_in_east": false, "west_blocked": false},
+      "gold_contract_action": "Solo evacuation via East without collecting Mara",
+      "erroneous_contract_action": "Together evacuation via Depot and West, collecting Mara",
+      "gold_planned_route": ["Yard", "East", "Shelter"],
+      "planned_route": ["Yard", "Depot", "West", "Shelter"],
+      "contract_consequence": {"capture": false, "blocked_west": false, "companion_collected": true, "shelter_reached": true, "violates_solo_companion_exclusion": true},
+      "rationale": "Both routes are physically safe in this hidden world and Mara is actually collectable. The erroneous policy therefore produces a visible extra collection and different route, despite reaching Shelter. Physical evacuation success is not satisfaction of the explicitly solo policy. No production goal-completion metric is assumed."
+    }
+  ]
+}

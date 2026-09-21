@@ -1,0 +1,1477 @@
+{
+  "schema": "ZL020-independent-pre-admission-review-v1",
+  "verdict": "PASS",
+  "issued_utc": "2026-09-21T05:08:51Z",
+  "scope": "Read-only independent source and gold gate for a bounded paid experiment; not deployment, publication or model-performance approval.",
+  "reviewed_repository": "/Users/tr/Projects/zombie-lab-jev-semantic-gate",
+  "source_commit": "073da696555a7370ac292f665446695dbd20560f",
+  "source_tree": "3b70ce3455c797760a9e6e7fe5a55001ae98b59a",
+  "source_freeze_commit_time": "2026-09-21T05:01:16Z",
+  "inputs_sha256": "dc42a6270c2d9628cade3f726f720f3dbcd8b79c05fee2ff31c07b39392261e4",
+  "gold_sha256": "d5edb0e418deb59c35fffc86269bab9cb5b143472e864e43b56e34cbd61800a1",
+  "spec_sha256": "0e61af04ee3433745465f40eec0af3e2505ec41729fce8d25f3855c2628b6cea",
+  "protocol_sha256": "07d283fe320279cafbdd5d03cfe07b091f50d06696d7735c2faeec4ea32ea6a2",
+  "blockers": [],
+  "gold_changes_required": [],
+  "source_changes_required": [],
+  "authorizes_paid_execution": false,
+  "parent_admission_prerequisites": [
+    "Parent, not this review, grants phase-2 authorization.",
+    "Materialize exactly these reviewed texts with the frozen spec/development; commit the exact request manifest and request bytes before admission. Preview hashes in this report are not a committed manifest.",
+    "Retain these exact input/gold hashes; any changed source, prompt, development, text or gold requires a new applicable gate rather than inheriting this PASS.",
+    "Runner must verify live public price, refuse CI, use a fresh single-use ZL020 ledger, cap at 24 requests, and never retry, refill, warm up or replace a failure.",
+    "Blind comparator receives only its declared allowed bundle, never gold, hidden worlds, rationales or these evaluator review artifacts."
+  ],
+  "categories": {
+    "spec": {
+      "verdict": "PASS",
+      "blockers": []
+    },
+    "standards": {
+      "verdict": "PASS",
+      "blockers": []
+    },
+    "security_and_logic": {
+      "verdict": "PASS",
+      "blockers": []
+    },
+    "regressions": {
+      "verdict": "PASS",
+      "blockers": []
+    },
+    "acceptance_relevant_baseline": {
+      "verdict": "PASS",
+      "blockers": []
+    },
+    "required_evidence_for_pre_admission_scope": {
+      "verdict": "PASS",
+      "blockers": []
+    }
+  },
+  "independence_caveat": "The author is independent of the new implementation, prompts/parser and new model outcomes, but not perfectly blind to historical outcomes. A too-broad legacy review search incidentally exposed aggregate counts, historical label summaries, and a narrative of one Jev clarification answer including probabilities. No legacy raw response file was opened by the author. This review read the actual new frozen spec/source and all 24 texts/gold; it did not use fresh parser/Jev/comparator outcomes to validate or alter annotations.",
+  "annotation_review": {
+    "reviewed_rows": 24,
+    "scenario_groups": 12,
+    "row_reviews": [
+      {
+        "id": "zl020-s01a",
+        "independent_interpretation": {
+          "ash_in_east": "negated",
+          "clarification": "goal",
+          "mara_at_depot": "known",
+          "policy": "unclear",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "Own inspection supplies three signed direct facts; the final observation-report sentence is not a goal.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s01b",
+        "independent_interpretation": {
+          "ash_in_east": "negated",
+          "clarification": "goal",
+          "mara_at_depot": "known",
+          "policy": "unclear",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "In-view Mara and personal passage examinations are direct. Calling this a factual report still supplies no command.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s02a",
+        "independent_interpretation": {
+          "ash_in_east": "unreported",
+          "clarification": "goal",
+          "mara_at_depot": "negated",
+          "policy": "unclear",
+          "west_blocked": "known"
+        },
+        "verdict": "PASS",
+        "reason": "Depot inspection denies Mara, unknown-whether Ash is unsigned, and observed West blockage is direct. Explicitly concurrent solo and hold orders conflict.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s02b",
+        "independent_interpretation": {
+          "ash_in_east": "unreported",
+          "clarification": "goal",
+          "mara_at_depot": "negated",
+          "policy": "unclear",
+          "west_blocked": "known"
+        },
+        "verdict": "PASS",
+        "reason": "Direct absence/obstruction and unknown Ash match a. Remain instead of leaving and depart are expressly simultaneous, not a two-stage itinerary.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s03a",
+        "independent_interpretation": {
+          "ash_in_east": "conflicting",
+          "clarification": "evidence",
+          "mara_at_depot": "suspected_negative",
+          "policy": "together",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "Both denials occur inside another speaker’s report. The narrator then directly affirms Ash and clears West, creating Ash conflict, not overriding hearsay.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s03b",
+        "independent_interpretation": {
+          "ash_in_east": "conflicting",
+          "clarification": "evidence",
+          "mara_at_depot": "suspected_negative",
+          "policy": "together",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "She has Mara as the unique compatible named antecedent; that statement carries the Ash denial. Personally seeing Ash there binds to East. Goal remains together.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s04a",
+        "independent_interpretation": {
+          "ash_in_east": "negated",
+          "clarification": "evidence",
+          "mara_at_depot": "known",
+          "policy": "solo",
+          "west_blocked": "suspected_positive"
+        },
+        "verdict": "PASS",
+        "reason": "Mara and Ash absence are personally verified. Suspected West blockage remains uncertain even though solo could otherwise use East.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s04b",
+        "independent_interpretation": {
+          "ash_in_east": "negated",
+          "clarification": "evidence",
+          "mara_at_depot": "known",
+          "policy": "solo",
+          "west_blocked": "suspected_positive"
+        },
+        "verdict": "PASS",
+        "reason": "Visible Mara and the Ash-free personal sweep are direct; explicitly calling West a non-observational guess retains suspected-positive status. Leaving Mara out is solo.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s05a",
+        "independent_interpretation": {
+          "ash_in_east": "known",
+          "clarification": "evidence",
+          "mara_at_depot": "known",
+          "policy": "together",
+          "west_blocked": "suspected_negative"
+        },
+        "verdict": "PASS",
+        "reason": "Mara and Ash are narrator observations. The West message’s quoted I and it remain the other speaker’s purported inspection of West, not narrator verification.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s05b",
+        "independent_interpretation": {
+          "ash_in_east": "known",
+          "clarification": "evidence",
+          "mara_at_depot": "known",
+          "policy": "together",
+          "west_blocked": "suspected_negative"
+        },
+        "verdict": "PASS",
+        "reason": "The West-clear assertion is expressly sourced solely to another person’s quote. Direct confirmation is limited to Mara and Ash. Taking Mara to Shelter is together.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s06a",
+        "independent_interpretation": {
+          "ash_in_east": "known",
+          "clarification": "evidence",
+          "mara_at_depot": "conflicting",
+          "policy": "together",
+          "west_blocked": "conflicting"
+        },
+        "verdict": "PASS",
+        "reason": "Direct positive Mara and direct negative West oppose the separate report. The explicit no-withdrawal statement rules out correction/retraction.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s06b",
+        "independent_interpretation": {
+          "ash_in_east": "known",
+          "clarification": "evidence",
+          "mara_at_depot": "conflicting",
+          "policy": "together",
+          "west_blocked": "conflicting"
+        },
+        "verdict": "PASS",
+        "reason": "Reversing source order does not change the two conflicts. The coexisting-claims sentence disallows recency or credibility resolution.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s07a",
+        "independent_interpretation": {
+          "ash_in_east": "negated",
+          "clarification": "none",
+          "mara_at_depot": "known",
+          "policy": "together",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "Each hearsay assertion agrees with a direct observation, so source multiplicity neither downgrades evidence nor creates conflict.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s07b",
+        "independent_interpretation": {
+          "ash_in_east": "negated",
+          "clarification": "none",
+          "mara_at_depot": "known",
+          "policy": "together",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "The narrator explicitly establishes those same facts after the received account. Elliptical Mara there/no Ash/no obstruction resolve to the immediately named propositions.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s08a",
+        "independent_interpretation": {
+          "ash_in_east": "unreported",
+          "clarification": "none",
+          "mara_at_depot": "unreported",
+          "policy": "solo",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "Mara’s Ash question is unsigned. Seeing Mara in East does not assert Ash in East or either sign of Mara-at-Depot under the frozen exact-proposition/unrelated-place criterion.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s08b",
+        "independent_interpretation": {
+          "ash_in_east": "unreported",
+          "clarification": "none",
+          "mara_at_depot": "unreported",
+          "policy": "solo",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "She resolves to Mara, but her question still asserts no Ash location. Mara-in-East remains outside the exact Depot proposition; no unstated exclusivity inference is licensed.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s09a",
+        "independent_interpretation": {
+          "ash_in_east": "negated",
+          "clarification": "none",
+          "mara_at_depot": "known",
+          "policy": "solo",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "Companion is explicitly equated with Mara. East there and West it have local passage antecedents. Excluding bringing the companion leaves evacuation affirmative: solo.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s09b",
+        "independent_interpretation": {
+          "ash_in_east": "negated",
+          "clarification": "none",
+          "mara_at_depot": "known",
+          "policy": "solo",
+          "west_blocked": "negated"
+        },
+        "verdict": "PASS",
+        "reason": "The frozen scene explicitly identifies Ash as the zombie; the verified zombie absence is Ash absence. Her refers to companion Mara. Without taking her is solo, not hold.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s10a",
+        "independent_interpretation": {
+          "ash_in_east": "suspected_negative",
+          "clarification": "evidence",
+          "mara_at_depot": "unreported",
+          "policy": "solo",
+          "west_blocked": "known"
+        },
+        "verdict": "PASS",
+        "reason": "Firsthand receipt expressly verifies only receipt. The quoted I saw no Ash is reported negative evidence, not a direct negative observation.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s10b",
+        "independent_interpretation": {
+          "ash_in_east": "suspected_negative",
+          "clarification": "evidence",
+          "mara_at_depot": "unreported",
+          "policy": "solo",
+          "west_blocked": "known"
+        },
+        "verdict": "PASS",
+        "reason": "The narrator disclaims verification of message contents; its author owns the Ash inspection claim. Unknown Mara remains unsigned and observed West obstruction direct.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s11a",
+        "independent_interpretation": {
+          "ash_in_east": "suspected_positive",
+          "clarification": "both",
+          "mara_at_depot": "suspected_positive",
+          "policy": "unclear",
+          "west_blocked": "unreported"
+        },
+        "verdict": "PASS",
+        "reason": "Might Mara and reported Ash are both suspected-positive; unknown-whether West is unsigned. The sole information request is expressly outside evacuation or hold.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s11b",
+        "independent_interpretation": {
+          "ash_in_east": "suspected_positive",
+          "clarification": "both",
+          "mara_at_depot": "suspected_positive",
+          "policy": "unclear",
+          "west_blocked": "unreported"
+        },
+        "verdict": "PASS",
+        "reason": "Guess and someone else’s account preserve the same two weak positive claims. The text expressly excludes interpreting information gathering as a bounded evacuation/hold goal.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s12a",
+        "independent_interpretation": {
+          "ash_in_east": "unreported",
+          "clarification": "none",
+          "mara_at_depot": "unreported",
+          "policy": "hold",
+          "west_blocked": "unreported"
+        },
+        "verdict": "PASS",
+        "reason": "The quoted set-label instructions are explicitly inert and nonoperative; imperatives establish no scene facts. The separately designated actual command is hold.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      },
+      {
+        "id": "zl020-s12b",
+        "independent_interpretation": {
+          "ash_in_east": "unreported",
+          "clarification": "none",
+          "mara_at_depot": "unreported",
+          "policy": "hold",
+          "west_blocked": "unreported"
+        },
+        "verdict": "PASS",
+        "reason": "Label/return are commands inside a nonoperative sample, not quoted declarative scene reports. The distinct operative hold instruction controls; embedded solo has no authority.",
+        "frozen_contract": "evidence/jev-semantic-gate/spec.json at 073da696555a7370ac292f665446695dbd20560f",
+        "hidden_world_used_for_annotation": false
+      }
+    ],
+    "all_gold_agrees_with_independent_review": true,
+    "all_pairs_share_labels_and_world": true,
+    "all_pairs_meaning_preserving_under_frozen_spec": true,
+    "unresolved_gold_ambiguities": []
+  },
+  "coverage": {
+    "counts": {
+      "ash_in_east": {
+        "conflicting": 2,
+        "known": 4,
+        "negated": 8,
+        "suspected_negative": 2,
+        "suspected_positive": 2,
+        "unreported": 6
+      },
+      "clarification": {
+        "both": 2,
+        "evidence": 10,
+        "goal": 4,
+        "none": 8
+      },
+      "mara_at_depot": {
+        "conflicting": 2,
+        "known": 10,
+        "negated": 2,
+        "suspected_negative": 2,
+        "suspected_positive": 2,
+        "unreported": 6
+      },
+      "policy": {
+        "hold": 2,
+        "solo": 8,
+        "together": 8,
+        "unclear": 6
+      },
+      "west_blocked": {
+        "conflicting": 2,
+        "known": 4,
+        "negated": 10,
+        "suspected_negative": 2,
+        "suspected_positive": 2,
+        "unreported": 4
+      }
+    },
+    "gold_controller_actions": {
+      "ASK": 16,
+      "TOGETHER_WEST": 2,
+      "SOLO_WEST": 2,
+      "SOLO_EAST": 2,
+      "WAIT": 2
+    },
+    "all_six_epistemic_labels_each_fact": true,
+    "all_four_policies": true,
+    "all_four_clarifications": true,
+    "pairing_limit": "12 purposive scenario groups, not 24 independent draws; full marginal label coverage is not full semantic or cross-product coverage."
+  },
+  "code_findings": [
+    {
+      "topic": "deterministic clarification",
+      "verdict": "PASS",
+      "source": "scripts/semantic_gate.py:18-38",
+      "evidence": "Independent 3456-combination oracle: any uncertain/conflicting fact or unclear policy forces ASK; any original clarification is preserved; raw labels/decision unchanged."
+    },
+    {
+      "topic": "secondary solo completion",
+      "verdict": "PASS",
+      "source": "scripts/semantic_gate.py:6-13",
+      "evidence": "160 decision/world/authorized-goal combinations retain historical physics/frames. Solo requires Shelter without actual companion; together requires companion; hold requires WAIT. Wrong-together/absent-Mara may still satisfy secondary solo completion, but primary trace agreement remains separate."
+    },
+    {
+      "topic": "strict decoding",
+      "verdict": "PASS",
+      "source": "scripts/semantic_gate_io.py:6-31; scripts/semantics_io.py:18-38",
+      "evidence": "Duplicate objects at nested depths, nonfinite constants/exponent overflow, nonmaximum selection and excessive distribution sums rejected; tied maxima accepted. Ten independent negative probes plus checked-in decoder tests."
+    },
+    {
+      "topic": "admission and no retries",
+      "verdict": "PASS",
+      "source": "scripts/run_semantic_gate.py:16-56; scripts/run_semantics.py:40-92",
+      "evidence": "CI refuses even with both authorization flags, before docs network. Synthetic HTTP 429, timeout exception and response overflow each consume one admission, stop and reject refill. Success uses exactly planned calls. Ledger and request exist before transport; fsync exercised; exclusive run marker persists."
+    },
+    {
+      "topic": "source and input boundaries",
+      "verdict": "PASS",
+      "source": "scripts/freeze_semantic_gate.py:55-80; scripts/semantics_io.py:10-11",
+      "evidence": "Actual verify_source returns exact reviewed commit. All 19 manifest-bound sources match both SHA256 and Git blobs, and inherited commit paths remain unchanged. All 24 in-memory request previews omit evaluator metadata, worlds and rationales."
+    },
+    {
+      "topic": "bounded parser and evaluator",
+      "verdict": "PASS for experiment readiness only",
+      "source": "scripts/semantic_gate_parser.py:9-66; scripts/build_semantic_gate.py:14-67,89-106",
+      "evidence": "Transparent grammar is intentionally not a general semantic oracle; 18 frozen development rows pass. No fresh heldout parser prediction was generated in this review. Collector iterates planned cases including absent/malformed responses; raw and gated metrics remain distinct. No post-holdout tuning approved."
+    }
+  ],
+  "offline_tests": {
+    "total": 18,
+    "failed": 0,
+    "receipts": [
+      {
+        "command": "PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s scripts -p 'test_semantic_gate*.py' -v",
+        "output": "test_all_closed_labels_force_required_ask_without_mutation (test_semantic_gate.GateTests) ... ok\ntest_invalid_labels_fail_closed_and_raw_ask_is_never_erased (test_semantic_gate.GateTests) ... ok\ntest_solo_excludes_actual_companion_after_wrong_together (test_semantic_gate.GateTests) ... ok\ntest_recorded_development_raw_vs_gated_export_and_bypass (test_semantic_gate_export.ExportTests) ... ok\ntest_prepare_is_label_free_and_hash_bound_offline (test_semantic_gate_freeze.FreezeTests) ... ok\ntest_duplicate_keys_rejected_at_every_depth (test_semantic_gate_io.DecoderTests) ... ok\ntest_allowed_development_grammar (test_semantic_gate_parser.ParserTests) ... ok\ntest_ci_refuses_without_transport_and_failure_is_single_use (test_semantic_gate_runner.RunnerTests) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.047s\n\nOK",
+        "exit_code": 0,
+        "error": null
+      },
+      {
+        "command": "PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s scripts -p 'test_semantics*.py' -v",
+        "output": "test_epistemic_controller_never_promotes_suspected (test_semantics.CoreTests) ... ok\ntest_schema_guards_fail_closed_and_all_suspected_combinations (test_semantics.CoreTests) ... ok\ntest_firsthand_reported_negated_conflict_and_clarification (test_semantics.ParserTests) ... ok\ntest_world_truth_not_interpretation_drives_observable_consequences (test_semantics.SimulationTests) ... ok\ntest_real_collection_offline_export_and_corruption (test_semantics_export.ExportTests) ... ok\ntest_split_blind_bundle_whitelist_and_historical_corruption (test_semantics_freeze.FreezeTests) ... ok\ntest_request_whitelist_and_strict_decode (test_semantics_io.IOTests) ... ok\ntest_live_price_table_is_parsed_not_substring_matched (test_semantics_runner.RunnerTests) ... ok\ntest_single_use_durable_failure_admission_and_ci (test_semantics_runner.RunnerTests) ... ok\ntest_counts_include_failures_and_unsafe_promotions (test_semantics_score.ScoreTests) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 1.354s\n\nOK",
+        "exit_code": 0,
+        "error": null
+      }
+    ]
+  },
+  "independent_probes": {
+    "asset_sha256": {
+      "SHA256SUMS.txt": "97fc4fc73404d1a4c91f26e1a0a909681e851f0d1ae4985dd15f94618ed5e3fe",
+      "authoring-protocol.md": "9c242bf591b9dced1729e0b4b956a1b48d8bbe7d19d75379bfa2ee3696c7fbcf",
+      "consequence-witnesses.json": "41ea6989cf69f95effa6a57eff8e43bc07560e4e030390ad07d770c2a3945e02",
+      "coverage.json": "d7a991e50d44a5a024719d5120f78e85bb5ae89ad3298edd61608d7ff9326b4c",
+      "gold.json": "d5edb0e418deb59c35fffc86269bab9cb5b143472e864e43b56e34cbd61800a1",
+      "inputs.json": "dc42a6270c2d9628cade3f726f720f3dbcd8b79c05fee2ff31c07b39392261e4",
+      "leakage-duplicate-audit.json": "ff8c961fb7151c6e0751081d28881a40fe4dacc76032e567d5a9ebd1258889f2"
+    },
+    "assets_and_source_unchanged": true,
+    "closed_gate_combinations": 3456,
+    "comparison_corpus_rows": 44,
+    "conservative_estimate_usd": 0.02020872,
+    "decoder_negative_probes": 10,
+    "exact_normalized_development_or_legacy_duplicates": [],
+    "field_label_counts": {
+      "ash_in_east": {
+        "conflicting": 2,
+        "known": 4,
+        "negated": 8,
+        "suspected_negative": 2,
+        "suspected_positive": 2,
+        "unreported": 6
+      },
+      "clarification": {
+        "both": 2,
+        "evidence": 10,
+        "goal": 4,
+        "none": 8
+      },
+      "mara_at_depot": {
+        "conflicting": 2,
+        "known": 10,
+        "negated": 2,
+        "suspected_negative": 2,
+        "suspected_positive": 2,
+        "unreported": 6
+      },
+      "policy": {
+        "hold": 2,
+        "solo": 8,
+        "together": 8,
+        "unclear": 6
+      },
+      "west_blocked": {
+        "conflicting": 2,
+        "known": 4,
+        "negated": 10,
+        "suspected_negative": 2,
+        "suspected_positive": 2,
+        "unreported": 4
+      }
+    },
+    "finished_utc": "2026-09-21T05:05:58.471880+00:00",
+    "groups": 12,
+    "heldout_parser_runs": 0,
+    "hypothetical_witnesses": [
+      {
+        "goal_completed": false,
+        "id": "capture_from_reported_absence_promotion",
+        "outcome": "captured",
+        "simulated_hypothetical_not_model_error": true
+      },
+      {
+        "goal_completed": false,
+        "id": "block_from_quoted_clearance_promotion",
+        "outcome": "blocked",
+        "simulated_hypothetical_not_model_error": true
+      },
+      {
+        "goal_completed": false,
+        "id": "wrong_companion_from_negation_scope_error",
+        "outcome": "shelter",
+        "simulated_hypothetical_not_model_error": true
+      }
+    ],
+    "live_runner_invocations": 0,
+    "network_denied_for_probes": true,
+    "new_model_calls": 0,
+    "requests_preview": [
+      {
+        "id": "zl020-s01a",
+        "sha256": "ab60a74a2c0a4541fa21a437d36f331967da6f6b03d01c8ac619d34618249943",
+        "wire_bytes": 11780
+      },
+      {
+        "id": "zl020-s01b",
+        "sha256": "777fbe8c71bd7d24ddfd09603c71c37dcbc2f273b568528a6eb16d4cf39def74",
+        "wire_bytes": 11794
+      },
+      {
+        "id": "zl020-s02a",
+        "sha256": "ad2aacb9758d722d687912f834b5ce3cb467f57256cdf62126141d2337f9babf",
+        "wire_bytes": 11853
+      },
+      {
+        "id": "zl020-s02b",
+        "sha256": "e985db8accd53d751b468c72685a80e2421e422cd5341d528e495d0530b6f358",
+        "wire_bytes": 11882
+      },
+      {
+        "id": "zl020-s03a",
+        "sha256": "0c21afd75f004d4e183d1b66c3deacdaf90a35932f4fa3fa871f3b5305a049b0",
+        "wire_bytes": 11845
+      },
+      {
+        "id": "zl020-s03b",
+        "sha256": "42ae4f6bf4cda7df27b0a362747fd5c1e46c7f0d643841deed1c6124c4c6bc46",
+        "wire_bytes": 11902
+      },
+      {
+        "id": "zl020-s04a",
+        "sha256": "ddb76e416678cdd681c073cefca48c3b419c032b431d85c6fdfea1bae7b07ca2",
+        "wire_bytes": 11802
+      },
+      {
+        "id": "zl020-s04b",
+        "sha256": "5273249db2aed5fd12c7eae9ed3a2b31568830a3392abec0ede628b761925382",
+        "wire_bytes": 11837
+      },
+      {
+        "id": "zl020-s05a",
+        "sha256": "62dca013f29a19ba210f29cba10a165c017152547273d0a8a5dfdfffc5f07857",
+        "wire_bytes": 11804
+      },
+      {
+        "id": "zl020-s05b",
+        "sha256": "4250dab36f8343954deda412be7be4d6acbe8d1c21eadd632b5986fafd9dd390",
+        "wire_bytes": 11884
+      },
+      {
+        "id": "zl020-s06a",
+        "sha256": "275034f1bac18ba21e54f9cc029988c2771b8a0395a93cc25f405b33f9c1d7eb",
+        "wire_bytes": 11881
+      },
+      {
+        "id": "zl020-s06b",
+        "sha256": "c94c0154239d0728f1315928791fd84722c5269c9cf4742ef4489e1b0ab9fe6d",
+        "wire_bytes": 11942
+      },
+      {
+        "id": "zl020-s07a",
+        "sha256": "ec41bd5f7beb4be269994fa21191347aaab16db9d6c23b7c620d7ba06a61db6e",
+        "wire_bytes": 11873
+      },
+      {
+        "id": "zl020-s07b",
+        "sha256": "7ce409d81aa6a230813edb42390679edec919a934848b97bbafacefd70802240",
+        "wire_bytes": 11878
+      },
+      {
+        "id": "zl020-s08a",
+        "sha256": "01aa83cb358bd32be86a61f5f854c01d12514f08f7d6ee10256b993a5f8f5455",
+        "wire_bytes": 11788
+      },
+      {
+        "id": "zl020-s08b",
+        "sha256": "bd856d1fe2246bc9f6f8ff1518f2ec4b2110d1d3629362231ce50ed319708214",
+        "wire_bytes": 11814
+      },
+      {
+        "id": "zl020-s09a",
+        "sha256": "f6da6b0b8dbb6839116260f2b7cba7d2fe5fcf7396cafee9a516f7a05f6f1777",
+        "wire_bytes": 11817
+      },
+      {
+        "id": "zl020-s09b",
+        "sha256": "24347ad9034962635376bcde5b5caa853261e7c3ff1d3dfa57aeeb23005ffd86",
+        "wire_bytes": 11829
+      },
+      {
+        "id": "zl020-s10a",
+        "sha256": "86a312529904f607063f96236b570f3301c774f7368ff7ef9dd28f2f685e8aef",
+        "wire_bytes": 11864
+      },
+      {
+        "id": "zl020-s10b",
+        "sha256": "7813bee183b35ec8eb8306e13bf33b0e40a26b271a923158b00f133d38b65a5b",
+        "wire_bytes": 11898
+      },
+      {
+        "id": "zl020-s11a",
+        "sha256": "fff60cf7d5644219aac71979c3313580520463a6e26290e54d45c9caf705b6d8",
+        "wire_bytes": 11826
+      },
+      {
+        "id": "zl020-s11b",
+        "sha256": "976ebe08df24c0277b1e9121d6beccf1f72841a8b2e78f82455a65db95a33a72",
+        "wire_bytes": 11875
+      },
+      {
+        "id": "zl020-s12a",
+        "sha256": "5c1e838fc2e3cbc8deae38f118f1052432b5273e778230f918fcb57f9088464b",
+        "wire_bytes": 11933
+      },
+      {
+        "id": "zl020-s12b",
+        "sha256": "cdf2f3569a50d24310e8a66a9bf70a8739bc3469f12a3452c437ef50e3fe8a22",
+        "wire_bytes": 11951
+      }
+    ],
+    "rows": 24,
+    "runner_probes": [
+      {
+        "admissions": 1,
+        "failures": 1,
+        "fsync_calls": 7,
+        "mode": "http_error",
+        "refill_rejected": true,
+        "unattempted": 1
+      },
+      {
+        "admissions": 1,
+        "failures": 1,
+        "fsync_calls": 6,
+        "mode": "transport_error",
+        "refill_rejected": true,
+        "unattempted": 1
+      },
+      {
+        "admissions": 1,
+        "failures": 1,
+        "fsync_calls": 7,
+        "mode": "oversize",
+        "refill_rejected": true,
+        "unattempted": 1
+      },
+      {
+        "admissions": 2,
+        "failures": 0,
+        "fsync_calls": 11,
+        "mode": "all_success",
+        "refill_rejected": true,
+        "unattempted": 0
+      }
+    ],
+    "simulation_combinations": 160,
+    "source_commit": "073da696555a7370ac292f665446695dbd20560f",
+    "source_hashes": {
+      "evidence/jev-semantic-gate/development.json": "9308ebfbcf82d2f62f4cd75404231444719aeeb7a58b4989abdf24c9df1288b2",
+      "evidence/jev-semantic-gate/spec.json": "0e61af04ee3433745465f40eec0af3e2505ec41729fce8d25f3855c2628b6cea",
+      "experiments/ZL-020-protocol.md": "07d283fe320279cafbdd5d03cfe07b091f50d06696d7735c2faeec4ea32ea6a2",
+      "scripts/build_semantic_gate.py": "aa309d7f054e92b3f8329af0e15643db176c37fc76a89e2dd1f28cc6180b8752",
+      "scripts/freeze_semantic_gate.py": "a42dd83b0dc138b3f83b61a62e2973136f529ea6eef1460929fa89b2bfff259c",
+      "scripts/run_semantic_gate.py": "3f7cf7a41fd8f731e1cca168071c9e39adfea2788df7e5a1228fbfb771d9af59",
+      "scripts/run_semantics.py": "682ee1157ab857443c60c78c569b6a3a3255cbe268bca7f12b486b5e3db0ed8c",
+      "scripts/semantic_gate.html": "523bfe6a92e2ae75e737859f880cc94fa6bed15fc064a52b85abfc329214f411",
+      "scripts/semantic_gate.py": "1f4291cafe5bc66a40263ed25fc04938c3cd51a9870a68cc6108c8a347ccf50c",
+      "scripts/semantic_gate_io.py": "2261d7d58314b5d4dc220ad26459b477afc54337e1c85a8a5fa40bf15a0b256c",
+      "scripts/semantic_gate_parser.py": "93508a222c8dcc684424fa4ecd506f39039ce0109884580bec72699454015a07",
+      "scripts/semantics_core.py": "c65de785230468fb72aa959bdc25a13dea68ff93290ae341a838fd70169800ef",
+      "scripts/semantics_io.py": "d656cfe2b57211fc7c17e580d4ca4468a79a46b2c5dd419842a33b3bb845b2c1",
+      "scripts/test_semantic_gate.py": "13101e488672817e76fe8790bcaee16e35d594f9bd8ee891355dbb49713ddc10",
+      "scripts/test_semantic_gate_export.py": "6a49383c072b4b0d190374a2041223abfaa55c1ef80bbbf620a4e3f32c11f02f",
+      "scripts/test_semantic_gate_freeze.py": "64915b0c3a8339577a30118e94ff27b4b994773fb17a0521f26a1c1775a1dae3",
+      "scripts/test_semantic_gate_io.py": "b70b746ac7fb2632e64afa6b27330a15be9d6862a8ed46fce6c118948beaf530",
+      "scripts/test_semantic_gate_parser.py": "2921d2a38ae3be83c7858780d375a3c529249d6cdb8fcd9c7822e975caf250e1",
+      "scripts/test_semantic_gate_runner.py": "554a5e8abf58883454f5c5ad922ccfc2455bd41ad8dc6fd7dde6072dc664bbf8"
+    },
+    "source_manifest_files_verified": 19,
+    "source_tree": "3b70ce3455c797760a9e6e7fe5a55001ae98b59a"
+  },
+  "additional_verification": {
+    "source_verification": "073da696555a7370ac292f665446695dbd20560f",
+    "source_verify_exit": 0,
+    "worktree_status": "",
+    "gold_action_counts": {
+      "ASK": 16,
+      "TOGETHER_WEST": 2,
+      "SOLO_WEST": 2,
+      "SOLO_EAST": 2,
+      "WAIT": 2
+    },
+    "world_true_counts": {
+      "mara_at_depot": 16,
+      "ash_in_east": 14,
+      "west_blocked": 12
+    },
+    "gold_traces": [
+      {
+        "id": "zl020-s01a",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s01b",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s02a",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s02b",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s03a",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s03b",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s04a",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s04b",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s05a",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s05b",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s06a",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s06b",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s07a",
+        "action": "TOGETHER_WEST",
+        "trace": {
+          "decision": {
+            "action": "move",
+            "route": [
+              "Yard",
+              "Depot",
+              "West",
+              "Shelter"
+            ],
+            "collect": true
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            },
+            {
+              "tick": 1,
+              "location": "Depot",
+              "companion": true,
+              "event": "collected_Mara"
+            },
+            {
+              "tick": 2,
+              "location": "West",
+              "companion": true,
+              "event": "move"
+            },
+            {
+              "tick": 3,
+              "location": "Shelter",
+              "companion": true,
+              "event": "shelter"
+            }
+          ],
+          "outcome": "shelter",
+          "goal_completed": true
+        }
+      },
+      {
+        "id": "zl020-s07b",
+        "action": "TOGETHER_WEST",
+        "trace": {
+          "decision": {
+            "action": "move",
+            "route": [
+              "Yard",
+              "Depot",
+              "West",
+              "Shelter"
+            ],
+            "collect": true
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            },
+            {
+              "tick": 1,
+              "location": "Depot",
+              "companion": true,
+              "event": "collected_Mara"
+            },
+            {
+              "tick": 2,
+              "location": "West",
+              "companion": true,
+              "event": "move"
+            },
+            {
+              "tick": 3,
+              "location": "Shelter",
+              "companion": true,
+              "event": "shelter"
+            }
+          ],
+          "outcome": "shelter",
+          "goal_completed": true
+        }
+      },
+      {
+        "id": "zl020-s08a",
+        "action": "SOLO_WEST",
+        "trace": {
+          "decision": {
+            "action": "move",
+            "route": [
+              "Yard",
+              "Depot",
+              "West",
+              "Shelter"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            },
+            {
+              "tick": 1,
+              "location": "Depot",
+              "companion": false,
+              "event": "move"
+            },
+            {
+              "tick": 2,
+              "location": "West",
+              "companion": false,
+              "event": "move"
+            },
+            {
+              "tick": 3,
+              "location": "Shelter",
+              "companion": false,
+              "event": "shelter"
+            }
+          ],
+          "outcome": "shelter",
+          "goal_completed": true
+        }
+      },
+      {
+        "id": "zl020-s08b",
+        "action": "SOLO_WEST",
+        "trace": {
+          "decision": {
+            "action": "move",
+            "route": [
+              "Yard",
+              "Depot",
+              "West",
+              "Shelter"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            },
+            {
+              "tick": 1,
+              "location": "Depot",
+              "companion": false,
+              "event": "move"
+            },
+            {
+              "tick": 2,
+              "location": "West",
+              "companion": false,
+              "event": "move"
+            },
+            {
+              "tick": 3,
+              "location": "Shelter",
+              "companion": false,
+              "event": "shelter"
+            }
+          ],
+          "outcome": "shelter",
+          "goal_completed": true
+        }
+      },
+      {
+        "id": "zl020-s09a",
+        "action": "SOLO_EAST",
+        "trace": {
+          "decision": {
+            "action": "move",
+            "route": [
+              "Yard",
+              "East",
+              "Shelter"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            },
+            {
+              "tick": 1,
+              "location": "East",
+              "companion": false,
+              "event": "move"
+            },
+            {
+              "tick": 2,
+              "location": "Shelter",
+              "companion": false,
+              "event": "shelter"
+            }
+          ],
+          "outcome": "shelter",
+          "goal_completed": true
+        }
+      },
+      {
+        "id": "zl020-s09b",
+        "action": "SOLO_EAST",
+        "trace": {
+          "decision": {
+            "action": "move",
+            "route": [
+              "Yard",
+              "East",
+              "Shelter"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            },
+            {
+              "tick": 1,
+              "location": "East",
+              "companion": false,
+              "event": "move"
+            },
+            {
+              "tick": 2,
+              "location": "Shelter",
+              "companion": false,
+              "event": "shelter"
+            }
+          ],
+          "outcome": "shelter",
+          "goal_completed": true
+        }
+      },
+      {
+        "id": "zl020-s10a",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s10b",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s11a",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s11b",
+        "action": "ASK",
+        "trace": {
+          "decision": {
+            "action": "ask",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "ask",
+          "goal_completed": false
+        }
+      },
+      {
+        "id": "zl020-s12a",
+        "action": "WAIT",
+        "trace": {
+          "decision": {
+            "action": "wait",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "wait",
+          "goal_completed": true
+        }
+      },
+      {
+        "id": "zl020-s12b",
+        "action": "WAIT",
+        "trace": {
+          "decision": {
+            "action": "wait",
+            "route": [
+              "Yard"
+            ],
+            "collect": false
+          },
+          "frames": [
+            {
+              "tick": 0,
+              "location": "Yard",
+              "companion": false,
+              "event": "initial"
+            }
+          ],
+          "outcome": "wait",
+          "goal_completed": true
+        }
+      }
+    ],
+    "checked_utc": "2026-09-21T05:07:00.719011+00:00"
+  },
+  "public_docs_read_only": [
+    "https://docs.typesafe.ai/llms.txt",
+    "https://docs.typesafe.ai/api.md",
+    "https://docs.typesafe.ai/primitives/choice.md"
+  ],
+  "not_exercised": [
+    "paid inference",
+    "new heldout parser/comparator performance",
+    "live transport",
+    "browser/320px behavior",
+    "deployment/publication"
+  ],
+  "changes": {
+    "repository": [],
+    "gold_or_authoring_assets": [],
+    "review_outputs": [
+      "/Users/tr/Projects/zombie-lab-evidence/ZL-020-pre-admission-review.md",
+      "/Users/tr/Projects/zombie-lab-evidence/ZL-020-pre-admission-review.json"
+    ],
+    "scratch_only": [
+      "/tmp/zl020-pre-admission-probe-073da69.py",
+      "/tmp/zl020-pre-admission-raw-receipts-073da69.json"
+    ]
+  },
+  "reusable_review_procedure": "Bind new source and authored assets independently; reannotate every text against the actual new frozen rubric before comparing gold, then verify paired labels, worlds, coverage and label-free request surfaces. Treat heldout grammar misses as experimental results, never an invitation to tune after exposure."
+}

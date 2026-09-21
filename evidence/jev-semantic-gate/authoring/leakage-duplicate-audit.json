@@ -1,0 +1,340 @@
+{
+  "created_at_utc": "2026-09-21T05:01:05.103492+00:00",
+  "corpus_scope": {
+    "new_rows": 24,
+    "new_scenario_groups": 12,
+    "legacy_development_texts": 6,
+    "legacy_test_texts": 20,
+    "legacy_total_texts": 26,
+    "new_legacy_pairs_compared": 624,
+    "legacy_test_gold_read": false
+  },
+  "method": {
+    "normalization": "casefold; ASCII alphanumeric/underscore token extraction; join with single spaces",
+    "similarity": "difflib token SequenceMatcher with autojunk=False; set Jaccard of five-token shingles",
+    "screen_thresholds": {
+      "token_sequence_ratio": 0.8,
+      "five_token_shingle_jaccard": 0.5
+    },
+    "flag_if": "either threshold met; thresholds screen for review, not statistical leakage proof"
+  },
+  "new_vs_legacy": {
+    "exact_duplicates": [],
+    "normalized_duplicates": [],
+    "near_duplicate_flags": [],
+    "nearest_legacy_for_each_row": [
+      {
+        "new_id": "zl020-s01a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 5,
+        "token_sequence_ratio": 0.461538,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s01b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 5,
+        "token_sequence_ratio": 0.464286,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s02a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 1,
+        "token_sequence_ratio": 0.5,
+        "five_token_shingle_jaccard": 0.037037
+      },
+      {
+        "new_id": "zl020-s02b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 12,
+        "token_sequence_ratio": 0.320988,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s03a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 5,
+        "token_sequence_ratio": 0.545455,
+        "five_token_shingle_jaccard": 0.09434
+      },
+      {
+        "new_id": "zl020-s03b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 3,
+        "token_sequence_ratio": 0.435897,
+        "five_token_shingle_jaccard": 0.014493
+      },
+      {
+        "new_id": "zl020-s04a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/development.json",
+        "legacy_text_index_1based": 1,
+        "token_sequence_ratio": 0.561404,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s04b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 2,
+        "token_sequence_ratio": 0.378378,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s05a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/development.json",
+        "legacy_text_index_1based": 1,
+        "token_sequence_ratio": 0.533333,
+        "five_token_shingle_jaccard": 0.019608
+      },
+      {
+        "new_id": "zl020-s05b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/development.json",
+        "legacy_text_index_1based": 1,
+        "token_sequence_ratio": 0.472222,
+        "five_token_shingle_jaccard": 0.015873
+      },
+      {
+        "new_id": "zl020-s06a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/development.json",
+        "legacy_text_index_1based": 1,
+        "token_sequence_ratio": 0.520548,
+        "five_token_shingle_jaccard": 0.048387
+      },
+      {
+        "new_id": "zl020-s06b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 6,
+        "token_sequence_ratio": 0.377778,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s07a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 15,
+        "token_sequence_ratio": 0.518519,
+        "five_token_shingle_jaccard": 0.013889
+      },
+      {
+        "new_id": "zl020-s07b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 19,
+        "token_sequence_ratio": 0.410959,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s08a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 1,
+        "token_sequence_ratio": 0.52,
+        "five_token_shingle_jaccard": 0.02439
+      },
+      {
+        "new_id": "zl020-s08b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 18,
+        "token_sequence_ratio": 0.424242,
+        "five_token_shingle_jaccard": 0.054545
+      },
+      {
+        "new_id": "zl020-s09a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/development.json",
+        "legacy_text_index_1based": 1,
+        "token_sequence_ratio": 0.483871,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s09b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 6,
+        "token_sequence_ratio": 0.416667,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s10a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 1,
+        "token_sequence_ratio": 0.454545,
+        "five_token_shingle_jaccard": 0.017544
+      },
+      {
+        "new_id": "zl020-s10b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/development.json",
+        "legacy_text_index_1based": 1,
+        "token_sequence_ratio": 0.30137,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s11a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 11,
+        "token_sequence_ratio": 0.484848,
+        "five_token_shingle_jaccard": 0.017544
+      },
+      {
+        "new_id": "zl020-s11b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 5,
+        "token_sequence_ratio": 0.347826,
+        "five_token_shingle_jaccard": 0.016667
+      },
+      {
+        "new_id": "zl020-s12a",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json",
+        "legacy_text_index_1based": 15,
+        "token_sequence_ratio": 0.146341,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "new_id": "zl020-s12b",
+        "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/development.json",
+        "legacy_text_index_1based": 4,
+        "token_sequence_ratio": 0.258824,
+        "five_token_shingle_jaccard": 0.0
+      }
+    ],
+    "maximum_token_sequence_match": {
+      "new_id": "zl020-s04a",
+      "legacy_source": "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/development.json",
+      "legacy_text_index_1based": 1,
+      "token_sequence_ratio": 0.561404,
+      "five_token_shingle_jaccard": 0.0
+    }
+  },
+  "within_new": {
+    "exact_duplicates": [],
+    "normalized_duplicates": [],
+    "cross_group_near_duplicate_flags": [],
+    "maximum_cross_group_token_sequence_match": {
+      "left": "zl020-s06a",
+      "right": "zl020-s07a",
+      "same_group": false,
+      "token_sequence_ratio": 0.58,
+      "five_token_shingle_jaccard": 0.010989
+    },
+    "within_pair_similarity": [
+      {
+        "left": "zl020-s01a",
+        "right": "zl020-s01b",
+        "same_group": true,
+        "token_sequence_ratio": 0.375,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "left": "zl020-s02a",
+        "right": "zl020-s02b",
+        "same_group": true,
+        "token_sequence_ratio": 0.224719,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "left": "zl020-s03a",
+        "right": "zl020-s03b",
+        "same_group": true,
+        "token_sequence_ratio": 0.357895,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "left": "zl020-s04a",
+        "right": "zl020-s04b",
+        "same_group": true,
+        "token_sequence_ratio": 0.315789,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "left": "zl020-s05a",
+        "right": "zl020-s05b",
+        "same_group": true,
+        "token_sequence_ratio": 0.372093,
+        "five_token_shingle_jaccard": 0.012987
+      },
+      {
+        "left": "zl020-s06a",
+        "right": "zl020-s06b",
+        "same_group": true,
+        "token_sequence_ratio": 0.301887,
+        "five_token_shingle_jaccard": 0.065217
+      },
+      {
+        "left": "zl020-s07a",
+        "right": "zl020-s07b",
+        "same_group": true,
+        "token_sequence_ratio": 0.4,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "left": "zl020-s08a",
+        "right": "zl020-s08b",
+        "same_group": true,
+        "token_sequence_ratio": 0.363636,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "left": "zl020-s09a",
+        "right": "zl020-s09b",
+        "same_group": true,
+        "token_sequence_ratio": 0.337662,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "left": "zl020-s10a",
+        "right": "zl020-s10b",
+        "same_group": true,
+        "token_sequence_ratio": 0.350515,
+        "five_token_shingle_jaccard": 0.022989
+      },
+      {
+        "left": "zl020-s11a",
+        "right": "zl020-s11b",
+        "same_group": true,
+        "token_sequence_ratio": 0.25,
+        "five_token_shingle_jaccard": 0.0
+      },
+      {
+        "left": "zl020-s12a",
+        "right": "zl020-s12b",
+        "same_group": true,
+        "token_sequence_ratio": 0.092593,
+        "five_token_shingle_jaccard": 0.0
+      }
+    ]
+  },
+  "input_surface": {
+    "exact_allowed_keys": [
+      "id",
+      "group",
+      "stratum",
+      "text"
+    ],
+    "all_rows_pass": true,
+    "gold_world_rationale_fields_in_inputs": false,
+    "ids_groups_strata_are_evaluator_only": true,
+    "forged_answer_labels_inside_s12_text": "Intentional inert malicious command content, not copied evaluator annotations. Only the actual text should enter requests."
+  },
+  "source_sha256": {
+    "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/spec.json": "3b9f79ff104d467cdb321c45293f986628cda016c4096fd6615d6c5ef701f16e",
+    "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/development.json": "c4b60f03d74bcb33746b9015b7020a73cd7aa8875d6575bec64232cc4676c0a1",
+    "/Users/tr/Projects/zombie-lab-jev-semantics/evidence/jev-semantics/data/test-inputs.json": "ff64e3f72462e8ab80ecd23fe968cc43e6bfea008f8be945c3378fdaaf336272",
+    "/Users/tr/Projects/zombie-lab-jev-semantics/experiments/ZL-019-protocol.md": "6fe8828516b33817ed87d2d840015c809c7fffe60103edd5ff0351baf07a610d"
+  },
+  "new_primary_sha256": {
+    "inputs.json": "dc42a6270c2d9628cade3f726f720f3dbcd8b79c05fee2ff31c07b39392261e4",
+    "gold.json": "d5edb0e418deb59c35fffc86269bab9cb5b143472e864e43b56e34cbd61800a1"
+  },
+  "independence": {
+    "new_implementation_prompts_parser_read": false,
+    "jev_raw_output_files_read": false,
+    "model_or_parser_executions": 0,
+    "paid_api_calls": 0,
+    "gold_sent_to_comparator": false,
+    "historical_test_labels_read_from_test_gold": false,
+    "historical_review_exposure": "A too-broad coverage search incidentally returned legacy aggregate counts, label summaries, and a narrative of a Jev clarification answer including probabilities. Original response files were not opened. This author was not completely blind to historical outcomes; new implementation and outputs remained unobserved."
+  },
+  "limitations": [
+    "Authored purposive coverage, not a representative sample.",
+    "Not a provider-training exclusion guarantee.",
+    "No exact or lexical overlap screen can prove semantic novelty or complete leakage absence.",
+    "Shared scene vocabulary and old development examples are permitted; new paraphrases are intentionally paired and must not be split.",
+    "Parent must review annotations and enforce source/development freeze before holdout release.",
+    "Coverage and witness checks are protocol-only data validation, not model-performance measurements."
+  ]
+}

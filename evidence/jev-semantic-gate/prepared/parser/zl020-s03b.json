@@ -1,0 +1,45 @@
+{
+  "interpretation": {
+    "ash_in_east": "known",
+    "clarification": "none",
+    "mara_at_depot": "unreported",
+    "policy": "together",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "that statement also denies ash's presence in the east passage, although i personally see ash there.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": false,
+      "span": "ash's presence in the east"
+    },
+    {
+      "clause": "i checked the west passage and found no obstruction.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "west passage and found no obstruction"
+    }
+  ],
+  "policy_matches": [
+    {
+      "clause": "evacuate with mara;",
+      "policy": "together",
+      "span": "evacuate with mara"
+    }
+  ],
+  "recognized_policies": [
+    "together"
+  ],
+  "skipped_clauses": [
+    {
+      "clause": "evacuate with mara;",
+      "reason": "nonassertion_or_command"
+    },
+    {
+      "clause": "do not leave her behind.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "interpretation": {
+    "ash_in_east": "known",
+    "clarification": "evidence",
+    "mara_at_depot": "suspected_positive",
+    "policy": "together",
+    "west_blocked": "suspected_negative"
+  },
+  "matched_claims": [
+    {
+      "clause": "a received account puts mara at the depot, denies ash is in the east passage, and calls the west passage unobstructed.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": true,
+      "span": "mara at the depot"
+    },
+    {
+      "clause": "a received account puts mara at the depot, denies ash is in the east passage, and calls the west passage unobstructed.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": true,
+      "span": "ash is in the east"
+    },
+    {
+      "clause": "a received account puts mara at the depot, denies ash is in the east passage, and calls the west passage unobstructed.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": true,
+      "span": "west passage unobstructed"
+    },
+    {
+      "clause": "my own inspection independently establishes those same facts: mara there, no ash in east, no obstruction in west.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": false,
+      "span": "ash in east"
+    }
+  ],
+  "policy_matches": [
+    {
+      "clause": "bring mara to shelter with you.",
+      "policy": "together",
+      "span": "bring mara"
+    }
+  ],
+  "recognized_policies": [
+    "together"
+  ],
+  "skipped_clauses": [
+    {
+      "clause": "bring mara to shelter with you.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

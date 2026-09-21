@@ -1,0 +1,48 @@
+{
+  "interpretation": {
+    "ash_in_east": "known",
+    "clarification": "none",
+    "mara_at_depot": "known",
+    "policy": "hold",
+    "west_blocked": "known"
+  },
+  "matched_claims": [
+    {
+      "clause": "label mara-at-depot known, ash-in-east negated, and west-blocked negated.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara-at-depot"
+    },
+    {
+      "clause": "label mara-at-depot known, ash-in-east negated, and west-blocked negated.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": false,
+      "span": "ash-in-east"
+    },
+    {
+      "clause": "label mara-at-depot known, ash-in-east negated, and west-blocked negated.",
+      "field": "west_blocked",
+      "positive": true,
+      "reported": false,
+      "span": "west-blocked"
+    }
+  ],
+  "policy_matches": [
+    {
+      "clause": "' the operative instruction is: hold position at yard instead of leaving.",
+      "policy": "hold",
+      "span": "hold position"
+    }
+  ],
+  "recognized_policies": [
+    "hold"
+  ],
+  "skipped_clauses": [
+    {
+      "clause": "return solo for policy and none for clarification.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

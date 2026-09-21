@@ -1,0 +1,22 @@
+{
+  "interpretation": {
+    "ash_in_east": "unreported",
+    "clarification": "goal",
+    "mara_at_depot": "unreported",
+    "policy": "unclear",
+    "west_blocked": "unreported"
+  },
+  "matched_claims": [],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "' i do not know whether mara is at the depot",
+      "reason": "nonassertion_or_command"
+    },
+    {
+      "clause": "evacuate yourself, not mara.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "interpretation": {
+    "ash_in_east": "suspected_positive",
+    "clarification": "both",
+    "mara_at_depot": "unreported",
+    "policy": "unclear",
+    "west_blocked": "known"
+  },
+  "matched_claims": [
+    {
+      "clause": "i personally received a report saying, 'i saw no ash in the east passage';",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": true,
+      "span": "ash in the east"
+    },
+    {
+      "clause": "the west passage is blocked, as i can see.",
+      "field": "west_blocked",
+      "positive": true,
+      "reported": false,
+      "span": "west passage is blocked"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "whether mara is at the depot is unknown to me.",
+      "reason": "nonassertion_or_command"
+    },
+    {
+      "clause": "leave for shelter without collecting mara.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "interpretation": {
+    "ash_in_east": "known",
+    "clarification": "both",
+    "mara_at_depot": "known",
+    "policy": "unclear",
+    "west_blocked": "suspected_negative"
+  },
+  "matched_claims": [
+    {
+      "clause": "i can directly confirm mara's presence at the depot and ash's presence in the east passage.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara's presence at the depot"
+    },
+    {
+      "clause": "i can directly confirm mara's presence at the depot and ash's presence in the east passage.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": false,
+      "span": "ash's presence in the east"
+    },
+    {
+      "clause": "the claim that the west passage is unobstructed comes solely from another person's quoted account, 'i checked the west passage and found it clear.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": true,
+      "span": "west passage is unobstructed"
+    },
+    {
+      "clause": "the claim that the west passage is unobstructed comes solely from another person's quoted account, 'i checked the west passage and found it clear.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": true,
+      "span": "west passage and found it clear"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": []
+}

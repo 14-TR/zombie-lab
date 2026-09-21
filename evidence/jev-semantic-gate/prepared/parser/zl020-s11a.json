@@ -1,0 +1,33 @@
+{
+  "interpretation": {
+    "ash_in_east": "suspected_positive",
+    "clarification": "both",
+    "mara_at_depot": "suspected_positive",
+    "policy": "unclear",
+    "west_blocked": "unreported"
+  },
+  "matched_claims": [
+    {
+      "clause": "mara might be at the depot.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": true,
+      "span": "mara might be at the depot"
+    },
+    {
+      "clause": "a report says ash is in the east passage.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": true,
+      "span": "ash is in the east"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "i do not know whether the west passage is blocked.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

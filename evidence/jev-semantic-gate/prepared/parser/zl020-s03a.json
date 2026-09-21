@@ -1,0 +1,47 @@
+{
+  "interpretation": {
+    "ash_in_east": "conflicting",
+    "clarification": "both",
+    "mara_at_depot": "suspected_negative",
+    "policy": "unclear",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "someone else's report reads, 'mara is not at the depot;",
+      "field": "mara_at_depot",
+      "positive": false,
+      "reported": true,
+      "span": "mara is not at the depot"
+    },
+    {
+      "clause": "ash is not in the east passage.",
+      "field": "ash_in_east",
+      "positive": false,
+      "reported": false,
+      "span": "ash is not in the east"
+    },
+    {
+      "clause": "' i can see ash in the east passage myself, and my own inspection confirms the west passage is clear.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": false,
+      "span": "ash in the east"
+    },
+    {
+      "clause": "' i can see ash in the east passage myself, and my own inspection confirms the west passage is clear.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "west passage is clear"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "get yourself and mara to shelter together.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

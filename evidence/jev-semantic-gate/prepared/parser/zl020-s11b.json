@@ -1,0 +1,33 @@
+{
+  "interpretation": {
+    "ash_in_east": "suspected_positive",
+    "clarification": "both",
+    "mara_at_depot": "suspected_positive",
+    "policy": "unclear",
+    "west_blocked": "unreported"
+  },
+  "matched_claims": [
+    {
+      "clause": "my guess places mara at the depot, and someone else's account places ash in the east passage.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": true,
+      "span": "mara at the depot"
+    },
+    {
+      "clause": "my guess places mara at the depot, and someone else's account places ash in the east passage.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": true,
+      "span": "ash in the east"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "whether west is obstructed is unknown to me.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

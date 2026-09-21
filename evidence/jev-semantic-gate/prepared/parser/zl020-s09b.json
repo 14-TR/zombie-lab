@@ -1,0 +1,33 @@
+{
+  "interpretation": {
+    "ash_in_east": "unreported",
+    "clarification": "goal",
+    "mara_at_depot": "known",
+    "policy": "unclear",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "the companion, mara, is visible to me at the depot.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara, is visible to me at the depot"
+    },
+    {
+      "clause": "in the east passage i verified the zombie's absence, and my inspection of the west passage found it unobstructed.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "west passage found it unobstructed"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "get yourself to shelter without taking her along.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

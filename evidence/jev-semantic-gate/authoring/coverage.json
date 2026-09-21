@@ -1,0 +1,228 @@
+{
+  "status": "authored_purposive_holdout_not_model_results",
+  "rows": 24,
+  "scenario_groups": 12,
+  "paraphrases_per_group": 2,
+  "field_label_counts_rows": {
+    "ash_in_east": {
+      "conflicting": 2,
+      "known": 4,
+      "negated": 8,
+      "suspected_negative": 2,
+      "suspected_positive": 2,
+      "unreported": 6
+    },
+    "clarification": {
+      "both": 2,
+      "evidence": 10,
+      "goal": 4,
+      "none": 8
+    },
+    "mara_at_depot": {
+      "conflicting": 2,
+      "known": 10,
+      "negated": 2,
+      "suspected_negative": 2,
+      "suspected_positive": 2,
+      "unreported": 6
+    },
+    "policy": {
+      "hold": 2,
+      "solo": 8,
+      "together": 8,
+      "unclear": 6
+    },
+    "west_blocked": {
+      "conflicting": 2,
+      "known": 4,
+      "negated": 10,
+      "suspected_negative": 2,
+      "suspected_positive": 2,
+      "unreported": 4
+    }
+  },
+  "field_label_counts_groups": {
+    "ash_in_east": {
+      "conflicting": 1,
+      "known": 2,
+      "negated": 4,
+      "suspected_negative": 1,
+      "suspected_positive": 1,
+      "unreported": 3
+    },
+    "clarification": {
+      "both": 1,
+      "evidence": 5,
+      "goal": 2,
+      "none": 4
+    },
+    "mara_at_depot": {
+      "conflicting": 1,
+      "known": 5,
+      "negated": 1,
+      "suspected_negative": 1,
+      "suspected_positive": 1,
+      "unreported": 3
+    },
+    "policy": {
+      "hold": 1,
+      "solo": 4,
+      "together": 4,
+      "unclear": 3
+    },
+    "west_blocked": {
+      "conflicting": 1,
+      "known": 2,
+      "negated": 5,
+      "suspected_negative": 1,
+      "suspected_positive": 1,
+      "unreported": 2
+    }
+  },
+  "stratum_counts_rows": {
+    "agreeing_sources_benign_together": 2,
+    "goal_only_incompatible": 2,
+    "goal_only_missing": 2,
+    "inert_malicious_instruction_and_hold": 2,
+    "opposing_sources_mara_and_west": 2,
+    "quoted_west_clearance_not_firsthand": 2,
+    "report_receipt_is_not_verified_ash_absence": 2,
+    "reported_mara_denial_and_ash_conflict": 2,
+    "resolved_referents_and_negated_companion_goal": 2,
+    "uncertain_claims_and_out_of_scope_goal": 2,
+    "uncertain_west_irrelevant_to_safe_east": 2,
+    "wrong_entity_exact_proposition_binding": 2
+  },
+  "groups": [
+    {
+      "group": "zl020-s01",
+      "stratum": "goal_only_missing",
+      "ids": [
+        "zl020-s01a",
+        "zl020-s01b"
+      ]
+    },
+    {
+      "group": "zl020-s02",
+      "stratum": "goal_only_incompatible",
+      "ids": [
+        "zl020-s02a",
+        "zl020-s02b"
+      ]
+    },
+    {
+      "group": "zl020-s03",
+      "stratum": "reported_mara_denial_and_ash_conflict",
+      "ids": [
+        "zl020-s03a",
+        "zl020-s03b"
+      ]
+    },
+    {
+      "group": "zl020-s04",
+      "stratum": "uncertain_west_irrelevant_to_safe_east",
+      "ids": [
+        "zl020-s04a",
+        "zl020-s04b"
+      ]
+    },
+    {
+      "group": "zl020-s05",
+      "stratum": "quoted_west_clearance_not_firsthand",
+      "ids": [
+        "zl020-s05a",
+        "zl020-s05b"
+      ]
+    },
+    {
+      "group": "zl020-s06",
+      "stratum": "opposing_sources_mara_and_west",
+      "ids": [
+        "zl020-s06a",
+        "zl020-s06b"
+      ]
+    },
+    {
+      "group": "zl020-s07",
+      "stratum": "agreeing_sources_benign_together",
+      "ids": [
+        "zl020-s07a",
+        "zl020-s07b"
+      ]
+    },
+    {
+      "group": "zl020-s08",
+      "stratum": "wrong_entity_exact_proposition_binding",
+      "ids": [
+        "zl020-s08a",
+        "zl020-s08b"
+      ]
+    },
+    {
+      "group": "zl020-s09",
+      "stratum": "resolved_referents_and_negated_companion_goal",
+      "ids": [
+        "zl020-s09a",
+        "zl020-s09b"
+      ]
+    },
+    {
+      "group": "zl020-s10",
+      "stratum": "report_receipt_is_not_verified_ash_absence",
+      "ids": [
+        "zl020-s10a",
+        "zl020-s10b"
+      ]
+    },
+    {
+      "group": "zl020-s11",
+      "stratum": "uncertain_claims_and_out_of_scope_goal",
+      "ids": [
+        "zl020-s11a",
+        "zl020-s11b"
+      ]
+    },
+    {
+      "group": "zl020-s12",
+      "stratum": "inert_malicious_instruction_and_hold",
+      "ids": [
+        "zl020-s12a",
+        "zl020-s12b"
+      ]
+    }
+  ],
+  "world_true_counts_rows": {
+    "mara_at_depot": 16,
+    "ash_in_east": 14,
+    "west_blocked": 12
+  },
+  "world_false_counts_rows": {
+    "mara_at_depot": 8,
+    "ash_in_east": 10,
+    "west_blocked": 12
+  },
+  "gold_contract_action_counts_rows": {
+    "ASK": 16,
+    "SOLO_EAST": 2,
+    "SOLO_WEST": 2,
+    "TOGETHER_WEST": 2,
+    "WAIT": 2
+  },
+  "witness_categories": 3,
+  "witness_linked_rows": 6,
+  "verification": {
+    "exact_input_whitelist": true,
+    "exact_gold_schema": true,
+    "world_values_are_json_booleans": true,
+    "all_ids_join_exactly": true,
+    "all_pairs_share_gold_and_world": true,
+    "paired_texts_differ": true,
+    "all_clarification_fields_follow_contract": true,
+    "all_six_labels_per_fact": true,
+    "all_four_policies": true,
+    "all_four_clarifications": true,
+    "witness_worlds_match_gold": true,
+    "witness_consequences_checked_against_protocol_only": true
+  },
+  "limits": "Contract-only validation, not testing any production simulator, parser, Jev or comparator. Pair meaning equivalence and annotation correctness still require parent review."
+}

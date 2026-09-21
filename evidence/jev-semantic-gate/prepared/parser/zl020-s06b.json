@@ -1,0 +1,47 @@
+{
+  "interpretation": {
+    "ash_in_east": "known",
+    "clarification": "goal",
+    "mara_at_depot": "known",
+    "policy": "unclear",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "another person's account denies that mara is at the depot and claims an obstruction in the west passage.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": true,
+      "span": "mara is at the depot"
+    },
+    {
+      "clause": "my own observation places mara at the depot and ash in the east passage;",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara at the depot"
+    },
+    {
+      "clause": "my own observation places mara at the depot and ash in the east passage;",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": false,
+      "span": "ash in the east"
+    },
+    {
+      "clause": "my own inspection finds the west passage unobstructed.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "west passage unobstructed"
+    }
+  ],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "get to shelter together with mara.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

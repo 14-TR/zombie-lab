@@ -1,0 +1,36 @@
+{
+  "interpretation": {
+    "ash_in_east": "known",
+    "clarification": "none",
+    "mara_at_depot": "known",
+    "policy": "together",
+    "west_blocked": "unreported"
+  },
+  "matched_claims": [
+    {
+      "clause": "mara at the depot and ash in the east passage are both in my sight.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara at the depot"
+    },
+    {
+      "clause": "mara at the depot and ash in the east passage are both in my sight.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": false,
+      "span": "ash in the east"
+    }
+  ],
+  "policy_matches": [
+    {
+      "clause": "' evacuate with mara.",
+      "policy": "together",
+      "span": "evacuate with mara"
+    }
+  ],
+  "recognized_policies": [
+    "together"
+  ],
+  "skipped_clauses": []
+}

@@ -1,0 +1,18 @@
+{
+  "interpretation": {
+    "ash_in_east": "unreported",
+    "clarification": "goal",
+    "mara_at_depot": "unreported",
+    "policy": "unclear",
+    "west_blocked": "unreported"
+  },
+  "matched_claims": [],
+  "policy_matches": [],
+  "recognized_policies": [],
+  "skipped_clauses": [
+    {
+      "clause": "whether the east passage contains ash is unknown to me.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

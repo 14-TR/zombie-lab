@@ -1,0 +1,62 @@
+{
+  "interpretation": {
+    "ash_in_east": "known",
+    "clarification": "evidence",
+    "mara_at_depot": "conflicting",
+    "policy": "together",
+    "west_blocked": "conflicting"
+  },
+  "matched_claims": [
+    {
+      "clause": "i see mara at the depot and ash in the east passage, and i have inspected the west passage and found it clear.",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara at the depot"
+    },
+    {
+      "clause": "i see mara at the depot and ash in the east passage, and i have inspected the west passage and found it clear.",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": false,
+      "span": "ash in the east"
+    },
+    {
+      "clause": "i see mara at the depot and ash in the east passage, and i have inspected the west passage and found it clear.",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "west passage and found it clear"
+    },
+    {
+      "clause": "a separate report says mara is not at the depot and the west passage is blocked.",
+      "field": "mara_at_depot",
+      "positive": false,
+      "reported": true,
+      "span": "mara is not at the depot"
+    },
+    {
+      "clause": "a separate report says mara is not at the depot and the west passage is blocked.",
+      "field": "west_blocked",
+      "positive": true,
+      "reported": true,
+      "span": "west passage is blocked"
+    }
+  ],
+  "policy_matches": [
+    {
+      "clause": "evacuate with mara.",
+      "policy": "together",
+      "span": "evacuate with mara"
+    }
+  ],
+  "recognized_policies": [
+    "together"
+  ],
+  "skipped_clauses": [
+    {
+      "clause": "evacuate with mara.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "interpretation": {
+    "ash_in_east": "unreported",
+    "clarification": "none",
+    "mara_at_depot": "unreported",
+    "policy": "solo",
+    "west_blocked": "known"
+  },
+  "matched_claims": [
+    {
+      "clause": "i can see that the west passage is blocked.",
+      "field": "west_blocked",
+      "positive": true,
+      "reported": false,
+      "span": "west passage is blocked"
+    }
+  ],
+  "policy_matches": [
+    {
+      "clause": "carry out both orders: evacuate without mara, and stay at yard rather than evacuating.",
+      "policy": "solo",
+      "span": "evacuate without mara"
+    }
+  ],
+  "recognized_policies": [
+    "solo"
+  ],
+  "skipped_clauses": [
+    {
+      "clause": "i do not know whether ash is in the east passage.",
+      "reason": "nonassertion_or_command"
+    }
+  ]
+}
