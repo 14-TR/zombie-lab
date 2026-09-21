@@ -1,0 +1,7 @@
+{
+  "sourceCommit": "309bd7377104a1e47752152fd39e3ac5f870e805",
+  "command": "node --test --test-concurrency=1 test-node.cjs scripts/test-*.cjs",
+  "exit": 0,
+  "elapsedMs": 158140.99825,
+  "childrenPeakRSSBytes": 256720896
+}

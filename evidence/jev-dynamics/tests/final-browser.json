@@ -1,0 +1,55 @@
+{
+  "startedAt": "2026-09-21T03:51:07.688Z",
+  "site": "/Users/tr/Projects/zombie-lab-evidence/ZL-018-site",
+  "sourceCommit": "309bd7377104a1e47752152fd39e3ac5f870e805",
+  "dataSHA256": "6f49eabae1a67da999654dceb2358e2f8cc166ab0946491446ba22a6b1dda82d",
+  "widths": [
+    {
+      "width": 320,
+      "requests": 24,
+      "boardFrames": 288,
+      "markers": 619,
+      "linkChecks": 216,
+      "minGlyphPx": 14.666666666666666,
+      "overlapPairs": 0,
+      "controls": "select,range,back,next,keyboard,play,pause,auto-stop passed"
+    },
+    {
+      "width": 390,
+      "requests": 24,
+      "boardFrames": 288,
+      "markers": 619,
+      "linkChecks": 216,
+      "minGlyphPx": 18.944444444444446,
+      "overlapPairs": 0,
+      "controls": "select,range,back,next,keyboard,play,pause,auto-stop passed"
+    },
+    {
+      "width": 1200,
+      "requests": 24,
+      "boardFrames": 288,
+      "markers": 619,
+      "linkChecks": 216,
+      "minGlyphPx": 20.533333333333335,
+      "overlapPairs": 0,
+      "controls": "select,range,back,next,keyboard,play,pause,auto-stop passed"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "sourceHashes": {
+    "scripts/build_dynamics.py": "f772ee7f54b7bed8a385703f94d4a1b5468c9a1b0e7420585632ae72aad23fc0",
+    "scripts/check-dynamics-browser.cjs": "0d20ebe4fcb05ede8a23976dff001ee07b89cd872eed5bd8f2c7c2131eeaba53",
+    "dynamics-template.html": "75ccf78e0c108d9c5a179e2e3cda76c7824135e66a66e955b19b30cbd17b908a"
+  },
+  "sourceFilesMatchCommit": true,
+  "artifactHashes": {
+    "dynamics.html": "27bd9897c30e3a26098c0d72a829eb2e338eb070f087ba4f1803f3e88b6a58f7",
+    "dynamics.json": "6f49eabae1a67da999654dceb2358e2f8cc166ab0946491446ba22a6b1dda82d",
+    "dynamics.csv": "bb81a356255a1585d5496223fadf5615b47f38c3c54812bcfe6b16679f53f3c0",
+    "states.csv": "2d74f5c6ba3f0adb6aa97ded48293d4f258811065c2de0f51ec5c81ccd0e7688",
+    "experiments/ZL-018-results.md": "c2b1adbff0d6370f5b1e158b2022d94d17d9ccf329c3ab03228799523697b9da"
+  },
+  "valid": true,
+  "completedAt": "2026-09-21T03:51:19.647Z"
+}
