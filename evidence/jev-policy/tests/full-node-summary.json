@@ -1,0 +1,15 @@
+{
+  "testedCodeCommit": "241124b9e2f728d5a65eaea93ec9c6788ae07891",
+  "command": "node --test --test-concurrency=1 test-node.cjs scripts/test-*.cjs",
+  "nodeResultFooter": {
+    "tests": 147,
+    "pass": 139,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 8,
+    "duration_ms": 156683.502958
+  },
+  "backgroundToolExitCode": null,
+  "completionProof": "Full Node result footer and no remaining original test PID; tool briefly misreported exited/null while child was still running.",
+  "scope": "Full local suite; eight explicitly optional/inherited artifact gates skipped; new actual exported viewer verified separately."
+}

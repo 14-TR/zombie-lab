@@ -1,0 +1,8 @@
+$ python3 -B scripts/test-jev-runner.py
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.046s
+
+OK
+
+exitCode=0

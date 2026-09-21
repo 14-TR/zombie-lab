@@ -1,0 +1,92 @@
+{
+  "checkedAt": "2026-09-21T01:50:04.035363+00:00",
+  "sourceCommit": "241124b9e2f728d5a65eaea93ec9c6788ae07891",
+  "tests": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/test-jev-runner.py"
+      ],
+      "exitCode": 0,
+      "receipt": "/Users/tr/Projects/zombie-lab-evidence/ZL-016-tests/test-jev-runner.py.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/test-jev-controller-runner.py"
+      ],
+      "exitCode": 0,
+      "receipt": "/Users/tr/Projects/zombie-lab-evidence/ZL-016-tests/test-jev-controller-runner.py.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/test-jev-policy-runner.py"
+      ],
+      "exitCode": 0,
+      "receipt": "/Users/tr/Projects/zombie-lab-evidence/ZL-016-tests/test-jev-policy-runner.py.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check-jev-controller-reference.py"
+      ],
+      "exitCode": 0,
+      "receipt": "/Users/tr/Projects/zombie-lab-evidence/ZL-016-tests/check-jev-controller-reference.py.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check-jev-policy-reference.py"
+      ],
+      "exitCode": 0,
+      "receipt": "/Users/tr/Projects/zombie-lab-evidence/ZL-016-tests/check-jev-policy-reference.py.txt"
+    }
+  ],
+  "baselineFilesPreserved": 216,
+  "allPriorModifiedFiles": [
+    ".github/workflows/pages.yml",
+    ".github/workflows/private-preview.yml",
+    ".gitignore"
+  ],
+  "ledgers": {
+    "jev": {
+      "count": 24,
+      "sha256": "a0516988c3306f4a5863b3788df7948c5050f11f906d6c4115d6261da80770f9"
+    },
+    "jev-controller": {
+      "count": 19,
+      "sha256": "fa5f147ab2fe55a18555f9bcf2038a461bb487bb1edb6dd806bd7622a39997e1"
+    },
+    "jev-policy": {
+      "count": 16,
+      "sha256": "21e4d033d7a6a51e6ffebe5ae47a0492f87d358b8ff3d5fa1486da55f6da326b"
+    }
+  },
+  "newProofsBeforeAdmission": 16,
+  "initialSerialization": [
+    {
+      "id": "run-01",
+      "frozenFileHasTrailingNewline": true,
+      "bodyOtherwiseByteIdentical": true,
+      "actualRequestBytes": 4053
+    },
+    {
+      "id": "run-02",
+      "frozenFileHasTrailingNewline": true,
+      "bodyOtherwiseByteIdentical": true,
+      "actualRequestBytes": 4053
+    }
+  ],
+  "actualSecretScan": {
+    "changedTrackedFiles": 90,
+    "matches": 0
+  },
+  "ciPaidCallRefusalExitCode": 1,
+  "scope": "local exact-source verification; no independent implementation review, remote CI or deployment"
+}

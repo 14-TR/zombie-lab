@@ -1,0 +1,3 @@
+$ CI=true python3 -B scripts/run-jev-policy.py --live-authorized
+Controller stopped: ValueError
+exitCode=1

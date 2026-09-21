@@ -1,0 +1,4 @@
+$ python3 -B scripts/check-jev-controller-reference.py
+{"valid": true, "runs": 2, "decisions": 19, "legalActions": 80, "oracleSHA256": "c7067696907f066498c0299ae5814a14b85fb3e110a5703dc28401fbb9856b5b", "scope": "all visited-state labels checked by frozen independent algorithm; not independent implementation review"}
+
+exitCode=0
