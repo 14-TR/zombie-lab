@@ -1,0 +1,45 @@
+FFFF
+======================================================================
+FAIL: test_budget_and_duplicate_admission (__main__.RunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_runner.py", line 37, in test_budget_and_duplicate_admission
+    r=self.load()
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_runner.py", line 11, in load
+    self.assertTrue((Path(__file__).parent/'run_dynamics.py').exists(), 'bounded runner missing')
+AssertionError: False is not true : bounded runner missing
+
+======================================================================
+FAIL: test_ci_refuses_before_any_network_or_directory (__main__.RunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_runner.py", line 31, in test_ci_refuses_before_any_network_or_directory
+    r=self.load()
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_runner.py", line 11, in load
+    self.assertTrue((Path(__file__).parent/'run_dynamics.py').exists(), 'bounded runner missing')
+AssertionError: False is not true : bounded runner missing
+
+======================================================================
+FAIL: test_failure_durably_consumes_and_rerun_refuses (__main__.RunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_runner.py", line 14, in test_failure_durably_consumes_and_rerun_refuses
+    r=self.load()
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_runner.py", line 11, in load
+    self.assertTrue((Path(__file__).parent/'run_dynamics.py').exists(), 'bounded runner missing')
+AssertionError: False is not true : bounded runner missing
+
+======================================================================
+FAIL: test_malformed_http_json_and_out_of_set_are_no_retry (__main__.RunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_runner.py", line 47, in test_malformed_http_json_and_out_of_set_are_no_retry
+    r=self.load()
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_runner.py", line 11, in load
+    self.assertTrue((Path(__file__).parent/'run_dynamics.py').exists(), 'bounded runner missing')
+AssertionError: False is not true : bounded runner missing
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=4)

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "board": {"width": 12, "height": 9},
+  "developmentBoards": [[3,3],[5,5]],
+  "cases": [
+    {"id":"A","start":{"H":[10,7],"Z1":[7,5],"Z2":[0,8],"caught":false},"actions":["W","N","W"],"panel":"identifying"},
+    {"id":"B","start":{"H":[11,1],"Z1":[8,3],"Z2":[2,8],"caught":false},"actions":["S","S","W"],"panel":"identifying"},
+    {"id":"C","start":{"H":[10,8],"Z1":[8,7],"Z2":[3,0],"caught":false},"actions":["E","N","W"],"panel":"ambiguous"},
+    {"id":"D","start":{"H":[11,5],"Z1":[9,3],"Z2":[6,8],"caught":false},"actions":["stay","N","W"],"panel":"ambiguous"}
+  ],
+  "examplePanels": {
+    "identifying":[
+      {"before":{"H":[9,7],"Z1":[6,5],"Z2":[2,8],"caught":false},"action":"N"},
+      {"before":{"H":[9,6],"Z1":[7,6],"Z2":[1,8],"caught":false},"action":"N"}
+    ],
+    "ambiguous":[
+      {"before":{"H":[11,8],"Z1":[8,8],"Z2":[4,8],"caught":false},"action":"stay"}
+    ]
+  },
+  "laws":["old_NESW","old_WSEN"],
+  "conditions":["neither","observations","supplied"]
+}

@@ -1,0 +1,13 @@
+..F.....
+======================================================================
+FAIL: test_legacy_reference_accepts_literal_rejects_corruption (__main__.FreezeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics.py", line 113, in test_legacy_reference_accepts_literal_rejects_corruption
+    self.assertTrue(script.exists(), 'legacy parity CLI missing')
+AssertionError: False is not true : legacy parity CLI missing
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.129s
+
+FAILED (failures=1)

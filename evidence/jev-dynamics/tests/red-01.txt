@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_fixed_actions_changed_rules_and_absorbing_multistep (__main__.DynamicsTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics.py", line 11, in test_fixed_actions_changed_rules_and_absorbing_multistep
+    self.assertTrue((Path(__file__).parent/'dynamics.py').exists(), 'prediction engine missing')
+AssertionError: False is not true : prediction engine missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

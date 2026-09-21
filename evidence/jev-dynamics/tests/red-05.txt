@@ -1,0 +1,13 @@
+.F.....
+======================================================================
+FAIL: test_bundle_freshness_identifiability_and_request_split_invariance (__main__.FreezeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics.py", line 112, in test_bundle_freshness_identifiability_and_request_split_invariance
+    self.assertTrue((Path(__file__).parent/'freeze_dynamics.py').exists(), 'freeze builder missing')
+AssertionError: False is not true : freeze builder missing
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.102s
+
+FAILED (failures=1)

@@ -1,0 +1,23 @@
+{
+  "valid": true,
+  "transitions": 312500,
+  "board": [
+    5,
+    5
+  ],
+  "allOrderedAgentPositions": 15625,
+  "laws": [
+    "old_NESW",
+    "old_WSEN",
+    "new_NESW",
+    "stationary"
+  ],
+  "actions": [
+    "N",
+    "E",
+    "S",
+    "W",
+    "stay"
+  ],
+  "elapsedSeconds": 2.5550174589999997
+}

@@ -1,0 +1,29 @@
+.FFF
+======================================================================
+FAIL: test_family_identification_and_ambiguity_same_input (__main__.PromptTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics.py", line 44, in test_family_identification_and_ambiguity_same_input
+    self.assertTrue(hasattr(d,'baseline'), 'same-input baseline missing')
+AssertionError: False is not true : same-input baseline missing
+
+======================================================================
+FAIL: test_group_swapping_invariance_and_split_rejection (__main__.PromptTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics.py", line 59, in test_group_swapping_invariance_and_split_rejection
+    self.assertTrue(hasattr(d,'assert_disjoint'), 'split checker missing')
+AssertionError: False is not true : split checker missing
+
+======================================================================
+FAIL: test_no_oracle_leak_and_exhaustive_schema (__main__.PromptTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics.py", line 27, in test_no_oracle_leak_and_exhaustive_schema
+    self.assertTrue(hasattr(d,'request'), 'request builder missing')
+AssertionError: False is not true : request builder missing
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=3)

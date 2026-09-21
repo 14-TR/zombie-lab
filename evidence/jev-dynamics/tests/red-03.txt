@@ -1,0 +1,21 @@
+....FF
+======================================================================
+FAIL: test_independent_reference_and_boundary (__main__.ReferenceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics.py", line 69, in test_independent_reference_and_boundary
+    self.assertTrue((Path(__file__).parent/'dynamics_reference.py').exists(), 'independent reference missing')
+AssertionError: False is not true : independent reference missing
+
+======================================================================
+FAIL: test_strict_parse_missing_out_of_set_and_component_errors (__main__.ScoringTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics.py", line 87, in test_strict_parse_missing_out_of_set_and_component_errors
+    self.assertTrue((Path(__file__).parent/'dynamics_score.py').exists(), 'prediction scorer missing')
+AssertionError: False is not true : prediction scorer missing
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+FAILED (failures=2)

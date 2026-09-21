@@ -1,0 +1,9 @@
+...........{"id": "test-01", "outcome": "transport_error", "httpStatus": null, "latencyMs": 0.05491600000001595}
+.{"id": "t", "outcome": "http_error", "httpStatus": 500, "latencyMs": 0.10099999999998999}
+{"id": "t", "outcome": "invalid_json", "httpStatus": 200, "latencyMs": 0.10745900000000419}
+{"id": "t", "outcome": "invalid_schema", "httpStatus": 200, "latencyMs": 0.10499999999999399}
+.
+----------------------------------------------------------------------
+Ran 13 tests in 0.186s
+
+OK

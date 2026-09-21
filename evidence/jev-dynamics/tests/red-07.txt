@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_aggregate_descriptive_pairs_and_missing_failures (__main__.ReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_report.py", line 7, in test_aggregate_descriptive_pairs_and_missing_failures
+    self.assertTrue((Path(__file__).parent/'dynamics_report.py').exists(),'report aggregation missing')
+AssertionError: False is not true : report aggregation missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

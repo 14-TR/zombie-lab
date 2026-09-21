@@ -1,0 +1,15 @@
+.......E.
+======================================================================
+ERROR: test_documented_rounded_probabilities_are_not_fake_failures (__main__.ScoringTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics.py", line 92, in test_documented_rounded_probabilities_are_not_fake_failures
+    self.assertEqual(s.parse_response(req,body)['1']['H_x'],'0')
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/dynamics_score.py", line 24, in parse_response
+    raise ValueError('invalid probability sum/argmax')
+ValueError: invalid probability sum/argmax
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.173s
+
+FAILED (errors=1)
