@@ -1,0 +1,136 @@
+{
+  "sourceCommit": "d6d6a88947a7a91b61414a78acfdc338c5fd9941",
+  "endCommit": "d6d6a88947a7a91b61414a78acfdc338c5fd9941",
+  "unchangedCleanSource": true,
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "test-node.cjs",
+        "scripts/test-avoidability-view.cjs",
+        "scripts/test-avoidability.cjs",
+        "scripts/test-compare.cjs",
+        "scripts/test-jev-controller-release.cjs",
+        "scripts/test-jev-controller-view.cjs",
+        "scripts/test-jev-controller.cjs",
+        "scripts/test-jev-policy-release.cjs",
+        "scripts/test-jev-policy-view.cjs",
+        "scripts/test-jev-policy.cjs",
+        "scripts/test-jev-release.cjs",
+        "scripts/test-jev-safe-exact.cjs",
+        "scripts/test-jev-safe-release.cjs",
+        "scripts/test-jev-safe-view.cjs",
+        "scripts/test-jev-safe.cjs",
+        "scripts/test-jev-view.cjs",
+        "scripts/test-jev.cjs",
+        "scripts/test-neural-release.cjs",
+        "scripts/test-neural-view.cjs",
+        "scripts/test-neural.cjs",
+        "scripts/test-one-tick-reference.cjs",
+        "scripts/test-one-tick-release.cjs",
+        "scripts/test-one-tick-view.cjs",
+        "scripts/test-one-tick.cjs",
+        "scripts/test-planning-view.cjs",
+        "scripts/test-planning.cjs",
+        "scripts/test-preview.cjs",
+        "scripts/test-proof.cjs",
+        "scripts/test-sweep-view.cjs",
+        "scripts/test-sweep.cjs",
+        "scripts/test-two-tick-reference-properties.cjs",
+        "scripts/test-two-tick-reference.cjs",
+        "scripts/test-two-tick-release.cjs",
+        "scripts/test-two-tick-view.cjs",
+        "scripts/test-two-tick.cjs",
+        "scripts/test-two-zombies-view.cjs",
+        "scripts/test-two-zombies.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 166.29134625,
+      "log": "/Users/tr/Projects/zombie-lab-evidence/ZL-017-tests-final/full-node.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/test-jev-runner.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.10159845900000164,
+      "log": "/Users/tr/Projects/zombie-lab-evidence/ZL-017-tests-final/test-jev-runner.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/test-jev-controller-runner.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.22682612500000232,
+      "log": "/Users/tr/Projects/zombie-lab-evidence/ZL-017-tests-final/test-jev-controller-runner.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/test-jev-policy-runner.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.530294457999986,
+      "log": "/Users/tr/Projects/zombie-lab-evidence/ZL-017-tests-final/test-jev-policy-runner.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/test-jev-safe-runner.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.8091495420000001,
+      "log": "/Users/tr/Projects/zombie-lab-evidence/ZL-017-tests-final/test-jev-safe-runner.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/test-jev-safe-reference.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.2554863750000038,
+      "log": "/Users/tr/Projects/zombie-lab-evidence/ZL-017-tests-final/test-jev-safe-reference.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check-jev-controller-reference.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.10039137500001516,
+      "log": "/Users/tr/Projects/zombie-lab-evidence/ZL-017-tests-final/check-jev-controller-reference.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check-jev-policy-reference.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.08358954199999857,
+      "log": "/Users/tr/Projects/zombie-lab-evidence/ZL-017-tests-final/check-jev-policy-reference.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check-jev-safe-reference.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.1484905000000083,
+      "log": "/Users/tr/Projects/zombie-lab-evidence/ZL-017-tests-final/check-jev-safe-reference.txt"
+    }
+  ],
+  "completedAt": "2026-09-21T02:23:59.129605+00:00",
+  "valid": true
+}

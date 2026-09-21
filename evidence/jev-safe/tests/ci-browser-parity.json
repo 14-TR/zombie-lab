@@ -1,0 +1,16 @@
+{
+  "CIExportWithoutKeyExitCode": 0,
+  "CIExportJSONMatchesLocal": true,
+  "visuallyInspectedSourceScreenshotsIdentical": [
+    "boards-320.png",
+    "decision-390.png",
+    "decision-320.png",
+    "boards-390.png",
+    "top-320.png",
+    "top-1200.png",
+    "boards-1200.png",
+    "top-390.png",
+    "decision-1200.png"
+  ],
+  "sourceCommit": "d6d6a88947a7a91b61414a78acfdc338c5fd9941"
+}
