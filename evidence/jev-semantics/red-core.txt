@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_epistemic_controller_never_promotes_suspected (test_semantics.CoreTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-semantics/scripts/test_semantics.py", line 8, in test_epistemic_controller_never_promotes_suspected
+    self.assertTrue(path.exists(), 'semantic adapter/controller not implemented')
+AssertionError: False is not true : semantic adapter/controller not implemented
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

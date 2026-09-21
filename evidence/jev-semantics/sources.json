@@ -1,0 +1,66 @@
+[
+  {
+    "url": "https://docs.typesafe.ai/llms.txt",
+    "file": "sources/llms.txt",
+    "http_status": 200,
+    "sha256": "9bb713532b8b5b836d48bf19733a6649525aff8353e22c5cbebf5524a498ff24",
+    "bytes": 16369,
+    "retrieved_utc": "2026-09-21T04:15:35.059956+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/models.md",
+    "file": "sources/models.md",
+    "http_status": 200,
+    "sha256": "9d20bb3c90a0147532d0b20ddc4c64579391be7842e965543b27bad684eeb4d6",
+    "bytes": 7245,
+    "retrieved_utc": "2026-09-21T04:15:35.196095+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/model-jaggedness/jev-1.13.md",
+    "file": "sources/model-jaggedness_jev-1.13.md",
+    "http_status": 200,
+    "sha256": "e69329bd32e91ac08f0bd2681ceb4aacc34923b9190e29c15c8f75d8e22950e2",
+    "bytes": 11588,
+    "retrieved_utc": "2026-09-21T04:15:35.189577+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/api.md",
+    "file": "sources/api.md",
+    "http_status": 200,
+    "sha256": "7ea1c82d9d16bd06e3d38885a5292548293f91e6d1ade4682c27398ced51a9e5",
+    "bytes": 11772,
+    "retrieved_utc": "2026-09-21T04:15:35.214705+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/primitives/choice.md",
+    "file": "sources/primitives_choice.md",
+    "http_status": 200,
+    "sha256": "4c55085131f8f2d7ae1faefdec52b1c7b379d40657d701cd2c786021cfe9dac9",
+    "bytes": 26794,
+    "retrieved_utc": "2026-09-21T04:15:35.298183+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/concepts/how-to-build-with-system-one.md",
+    "file": "sources/concepts_how-to-build-with-system-one.md",
+    "http_status": 200,
+    "sha256": "d9f4d34c1349bf5acb55c99d6a1651eacfc481ad8d1f78ccb8776769da729a49",
+    "bytes": 40921,
+    "retrieved_utc": "2026-09-21T04:15:35.435525+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/cookbooks/function_calling.md",
+    "file": "sources/cookbooks_function_calling.md",
+    "http_status": 200,
+    "sha256": "5447823489575a93adc3943627461fa8b904e5692bfed3395caa21a50458fe40",
+    "bytes": 18910,
+    "retrieved_utc": "2026-09-21T04:15:35.591761+00:00"
+  },
+  {
+    "url": "https://docs.typesafe.ai/confidence.md",
+    "file": "sources/confidence.md",
+    "http_status": 200,
+    "sha256": "97dafe98b77979906a2ad456013dd85a70dcecd109d0644b096817d910997ea5",
+    "bytes": 11396,
+    "retrieved_utc": "2026-09-21T04:15:35.383491+00:00"
+  }
+]

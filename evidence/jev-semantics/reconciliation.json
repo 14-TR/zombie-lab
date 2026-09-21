@@ -1,0 +1,99 @@
+{
+  "utc": "2026-09-21T04:15:34.674950+00:00",
+  "worktrees": [
+    {
+      "path": "/Users/tr/Projects/zombie-lab",
+      "head": "b22cf4990f10a694998e4a571b534ece8d46cd43",
+      "status": "?? evidence/app-red-launch.json\n?? evidence/app-verification.json\n?? evidence/browser-check.cjs\n?? evidence/browser-green-canvas.json\n?? evidence/browser-green-controls.json\n?? evidence/browser-red-canvas.json\n?? evidence/browser-red-controls.json\n?? evidence/browser-tests.json\n?? evidence/fixed-start-cycle/\n?? evidence/initial.png\n?? evidence/lead-app-verification.json\n?? evidence/lead-browser-tests.json\n?? evidence/narrow.png\n?? evidence/node-tests.json\n?? evidence/source-measurements.json\n?? evidence/step.png\n?? evidence/syntax-checks.json\n?? evidence/terminal.png\n?? evidence/tests.png\n?? evidence/verify-app.cjs\n"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-capture",
+      "head": "4aa57f6a04e76885e537e865ffb42fec7a31135c",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-evidence/ZL-012-review-candidate",
+      "head": "787254a5abc17064748c65dbdeba00a87fda5d24",
+      "status": " M .github/workflows/pages.yml\n M .github/workflows/private-preview.yml\n M README.md\n?? evidence/one-tick/\n?? experiments/ZL-012-one-tick.md\n?? one-tick-policy.js\n?? one-tick-view.js\n?? one-tick.html\n?? scripts/build-one-tick.cjs\n?? scripts/one-tick-reference.cjs\n?? scripts/test-one-tick-reference.cjs\n?? scripts/test-one-tick-release.cjs\n?? scripts/test-one-tick-view.cjs\n?? scripts/test-one-tick.cjs\n"
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-explain",
+      "head": "8882287de11d8e4dcbb9a96b7fd0d3d248e193e8",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-jev",
+      "head": "1141112995d539fc8fce768111c783b9a56b3e5a",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-jev-controller",
+      "head": "3b42d9d913e4bd9a442857c79a1cc962176026b0",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-jev-dynamics",
+      "head": "ca6ea28007e3daacd49c5a765ee52f1d24533526",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-jev-policy",
+      "head": "ac5f0c72d42356122419442656420f1aafa239d2",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-jev-safe",
+      "head": "1c68578d18908ad146a6e8f1b22c96d380aa1566",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-jev-semantics",
+      "head": "ca6ea28007e3daacd49c5a765ee52f1d24533526",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-neural",
+      "head": "22b670aee0afd86e61610473b80d9d56a4ce08b7",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-neural-one-tick",
+      "head": "6f5e957b34c4080e917e4b2dffe5f9495638837c",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-neural-two-tick",
+      "head": "1bf90b4584fad715dcca2686a9e242b6c2a2195f",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-planning",
+      "head": "4072dc6fcc5a8ecc3638975f173f4c85c398f5c0",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-position",
+      "head": "ff7cf97c2fd3484ab9e970b80ccf0bb617004b35",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-solver",
+      "head": "3079af2b0f59b728e64d12f1624660a69a86abfc",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-sweep",
+      "head": "bd8b8b76bdc9b77d1d0533a9ad75db727176d896",
+      "status": ""
+    },
+    {
+      "path": "/Users/tr/Projects/zombie-lab-two-zombies",
+      "head": "f570bc3c9ecd0d19d96c86bdd3922aedefe2d005",
+      "status": ""
+    }
+  ],
+  "open_prs": [],
+  "matching_inference_processes": [],
+  "external_prior_files": 4532,
+  "key_present_only": true
+}
