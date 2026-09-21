@@ -1,0 +1,10 @@
+{
+  "error": null,
+  "finished_utc": "2026-09-21T05:11:18.572910+00:00",
+  "http_status": 200,
+  "id": "zl020-s04a",
+  "latency_ms": 196.0085,
+  "request_sha256": "ddb76e416678cdd681c073cefca48c3b419c032b431d85c6fdfea1bae7b07ca2",
+  "response_bytes": 965,
+  "response_sha256": "7824e7620c64565d35e5ef0dd7fce4502846d2c487da2a59f97c6be7d708f490"
+}

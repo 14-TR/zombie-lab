@@ -1,0 +1,16 @@
+{
+  "estimated_ceiling_usd": 0.02020872,
+  "hard_admission_cap": 24,
+  "metadata": {
+    "experiment": "ZL020",
+    "input_usd_per_million": 0.042,
+    "output_usd_per_million": 0,
+    "price_checked_utc": "2026-09-21T05:11:16.719727+00:00",
+    "price_sha256": "9d20bb3c90a0147532d0b20ddc4c64579391be7842e965543b27bad684eeb4d6",
+    "request_manifest_sha256": "da97ed590ef3cd09983448287e50eeaa8a0d5d2eb517f7fcbbe5d0213ad53e80",
+    "source_freeze_commit": "073da696555a7370ac292f665446695dbd20560f"
+  },
+  "model": "jev-1.13.0",
+  "planned": 24,
+  "started_utc": "2026-09-21T05:11:16.725040+00:00"
+}
