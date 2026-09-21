@@ -1,0 +1,200 @@
+[
+  {
+    "group": "dev-direct",
+    "text": "I see Mara at the depot. I see Ash in the east passage. I checked the west passage is clear. Evacuate with Mara.",
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "known",
+      "west_blocked": "negated",
+      "policy": "together",
+      "clarification": "none"
+    }
+  },
+  {
+    "group": "dev-hearsay",
+    "text": "Niko reports Mara at the depot. Leave without Mara.",
+    "interpretation": {
+      "mara_at_depot": "suspected_positive",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "solo",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-quoted-denial",
+    "text": "Niko says \"I see Ash is not in the east passage\". I see the west passage is blocked. Stay here.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "suspected_negative",
+      "west_blocked": "known",
+      "policy": "hold",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-conflict",
+    "text": "I see Mara at the depot. Niko reports Mara is not at the depot. I see Ash in the east passage. The west passage is blocked. Hold position.",
+    "interpretation": {
+      "mara_at_depot": "conflicting",
+      "ash_in_east": "known",
+      "west_blocked": "known",
+      "policy": "hold",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-both",
+    "text": "Niko reports Mara is not at the depot. I checked the west passage is clear. What should we do?",
+    "interpretation": {
+      "mara_at_depot": "suspected_negative",
+      "ash_in_east": "unreported",
+      "west_blocked": "negated",
+      "policy": "unclear",
+      "clarification": "both"
+    }
+  },
+  {
+    "group": "dev-silence",
+    "text": "If Mara is at the depot, wave. I do not know whether Ash is in the east passage. Stay here.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "hold",
+      "clarification": "none"
+    }
+  },
+  {
+    "group": "dev-question",
+    "text": "Is Ash in the east passage? Hold position.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "hold",
+      "clarification": "none"
+    }
+  },
+  {
+    "group": "dev-negated-goal",
+    "text": "Do not go alone. Evacuate with Mara.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "together",
+      "clarification": "none"
+    }
+  },
+  {
+    "group": "dev-west-report",
+    "text": "Niko reports the western passage is open. Wait here.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "suspected_negative",
+      "policy": "hold",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-west-conflict",
+    "text": "The west passage is clear. Niko says the west passage is blocked. Stay here.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "conflicting",
+      "policy": "hold",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-mixed-support",
+    "text": "Mara is at the depot. Niko reports Mara at the depot. Hold position.",
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "hold",
+      "clarification": "none"
+    }
+  },
+  {
+    "group": "dev-mara-negative",
+    "text": "Niko reports Mara is absent from the depot. Stay here.",
+    "interpretation": {
+      "mara_at_depot": "suspected_negative",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "hold",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-goal-only",
+    "text": "Ash is not in the east passage. Paint the shelter blue.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "negated",
+      "west_blocked": "unreported",
+      "policy": "unclear",
+      "clarification": "goal"
+    }
+  },
+  {
+    "group": "dev-clause-source",
+    "text": "Niko says Ash is in the east passage, but the west passage is clear. Stay here.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "suspected_positive",
+      "west_blocked": "negated",
+      "policy": "hold",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-inverted",
+    "text": "At the depot stands Mara. The eastern passage contains no Ash. The western passage is unobstructed. Escort Mara to shelter.",
+    "interpretation": {
+      "mara_at_depot": "known",
+      "ash_in_east": "negated",
+      "west_blocked": "negated",
+      "policy": "together",
+      "clarification": "none"
+    }
+  },
+  {
+    "group": "dev-conditional",
+    "text": "If Mara is at the depot, wait there. Ash might be in the east passage. Hold position.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "suspected_positive",
+      "west_blocked": "unreported",
+      "policy": "hold",
+      "clarification": "evidence"
+    }
+  },
+  {
+    "group": "dev-pronoun",
+    "text": "Mara and Niko are nearby. She is at the depot. Stay here.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "hold",
+      "clarification": "none"
+    }
+  },
+  {
+    "group": "dev-policy-conflict",
+    "text": "Go alone. Bring Mara.",
+    "interpretation": {
+      "mara_at_depot": "unreported",
+      "ash_in_east": "unreported",
+      "west_blocked": "unreported",
+      "policy": "unclear",
+      "clarification": "goal"
+    }
+  }
+]

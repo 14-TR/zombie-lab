@@ -1,0 +1,26 @@
+# ZL-020 preregistration — clarification-gated semantic adapter
+
+## Scope / hypothesis
+A deterministic abstention constraint over interpreted epistemic and policy fields prevents redundant-head inconsistency from authorizing action, conditional on correct extraction. It is not a safety guarantee: confidently wrong facts or intent can bypass the gate. No physical-world actuation.
+
+Base `e87d88b7335d556d8c0ed5ac240ac8ddbd24aeb0` is immutable. ZL019's recordings, original parser, original completion metric and all evidence remain unchanged. Prior s06a is historical development, never fresh heldout.
+
+## Intervention and authority
+Jev supplies exactly the inherited five closed labels. Three facts each use known, negated, suspected_positive, suspected_negative, conflicting, unreported. Policy: solo/together/hold/unclear. Raw clarification: none/goal/evidence/both. Original on-wire clarification and probabilities are never replaced.
+
+Code derives `required_clarification` from ALL three interpreted facts plus policy. Any suspected/conflicting fact requires evidence clarification even on an irrelevant route or hold goal. Unclear policy requires goal clarification. Both -> both; neither -> none. Invalid interpretation fails closed. Unreported alone does not require the semantic evidence label; controller can still ask for missing route/companion verification. Code forces ASK if derived clarification or raw clarification is not none; it never relaxes raw ASK. Otherwise inherited deterministic controller acts. Every result retains raw/gated decision, reasons, intervention flag and raw interpretation. Exhaust all 3,456 closed inputs before freeze.
+
+Only simulator reads hidden truth. Physics/routes unchanged. NEW secondary completion fixes solo exclusion: Shelter with Mara is not solo completion; together requires Mara; hold requires WAIT. Goal completion is secondary to authorized trace agreement, not a reason to override clarification. Duplicate JSON keys at any depth and nonfinite values fail decoding; reported selected probability must be a maximum (ties accepted), sum tolerance 0.005 per option + 1e-8 only for decimal rounding. No confidence threshold tuning.
+
+## Development / blinding
+New prompt and transparent clause grammar may use the old six examples, old ZL019 pilot and review, and explicitly authored development probes. New development has 18 rows. This is a stronger bounded grammar, not a strong general NLP baseline: source scope, pronouns, long-distance syntax and adversarial text can still fail. Freeze protocol/source/parser/development in Git before opening any new independently authored heldout. Independent author does not see new implementation. Parent releases/integrates fresh cases and gold after freeze, commits request manifest before admission, owns blind comparator and independent review. No post-holdout tuning under this preregistration.
+
+## Planned phase 2 (not executed in phase 1)
+At most 24 isolated-text calls, one Jev request per text, pinned jev-1.13.0. No retry, warmup, refill or failure replacement. Admission persists/fsyncs before network. Stop on first transport/HTTP failure; every failed request counts. Fixed new ledger `evidence/jev-semantic-gate/recording`; old ledgers permanently closed. Env-only key never printed. CI/GITHUB_ACTIONS refuse before docs or inference network. Current retained price $0.042/M input tokens, output free; verify live price before admission. Conservative byte-as-token plus 8,192 overhead per request budget <=$0.05 is an estimate, not provider-enforced dollar limit. Request <=32,768 bytes; response <=131,072 (overflow detector reads one extra byte); timeout 30s/call, 900s campaign bound inherited.
+
+Primary descriptive reporting: raw five-field exact match and field confusion; gated action/trace agreement and raw-to-gated paired changes. Do not call gated labels improved model accuracy. Report ASK/WAIT/move, non-ASK coverage, useful matching coverage, false action, unsupported assertions, suspected promotions, semantic clarification inconsistency and secondary completion separately. Count missing/malformed rows in planned denominator, not successes only. Pair group-level exactness and state correlated paraphrases. Show cases where extraction bypasses gate. All claims descriptive to independently authored small bounded scene; not calibrated safety, general language superiority or learned physics. Compare new Jev against new parser on the same frozen isolated texts; unchanged old parser optional historical control. Other-model workflow is parent-owned and not automatically input/latency matched.
+
+## Offline demo and release boundary
+Prepared exporter has no browser API call or credential path. Recorded request/report selection, raw/gated/model-vs-code authority, case text, full raw JSON, simulator replay including initial/stopping frames, play/pause/scrub and downloads are required. Free-text edits must not fabricate cached predictions or trigger paid calls. Browser/320px verification and useful demo claim are phase 2 conditional on reviewed heldout performance. No push/merge/publication authorized here.
+
+Block start 2026-09-21T04:53:00Z; requested phase-1 handoff 05:04Z; implementation cutoff 05:38Z; verification checkpoint 05:53Z, lead-enforced. Parent owns completion beyond freeze.

@@ -1,0 +1,43 @@
+{
+  "base": "e87d88b7335d556d8c0ed5ac240ac8ddbd24aeb0",
+  "created_utc": "2026-09-21T05:01:08.950049+00:00",
+  "development_rows": 18,
+  "experiment": "ZL020",
+  "files": {
+    "evidence/jev-semantic-gate/development.json": "9308ebfbcf82d2f62f4cd75404231444719aeeb7a58b4989abdf24c9df1288b2",
+    "evidence/jev-semantic-gate/spec.json": "0e61af04ee3433745465f40eec0af3e2505ec41729fce8d25f3855c2628b6cea",
+    "experiments/ZL-020-protocol.md": "07d283fe320279cafbdd5d03cfe07b091f50d06696d7735c2faeec4ea32ea6a2",
+    "scripts/build_semantic_gate.py": "aa309d7f054e92b3f8329af0e15643db176c37fc76a89e2dd1f28cc6180b8752",
+    "scripts/freeze_semantic_gate.py": "a42dd83b0dc138b3f83b61a62e2973136f529ea6eef1460929fa89b2bfff259c",
+    "scripts/run_semantic_gate.py": "3f7cf7a41fd8f731e1cca168071c9e39adfea2788df7e5a1228fbfb771d9af59",
+    "scripts/run_semantics.py": "682ee1157ab857443c60c78c569b6a3a3255cbe268bca7f12b486b5e3db0ed8c",
+    "scripts/semantic_gate.html": "523bfe6a92e2ae75e737859f880cc94fa6bed15fc064a52b85abfc329214f411",
+    "scripts/semantic_gate.py": "1f4291cafe5bc66a40263ed25fc04938c3cd51a9870a68cc6108c8a347ccf50c",
+    "scripts/semantic_gate_io.py": "2261d7d58314b5d4dc220ad26459b477afc54337e1c85a8a5fa40bf15a0b256c",
+    "scripts/semantic_gate_parser.py": "93508a222c8dcc684424fa4ecd506f39039ce0109884580bec72699454015a07",
+    "scripts/semantics_core.py": "c65de785230468fb72aa959bdc25a13dea68ff93290ae341a838fd70169800ef",
+    "scripts/semantics_io.py": "d656cfe2b57211fc7c17e580d4ca4468a79a46b2c5dd419842a33b3bb845b2c1",
+    "scripts/test_semantic_gate.py": "13101e488672817e76fe8790bcaee16e35d594f9bd8ee891355dbb49713ddc10",
+    "scripts/test_semantic_gate_export.py": "6a49383c072b4b0d190374a2041223abfaa55c1ef80bbbf620a4e3f32c11f02f",
+    "scripts/test_semantic_gate_freeze.py": "64915b0c3a8339577a30118e94ff27b4b994773fb17a0521f26a1c1775a1dae3",
+    "scripts/test_semantic_gate_io.py": "b70b746ac7fb2632e64afa6b27330a15be9d6862a8ed46fce6c118948beaf530",
+    "scripts/test_semantic_gate_parser.py": "2921d2a38ae3be83c7858780d375a3c529249d6cdb8fcd9c7822e975caf250e1",
+    "scripts/test_semantic_gate_runner.py": "554a5e8abf58883454f5c5ad922ccfc2455bd41ad8dc6fd7dde6072dc664bbf8"
+  },
+  "inherited_tracked_files": 1081,
+  "limitations": "No new heldout evaluation/browser verification. Gate cannot correct extracted facts or policy. Price bound is conservative estimate, not provider-enforced.",
+  "live_docs_read": [
+    "https://docs.typesafe.ai/api.md",
+    "https://docs.typesafe.ai/primitives/choice.md",
+    "https://docs.typesafe.ai/models.md",
+    "https://docs.typesafe.ai/model-jaggedness/jev-1.13.md",
+    "https://docs.typesafe.ai/cookbooks/function_calling.md"
+  ],
+  "paid_admissions": 0,
+  "phase": "1: unreviewed preregistration, no new heldout read and no paid calls",
+  "price_observed": {
+    "input_usd_per_million": 0.042,
+    "model": "jev-1.13.0",
+    "output_usd_per_million": 0
+  }
+}
