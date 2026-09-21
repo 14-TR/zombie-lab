@@ -25,8 +25,23 @@ test('PR and Pages integrate only offline safe builds and tests',()=>{
  for(const name of ['pages.yml','private-preview.yml']){
   const text=fs.readFileSync(path.join(__dirname,'../.github/workflows',name),'utf8');
   assert(text.includes('node scripts/build-jev-safe.cjs preview'));assert(text.includes('scripts/test-jev-safe-runner.py'));assert(text.includes('scripts/check-jev-safe-reference.py'));
-  assert(!text.includes('--live-authorized'));assert(!text.includes('TYPESAFE_API_KEY'));assert(text.includes('fetch-depth: 0'),'Historical inference-commit proof requires fetched history');
+  assert(!text.includes('--live-authorized'));assert(!text.includes('TYPESAFE_API_KEY'));
  }
+});
+test('portable commit/tree proof rejects altered commit, tree, or frozen manifest bytes',()=>{
+ const api=require(file),proof=require('../evidence/jev-safe/inference-provenance.json'),manifest=fs.readFileSync(path.join(__dirname,'../evidence/jev-safe/frozen/manifest.json'));
+ assert.equal(typeof api.verifyFreezeProof,'function');assert.equal(api.verifyFreezeProof(proof,proof.sourceCommit,manifest),true);
+ for(const field of ['commit','tree','manifest']){
+  const p=structuredClone(proof);let raw=manifest;
+  if(field==='commit')p.commitBase64=Buffer.from('wrong').toString('base64');
+  if(field==='tree')p.trees[0].rawBase64=Buffer.from('wrong').toString('base64');
+  if(field==='manifest')raw=Buffer.concat([raw,Buffer.from(' ')]);
+  assert.throws(()=>api.verifyFreezeProof(p,proof.sourceCommit,raw));
+ }
+});
+test('offline collection validates inference provenance without historical Git objects',()=>{
+ const cp=require('node:child_process'),empty=fs.mkdtempSync(path.join(os.tmpdir(),'zl017-no-git-objects-'));
+ try{const p=cp.spawnSync(process.execPath,['-e',"require('./scripts/build-jev-safe.cjs').collect()"],{cwd:path.join(__dirname,'..'),env:{...process.env,GIT_OBJECT_DIRECTORY:empty,GIT_ALTERNATE_OBJECT_DIRECTORIES:''},encoding:'utf8'});assert.equal(p.status,0,p.stderr);}finally{fs.rmSync(empty,{recursive:true,force:true});}
 });
 test('browser harness refuses absent actual artifact before optional browser loading',()=>{
  const script=path.join(__dirname,'check-jev-safe-browser.cjs');assert(fs.existsSync(script),'safe browser harness exists');

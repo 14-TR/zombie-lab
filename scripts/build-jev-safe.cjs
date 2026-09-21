@@ -3,6 +3,27 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),cp=require('node:child_process');
 const pilot=require('./jev-pilot.cjs'),original=require('./jev-controller.cjs'),safe=require('./jev-safe.cjs');
 const ROOT=pilot.ROOT,DIR=path.join(ROOT,'evidence/jev-safe'),REC=path.join(DIR,'recording'),read=p=>JSON.parse(fs.readFileSync(p));
+function verifyFreezeProof(proof,sourceCommit,manifestBytes){
+ // A compact Git Merkle inclusion proof survives shallow/squashed checkouts.
+ // This proves byte inclusion, not independent review or a signed attestation.
+ const hash=(type,raw)=>require('node:crypto').createHash('sha1').update(Buffer.from(`${type} ${raw.length}\0`)).update(raw).digest('hex');
+ const decode=s=>{const b=Buffer.from(s,'base64');assert.equal(b.toString('base64'),s);return b;};
+ assert.equal(proof.schemaVersion,1);assert.equal(proof.sourceCommit,sourceCommit);assert.match(sourceCommit,/^[0-9a-f]{40}$/);
+ const commit=decode(proof.commitBase64);assert.equal(hash('commit',commit),sourceCommit);
+ const treeLine=/^tree ([0-9a-f]{40})\n/.exec(commit.toString());assert(treeLine);let expected=treeLine[1];
+ const components=['evidence','jev-safe','frozen','manifest.json'];assert.equal(proof.trees.length,components.length);
+ for(const [i,component]of components.entries()){
+  const row=proof.trees[i],raw=decode(row.rawBase64);assert.equal(row.component,component);assert.equal(hash('tree',raw),expected);
+  let offset=0,found=null;
+  while(offset<raw.length){
+   const space=raw.indexOf(32,offset),nul=raw.indexOf(0,space+1);assert(space>offset&&nul>space&&nul+21<=raw.length);
+   const mode=raw.subarray(offset,space).toString(),name=raw.subarray(space+1,nul).toString(),id=raw.subarray(nul+1,nul+21).toString('hex');
+   if(name===component){assert.equal(found,null);assert.equal(mode,i===components.length-1?'100644':'40000');found=id;}offset=nul+21;
+  }
+  assert(found);expected=found;
+ }
+ assert.equal(hash('blob',manifestBytes),expected);return true;
+}
 function metrics(trace){
  const events=trace.decisions??[],executed=events.filter(e=>e.action),selected=executed.map(e=>e.truth.actions.find(a=>a.action===e.action));
  const loss=executed.find(e=>e.truth.rank===-1&&!e.truth.actions.find(a=>a.action===e.action).avoidable);
@@ -12,7 +33,7 @@ function metrics(trace){
 function collect({recordingDir=REC}={}){
  const manifest=read(path.join(DIR,'frozen/manifest.json')),complete=read(path.join(recordingDir,'complete.json')),recording=read(path.join(recordingDir,'run.json'));
  assert.match(recording.sourceCommit,/^[0-9a-f]{40}$/,'Literal committed source identity');
- assert.deepEqual(cp.execFileSync('git',['show',recording.sourceCommit+':evidence/jev-safe/frozen/manifest.json'],{cwd:ROOT,stdio:['ignore','pipe','pipe']}),fs.readFileSync(path.join(DIR,'frozen/manifest.json')),'Exact source/input freeze existed in inference commit');
+ verifyFreezeProof(read(path.join(DIR,'inference-provenance.json')),recording.sourceCommit,fs.readFileSync(path.join(DIR,'frozen/manifest.json')));
  assert.equal(recording.runnerSHA256,manifest.sourceHashes['scripts/run-jev-safe.py']);
  for(const [f,h]of Object.entries({...manifest.sourceHashes,...manifest.baselineHashes,...manifest.inputHashes}))assert.equal(pilot.sha(fs.readFileSync(path.join(ROOT,f))),h,'Frozen source/input/history changed: '+f);
  const historical=require('./build-jev-controller.cjs').collect();assert.deepEqual(manifest.starts,historical.manifest.starts);
@@ -93,5 +114,5 @@ function build(out){
  for(const name of ['index.html','jev-controller.html','jev-policy.html']){const file=path.join(out,name);if(fs.existsSync(file)){const html=fs.readFileSync(file,'utf8');if(!html.includes('href="jev-safe.html"'))fs.writeFileSync(file,html.replace('<body>','<body><p><a href="jev-safe.html">ZL-017 · Original vs immediate-safe guardrail vs exact planner</a></p>'));}}
  fs.writeFileSync(path.join(out,'jev-safe-build.json'),JSON.stringify({elapsedMs:Number(process.hrtime.bigint()-started)/1e6,maxRSSKiB:process.resourceUsage().maxRSS,sourceCommit:data.buildCommit})+'\n');return data;
 }
-module.exports={collect,metrics,build};
+module.exports={collect,metrics,build,verifyFreezeProof};
 if(require.main===module)console.log(JSON.stringify(build(path.resolve(process.argv[2]||'preview')).summary));
