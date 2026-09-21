@@ -3,11 +3,13 @@
 import argparse,fcntl,importlib.util,json,os,pathlib,subprocess,time
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 spec=importlib.util.spec_from_file_location('transport',ROOT/'scripts/run-jev.py')
+assert spec and spec.loader
 transport_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(transport_module)
 FROZEN=ROOT/'evidence/jev-policy/frozen/manifest.json'
 OUT=ROOT/'evidence/jev-policy/recording'
 ORACLE=ROOT/'evidence/jev/independent-reference/oracle.py'
 reference_spec=importlib.util.spec_from_file_location('portable_reference',ROOT/'scripts/check-jev-controller-reference.py')
+assert reference_spec and reference_spec.loader
 reference=importlib.util.module_from_spec(reference_spec);reference_spec.loader.exec_module(reference)
 
 def bridge(payload):

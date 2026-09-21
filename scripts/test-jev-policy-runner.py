@@ -28,4 +28,12 @@ class PolicyAdmission(unittest.TestCase):
    self.assertFalse((out/'run-02.trajectory.json').exists())
    with self.assertRaises(ValueError):runner.campaign(manifest,out,transport)
    self.assertEqual(len(calls),1)
+ def test_postrun_checker_rejects_mutated_executed_frame(self):
+  file=ROOT/'scripts/check-jev-policy-reference.py'
+  self.assertTrue(file.exists(),'policy postrun checker exists')
+  spec=importlib.util.spec_from_file_location('policy_check',file);check=importlib.util.module_from_spec(spec);spec.loader.exec_module(check)
+  runs=[json.loads(f.read_text()) for f in sorted((ROOT/'evidence/jev-controller/recording').glob('*.trajectory.json'))]
+  self.assertEqual(check.verify(runs)['decisions'],19)
+  runs[1]['frames'][-1]['human']['x']=9
+  with self.assertRaises(AssertionError):check.verify(runs)
 if __name__=='__main__':unittest.main()
