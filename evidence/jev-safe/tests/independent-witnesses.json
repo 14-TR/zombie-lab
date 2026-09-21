@@ -1,0 +1,114 @@
+{
+  "singleton": {
+    "stateIndex": 90,
+    "cells": [
+      20,
+      0,
+      1
+    ],
+    "safe": [
+      "S"
+    ],
+    "actions": [
+      [
+        "N",
+        49780,
+        true,
+        0
+      ],
+      [
+        "E",
+        49791,
+        true,
+        0
+      ],
+      [
+        "S",
+        49800,
+        false,
+        4
+      ],
+      [
+        "stay",
+        49790,
+        true,
+        0
+      ]
+    ]
+  },
+  "delayedTrap": {
+    "stateIndex": 91,
+    "cells": [
+      21,
+      0,
+      1
+    ],
+    "actions": [
+      [
+        "N",
+        5681,
+        true,
+        0
+      ],
+      [
+        "E",
+        5692,
+        false,
+        -1
+      ],
+      [
+        "S",
+        5701,
+        false,
+        -1
+      ],
+      [
+        "W",
+        5690,
+        false,
+        5
+      ],
+      [
+        "stay",
+        5691,
+        true,
+        0
+      ]
+    ]
+  },
+  "allUnsafe": {
+    "stateIndex": 1612,
+    "cells": [
+      2,
+      0,
+      23
+    ],
+    "safe": [],
+    "actions": [
+      [
+        "E",
+        5813,
+        true,
+        0
+      ],
+      [
+        "S",
+        5822,
+        true,
+        0
+      ],
+      [
+        "W",
+        5811,
+        true,
+        0
+      ],
+      [
+        "stay",
+        5812,
+        true,
+        0
+      ]
+    ]
+  }
+}
