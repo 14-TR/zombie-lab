@@ -28,6 +28,16 @@ The exact planner is **not** the old depth2 planner: it selects the first certif
 - First trajectory divergence from original: tick10 for run-01, tick7 for run-02. At the historical tick-7 failure state, S is the sole safe action, so code replaces the opportunity for a mistake with a forced step; the model does not select S then.
 - Both new runs and exact controls are **unresolved at12**, not proofs of their realized policy's infinite survival. Certificate-winning endpoints mean some future strategy exists, not that future Jev choices will implement it. No learned weights, training, statistical-confidence or general-intelligence claim.
 
+## Architecture scope: prediction, choice, and authority
+
+This toy is a diagnostic of using **Jev as an inference component behind a world model**, not a validated traffic-light, traffic-flow, pipe-pressure, hydraulic, or system-load model. No new domain was built or tested here; the approved ZL-017 scope and budget did not change.
+
+- **Dynamics prediction:** Jev independently predicts the two next zombie moves. The measured result is 34/42 correct predictions; six values are explicitly not requested on forced steps. These answers are diagnostics, not an executable physics model.
+- **Control selection:** Jev makes 21 genuine choices from code-retained candidates. Three other steps have exactly one safe option and are executed by the guardrail with no model call or agency. The decisive prevention of the historical capture is in this forced category.
+- **Simulator / constraint-solver authority:** Deterministic production code moves the actual zombies and resolves capture. The immediate-capture mask is computed in code and independently checked. The exact certificate planner is a separate oracle control; its ranks never enter Jev's request.
+
+The combined system's bounded success therefore does not establish that Jev learned the dynamics or can transfer to traffic or hydraulic control. There were no reached states offering an immediately safe delayed-losing alternative, so long-term trap discrimination was not tested by the paid trajectories. Any future domain needs its own grounded state representation, physics/constraint authority, validated predictive judgments, and control evaluation; that is architectural context, not authorization for another experiment.
+
 ## Actual usage / bounds
 
 Single campaign completed `2026-09-21T02:06:33.692667+00:00`;21/24 admissions, all HTTP200, pinned returned `jev-1.13.0`, zero invalid/service failures. Three unused admissions stay unused; the single-use ledger refuses a second batch. No warmups, retries, replacement historical calls, or retuning.
