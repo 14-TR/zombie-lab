@@ -1,0 +1,12 @@
+{
+  "startedAt": "2026-09-21T03:43:46.913Z",
+  "site": "/Users/tr/Projects/zombie-lab-evidence/ZL-018-site",
+  "sourceCommit": "567fe2eeda5bebfb8fe370ae920d6809bc839175",
+  "dataSHA256": "6f49eabae1a67da999654dceb2358e2f8cc166ab0946491446ba22a6b1dda82d",
+  "widths": [],
+  "errors": [],
+  "externalRequests": [],
+  "valid": false,
+  "failure": "AssertionError [ERR_ASSERTION]: glyph size 11.333333333333332\n    at /Users/tr/Projects/zombie-lab-jev-dynamics/scripts/check-dynamics-browser.cjs:38:10",
+  "completedAt": "2026-09-21T03:43:48.185Z"
+}

@@ -1,0 +1,903 @@
+{
+  "summary": {
+    "overall": {
+      "n": 48,
+      "model": {
+        "exact": 0,
+        "correctComponents": 130,
+        "components": 336,
+        "numericCoordinates": 216,
+        "coordinateAbsoluteError": 203,
+        "captureCorrect": 23,
+        "unknown": 79,
+        "missing": 0
+      },
+      "baseline": {
+        "exact": 24,
+        "correctComponents": 222,
+        "components": 336,
+        "numericCoordinates": 182,
+        "coordinateAbsoluteError": 0,
+        "captureCorrect": 40,
+        "unknown": 114,
+        "missing": 0
+      },
+      "evidenceTargetExact": 4
+    },
+    "byConditionHorizonLaw": [
+      {
+        "condition": "neither",
+        "horizon": 1,
+        "law": "old_NESW",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 12,
+          "components": 28,
+          "numericCoordinates": 9,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 3,
+          "unknown": 15,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 12,
+          "components": 28,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 16,
+          "missing": 0
+        },
+        "evidenceTargetExact": 2
+      },
+      {
+        "condition": "neither",
+        "horizon": 1,
+        "law": "old_WSEN",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 11,
+          "components": 28,
+          "numericCoordinates": 10,
+          "coordinateAbsoluteError": 2,
+          "captureCorrect": 3,
+          "unknown": 14,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 12,
+          "components": 28,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 16,
+          "missing": 0
+        },
+        "evidenceTargetExact": 2
+      },
+      {
+        "condition": "neither",
+        "horizon": 3,
+        "law": "old_NESW",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 5,
+          "components": 28,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 3,
+          "captureCorrect": 0,
+          "unknown": 20,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 4,
+          "components": 28,
+          "numericCoordinates": 4,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 0,
+          "unknown": 24,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "neither",
+        "horizon": 3,
+        "law": "old_WSEN",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 4,
+          "components": 28,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 4,
+          "captureCorrect": 0,
+          "unknown": 19,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 4,
+          "components": 28,
+          "numericCoordinates": 4,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 0,
+          "unknown": 24,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "observations",
+        "horizon": 1,
+        "law": "old_NESW",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 15,
+          "components": 28,
+          "numericCoordinates": 23,
+          "coordinateAbsoluteError": 31,
+          "captureCorrect": 4,
+          "unknown": 1,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 2,
+          "correctComponents": 20,
+          "components": 28,
+          "numericCoordinates": 16,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 8,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "observations",
+        "horizon": 1,
+        "law": "old_WSEN",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 16,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 30,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 2,
+          "correctComponents": 20,
+          "components": 28,
+          "numericCoordinates": 16,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 8,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "observations",
+        "horizon": 3,
+        "law": "old_NESW",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 7,
+          "components": 28,
+          "numericCoordinates": 21,
+          "coordinateAbsoluteError": 35,
+          "captureCorrect": 1,
+          "unknown": 3,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 2,
+          "correctComponents": 19,
+          "components": 28,
+          "numericCoordinates": 15,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 9,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "observations",
+        "horizon": 3,
+        "law": "old_WSEN",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 6,
+          "components": 28,
+          "numericCoordinates": 17,
+          "coordinateAbsoluteError": 23,
+          "captureCorrect": 0,
+          "unknown": 7,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 2,
+          "correctComponents": 19,
+          "components": 28,
+          "numericCoordinates": 15,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 9,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "supplied",
+        "horizon": 1,
+        "law": "old_NESW",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 19,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 10,
+          "captureCorrect": 3,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "supplied",
+        "horizon": 1,
+        "law": "old_WSEN",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 17,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 11,
+          "captureCorrect": 3,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "supplied",
+        "horizon": 3,
+        "law": "old_NESW",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 10,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 27,
+          "captureCorrect": 1,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "supplied",
+        "horizon": 3,
+        "law": "old_WSEN",
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 8,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 27,
+          "captureCorrect": 1,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      }
+    ],
+    "byConditionHorizon": [
+      {
+        "condition": "neither",
+        "horizon": 1,
+        "n": 8,
+        "model": {
+          "exact": 0,
+          "correctComponents": 23,
+          "components": 56,
+          "numericCoordinates": 19,
+          "coordinateAbsoluteError": 2,
+          "captureCorrect": 6,
+          "unknown": 29,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 24,
+          "components": 56,
+          "numericCoordinates": 16,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 8,
+          "unknown": 32,
+          "missing": 0
+        },
+        "evidenceTargetExact": 4
+      },
+      {
+        "condition": "neither",
+        "horizon": 3,
+        "n": 8,
+        "model": {
+          "exact": 0,
+          "correctComponents": 9,
+          "components": 56,
+          "numericCoordinates": 16,
+          "coordinateAbsoluteError": 7,
+          "captureCorrect": 0,
+          "unknown": 39,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 8,
+          "components": 56,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 0,
+          "unknown": 48,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "observations",
+        "horizon": 1,
+        "n": 8,
+        "model": {
+          "exact": 0,
+          "correctComponents": 31,
+          "components": 56,
+          "numericCoordinates": 47,
+          "coordinateAbsoluteError": 61,
+          "captureCorrect": 8,
+          "unknown": 1,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 40,
+          "components": 56,
+          "numericCoordinates": 32,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 8,
+          "unknown": 16,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "observations",
+        "horizon": 3,
+        "n": 8,
+        "model": {
+          "exact": 0,
+          "correctComponents": 13,
+          "components": 56,
+          "numericCoordinates": 38,
+          "coordinateAbsoluteError": 58,
+          "captureCorrect": 1,
+          "unknown": 10,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 38,
+          "components": 56,
+          "numericCoordinates": 30,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 8,
+          "unknown": 18,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "supplied",
+        "horizon": 1,
+        "n": 8,
+        "model": {
+          "exact": 0,
+          "correctComponents": 36,
+          "components": 56,
+          "numericCoordinates": 48,
+          "coordinateAbsoluteError": 21,
+          "captureCorrect": 6,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 8,
+          "correctComponents": 56,
+          "components": 56,
+          "numericCoordinates": 48,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 8,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "condition": "supplied",
+        "horizon": 3,
+        "n": 8,
+        "model": {
+          "exact": 0,
+          "correctComponents": 18,
+          "components": 56,
+          "numericCoordinates": 48,
+          "coordinateAbsoluteError": 54,
+          "captureCorrect": 2,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 8,
+          "correctComponents": 56,
+          "components": 56,
+          "numericCoordinates": 48,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 8,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      }
+    ],
+    "byPanelConditionHorizon": [
+      {
+        "panel": "ambiguous",
+        "condition": "neither",
+        "horizon": 1,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 10,
+          "components": 28,
+          "numericCoordinates": 9,
+          "coordinateAbsoluteError": 1,
+          "captureCorrect": 2,
+          "unknown": 15,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 12,
+          "components": 28,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 16,
+          "missing": 0
+        },
+        "evidenceTargetExact": 2
+      },
+      {
+        "panel": "ambiguous",
+        "condition": "neither",
+        "horizon": 3,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 5,
+          "components": 28,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 3,
+          "captureCorrect": 0,
+          "unknown": 20,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 4,
+          "components": 28,
+          "numericCoordinates": 4,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 0,
+          "unknown": 24,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "panel": "ambiguous",
+        "condition": "observations",
+        "horizon": 1,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 15,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 37,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 12,
+          "components": 28,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 16,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "panel": "ambiguous",
+        "condition": "observations",
+        "horizon": 3,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 5,
+          "components": 28,
+          "numericCoordinates": 18,
+          "coordinateAbsoluteError": 38,
+          "captureCorrect": 1,
+          "unknown": 6,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 10,
+          "components": 28,
+          "numericCoordinates": 6,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 18,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "panel": "ambiguous",
+        "condition": "supplied",
+        "horizon": 1,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 17,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 11,
+          "captureCorrect": 2,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "panel": "ambiguous",
+        "condition": "supplied",
+        "horizon": 3,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 11,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 22,
+          "captureCorrect": 2,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "panel": "identifying",
+        "condition": "neither",
+        "horizon": 1,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 13,
+          "components": 28,
+          "numericCoordinates": 10,
+          "coordinateAbsoluteError": 1,
+          "captureCorrect": 4,
+          "unknown": 14,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 12,
+          "components": 28,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 16,
+          "missing": 0
+        },
+        "evidenceTargetExact": 2
+      },
+      {
+        "panel": "identifying",
+        "condition": "neither",
+        "horizon": 3,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 4,
+          "components": 28,
+          "numericCoordinates": 8,
+          "coordinateAbsoluteError": 4,
+          "captureCorrect": 0,
+          "unknown": 19,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 0,
+          "correctComponents": 4,
+          "components": 28,
+          "numericCoordinates": 4,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 0,
+          "unknown": 24,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "panel": "identifying",
+        "condition": "observations",
+        "horizon": 1,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 16,
+          "components": 28,
+          "numericCoordinates": 23,
+          "coordinateAbsoluteError": 24,
+          "captureCorrect": 4,
+          "unknown": 1,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "panel": "identifying",
+        "condition": "observations",
+        "horizon": 3,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 8,
+          "components": 28,
+          "numericCoordinates": 20,
+          "coordinateAbsoluteError": 20,
+          "captureCorrect": 0,
+          "unknown": 4,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "panel": "identifying",
+        "condition": "supplied",
+        "horizon": 1,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 19,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 10,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      },
+      {
+        "panel": "identifying",
+        "condition": "supplied",
+        "horizon": 3,
+        "n": 4,
+        "model": {
+          "exact": 0,
+          "correctComponents": 7,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 32,
+          "captureCorrect": 0,
+          "unknown": 0,
+          "missing": 0
+        },
+        "baseline": {
+          "exact": 4,
+          "correctComponents": 28,
+          "components": 28,
+          "numericCoordinates": 24,
+          "coordinateAbsoluteError": 0,
+          "captureCorrect": 4,
+          "unknown": 0,
+          "missing": 0
+        },
+        "evidenceTargetExact": 0
+      }
+    ],
+    "pairedInformation": {
+      "supplied-minus-observations": {
+        "n": 16,
+        "better": 0,
+        "worse": 0,
+        "same": 16,
+        "net": 0
+      },
+      "observations-minus-neither": {
+        "n": 16,
+        "better": 0,
+        "worse": 0,
+        "same": 16,
+        "net": 0
+      },
+      "supplied-minus-neither": {
+        "n": 16,
+        "better": 0,
+        "worse": 0,
+        "same": 16,
+        "net": 0
+      }
+    },
+    "pairedRule": {
+      "n": 24,
+      "better": 0,
+      "worse": 0,
+      "same": 24,
+      "net": 0
+    },
+    "interpretation": "Descriptive paired counts only; repeated arms/horizons share four configurations, not independent samples."
+  },
+  "usage": {
+    "admissions": 24,
+    "responses": 24,
+    "failures": 0,
+    "input_tokens": 98576,
+    "output_tokens": 30588,
+    "estimatedUSD": 0.004140192,
+    "estimateNotInvoice": true,
+    "conservativeEstimatedCeilingUSD": 0.019403915999999997,
+    "requestBytes": 265390,
+    "responseBytes": 61845,
+    "latencyMs": {
+      "n": 24,
+      "min": 214.35712500000025,
+      "median": 245.61891700000007,
+      "mean": 247.98708345833333,
+      "max": 297.5501250000008
+    },
+    "complete": {
+      "admitted": 24,
+      "completedAt": "2026-09-21T03:36:34.254312+00:00",
+      "elapsedMs": 5983.997958,
+      "halted": false,
+      "peakRSSBytes": 21839872,
+      "planned": 24
+    }
+  },
+  "integrity": {
+    "historicalFiles": 765,
+    "frozenHashes": 50,
+    "independentTruthMatches": 8,
+    "independentRequestChecks": 24,
+    "valid": true
+  }
+}

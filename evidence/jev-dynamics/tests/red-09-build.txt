@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_offline_actual_evidence_collection_complete_and_hash_bound (__main__.BuildTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_build.py", line 9, in test_offline_actual_evidence_collection_complete_and_hash_bound
+    self.assertTrue((Path(__file__).parent/'build_dynamics.py').exists(),'offline collector missing')
+AssertionError: False is not true : offline collector missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

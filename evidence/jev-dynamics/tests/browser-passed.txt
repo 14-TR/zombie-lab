@@ -1,0 +1,42 @@
+{
+  "startedAt": "2026-09-21T03:44:19.269Z",
+  "site": "/Users/tr/Projects/zombie-lab-evidence/ZL-018-site",
+  "sourceCommit": "567fe2eeda5bebfb8fe370ae920d6809bc839175",
+  "dataSHA256": "6f49eabae1a67da999654dceb2358e2f8cc166ab0946491446ba22a6b1dda82d",
+  "widths": [
+    {
+      "width": 320,
+      "requests": 24,
+      "boardFrames": 288,
+      "markers": 619,
+      "linkChecks": 216,
+      "minGlyphPx": 14.666666666666666,
+      "overlapPairs": 0,
+      "controls": "select,range,back,next,keyboard,play,pause,auto-stop passed"
+    },
+    {
+      "width": 390,
+      "requests": 24,
+      "boardFrames": 288,
+      "markers": 619,
+      "linkChecks": 216,
+      "minGlyphPx": 18.944444444444446,
+      "overlapPairs": 0,
+      "controls": "select,range,back,next,keyboard,play,pause,auto-stop passed"
+    },
+    {
+      "width": 1200,
+      "requests": 24,
+      "boardFrames": 288,
+      "markers": 619,
+      "linkChecks": 216,
+      "minGlyphPx": 20.533333333333335,
+      "overlapPairs": 0,
+      "controls": "select,range,back,next,keyboard,play,pause,auto-stop passed"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "valid": true,
+  "completedAt": "2026-09-21T03:44:31.135Z"
+}

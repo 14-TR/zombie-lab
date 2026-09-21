@@ -1,0 +1,17 @@
+{
+  "results": [
+    {
+      "probe": "ci",
+      "exit": 1,
+      "stdout": "ZL-018 stopped: Explicit local consent required; CI refuses all paid calls\n",
+      "stderr": ""
+    },
+    {
+      "probe": "repeat",
+      "exit": 1,
+      "stdout": "ZL-018 stopped: ZL-018 already started; permanently single-use\n",
+      "stderr": ""
+    }
+  ],
+  "allRecordingBytesUnchanged": true
+}

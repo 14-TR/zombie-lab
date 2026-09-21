@@ -1,0 +1,13 @@
+F.
+======================================================================
+FAIL: test_export_contains_actual_data_csv_and_offline_html (__main__.BuildTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-dynamics/scripts/test_dynamics_build.py", line 32, in test_export_contains_actual_data_csv_and_offline_html
+    self.assertTrue(hasattr(b,'export'),'offline export missing')
+AssertionError: False is not true : offline export missing
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.051s
+
+FAILED (failures=1)
