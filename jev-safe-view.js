@@ -53,7 +53,7 @@ function mount(data,doc){
   if(arm==='exact'){const a=el('a','Frozen exact-control evidence');a.href='evidence/jev-safe/frozen/exact-controls.json';links.append(a);}
   else for(const [label,suffix]of [['Request','request'],['Response','response'],['Receipt','receipt'],['Checked truth','truth']]){
    if(suffix!=='truth'&&!e.receipt)continue;if(suffix==='response'&&!e.receipt.responseSHA256)continue;
-   const a=el('a',label+' ');a.href=`evidence/${directory}/recording/${e.id}.${suffix}.json`;links.append(a);
+   const a=el('a',label+' ');a.href=suffix==='truth'&&arm==='original'?`evidence/${directory}/recording/${trace.id}.trajectory.json`:`evidence/${directory}/recording/${e.id}.${suffix}.json`;links.append(a);
   }panel.append(links);return panel;
  }
  function render(){
