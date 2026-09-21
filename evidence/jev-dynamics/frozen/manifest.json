@@ -1,0 +1,236 @@
+{
+  "base": "1c68578d18908ad146a6e8f1b22c96d380aa1566",
+  "campaign": "ZL-018",
+  "conservativeEstimatedUSD": 0.019403915999999997,
+  "generatedAt": "2026-09-21T03:36:04.250336+00:00",
+  "hashes": {
+    "evidence/jev-dynamics/docs/api.md": "7ea1c82d9d16bd06e3d38885a5292548293f91e6d1ade4682c27398ced51a9e5",
+    "evidence/jev-dynamics/docs/concepts-state.md": "6871d59470c6af330b10be302a7382ab4c175ee8994886ad48df2fe6bb315462",
+    "evidence/jev-dynamics/docs/cookbooks-parallel_questions.md": "e142ddb58aeb69796358851910e856dc089335db10f6bcecc801e95ff5e28808",
+    "evidence/jev-dynamics/docs/llms.txt": "9bb713532b8b5b836d48bf19733a6649525aff8353e22c5cbebf5524a498ff24",
+    "evidence/jev-dynamics/docs/models.md": "9d20bb3c90a0147532d0b20ddc4c64579391be7842e965543b27bad684eeb4d6",
+    "evidence/jev-dynamics/docs/patterns-fan-out.md": "8d7a251ea6b735cb4994c1e0a95166cc0b3febce7d18189c3aa5e1673f182c91",
+    "evidence/jev-dynamics/docs/primitives-choice.md": "4c55085131f8f2d7ae1faefdec52b1c7b379d40657d701cd2c786021cfe9dac9",
+    "evidence/jev-dynamics/docs/receipt.json": "8351e8cd18c77b805fb91951ca270017dbbecd44451d5385fd70a3d46d60d623",
+    "evidence/jev-dynamics/frozen/checks.json": "2f2fc19b813ab7b410d696903874372aeddf7efa3cef8b1ee34ec3222c092584",
+    "evidence/jev-dynamics/frozen/historical-preservation.json": "9f00a8f963681ef784b2ce40219c49937c0e2796033ebdbe787ea3f4845fc4cd",
+    "evidence/jev-dynamics/frozen/request-index.json": "a2f179935289312dba256857eac37f8e745cea2bd8d1fddf050ba65d0ce6c87f",
+    "evidence/jev-dynamics/frozen/requests/q01.json": "b930baedc0bde4ff1d76d9f164cb403884d34bd42ce58efd06272913c20728bc",
+    "evidence/jev-dynamics/frozen/requests/q02.json": "d0c6a0969a6fde922123855868ce7259e185f8817182eefe4ff8e8433ad54793",
+    "evidence/jev-dynamics/frozen/requests/q03.json": "e742c6ebb9f64dd393eb876168e67dd9b8e069337f68f61a7451d4055a5b3282",
+    "evidence/jev-dynamics/frozen/requests/q04.json": "b930baedc0bde4ff1d76d9f164cb403884d34bd42ce58efd06272913c20728bc",
+    "evidence/jev-dynamics/frozen/requests/q05.json": "56316979ab5fc614d08f6898e02b324968c8b28d33d09843781965ca892a2df9",
+    "evidence/jev-dynamics/frozen/requests/q06.json": "7493281a4702b8ff341be70fa11477fe70c522fe253c381f3b2779c507cbbae5",
+    "evidence/jev-dynamics/frozen/requests/q07.json": "c3c15bb4330d268203e081d4739bf063d93559a295743b0c9e3b600b548c6b4a",
+    "evidence/jev-dynamics/frozen/requests/q08.json": "38fd8e22dce4452f002d9e3a43dd54d8271d485f26710f80a703b1d0de27e075",
+    "evidence/jev-dynamics/frozen/requests/q09.json": "2263334a60d3aa6205e21e29980374d93277a7e7210124fc2ef063793008f47d",
+    "evidence/jev-dynamics/frozen/requests/q10.json": "c3c15bb4330d268203e081d4739bf063d93559a295743b0c9e3b600b548c6b4a",
+    "evidence/jev-dynamics/frozen/requests/q11.json": "af64620f0080cfa82094df9102d64d71743040e88d5b6b8e2a1b46cc55a5b2fc",
+    "evidence/jev-dynamics/frozen/requests/q12.json": "141cab8333ff69b105bc5385c79ce3f518180f3508f158b031cbd0e35ab4bbb1",
+    "evidence/jev-dynamics/frozen/requests/q13.json": "c133646179b8e70987ac6869e279c08a44ba2e8fa1d0ed49c2f932ee96ff9924",
+    "evidence/jev-dynamics/frozen/requests/q14.json": "7cb8d0bfdea887c0b7dea21e5331cbebb82995c562e2a03b77f600f5c1d55c84",
+    "evidence/jev-dynamics/frozen/requests/q15.json": "1456ee3232b3bbd736c0d2d2f480c6646f8b89eb81c3baa15849dd78d4a45694",
+    "evidence/jev-dynamics/frozen/requests/q16.json": "c133646179b8e70987ac6869e279c08a44ba2e8fa1d0ed49c2f932ee96ff9924",
+    "evidence/jev-dynamics/frozen/requests/q17.json": "7cb8d0bfdea887c0b7dea21e5331cbebb82995c562e2a03b77f600f5c1d55c84",
+    "evidence/jev-dynamics/frozen/requests/q18.json": "a7baa750603e5ac7aea40cc58d7af56948d8f17ba45db26423088053673a4338",
+    "evidence/jev-dynamics/frozen/requests/q19.json": "708b1f1189690bcfe6b1ce2df054842121fa8bb9bc12bdc15e3d904383cb8757",
+    "evidence/jev-dynamics/frozen/requests/q20.json": "06a30c9a6337a76ca3062e918289b0257d153afeb1a4dd99bed8f97f8b60078f",
+    "evidence/jev-dynamics/frozen/requests/q21.json": "99ce195c0f372d6c3a457f22109af911996cd5aa6e989227284374af00378ba1",
+    "evidence/jev-dynamics/frozen/requests/q22.json": "708b1f1189690bcfe6b1ce2df054842121fa8bb9bc12bdc15e3d904383cb8757",
+    "evidence/jev-dynamics/frozen/requests/q23.json": "06a30c9a6337a76ca3062e918289b0257d153afeb1a4dd99bed8f97f8b60078f",
+    "evidence/jev-dynamics/frozen/requests/q24.json": "b0a383171f7d2eaa67d704809b5653f1636539cf8c144f5fc731416eb7cd127f",
+    "evidence/jev-dynamics/frozen/truth.json": "97269f4bc4672019ab34195714dd20eefd0663fd9da14cde81848b1b1c7d5756",
+    "evidence/jev-dynamics/inputs.json": "303998f610a6a1ad38c60b8dae62115bbad26c484be3eb94f924ee28027e1fdb",
+    "experiments/ZL-018-protocol.md": "f7f3fe4a3f1840f196ee47740c00ff9386b018227716f9b07ccf6848a36a1804",
+    "scripts/check-dynamics-legacy.cjs": "19b2937f609510392620d5447acdb4289562f012b3c1e436ab828a28335c72f5",
+    "scripts/dynamics.py": "a8421857664515e0965bc9948af7bf0789181c127b2eabc93dfd4c18f4aa23ea",
+    "scripts/dynamics_reference.py": "641d54f8794f09f3d0085f5039eaabe879ffa8478f5c1feca3a60883dd1a2bd0",
+    "scripts/dynamics_report.py": "c7ce98c03226d11de9f04860e9a620b1fd71c534c451a5a6a214d1eac91bace2",
+    "scripts/dynamics_score.py": "0989e59815c905b80e9d58088a4daa137e9ffa7f50c12eb4ddf5b0768567f6ab",
+    "scripts/freeze_dynamics.py": "986630d2eca5e7c6c80273cab1b453ef2d099395c016d6087cb079e0d38daffe",
+    "scripts/run-jev.py": "f27f35c8c10c31448f82575f9f0d8e46678e0ec222bd304944392e78fdbc11e3",
+    "scripts/run_dynamics.py": "d417d2cdbde19c4463ef8d961e4b20527528da9affcd7fc74241e7da6df35750",
+    "scripts/test_dynamics.py": "0002153f89d5b92ee85fb54abb51a3521428cb2b2bedc9ab585c63f5c644ab3d",
+    "scripts/test_dynamics_report.py": "5ab24342a83eb5659d329fc98d3d4caf1fbb433632d7153ca0bd459d9b305bda",
+    "scripts/test_dynamics_runner.py": "d132652aea2b85c10b2a7dcc1424511c65a51b2aab6d0597c86086bd8a6c2507",
+    "two-zombies.js": "ae62cc4ed7d4fb465a97827c0da34eb191005afc3de6c1c0185b163b00fc3243"
+  },
+  "independentCheck": {
+    "legacy": {
+      "purpose": "unchanged-law production parity on prescribed inputs",
+      "source": "two-zombies.js",
+      "transitions": 12,
+      "valid": true
+    },
+    "method": "independent coordinate-sign reference; same author, not blind external review",
+    "transitionComparisons": 204,
+    "valid": true
+  },
+  "inputUSDPerMillion": 0.042,
+  "model": "jev-1.13.0",
+  "outputFree": true,
+  "requests": [
+    {
+      "bytes": 10931,
+      "file": "evidence/jev-dynamics/frozen/requests/q01.json",
+      "id": "q01",
+      "sha256": "b930baedc0bde4ff1d76d9f164cb403884d34bd42ce58efd06272913c20728bc"
+    },
+    {
+      "bytes": 11208,
+      "file": "evidence/jev-dynamics/frozen/requests/q02.json",
+      "id": "q02",
+      "sha256": "d0c6a0969a6fde922123855868ce7259e185f8817182eefe4ff8e8433ad54793"
+    },
+    {
+      "bytes": 11095,
+      "file": "evidence/jev-dynamics/frozen/requests/q03.json",
+      "id": "q03",
+      "sha256": "e742c6ebb9f64dd393eb876168e67dd9b8e069337f68f61a7451d4055a5b3282"
+    },
+    {
+      "bytes": 10931,
+      "file": "evidence/jev-dynamics/frozen/requests/q04.json",
+      "id": "q04",
+      "sha256": "b930baedc0bde4ff1d76d9f164cb403884d34bd42ce58efd06272913c20728bc"
+    },
+    {
+      "bytes": 11208,
+      "file": "evidence/jev-dynamics/frozen/requests/q05.json",
+      "id": "q05",
+      "sha256": "56316979ab5fc614d08f6898e02b324968c8b28d33d09843781965ca892a2df9"
+    },
+    {
+      "bytes": 11095,
+      "file": "evidence/jev-dynamics/frozen/requests/q06.json",
+      "id": "q06",
+      "sha256": "7493281a4702b8ff341be70fa11477fe70c522fe253c381f3b2779c507cbbae5"
+    },
+    {
+      "bytes": 10931,
+      "file": "evidence/jev-dynamics/frozen/requests/q07.json",
+      "id": "q07",
+      "sha256": "c3c15bb4330d268203e081d4739bf063d93559a295743b0c9e3b600b548c6b4a"
+    },
+    {
+      "bytes": 11208,
+      "file": "evidence/jev-dynamics/frozen/requests/q08.json",
+      "id": "q08",
+      "sha256": "38fd8e22dce4452f002d9e3a43dd54d8271d485f26710f80a703b1d0de27e075"
+    },
+    {
+      "bytes": 11095,
+      "file": "evidence/jev-dynamics/frozen/requests/q09.json",
+      "id": "q09",
+      "sha256": "2263334a60d3aa6205e21e29980374d93277a7e7210124fc2ef063793008f47d"
+    },
+    {
+      "bytes": 10931,
+      "file": "evidence/jev-dynamics/frozen/requests/q10.json",
+      "id": "q10",
+      "sha256": "c3c15bb4330d268203e081d4739bf063d93559a295743b0c9e3b600b548c6b4a"
+    },
+    {
+      "bytes": 11208,
+      "file": "evidence/jev-dynamics/frozen/requests/q11.json",
+      "id": "q11",
+      "sha256": "af64620f0080cfa82094df9102d64d71743040e88d5b6b8e2a1b46cc55a5b2fc"
+    },
+    {
+      "bytes": 11095,
+      "file": "evidence/jev-dynamics/frozen/requests/q12.json",
+      "id": "q12",
+      "sha256": "141cab8333ff69b105bc5385c79ce3f518180f3508f158b031cbd0e35ab4bbb1"
+    },
+    {
+      "bytes": 10931,
+      "file": "evidence/jev-dynamics/frozen/requests/q13.json",
+      "id": "q13",
+      "sha256": "c133646179b8e70987ac6869e279c08a44ba2e8fa1d0ed49c2f932ee96ff9924"
+    },
+    {
+      "bytes": 11083,
+      "file": "evidence/jev-dynamics/frozen/requests/q14.json",
+      "id": "q14",
+      "sha256": "7cb8d0bfdea887c0b7dea21e5331cbebb82995c562e2a03b77f600f5c1d55c84"
+    },
+    {
+      "bytes": 11095,
+      "file": "evidence/jev-dynamics/frozen/requests/q15.json",
+      "id": "q15",
+      "sha256": "1456ee3232b3bbd736c0d2d2f480c6646f8b89eb81c3baa15849dd78d4a45694"
+    },
+    {
+      "bytes": 10931,
+      "file": "evidence/jev-dynamics/frozen/requests/q16.json",
+      "id": "q16",
+      "sha256": "c133646179b8e70987ac6869e279c08a44ba2e8fa1d0ed49c2f932ee96ff9924"
+    },
+    {
+      "bytes": 11083,
+      "file": "evidence/jev-dynamics/frozen/requests/q17.json",
+      "id": "q17",
+      "sha256": "7cb8d0bfdea887c0b7dea21e5331cbebb82995c562e2a03b77f600f5c1d55c84"
+    },
+    {
+      "bytes": 11095,
+      "file": "evidence/jev-dynamics/frozen/requests/q18.json",
+      "id": "q18",
+      "sha256": "a7baa750603e5ac7aea40cc58d7af56948d8f17ba45db26423088053673a4338"
+    },
+    {
+      "bytes": 10934,
+      "file": "evidence/jev-dynamics/frozen/requests/q19.json",
+      "id": "q19",
+      "sha256": "708b1f1189690bcfe6b1ce2df054842121fa8bb9bc12bdc15e3d904383cb8757"
+    },
+    {
+      "bytes": 11086,
+      "file": "evidence/jev-dynamics/frozen/requests/q20.json",
+      "id": "q20",
+      "sha256": "06a30c9a6337a76ca3062e918289b0257d153afeb1a4dd99bed8f97f8b60078f"
+    },
+    {
+      "bytes": 11098,
+      "file": "evidence/jev-dynamics/frozen/requests/q21.json",
+      "id": "q21",
+      "sha256": "99ce195c0f372d6c3a457f22109af911996cd5aa6e989227284374af00378ba1"
+    },
+    {
+      "bytes": 10934,
+      "file": "evidence/jev-dynamics/frozen/requests/q22.json",
+      "id": "q22",
+      "sha256": "708b1f1189690bcfe6b1ce2df054842121fa8bb9bc12bdc15e3d904383cb8757"
+    },
+    {
+      "bytes": 11086,
+      "file": "evidence/jev-dynamics/frozen/requests/q23.json",
+      "id": "q23",
+      "sha256": "06a30c9a6337a76ca3062e918289b0257d153afeb1a4dd99bed8f97f8b60078f"
+    },
+    {
+      "bytes": 11098,
+      "file": "evidence/jev-dynamics/frozen/requests/q24.json",
+      "id": "q24",
+      "sha256": "b0a383171f7d2eaa67d704809b5653f1636539cf8c144f5fc731416eb7cd127f"
+    }
+  ],
+  "sourceParent": "41e716ccfec7314f1b04d2b4f6055e7d4a63d3dc",
+  "splitCheck": {
+    "developmentBoards": [
+      [
+        3,
+        3
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "evaluationStartGroups": 4,
+    "evaluationTrajectoryGroups": 24,
+    "exampleGroups": 8,
+    "historicalDomain": "All configurations in10x7 excluded by at least one coordinate outside support; swaps included",
+    "overlaps": 0
+  }
+}

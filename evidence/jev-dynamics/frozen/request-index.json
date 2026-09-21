@@ -1,0 +1,2026 @@
+[
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW",
+        "stationary"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "8",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "7",
+            "Z1_y": "6",
+            "Z2_x": "1",
+            "Z2_y": "8",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "8",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "7",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "9",
+            "H_y": "6",
+            "Z1_x": "9",
+            "Z1_y": "5",
+            "Z2_x": "1",
+            "Z2_y": "7",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "8",
+            "H_y": "6",
+            "Z1_x": "8",
+            "Z1_y": "7",
+            "Z2_x": "3",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "9",
+            "H_y": "6",
+            "Z1_x": "9",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "8",
+            "H_y": "6",
+            "Z1_x": "7",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "9",
+          "H_y": "7",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "6",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "unknown"
+        }
+      }
+    },
+    "bytes": 10931,
+    "caseId": "A",
+    "condition": "neither",
+    "file": "evidence/jev-dynamics/frozen/requests/q01.json",
+    "id": "q01",
+    "law": "old_NESW",
+    "panel": "identifying",
+    "sha256": "b930baedc0bde4ff1d76d9f164cb403884d34bd42ce58efd06272913c20728bc"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "8",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "7",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "9",
+            "H_y": "6",
+            "Z1_x": "9",
+            "Z1_y": "5",
+            "Z2_x": "1",
+            "Z2_y": "7",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "9",
+          "H_y": "7",
+          "Z1_x": "8",
+          "Z1_y": "5",
+          "Z2_x": "0",
+          "Z2_y": "7",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "9",
+          "H_y": "6",
+          "Z1_x": "9",
+          "Z1_y": "5",
+          "Z2_x": "1",
+          "Z2_y": "7",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11208,
+    "caseId": "A",
+    "condition": "observations",
+    "file": "evidence/jev-dynamics/frozen/requests/q02.json",
+    "id": "q02",
+    "law": "old_NESW",
+    "panel": "identifying",
+    "sha256": "d0c6a0969a6fde922123855868ce7259e185f8817182eefe4ff8e8433ad54793"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "8",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "7",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "9",
+            "H_y": "6",
+            "Z1_x": "9",
+            "Z1_y": "5",
+            "Z2_x": "1",
+            "Z2_y": "7",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "9",
+          "H_y": "7",
+          "Z1_x": "8",
+          "Z1_y": "5",
+          "Z2_x": "0",
+          "Z2_y": "7",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "9",
+          "H_y": "6",
+          "Z1_x": "9",
+          "Z1_y": "5",
+          "Z2_x": "1",
+          "Z2_y": "7",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11095,
+    "caseId": "A",
+    "condition": "supplied",
+    "file": "evidence/jev-dynamics/frozen/requests/q03.json",
+    "id": "q03",
+    "law": "old_NESW",
+    "panel": "identifying",
+    "sha256": "e742c6ebb9f64dd393eb876168e67dd9b8e069337f68f61a7451d4055a5b3282"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW",
+        "stationary"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "8",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "7",
+            "Z1_y": "6",
+            "Z2_x": "1",
+            "Z2_y": "8",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "8",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "7",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "9",
+            "H_y": "6",
+            "Z1_x": "9",
+            "Z1_y": "5",
+            "Z2_x": "1",
+            "Z2_y": "7",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "8",
+            "H_y": "6",
+            "Z1_x": "8",
+            "Z1_y": "7",
+            "Z2_x": "3",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "9",
+            "H_y": "6",
+            "Z1_x": "9",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "8",
+            "H_y": "6",
+            "Z1_x": "7",
+            "Z1_y": "5",
+            "Z2_x": "0",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "9",
+          "H_y": "7",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "6",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "unknown"
+        }
+      }
+    },
+    "bytes": 10931,
+    "caseId": "A",
+    "condition": "neither",
+    "file": "evidence/jev-dynamics/frozen/requests/q04.json",
+    "id": "q04",
+    "law": "old_WSEN",
+    "panel": "identifying",
+    "sha256": "b930baedc0bde4ff1d76d9f164cb403884d34bd42ce58efd06272913c20728bc"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_WSEN"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "7",
+            "Z1_y": "6",
+            "Z2_x": "1",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "8",
+            "H_y": "6",
+            "Z1_x": "8",
+            "Z1_y": "7",
+            "Z2_x": "3",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "9",
+          "H_y": "7",
+          "Z1_x": "7",
+          "Z1_y": "6",
+          "Z2_x": "1",
+          "Z2_y": "8",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "8",
+          "H_y": "6",
+          "Z1_x": "8",
+          "Z1_y": "7",
+          "Z2_x": "3",
+          "Z2_y": "8",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11208,
+    "caseId": "A",
+    "condition": "observations",
+    "file": "evidence/jev-dynamics/frozen/requests/q05.json",
+    "id": "q05",
+    "law": "old_WSEN",
+    "panel": "identifying",
+    "sha256": "56316979ab5fc614d08f6898e02b324968c8b28d33d09843781965ca892a2df9"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_WSEN"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "9",
+            "H_y": "7",
+            "Z1_x": "7",
+            "Z1_y": "6",
+            "Z2_x": "1",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "8",
+            "H_y": "6",
+            "Z1_x": "8",
+            "Z1_y": "7",
+            "Z2_x": "3",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "9",
+          "H_y": "7",
+          "Z1_x": "7",
+          "Z1_y": "6",
+          "Z2_x": "1",
+          "Z2_y": "8",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "8",
+          "H_y": "6",
+          "Z1_x": "8",
+          "Z1_y": "7",
+          "Z2_x": "3",
+          "Z2_y": "8",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11095,
+    "caseId": "A",
+    "condition": "supplied",
+    "file": "evidence/jev-dynamics/frozen/requests/q06.json",
+    "id": "q06",
+    "law": "old_WSEN",
+    "panel": "identifying",
+    "sha256": "7493281a4702b8ff341be70fa11477fe70c522fe253c381f3b2779c507cbbae5"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW",
+        "stationary"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "8",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "9",
+            "Z1_y": "3",
+            "Z2_x": "3",
+            "Z2_y": "8",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "8",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "8",
+            "Z1_y": "3",
+            "Z2_x": "2",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "10",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "5",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "4",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "5",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "3",
+            "Z1_x": "8",
+            "Z1_y": "3",
+            "Z2_x": "2",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "2",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "3",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "unknown"
+        }
+      }
+    },
+    "bytes": 10931,
+    "caseId": "B",
+    "condition": "neither",
+    "file": "evidence/jev-dynamics/frozen/requests/q07.json",
+    "id": "q07",
+    "law": "old_NESW",
+    "panel": "identifying",
+    "sha256": "c3c15bb4330d268203e081d4739bf063d93559a295743b0c9e3b600b548c6b4a"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "8",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "7",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "10",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "5",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "2",
+          "Z1_x": "8",
+          "Z1_y": "2",
+          "Z2_x": "2",
+          "Z2_y": "7",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "10",
+          "H_y": "3",
+          "Z1_x": "10",
+          "Z1_y": "2",
+          "Z2_x": "2",
+          "Z2_y": "5",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11208,
+    "caseId": "B",
+    "condition": "observations",
+    "file": "evidence/jev-dynamics/frozen/requests/q08.json",
+    "id": "q08",
+    "law": "old_NESW",
+    "panel": "identifying",
+    "sha256": "38fd8e22dce4452f002d9e3a43dd54d8271d485f26710f80a703b1d0de27e075"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "8",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "7",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "10",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "5",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "2",
+          "Z1_x": "8",
+          "Z1_y": "2",
+          "Z2_x": "2",
+          "Z2_y": "7",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "10",
+          "H_y": "3",
+          "Z1_x": "10",
+          "Z1_y": "2",
+          "Z2_x": "2",
+          "Z2_y": "5",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11095,
+    "caseId": "B",
+    "condition": "supplied",
+    "file": "evidence/jev-dynamics/frozen/requests/q09.json",
+    "id": "q09",
+    "law": "old_NESW",
+    "panel": "identifying",
+    "sha256": "2263334a60d3aa6205e21e29980374d93277a7e7210124fc2ef063793008f47d"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW",
+        "stationary"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "8",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "9",
+            "Z1_y": "3",
+            "Z2_x": "3",
+            "Z2_y": "8",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "8",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "8",
+            "Z1_y": "3",
+            "Z2_x": "2",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "10",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "5",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "4",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "2",
+            "Z2_x": "2",
+            "Z2_y": "5",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "3",
+            "Z1_x": "8",
+            "Z1_y": "3",
+            "Z2_x": "2",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "2",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "3",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "unknown"
+        }
+      }
+    },
+    "bytes": 10931,
+    "caseId": "B",
+    "condition": "neither",
+    "file": "evidence/jev-dynamics/frozen/requests/q10.json",
+    "id": "q10",
+    "law": "old_WSEN",
+    "panel": "identifying",
+    "sha256": "c3c15bb4330d268203e081d4739bf063d93559a295743b0c9e3b600b548c6b4a"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_WSEN"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "9",
+            "Z1_y": "3",
+            "Z2_x": "3",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "4",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "2",
+          "Z1_x": "9",
+          "Z1_y": "3",
+          "Z2_x": "3",
+          "Z2_y": "8",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "11",
+          "H_y": "3",
+          "Z1_x": "10",
+          "Z1_y": "3",
+          "Z2_x": "4",
+          "Z2_y": "8",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11208,
+    "caseId": "B",
+    "condition": "observations",
+    "file": "evidence/jev-dynamics/frozen/requests/q11.json",
+    "id": "q11",
+    "law": "old_WSEN",
+    "panel": "identifying",
+    "sha256": "af64620f0080cfa82094df9102d64d71743040e88d5b6b8e2a1b46cc55a5b2fc"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_WSEN"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "2",
+            "Z1_x": "9",
+            "Z1_y": "3",
+            "Z2_x": "3",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "3",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "4",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "2",
+          "Z1_x": "9",
+          "Z1_y": "3",
+          "Z2_x": "3",
+          "Z2_y": "8",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "11",
+          "H_y": "3",
+          "Z1_x": "10",
+          "Z1_y": "3",
+          "Z2_x": "4",
+          "Z2_y": "8",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11095,
+    "caseId": "B",
+    "condition": "supplied",
+    "file": "evidence/jev-dynamics/frozen/requests/q12.json",
+    "id": "q12",
+    "law": "old_WSEN",
+    "panel": "identifying",
+    "sha256": "141cab8333ff69b105bc5385c79ce3f518180f3508f158b031cbd0e35ab4bbb1"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW",
+        "stationary"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "9",
+            "Z1_y": "7",
+            "Z2_x": "4",
+            "Z2_y": "0",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "8",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "1",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "9",
+            "Z1_y": "7",
+            "Z2_x": "4",
+            "Z2_y": "0",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "8",
+            "Z1_y": "7",
+            "Z2_x": "3",
+            "Z2_y": "0",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "7",
+            "Z2_x": "5",
+            "Z2_y": "0",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "3",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "7",
+            "Z2_x": "5",
+            "Z2_y": "0",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "7",
+            "Z1_x": "8",
+            "Z1_y": "7",
+            "Z2_x": "3",
+            "Z2_y": "0",
+            "world_caught": "no"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "8",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "7",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "unknown"
+        }
+      }
+    },
+    "bytes": 10931,
+    "caseId": "C",
+    "condition": "neither",
+    "file": "evidence/jev-dynamics/frozen/requests/q13.json",
+    "id": "q13",
+    "law": "old_NESW",
+    "panel": "ambiguous",
+    "sha256": "c133646179b8e70987ac6869e279c08a44ba2e8fa1d0ed49c2f932ee96ff9924"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "9",
+            "Z1_y": "7",
+            "Z2_x": "4",
+            "Z2_y": "0",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "8",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "1",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "9",
+            "Z1_y": "7",
+            "Z2_x": "4",
+            "Z2_y": "0",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "7",
+            "Z2_x": "5",
+            "Z2_y": "0",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "3",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "7",
+            "Z2_x": "5",
+            "Z2_y": "0",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "8",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "7",
+          "Z1_x": "10",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11083,
+    "caseId": "C",
+    "condition": "observations",
+    "file": "evidence/jev-dynamics/frozen/requests/q14.json",
+    "id": "q14",
+    "law": "old_NESW",
+    "panel": "ambiguous",
+    "sha256": "7cb8d0bfdea887c0b7dea21e5331cbebb82995c562e2a03b77f600f5c1d55c84"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "9",
+            "Z1_y": "7",
+            "Z2_x": "4",
+            "Z2_y": "0",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "7",
+            "Z2_x": "5",
+            "Z2_y": "0",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "8",
+          "Z1_x": "9",
+          "Z1_y": "7",
+          "Z2_x": "4",
+          "Z2_y": "0",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "11",
+          "H_y": "7",
+          "Z1_x": "10",
+          "Z1_y": "7",
+          "Z2_x": "5",
+          "Z2_y": "0",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11095,
+    "caseId": "C",
+    "condition": "supplied",
+    "file": "evidence/jev-dynamics/frozen/requests/q15.json",
+    "id": "q15",
+    "law": "old_NESW",
+    "panel": "ambiguous",
+    "sha256": "1456ee3232b3bbd736c0d2d2f480c6646f8b89eb81c3baa15849dd78d4a45694"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW",
+        "stationary"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "9",
+            "Z1_y": "7",
+            "Z2_x": "4",
+            "Z2_y": "0",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "8",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "1",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "9",
+            "Z1_y": "7",
+            "Z2_x": "4",
+            "Z2_y": "0",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "8",
+            "Z1_y": "7",
+            "Z2_x": "3",
+            "Z2_y": "0",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "7",
+            "Z2_x": "5",
+            "Z2_y": "0",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "3",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "7",
+            "Z2_x": "5",
+            "Z2_y": "0",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "7",
+            "Z1_x": "8",
+            "Z1_y": "7",
+            "Z2_x": "3",
+            "Z2_y": "0",
+            "world_caught": "no"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "8",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "7",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "unknown"
+        }
+      }
+    },
+    "bytes": 10931,
+    "caseId": "C",
+    "condition": "neither",
+    "file": "evidence/jev-dynamics/frozen/requests/q16.json",
+    "id": "q16",
+    "law": "old_WSEN",
+    "panel": "ambiguous",
+    "sha256": "c133646179b8e70987ac6869e279c08a44ba2e8fa1d0ed49c2f932ee96ff9924"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "9",
+            "Z1_y": "7",
+            "Z2_x": "4",
+            "Z2_y": "0",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "8",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "1",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "9",
+            "Z1_y": "7",
+            "Z2_x": "4",
+            "Z2_y": "0",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "7",
+            "Z2_x": "5",
+            "Z2_y": "0",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "3",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "7",
+            "Z2_x": "5",
+            "Z2_y": "0",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "8",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "7",
+          "Z1_x": "10",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11083,
+    "caseId": "C",
+    "condition": "observations",
+    "file": "evidence/jev-dynamics/frozen/requests/q17.json",
+    "id": "q17",
+    "law": "old_WSEN",
+    "panel": "ambiguous",
+    "sha256": "7cb8d0bfdea887c0b7dea21e5331cbebb82995c562e2a03b77f600f5c1d55c84"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_WSEN"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "8",
+            "Z1_x": "8",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "1",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "10",
+            "H_y": "7",
+            "Z1_x": "10",
+            "Z1_y": "8",
+            "Z2_x": "3",
+            "Z2_y": "3",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "8",
+          "Z1_x": "8",
+          "Z1_y": "8",
+          "Z2_x": "3",
+          "Z2_y": "1",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "10",
+          "H_y": "7",
+          "Z1_x": "10",
+          "Z1_y": "8",
+          "Z2_x": "3",
+          "Z2_y": "3",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11095,
+    "caseId": "C",
+    "condition": "supplied",
+    "file": "evidence/jev-dynamics/frozen/requests/q18.json",
+    "id": "q18",
+    "law": "old_WSEN",
+    "panel": "ambiguous",
+    "sha256": "a7baa750603e5ac7aea40cc58d7af56948d8f17ba45db26423088053673a4338"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW",
+        "stationary"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "9",
+            "Z1_y": "4",
+            "Z2_x": "7",
+            "Z2_y": "8",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "9",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "4",
+            "Z1_x": "11",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "4",
+            "Z1_x": "10",
+            "Z1_y": "5",
+            "Z2_x": "9",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "4",
+            "Z1_x": "11",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "4",
+            "Z1_x": "9",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "5",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "4",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "unknown"
+        }
+      }
+    },
+    "bytes": 10934,
+    "caseId": "D",
+    "condition": "neither",
+    "file": "evidence/jev-dynamics/frozen/requests/q19.json",
+    "id": "q19",
+    "law": "old_NESW",
+    "panel": "ambiguous",
+    "sha256": "708b1f1189690bcfe6b1ce2df054842121fa8bb9bc12bdc15e3d904383cb8757"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "9",
+            "Z1_y": "4",
+            "Z2_x": "7",
+            "Z2_y": "8",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "7",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "4",
+            "Z1_x": "11",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "4",
+            "Z1_x": "10",
+            "Z1_y": "5",
+            "Z2_x": "9",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "4",
+            "Z1_x": "11",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "5",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "4",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11086,
+    "caseId": "D",
+    "condition": "observations",
+    "file": "evidence/jev-dynamics/frozen/requests/q20.json",
+    "id": "q20",
+    "law": "old_NESW",
+    "panel": "ambiguous",
+    "sha256": "06a30c9a6337a76ca3062e918289b0257d153afeb1a4dd99bed8f97f8b60078f"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "7",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "4",
+            "Z1_x": "11",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "5",
+          "Z1_x": "10",
+          "Z1_y": "3",
+          "Z2_x": "6",
+          "Z2_y": "7",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "11",
+          "H_y": "4",
+          "Z1_x": "11",
+          "Z1_y": "3",
+          "Z2_x": "6",
+          "Z2_y": "6",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11098,
+    "caseId": "D",
+    "condition": "supplied",
+    "file": "evidence/jev-dynamics/frozen/requests/q21.json",
+    "id": "q21",
+    "law": "old_NESW",
+    "panel": "ambiguous",
+    "sha256": "99ce195c0f372d6c3a457f22109af911996cd5aa6e989227284374af00378ba1"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW",
+        "stationary"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "9",
+            "Z1_y": "4",
+            "Z2_x": "7",
+            "Z2_y": "8",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "9",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "4",
+            "Z1_x": "11",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "4",
+            "Z1_x": "10",
+            "Z1_y": "5",
+            "Z2_x": "9",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "4",
+            "Z1_x": "11",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "4",
+            "Z1_x": "9",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "5",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "4",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "unknown"
+        }
+      }
+    },
+    "bytes": 10934,
+    "caseId": "D",
+    "condition": "neither",
+    "file": "evidence/jev-dynamics/frozen/requests/q22.json",
+    "id": "q22",
+    "law": "old_WSEN",
+    "panel": "ambiguous",
+    "sha256": "708b1f1189690bcfe6b1ce2df054842121fa8bb9bc12bdc15e3d904383cb8757"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_NESW",
+        "old_WSEN",
+        "new_NESW"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "7",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "9",
+            "Z1_y": "4",
+            "Z2_x": "7",
+            "Z2_y": "8",
+            "world_caught": "no"
+          },
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "10",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "7",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "11",
+            "H_y": "4",
+            "Z1_x": "11",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "10",
+            "H_y": "4",
+            "Z1_x": "10",
+            "Z1_y": "5",
+            "Z2_x": "9",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          },
+          {
+            "H_x": "11",
+            "H_y": "4",
+            "Z1_x": "11",
+            "Z1_y": "3",
+            "Z2_x": "6",
+            "Z2_y": "6",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "5",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "unknown",
+          "H_y": "4",
+          "Z1_x": "unknown",
+          "Z1_y": "unknown",
+          "Z2_x": "unknown",
+          "Z2_y": "unknown",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11086,
+    "caseId": "D",
+    "condition": "observations",
+    "file": "evidence/jev-dynamics/frozen/requests/q23.json",
+    "id": "q23",
+    "law": "old_WSEN",
+    "panel": "ambiguous",
+    "sha256": "06a30c9a6337a76ca3062e918289b0257d153afeb1a4dd99bed8f97f8b60078f"
+  },
+  {
+    "baseline": {
+      "hypotheses": [
+        "old_WSEN"
+      ],
+      "possible": {
+        "1": [
+          {
+            "H_x": "11",
+            "H_y": "5",
+            "Z1_x": "9",
+            "Z1_y": "4",
+            "Z2_x": "7",
+            "Z2_y": "8",
+            "world_caught": "no"
+          }
+        ],
+        "3": [
+          {
+            "H_x": "10",
+            "H_y": "4",
+            "Z1_x": "10",
+            "Z1_y": "5",
+            "Z2_x": "9",
+            "Z2_y": "8",
+            "world_caught": "yes"
+          }
+        ]
+      },
+      "predictions": {
+        "1": {
+          "H_x": "11",
+          "H_y": "5",
+          "Z1_x": "9",
+          "Z1_y": "4",
+          "Z2_x": "7",
+          "Z2_y": "8",
+          "world_caught": "no"
+        },
+        "3": {
+          "H_x": "10",
+          "H_y": "4",
+          "Z1_x": "10",
+          "Z1_y": "5",
+          "Z2_x": "9",
+          "Z2_y": "8",
+          "world_caught": "yes"
+        }
+      }
+    },
+    "bytes": 11098,
+    "caseId": "D",
+    "condition": "supplied",
+    "file": "evidence/jev-dynamics/frozen/requests/q24.json",
+    "id": "q24",
+    "law": "old_WSEN",
+    "panel": "ambiguous",
+    "sha256": "b0a383171f7d2eaa67d704809b5653f1636539cf8c144f5fc731416eb7cd127f"
+  }
+]

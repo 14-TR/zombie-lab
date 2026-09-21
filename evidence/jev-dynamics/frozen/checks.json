@@ -1,0 +1,30 @@
+{
+  "independent": {
+    "legacy": {
+      "purpose": "unchanged-law production parity on prescribed inputs",
+      "source": "two-zombies.js",
+      "transitions": 12,
+      "valid": true
+    },
+    "method": "independent coordinate-sign reference; same author, not blind external review",
+    "transitionComparisons": 204,
+    "valid": true
+  },
+  "split": {
+    "developmentBoards": [
+      [
+        3,
+        3
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "evaluationStartGroups": 4,
+    "evaluationTrajectoryGroups": 24,
+    "exampleGroups": 8,
+    "historicalDomain": "All configurations in10x7 excluded by at least one coordinate outside support; swaps included",
+    "overlaps": 0
+  }
+}

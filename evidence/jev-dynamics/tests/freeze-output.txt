@@ -1,0 +1,31 @@
+{
+  "conservativeEstimatedUSD": 0.019403915999999997,
+  "independentCheck": {
+    "valid": true,
+    "transitionComparisons": 204,
+    "method": "independent coordinate-sign reference; same author, not blind external review",
+    "legacy": {
+      "valid": true,
+      "transitions": 12,
+      "source": "two-zombies.js",
+      "purpose": "unchanged-law production parity on prescribed inputs"
+    }
+  },
+  "splitCheck": {
+    "overlaps": 0,
+    "evaluationStartGroups": 4,
+    "evaluationTrajectoryGroups": 24,
+    "exampleGroups": 8,
+    "historicalDomain": "All configurations in10x7 excluded by at least one coordinate outside support; swaps included",
+    "developmentBoards": [
+      [
+        3,
+        3
+      ],
+      [
+        5,
+        5
+      ]
+    ]
+  }
+}
