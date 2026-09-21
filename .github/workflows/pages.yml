@@ -50,9 +50,13 @@ jobs:
           node --test scripts/test-jev-controller.cjs scripts/test-jev-controller-release.cjs scripts/test-jev-controller-view.cjs
           python3 -B scripts/test-jev-controller-runner.py
           python3 -B scripts/check-jev-controller-reference.py
+          node --test scripts/test-jev-policy.cjs scripts/test-jev-policy-release.cjs scripts/test-jev-policy-view.cjs
+          python3 -B scripts/test-jev-policy-runner.py
+          python3 -B scripts/check-jev-policy-reference.py
           node scripts/build-preview.cjs preview
           node scripts/build-jev.cjs preview
           node scripts/build-jev-controller.cjs preview
+          node scripts/build-jev-policy.cjs preview
           node scripts/build-sweep.cjs preview
           node scripts/build-proof.cjs preview
           node scripts/build-planning.cjs preview

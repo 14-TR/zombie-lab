@@ -1,6 +1,15 @@
 "use strict";
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const file=path.join(__dirname,'build-jev-policy.cjs');
+test('PR and Pages run only offline policy tests and exports, never paid calls',()=>{
+ for(const name of ['pages.yml','private-preview.yml']){
+  const text=fs.readFileSync(path.join(__dirname,'../.github/workflows',name),'utf8');
+  assert(text.includes('node scripts/build-jev-policy.cjs preview'),name+' packages policy replay');
+  assert(text.includes('python3 -B scripts/check-jev-policy-reference.py'));
+  assert(text.includes('scripts/test-jev-policy-runner.py'));
+  assert(!text.includes('--live-authorized'));assert(!text.includes('TYPESAFE_API_KEY'));
+ }
+});
 test('offline comparison binds both real arms, all admissions and the earlier policy capture',()=>{
  assert(fs.existsSync(file),'policy comparison builder exists');
  const d=require(file).collect();

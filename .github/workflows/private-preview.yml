@@ -51,6 +51,9 @@ jobs:
           node --test scripts/test-jev-controller.cjs scripts/test-jev-controller-release.cjs scripts/test-jev-controller-view.cjs
           python3 -B scripts/test-jev-controller-runner.py
           python3 -B scripts/check-jev-controller-reference.py
+          node --test scripts/test-jev-policy.cjs scripts/test-jev-policy-release.cjs scripts/test-jev-policy-view.cjs
+          python3 -B scripts/test-jev-policy-runner.py
+          python3 -B scripts/check-jev-policy-reference.py
       - name: Generate full position replay
         env:
           PREVIEW_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -58,6 +61,7 @@ jobs:
           node scripts/build-preview.cjs preview
           node scripts/build-jev.cjs preview
           node scripts/build-jev-controller.cjs preview
+          node scripts/build-jev-policy.cjs preview
           node scripts/build-sweep.cjs preview
           node scripts/build-proof.cjs preview
           node scripts/build-planning.cjs preview
@@ -107,4 +111,4 @@ jobs:
           ARTIFACT_URL: ${{ steps.artifact.outputs.artifact-url }}
           SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
-          printf '## Zombie Lab PR replay\n\n[Download replay ZIP](%s) (GitHub sign-in required to download the artifact).\n\nUnzip, then open `neural.html` for ZL-011 frozen-model replay and negative results, or `index.html` for the earlier comparison. Includes full replay history, JSON, frozen models, reports and compact original evidence. No training is run in CI. Main publishes on GitHub Pages.\n\nSource commit: `%s`. Artifact expires after seven days.\n' "$ARTIFACT_URL" "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
+          printf '## Zombie Lab PR replay\n\n[Download replay ZIP](%s) (GitHub sign-in required to download the artifact).\n\nUnzip, then open `jev-policy.html` for ZL-016 original versus policy-guided prompt replay and negative results, or `index.html` for earlier comparisons. Includes full replay history, JSON, frozen models, reports and compact original evidence. No training is run in CI. Main publishes on GitHub Pages.\n\nSource commit: `%s`. Artifact expires after seven days.\n' "$ARTIFACT_URL" "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
