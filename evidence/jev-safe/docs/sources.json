@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://docs.typesafe.ai/api.md",
+    "sha256": "7ea1c82d9d16bd06e3d38885a5292548293f91e6d1ade4682c27398ced51a9e5",
+    "bytes": 11772
+  },
+  {
+    "url": "https://docs.typesafe.ai/primitives/choice.md",
+    "sha256": "4c55085131f8f2d7ae1faefdec52b1c7b379d40657d701cd2c786021cfe9dac9",
+    "bytes": 26794
+  },
+  {
+    "url": "https://docs.typesafe.ai/models.md",
+    "sha256": "9d20bb3c90a0147532d0b20ddc4c64579391be7842e965543b27bad684eeb4d6",
+    "bytes": 7245
+  },
+  {
+    "url": "https://docs.typesafe.ai/patterns/fan-out.md",
+    "sha256": "8d7a251ea6b735cb4994c1e0a95166cc0b3febce7d18189c3aa5e1673f182c91",
+    "bytes": 13967
+  }
+]
