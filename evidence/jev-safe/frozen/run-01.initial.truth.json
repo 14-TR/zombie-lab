@@ -1,0 +1,174 @@
+{
+  "before": {
+    "width": 10,
+    "height": 7,
+    "tick": 0,
+    "tickLimit": 12,
+    "human": {
+      "x": 2,
+      "y": 0
+    },
+    "zombies": [
+      {
+        "x": 2,
+        "y": 4
+      },
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "status": "running",
+    "reason": ""
+  },
+  "truth": {
+    "stateIndex": 205802,
+    "rank": -1,
+    "zombieMoves": [
+      "N",
+      "E"
+    ],
+    "actions": [
+      {
+        "action": "E",
+        "successor": {
+          "width": 10,
+          "height": 7,
+          "tick": 1,
+          "tickLimit": 12,
+          "human": {
+            "x": 3,
+            "y": 0
+          },
+          "zombies": [
+            {
+              "x": 2,
+              "y": 3
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "status": "running",
+          "reason": ""
+        },
+        "successorIndex": 156873,
+        "rank": -1,
+        "capture": false,
+        "avoidable": true
+      },
+      {
+        "action": "S",
+        "successor": {
+          "width": 10,
+          "height": 7,
+          "tick": 1,
+          "tickLimit": 12,
+          "human": {
+            "x": 2,
+            "y": 1
+          },
+          "zombies": [
+            {
+              "x": 2,
+              "y": 3
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "status": "running",
+          "reason": ""
+        },
+        "successorIndex": 156882,
+        "rank": -1,
+        "capture": false,
+        "avoidable": true
+      },
+      {
+        "action": "W",
+        "successor": {
+          "width": 10,
+          "height": 7,
+          "tick": 1,
+          "tickLimit": 12,
+          "human": {
+            "x": 1,
+            "y": 0
+          },
+          "zombies": [
+            {
+              "x": 2,
+              "y": 3
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "status": "caught",
+          "reason": "shared destination"
+        },
+        "successorIndex": 156871,
+        "rank": 0,
+        "capture": true,
+        "avoidable": false
+      },
+      {
+        "action": "stay",
+        "successor": {
+          "width": 10,
+          "height": 7,
+          "tick": 1,
+          "tickLimit": 12,
+          "human": {
+            "x": 2,
+            "y": 0
+          },
+          "zombies": [
+            {
+              "x": 2,
+              "y": 3
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "status": "caught",
+          "reason": "orthogonally adjacent"
+        },
+        "successorIndex": 156872,
+        "rank": 0,
+        "capture": true,
+        "avoidable": false
+      }
+    ]
+  },
+  "mask": {
+    "safeActions": [
+      "E",
+      "S"
+    ],
+    "retainedActions": [
+      "E",
+      "S"
+    ],
+    "safeSetSize": 2,
+    "mode": "safe_candidates",
+    "agency": "jev_choice"
+  },
+  "reference": {
+    "valid": true,
+    "runs": 1,
+    "decisions": 1,
+    "legalActions": 4,
+    "oracleSHA256": "c7067696907f066498c0299ae5814a14b85fb3e110a5703dc28401fbb9856b5b",
+    "scope": "all visited-state labels checked by frozen independent algorithm; not independent implementation review",
+    "stateIndex": 205802,
+    "maskVerified": true,
+    "checkedAt": "2026-09-21T02:06:11.477400+00:00"
+  }
+}
