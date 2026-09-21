@@ -1,0 +1,21 @@
+{
+  "interpretation": {
+    "ash_in_east": "unreported",
+    "clarification": "none",
+    "mara_at_depot": "unreported",
+    "policy": "solo",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "i checked the west passage is clear",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "the west passage is clear"
+    }
+  ],
+  "recognized_policies": [
+    "solo"
+  ]
+}

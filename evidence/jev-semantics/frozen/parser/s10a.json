@@ -1,0 +1,36 @@
+{
+  "interpretation": {
+    "ash_in_east": "negated",
+    "clarification": "both",
+    "mara_at_depot": "suspected_positive",
+    "policy": "unclear",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "niko reports mara at the depot",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": true,
+      "span": "mara at the depot"
+    },
+    {
+      "clause": "i see ash is not in the east passage",
+      "field": "ash_in_east",
+      "positive": false,
+      "reported": false,
+      "span": "ash is not in the east passage"
+    },
+    {
+      "clause": "the west passage is clear",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "the west passage is clear"
+    }
+  ],
+  "recognized_policies": [
+    "solo",
+    "together"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "interpretation": {
+    "ash_in_east": "known",
+    "clarification": "none",
+    "mara_at_depot": "known",
+    "policy": "hold",
+    "west_blocked": "unreported"
+  },
+  "matched_claims": [
+    {
+      "clause": "i see mara at the depot",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara at the depot"
+    },
+    {
+      "clause": "i see ash in the east passage",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": false,
+      "span": "ash in the east passage"
+    }
+  ],
+  "recognized_policies": [
+    "hold"
+  ]
+}

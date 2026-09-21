@@ -1,0 +1,19 @@
+{
+  "interpretation": {
+    "ash_in_east": "unreported",
+    "clarification": "goal",
+    "mara_at_depot": "known",
+    "policy": "unclear",
+    "west_blocked": "unreported"
+  },
+  "matched_claims": [
+    {
+      "clause": "my own view places mara at the depot, but niko insists she is absent from that very place",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara at the depot"
+    }
+  ],
+  "recognized_policies": []
+}

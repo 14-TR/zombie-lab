@@ -1,0 +1,82 @@
+[
+  {
+    "id": "s01a",
+    "text": "I see Ash is not in the east passage. I see the west passage is blocked. Leave without Mara."
+  },
+  {
+    "id": "s01b",
+    "text": "My sweep of the eastern passage found no Ash there; the western way is sealed by rubble, as I can see myself. Head for shelter on your own, without picking Mara up."
+  },
+  {
+    "id": "s02a",
+    "text": "I see Mara at the depot. I see Ash is not in the east passage. I checked the west passage is clear. Do not leave Mara behind."
+  },
+  {
+    "id": "s02b",
+    "text": "At the depot I have Mara in sight. I inspected both passages: the eastern one contains no Ash, and nothing obstructs the western one. Get to shelter, but not at the cost of abandoning her."
+  },
+  {
+    "id": "s03a",
+    "text": "I see Mara is not at the depot. I see Ash in the east passage. The west passage is clear. Evacuate alone."
+  },
+  {
+    "id": "s03b",
+    "text": "I checked the depot and Mara is absent. Through my binoculars I spot Ash occupying the east passage, while my inspection confirms the west is unobstructed. Do not collect Mara; get yourself to shelter."
+  },
+  {
+    "id": "s04a",
+    "text": "I see Mara at the depot. I see Ash in the east passage. Stay here."
+  },
+  {
+    "id": "s04b",
+    "text": "At the depot stands Mara, visible to me; Ash is visible in the eastern passage. Cancel any departure for shelter and remain where you are."
+  },
+  {
+    "id": "s05a",
+    "text": "Niko is at the depot. If Ash is in the east passage, ring the bell. I checked the west passage is clear. Leave without Mara."
+  },
+  {
+    "id": "s05b",
+    "text": "My inspection found the west passage free of obstructions. The person waiting at the depot is Niko. Whether Ash uses the eastern passage is not known to me. Make for shelter by yourself."
+  },
+  {
+    "id": "s06a",
+    "text": "I see Mara at the depot. Niko says \"I see Ash in the east passage\". I checked the west passage is clear. Evacuate with Mara."
+  },
+  {
+    "id": "s06b",
+    "text": "I can personally confirm Mara is waiting at the depot and the western passage is unobstructed. About the eastern passage, all I have is Niko's account that Ash is there. Reach shelter without leaving Mara behind."
+  },
+  {
+    "id": "s07a",
+    "text": "Niko reports Ash is not in the east passage. I see the west passage is blocked. Leave without Mara."
+  },
+  {
+    "id": "s07b",
+    "text": "I have not inspected the eastern passage: Niko assures me Ash is absent from it. The west passage is obstructed; that part I witnessed. Take yourself to shelter, not Mara."
+  },
+  {
+    "id": "s08a",
+    "text": "I see Mara at the depot. Niko reports Mara is not at the depot. I see Ash is not in the east passage. The west passage is clear. Evacuate with Mara."
+  },
+  {
+    "id": "s08b",
+    "text": "My own view places Mara at the depot, but Niko insists she is absent from that very place. I verified an Ash-free eastern passage and an unobstructed western passage. Escort Mara to shelter with you."
+  },
+  {
+    "id": "s09a",
+    "text": "I see Ash is not in the east passage. Niko reports Ash in the east passage. The west passage is clear. Leave without Mara."
+  },
+  {
+    "id": "s09b",
+    "text": "I inspected the eastern passage and found no Ash; Niko nevertheless says Ash is occupying it. My west-passage inspection found no obstruction. Evacuate yourself, leaving Mara out of the plan."
+  },
+  {
+    "id": "s10a",
+    "text": "Niko reports Mara at the depot. I see Ash is not in the east passage. The west passage is clear. Leave without Mara. Do not leave Mara behind."
+  },
+  {
+    "id": "s10b",
+    "text": "Mara might be waiting at the depot; I cannot vouch for that. I personally checked the east passage: Ash is absent; I found the west passage unobstructed. Go to shelter without Mara, and ensure Mara accompanies you to shelter."
+  }
+]

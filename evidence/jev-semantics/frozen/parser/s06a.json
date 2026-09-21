@@ -1,0 +1,35 @@
+{
+  "interpretation": {
+    "ash_in_east": "suspected_positive",
+    "clarification": "evidence",
+    "mara_at_depot": "known",
+    "policy": "together",
+    "west_blocked": "negated"
+  },
+  "matched_claims": [
+    {
+      "clause": "i see mara at the depot",
+      "field": "mara_at_depot",
+      "positive": true,
+      "reported": false,
+      "span": "mara at the depot"
+    },
+    {
+      "clause": "niko says \"i see ash in the east passage\"",
+      "field": "ash_in_east",
+      "positive": true,
+      "reported": true,
+      "span": "ash in the east passage"
+    },
+    {
+      "clause": "i checked the west passage is clear",
+      "field": "west_blocked",
+      "positive": false,
+      "reported": false,
+      "span": "the west passage is clear"
+    }
+  ],
+  "recognized_policies": [
+    "together"
+  ]
+}

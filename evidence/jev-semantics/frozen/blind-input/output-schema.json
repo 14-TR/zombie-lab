@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "predictions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "enum": [
+              "s01a",
+              "s01b",
+              "s02a",
+              "s02b",
+              "s03a",
+              "s03b",
+              "s04a",
+              "s04b",
+              "s05a",
+              "s05b",
+              "s06a",
+              "s06b",
+              "s07a",
+              "s07b",
+              "s08a",
+              "s08b",
+              "s09a",
+              "s09b",
+              "s10a",
+              "s10b"
+            ],
+            "type": "string"
+          },
+          "interpretation": {
+            "additionalProperties": false,
+            "properties": {
+              "ash_in_east": {
+                "enum": [
+                  "known",
+                  "negated",
+                  "suspected_positive",
+                  "suspected_negative",
+                  "conflicting",
+                  "unreported"
+                ],
+                "type": "string"
+              },
+              "clarification": {
+                "enum": [
+                  "none",
+                  "goal",
+                  "evidence",
+                  "both"
+                ],
+                "type": "string"
+              },
+              "mara_at_depot": {
+                "enum": [
+                  "known",
+                  "negated",
+                  "suspected_positive",
+                  "suspected_negative",
+                  "conflicting",
+                  "unreported"
+                ],
+                "type": "string"
+              },
+              "policy": {
+                "enum": [
+                  "solo",
+                  "together",
+                  "hold",
+                  "unclear"
+                ],
+                "type": "string"
+              },
+              "west_blocked": {
+                "enum": [
+                  "known",
+                  "negated",
+                  "suspected_positive",
+                  "suspected_negative",
+                  "conflicting",
+                  "unreported"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "mara_at_depot",
+              "ash_in_east",
+              "west_blocked",
+              "policy",
+              "clarification"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "interpretation"
+        ],
+        "type": "object"
+      },
+      "maxItems": 20,
+      "minItems": 20,
+      "type": "array"
+    }
+  },
+  "required": [
+    "predictions"
+  ],
+  "type": "object"
+}

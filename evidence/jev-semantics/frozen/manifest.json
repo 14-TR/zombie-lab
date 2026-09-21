@@ -1,0 +1,222 @@
+{
+  "base_commit": "ca6ea28007e3daacd49c5a765ee52f1d24533526",
+  "blind_bundle_sha256": {
+    "README.md": "1275bf3e0c675ff732a09d5f240706a968463f0db1bdc06cf3d68f467a10cbd6",
+    "development.json": "94c4aa051c44d974aba6151035e9935de4a9053cd4cfafaebf72944070ead844",
+    "instructions.json": "13190515fb3231af55f25fd37e65d9318dd189a2617513627b55a359ccc4a098",
+    "output-schema.json": "a40a77196081b934c1be2afe5a8c91422d736feb27f285e4462a7c71f3a6a141",
+    "test-texts.json": "b419e421f901ca0de7b9454189b768d0a6a3999ced840e62826efc720fa90cad"
+  },
+  "estimated_ceiling_usd": 0.012976488000000001,
+  "files": {
+    "evidence/jev-semantics/data/development.json": "c4b60f03d74bcb33746b9015b7020a73cd7aa8875d6575bec64232cc4676c0a1",
+    "evidence/jev-semantics/data/spec.json": "3b9f79ff104d467cdb321c45293f986628cda016c4096fd6615d6c5ef701f16e",
+    "evidence/jev-semantics/data/test-gold.json": "fc8ac426def2c91cb62a152d176cc5a2e0a7ec43eb1bba9056c580cb9749aa31",
+    "evidence/jev-semantics/data/test-inputs.json": "ff64e3f72462e8ab80ecd23fe968cc43e6bfea008f8be945c3378fdaaf336272",
+    "evidence/jev-semantics/frozen/blind-input/README.md": "1275bf3e0c675ff732a09d5f240706a968463f0db1bdc06cf3d68f467a10cbd6",
+    "evidence/jev-semantics/frozen/blind-input/development.json": "94c4aa051c44d974aba6151035e9935de4a9053cd4cfafaebf72944070ead844",
+    "evidence/jev-semantics/frozen/blind-input/instructions.json": "13190515fb3231af55f25fd37e65d9318dd189a2617513627b55a359ccc4a098",
+    "evidence/jev-semantics/frozen/blind-input/output-schema.json": "a40a77196081b934c1be2afe5a8c91422d736feb27f285e4462a7c71f3a6a141",
+    "evidence/jev-semantics/frozen/blind-input/test-texts.json": "b419e421f901ca0de7b9454189b768d0a6a3999ced840e62826efc720fa90cad",
+    "evidence/jev-semantics/frozen/historical.json": "295f951594a860c917b243232ca2565ce1d106e8de128b1e951d624a691a9fa3",
+    "evidence/jev-semantics/frozen/parser/s01a.json": "aef8a6176f1204cd5edcaf68d66c2561493ac2c1e767d19d6972f44bd4eb1dc9",
+    "evidence/jev-semantics/frozen/parser/s01b.json": "40ab6b3d976e98c37c39c97751fd1487eb4f11a3c6280877086009bd786bf81e",
+    "evidence/jev-semantics/frozen/parser/s02a.json": "c60b0f7336dbdd6eb90f93fd4f748782cf7efd13f61e19e85005d2edda899767",
+    "evidence/jev-semantics/frozen/parser/s02b.json": "40ab6b3d976e98c37c39c97751fd1487eb4f11a3c6280877086009bd786bf81e",
+    "evidence/jev-semantics/frozen/parser/s03a.json": "fc94b614efa77b8a38643c51b2e313951b35643b50b7cc50100cdc523604c759",
+    "evidence/jev-semantics/frozen/parser/s03b.json": "40ab6b3d976e98c37c39c97751fd1487eb4f11a3c6280877086009bd786bf81e",
+    "evidence/jev-semantics/frozen/parser/s04a.json": "ade7676f1b877ff10a17a84773ef4ee68a236b42c83f4f64118f14c42fdbf14b",
+    "evidence/jev-semantics/frozen/parser/s04b.json": "40ab6b3d976e98c37c39c97751fd1487eb4f11a3c6280877086009bd786bf81e",
+    "evidence/jev-semantics/frozen/parser/s05a.json": "9864776eb96ad3491873762617c2962116cd24189cf7099c4e896914732e9764",
+    "evidence/jev-semantics/frozen/parser/s05b.json": "40ab6b3d976e98c37c39c97751fd1487eb4f11a3c6280877086009bd786bf81e",
+    "evidence/jev-semantics/frozen/parser/s06a.json": "358d34e27c96880ca075cac5fbbcba4259819d457452a0fb6d66f5ba6c27d5b5",
+    "evidence/jev-semantics/frozen/parser/s06b.json": "40ab6b3d976e98c37c39c97751fd1487eb4f11a3c6280877086009bd786bf81e",
+    "evidence/jev-semantics/frozen/parser/s07a.json": "a81d6e1732ceae11f273b8b68970a93662f9ee6f26459042d2b28f483bb54ddd",
+    "evidence/jev-semantics/frozen/parser/s07b.json": "40ab6b3d976e98c37c39c97751fd1487eb4f11a3c6280877086009bd786bf81e",
+    "evidence/jev-semantics/frozen/parser/s08a.json": "f55b487da5fda3ac40fe82e742a2f638204661e19b15ff854b21889c0820f5c5",
+    "evidence/jev-semantics/frozen/parser/s08b.json": "717d7ec145d2c1333d8b747dbc9632438e8310881f30d6df8b46561f4ba67365",
+    "evidence/jev-semantics/frozen/parser/s09a.json": "c6cee60e04bd2a74a20a7b279597daaf0bd665510d2d29e6621953a693296d6d",
+    "evidence/jev-semantics/frozen/parser/s09b.json": "40ab6b3d976e98c37c39c97751fd1487eb4f11a3c6280877086009bd786bf81e",
+    "evidence/jev-semantics/frozen/parser/s10a.json": "ee283cdc8f11acf3fd0076fa3b8320f50a241c4204985a808f2188485bf252c3",
+    "evidence/jev-semantics/frozen/parser/s10b.json": "40ab6b3d976e98c37c39c97751fd1487eb4f11a3c6280877086009bd786bf81e",
+    "evidence/jev-semantics/frozen/requests/s01a.request.json": "6de23b86f46db6f90535126a9e02b818361599fb77e7c7190cf4dfe3f13051ec",
+    "evidence/jev-semantics/frozen/requests/s01b.request.json": "6a46cbda1aee268bcc8daacf6a6e54a24ff95f19501f9a4b9b8a6fabd4a9310e",
+    "evidence/jev-semantics/frozen/requests/s02a.request.json": "5d1b7c28eb9722d168f4a8494a5ac0f80e19cc6416966b310dc901454b79b41e",
+    "evidence/jev-semantics/frozen/requests/s02b.request.json": "2ee4dd16e83866cf2a413c81dc5e815fe143490c196917b20501d45b83349cfd",
+    "evidence/jev-semantics/frozen/requests/s03a.request.json": "3b858159ea499be1dccc700c0076af3601d1e1d8bdb3a10f6b7edc91855f04a5",
+    "evidence/jev-semantics/frozen/requests/s03b.request.json": "f5ff528950330c7fe839e46c95c0d7ea4c8845750e101fc162f5fc87c4ad5182",
+    "evidence/jev-semantics/frozen/requests/s04a.request.json": "a6baa60596b9566cb3ed72b0fc572ab0abf5c49572242a8b8a0af82bbddcd90f",
+    "evidence/jev-semantics/frozen/requests/s04b.request.json": "8d2eef19ddf14fa20298c04c40720ed0a495aeb4ca7105402fbe403365d6e62b",
+    "evidence/jev-semantics/frozen/requests/s05a.request.json": "b0c4e63ad95f8c1ee7e72c66a59ff82748912913d038b78c5c7aa7fa479424a9",
+    "evidence/jev-semantics/frozen/requests/s05b.request.json": "479ffadce911d34b921495e3b3e24cf3b4d77407cd9e24f5bf85be3214f3f49d",
+    "evidence/jev-semantics/frozen/requests/s06a.request.json": "2612e8ce47d1824a00a08e469cdc410e37d4499fdc68a604ed80ed3bf61ac790",
+    "evidence/jev-semantics/frozen/requests/s06b.request.json": "958eabe0a9d7c9c359b1c55ee5ccb766af882a12598b07b4f974291b145d052f",
+    "evidence/jev-semantics/frozen/requests/s07a.request.json": "1e5a0883deeaf78ee737db0fb61d7eb0f49dea319144fa9556fcf41fa8e8b79f",
+    "evidence/jev-semantics/frozen/requests/s07b.request.json": "4e9d0b7c3a6680eb59ab78c7a13454ad7a0ae9eb67ef78c5b87be2a16ac8ab8b",
+    "evidence/jev-semantics/frozen/requests/s08a.request.json": "7f1dfa0166c84ca694ab2eaef30342972f6597d384287d5bf74af34a9ad80181",
+    "evidence/jev-semantics/frozen/requests/s08b.request.json": "36f89066a2b40edb23fbe9f66b9336512b202056e83ba1a9270001066813ba17",
+    "evidence/jev-semantics/frozen/requests/s09a.request.json": "28ad7fbf58e6082a4a8c85f1e250ae9f31af52a9cd9eee10527ae825722f086f",
+    "evidence/jev-semantics/frozen/requests/s09b.request.json": "bb58303a5474f9f6de57a99bcc4b5fbfbe7fc0234eae42858dd7f0a7479b37f5",
+    "evidence/jev-semantics/frozen/requests/s10a.request.json": "f17b461bbed4d3e909a33319a87cace84bb95036ed72be2d47314c7faba6c431",
+    "evidence/jev-semantics/frozen/requests/s10b.request.json": "fc3c0666f675ec677a78ecd9d67217844fa4d139ea50a4968aaaaa729394ddf1",
+    "evidence/jev-semantics/gold-development-check.json": "56fccf5c02a37d82379ff1c5c8d5ece599fca792309549321593a377fb2368ea",
+    "evidence/jev-semantics/green-core.txt": "fb184ea57734512b1f088f9181209901b9cd46df3eb7eaa2500ea9e48dde20b5",
+    "evidence/jev-semantics/green-freeze.txt": "316558a93ba028238bcd514bbec8a07c6b5122f2fa8e4ce8499b5d85bc6111f8",
+    "evidence/jev-semantics/green-parser.txt": "fe008aab760eb03ccac7578e2b84665b1b50b0d7f855b17a0c7a8d039435b658",
+    "evidence/jev-semantics/green-price.txt": "0490208e5a254f2f2e6e0f70f7a5ee55157accf27688d6887c0492cc0a5b37e0",
+    "evidence/jev-semantics/green-score-runner.txt": "c1de396add63b60b7739446ae754c9af4d1c4c8af85083ffc8071726ef9e4e98",
+    "evidence/jev-semantics/green-simulator-io.txt": "56e03afda220e7ba78bbcecf9a2e53a0149cfc3e311fa10bbd01b25e8e5ba671",
+    "evidence/jev-semantics/reconciliation.json": "5d36661813b6c8b34b7cbfa1c14aadcf88cab87cd5dd1772b98945f78b18b6fa",
+    "evidence/jev-semantics/red-core.txt": "3d60b5e7cb72f829e089aaa27984e7b98578d8f13e05c6e74141bb8e43c35c4f",
+    "evidence/jev-semantics/red-freeze.txt": "aa6a7b938d64a393a33b6a2d155b52a8e3a1964aaa1d2660af473825bc05bb2b",
+    "evidence/jev-semantics/red-parser.txt": "f44689f17f2851fd40e63fd33f050ef416022cc2e4035d7e8a1cd940588f1637",
+    "evidence/jev-semantics/red-price.txt": "4571b4da2d24733fd58b7fb32c115d1d3600c1734ffecb0a3e6ec05d75b01a1d",
+    "evidence/jev-semantics/red-score-runner.txt": "4f20620545ecabaffd5fb915f3e8aa815a2b2f5ed11f6fbf8f7f07669cc69a7f",
+    "evidence/jev-semantics/red-simulator-io.txt": "5452c7bf22c147bed2d177a8f578594eea43552396fff211dacf4143018f1b3a",
+    "evidence/jev-semantics/sources.json": "cc34c513e2e15a466c24a355d32cdf4bb720587a0a062d3a1526e4e7085dc28d",
+    "evidence/jev-semantics/sources/api.md": "7ea1c82d9d16bd06e3d38885a5292548293f91e6d1ade4682c27398ced51a9e5",
+    "evidence/jev-semantics/sources/concepts_how-to-build-with-system-one.md": "d9f4d34c1349bf5acb55c99d6a1651eacfc481ad8d1f78ccb8776769da729a49",
+    "evidence/jev-semantics/sources/confidence.md": "97dafe98b77979906a2ad456013dd85a70dcecd109d0644b096817d910997ea5",
+    "evidence/jev-semantics/sources/cookbooks_function_calling.md": "5447823489575a93adc3943627461fa8b904e5692bfed3395caa21a50458fe40",
+    "evidence/jev-semantics/sources/llms.txt": "9bb713532b8b5b836d48bf19733a6649525aff8353e22c5cbebf5524a498ff24",
+    "evidence/jev-semantics/sources/model-jaggedness_jev-1.13.md": "e69329bd32e91ac08f0bd2681ceb4aacc34923b9190e29c15c8f75d8e22950e2",
+    "evidence/jev-semantics/sources/models.md": "9d20bb3c90a0147532d0b20ddc4c64579391be7842e965543b27bad684eeb4d6",
+    "evidence/jev-semantics/sources/primitives_choice.md": "4c55085131f8f2d7ae1faefdec52b1c7b379d40657d701cd2c786021cfe9dac9",
+    "experiments/ZL-019-protocol.md": "6fe8828516b33817ed87d2d840015c809c7fffe60103edd5ff0351baf07a610d",
+    "scripts/freeze_semantics.py": "492cfbc3fe155244bdaa7f5c19a2977dee1eacc1215d668b05ad7141e5a915d4",
+    "scripts/run_semantics.py": "682ee1157ab857443c60c78c569b6a3a3255cbe268bca7f12b486b5e3db0ed8c",
+    "scripts/semantics_core.py": "c65de785230468fb72aa959bdc25a13dea68ff93290ae341a838fd70169800ef",
+    "scripts/semantics_io.py": "d656cfe2b57211fc7c17e580d4ca4468a79a46b2c5dd419842a33b3bb845b2c1",
+    "scripts/semantics_score.py": "e595b7dbabc5f0fd21a1dad2f66690be2c562b1e4a4d77995b1746a44c2d30d6",
+    "scripts/test_semantics.py": "e408d03b7a764b52f967b95e4919bcdcde081a9ea8ea8c87a0c0b280887e8b02",
+    "scripts/test_semantics_freeze.py": "081e01f1a168696cc48088e16a3430ef043e6103419628e2898236bc61db9a06",
+    "scripts/test_semantics_io.py": "b3905411eac19a96f6b3711f00cc2fe5cafb24a938fe2352ac92d15573056de8",
+    "scripts/test_semantics_runner.py": "7a94cec2763936886221d157b3e5db500ba274b0e66c99b44ed11081cca2acc9",
+    "scripts/test_semantics_score.py": "540b9d9485c7900c4fc967c4a43ab1b3a8b0d6ef3d5a7c7438510a442c840561"
+  },
+  "input_price_usd_per_million": 0.042,
+  "planned_requests": 20,
+  "requests": [
+    {
+      "bytes": 7197,
+      "id": "s01a",
+      "path": "evidence/jev-semantics/frozen/requests/s01a.request.json",
+      "sha256": "6de23b86f46db6f90535126a9e02b818361599fb77e7c7190cf4dfe3f13051ec"
+    },
+    {
+      "bytes": 7269,
+      "id": "s01b",
+      "path": "evidence/jev-semantics/frozen/requests/s01b.request.json",
+      "sha256": "6a46cbda1aee268bcc8daacf6a6e54a24ff95f19501f9a4b9b8a6fabd4a9310e"
+    },
+    {
+      "bytes": 7230,
+      "id": "s02a",
+      "path": "evidence/jev-semantics/frozen/requests/s02a.request.json",
+      "sha256": "5d1b7c28eb9722d168f4a8494a5ac0f80e19cc6416966b310dc901454b79b41e"
+    },
+    {
+      "bytes": 7293,
+      "id": "s02b",
+      "path": "evidence/jev-semantics/frozen/requests/s02b.request.json",
+      "sha256": "2ee4dd16e83866cf2a413c81dc5e815fe143490c196917b20501d45b83349cfd"
+    },
+    {
+      "bytes": 7210,
+      "id": "s03a",
+      "path": "evidence/jev-semantics/frozen/requests/s03a.request.json",
+      "sha256": "3b858159ea499be1dccc700c0076af3601d1e1d8bdb3a10f6b7edc91855f04a5"
+    },
+    {
+      "bytes": 7306,
+      "id": "s03b",
+      "path": "evidence/jev-semantics/frozen/requests/s03b.request.json",
+      "sha256": "f5ff528950330c7fe839e46c95c0d7ea4c8845750e101fc162f5fc87c4ad5182"
+    },
+    {
+      "bytes": 7171,
+      "id": "s04a",
+      "path": "evidence/jev-semantics/frozen/requests/s04a.request.json",
+      "sha256": "a6baa60596b9566cb3ed72b0fc572ab0abf5c49572242a8b8a0af82bbddcd90f"
+    },
+    {
+      "bytes": 7243,
+      "id": "s04b",
+      "path": "evidence/jev-semantics/frozen/requests/s04b.request.json",
+      "sha256": "8d2eef19ddf14fa20298c04c40720ed0a495aeb4ca7105402fbe403365d6e62b"
+    },
+    {
+      "bytes": 7229,
+      "id": "s05a",
+      "path": "evidence/jev-semantics/frozen/requests/s05a.request.json",
+      "sha256": "b0c4e63ad95f8c1ee7e72c66a59ff82748912913d038b78c5c7aa7fa479424a9"
+    },
+    {
+      "bytes": 7291,
+      "id": "s05b",
+      "path": "evidence/jev-semantics/frozen/requests/s05b.request.json",
+      "sha256": "479ffadce911d34b921495e3b3e24cf3b4d77407cd9e24f5bf85be3214f3f49d"
+    },
+    {
+      "bytes": 7231,
+      "id": "s06a",
+      "path": "evidence/jev-semantics/frozen/requests/s06a.request.json",
+      "sha256": "2612e8ce47d1824a00a08e469cdc410e37d4499fdc68a604ed80ed3bf61ac790"
+    },
+    {
+      "bytes": 7317,
+      "id": "s06b",
+      "path": "evidence/jev-semantics/frozen/requests/s06b.request.json",
+      "sha256": "958eabe0a9d7c9c359b1c55ee5ccb766af882a12598b07b4f974291b145d052f"
+    },
+    {
+      "bytes": 7204,
+      "id": "s07a",
+      "path": "evidence/jev-semantics/frozen/requests/s07a.request.json",
+      "sha256": "1e5a0883deeaf78ee737db0fb61d7eb0f49dea319144fa9556fcf41fa8e8b79f"
+    },
+    {
+      "bytes": 7276,
+      "id": "s07b",
+      "path": "evidence/jev-semantics/frozen/requests/s07b.request.json",
+      "sha256": "4e9d0b7c3a6680eb59ab78c7a13454ad7a0ae9eb67ef78c5b87be2a16ac8ab8b"
+    },
+    {
+      "bytes": 7253,
+      "id": "s08a",
+      "path": "evidence/jev-semantics/frozen/requests/s08a.request.json",
+      "sha256": "7f1dfa0166c84ca694ab2eaef30342972f6597d384287d5bf74af34a9ad80181"
+    },
+    {
+      "bytes": 7304,
+      "id": "s08b",
+      "path": "evidence/jev-semantics/frozen/requests/s08b.request.json",
+      "sha256": "36f89066a2b40edb23fbe9f66b9336512b202056e83ba1a9270001066813ba17"
+    },
+    {
+      "bytes": 7227,
+      "id": "s09a",
+      "path": "evidence/jev-semantics/frozen/requests/s09a.request.json",
+      "sha256": "28ad7fbf58e6082a4a8c85f1e250ae9f31af52a9cd9eee10527ae825722f086f"
+    },
+    {
+      "bytes": 7296,
+      "id": "s09b",
+      "path": "evidence/jev-semantics/frozen/requests/s09b.request.json",
+      "sha256": "bb58303a5474f9f6de57a99bcc4b5fbfbe7fc0234eae42858dd7f0a7479b37f5"
+    },
+    {
+      "bytes": 7247,
+      "id": "s10a",
+      "path": "evidence/jev-semantics/frozen/requests/s10a.request.json",
+      "sha256": "f17b461bbed4d3e909a33319a87cace84bb95036ed72be2d47314c7faba6c431"
+    },
+    {
+      "bytes": 7330,
+      "id": "s10b",
+      "path": "evidence/jev-semantics/frozen/requests/s10b.request.json",
+      "sha256": "fc3c0666f675ec677a78ecd9d67217844fa4d139ea50a4968aaaaa729394ddf1"
+    }
+  ],
+  "scenario_groups": 10
+}
