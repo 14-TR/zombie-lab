@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_real_collection_offline_export_and_corruption (test_semantics_export.ExportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-semantics/scripts/test_semantics_export.py", line 27, in test_real_collection_offline_export_and_corruption
+    self.assertIn('ash_in_east',(Path(d)/'semantics.csv').read_text().splitlines()[0])
+AssertionError: 'ash_in_east' not found in 'id,group,stratum,method,exact,components_correct,unsupported_assertions,suspected_promotions,abstain,coverage,moved,false_action,trace_match,outcome,goal_completed'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.660s
+
+FAILED (failures=1)

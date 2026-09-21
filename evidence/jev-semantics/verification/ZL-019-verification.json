@@ -1,0 +1,80 @@
+{
+  "verified_utc": "2026-09-21T04:32:47.108791+00:00",
+  "tested_source_candidate": "22cbfc058fbd7736dfa4cd289e8453077bd8f8fa",
+  "freeze_commit": "e8e69d486e6a42adcb2abd725b59dd468c1286a7",
+  "freeze_before_inference": true,
+  "frozen_files_checked": 84,
+  "historical_tracked_files_checked": 916,
+  "old_external_files_byte_preserved": 4532,
+  "old_worktree_heads_statuses_unchanged": 17,
+  "new_tests": {
+    "tests": 10,
+    "passed": 10
+  },
+  "inherited_python": {
+    "tests": 19,
+    "passed": 19
+  },
+  "inherited_node": {
+    "tests": 161,
+    "pass": 153,
+    "fail": 0,
+    "skipped": 8,
+    "cancelled": 0
+  },
+  "inherited_node_ms": 159241.151708,
+  "browser": {
+    "passed": true,
+    "scope": "Local offline real-artifact cached Chromium; not physical phone/Safari, independent review, download or publication",
+    "htmlSha256": "ffeef85aad456703483e37ce773889c43f4bee93eb8c04fd16b09d01bd37bc2d",
+    "jsonSha256": "b3be8623a60823ce4f138db746638c3911f561b5a5ad6db879849944e314399f",
+    "scriptSha256": "add5fb9cf104e8acc8d6432a939ef7968b95073abe98c525164b5dc2c00d3c89",
+    "sourceCommit": "22cbfc058fbd7736dfa4cd289e8453077bd8f8fa",
+    "freezeCommit": "e8e69d486e6a42adcb2abd725b59dd468c1286a7",
+    "wallMs": 11269.952500000001,
+    "results": [
+      {
+        "width": 320,
+        "cases": 20,
+        "armFrameComparisons": 135,
+        "packagedLinkChecks": 140,
+        "minimumFontPx": 16,
+        "consoleErrors": [],
+        "externalRequests": [],
+        "controls": "select/range/keyboard/previous/next/play/pause/endpoint passed"
+      },
+      {
+        "width": 390,
+        "cases": 20,
+        "armFrameComparisons": 135,
+        "packagedLinkChecks": 140,
+        "minimumFontPx": 16,
+        "consoleErrors": [],
+        "externalRequests": [],
+        "controls": "select/range/keyboard/previous/next/play/pause/endpoint passed"
+      },
+      {
+        "width": 1200,
+        "cases": 20,
+        "armFrameComparisons": 135,
+        "packagedLinkChecks": 140,
+        "minimumFontPx": 16,
+        "consoleErrors": [],
+        "externalRequests": [],
+        "controls": "select/range/keyboard/previous/next/play/pause/endpoint passed"
+      }
+    ]
+  },
+  "blind_bundle_exact_files": [
+    "README.md",
+    "development.json",
+    "instructions.json",
+    "output-schema.json",
+    "test-texts.json"
+  ],
+  "blind_comparator_status": "pending",
+  "independent_review_status": "pending",
+  "archive_entries": 125,
+  "archive_crc_and_all_bytes_verified": true,
+  "no_push_merge_publication": true
+}

@@ -1,0 +1,18 @@
+{
+  "recording_unchanged": true,
+  "admissions": 20,
+  "probes": [
+    {
+      "probe": "ci",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/tr/Projects/zombie-lab-jev-semantics/scripts/run_semantics.py\", line 125, in <module>\n    if __name__=='__main__': main()\n                             ^^^^^^\n  File \"/Users/tr/Projects/zombie-lab-jev-semantics/scripts/run_semantics.py\", line 107, in main\n    authorize(args.live_authorized,os.environ)\n  File \"/Users/tr/Projects/zombie-lab-jev-semantics/scripts/run_semantics.py\", line 29, in authorize\n    raise ValueError('Live inference refused: explicit local authorization required; never CI')\nValueError: Live inference refused: explicit local authorization required; never CI\n"
+    },
+    {
+      "probe": "single-use",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/tr/Projects/zombie-lab-jev-semantics/scripts/run_semantics.py\", line 125, in <module>\n    if __name__=='__main__': main()\n                             ^^^^^^\n  File \"/Users/tr/Projects/zombie-lab-jev-semantics/scripts/run_semantics.py\", line 109, in main\n    if (directory/'run.json').exists(): raise FileExistsError('ZL019 campaign permanently single-use; never refill')\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileExistsError: ZL019 campaign permanently single-use; never refill\n"
+    }
+  ]
+}

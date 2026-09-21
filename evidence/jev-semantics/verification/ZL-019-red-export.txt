@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_real_collection_offline_export_and_corruption (test_semantics_export.ExportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tr/Projects/zombie-lab-jev-semantics/scripts/test_semantics_export.py", line 9, in test_real_collection_offline_export_and_corruption
+    self.assertTrue(Path(__file__).with_name('build_semantics.py').exists(),'offline collector/export not implemented')
+AssertionError: False is not true : offline collector/export not implemented
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
